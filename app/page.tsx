@@ -121,6 +121,10 @@ export default function Home() {
               height={32}
               className="mr-2"
               priority
+              unoptimized
+              onError={(e) => {
+                console.error('Error loading image:', e);
+              }}
             />
             <span
               className="font-normal text-xl sm:text-2xl md:text-3xl text-black dark:text-white transition-all duration-300"
