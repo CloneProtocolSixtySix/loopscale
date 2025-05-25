@@ -114,15 +114,6 @@ export default function Home() {
         {/* Theme Toggle */}
         <div className="fixed top-8 left-0 right-0 flex justify-between items-center px-8 z-50">
           <span className="flex items-center text-lg sm:text-2xl text-black dark:text-white transition-all duration-300">
-            <Image
-              src="/images/loopscale.png"
-              alt="Loopscale Logo"
-              width={24}
-              height={24}
-              className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 mr-2 object-contain dark:invert-0 invert"
-              priority
-              unoptimized
-            />
             <span
               className="font-normal text-xl sm:text-2xl md:text-3xl text-black dark:text-white transition-all duration-300"
               style={{
@@ -344,14 +335,6 @@ export default function Home() {
         <>
           <div className="fixed bottom-4 right-8 z-50 text-sm text-gray-400 dark:text-gray-400">
             © 2025 Loopscale AI · <a href="mailto:hello@loopscale.ai" className="underline hover:text-blue-600 dark:hover:text-blue-400">hello@loopscale.ai</a> · Montreal
-          </div>
-          <div className="fixed bottom-4 left-8 z-50 hidden sm:block">
-            <button
-              onClick={() => { if (mainRef.current) { mainRef.current.scrollTo({ top: 0, behavior: 'smooth' }); } }}
-              className="text-sm px-4 py-2 rounded text-gray-700 dark:text-gray-200 hover:underline transition-colors"
-            >
-              Back to top
-            </button>
           </div>
         </>
       )}
