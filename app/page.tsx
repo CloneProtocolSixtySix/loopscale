@@ -114,6 +114,14 @@ export default function Home() {
         {/* Theme Toggle */}
         <div className="fixed top-8 left-0 right-0 flex justify-between items-center px-8 z-50">
           <span className="flex items-center text-lg sm:text-2xl text-black dark:text-white transition-all duration-300">
+            <Image
+              src="/images/loopscale.png"
+              alt="Loopscale Logo"
+              width={32}
+              height={32}
+              className="mr-2"
+              priority
+            />
             <span
               className="font-normal text-xl sm:text-2xl md:text-3xl text-black dark:text-white transition-all duration-300"
               style={{
@@ -231,7 +239,7 @@ export default function Home() {
                       <div className="text-base text-gray-400 dark:text-gray-400 mt-1">Recognize patterns and trigger actions.</div>
                     </li>
                     <li className="px-2 py-1">
-                      <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">⊙</span> Focus
+                      <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">⊹</span> Focus
                       <div className="text-base text-gray-400 dark:text-gray-400 mt-1">Prioritize tasks and surface what matters.</div>
                     </li>
                     <li className="px-2 py-1">
