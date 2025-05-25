@@ -121,6 +121,7 @@ export default function Home() {
               height={24}
               className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 mr-2 object-contain dark:invert-0 invert"
               priority
+              unoptimized
             />
             <span
               className="font-normal text-xl sm:text-2xl md:text-3xl text-black dark:text-white transition-all duration-300"
