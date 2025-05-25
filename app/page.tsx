@@ -114,7 +114,7 @@ export default function Home() {
         {/* Theme Toggle */}
         <div className="fixed top-8 left-0 right-0 flex justify-between items-center px-8 z-50">
           <span className="flex items-center text-lg sm:text-2xl text-black dark:text-white transition-all duration-300">
-            <span className="mr-1 text-lg sm:text-xl md:text-2xl">⌘</span>
+            <span className="mr-1 text-base sm:text-lg md:text-xl">⌘</span>
             <span
               className="font-normal text-base sm:text-lg md:text-xl text-black dark:text-white transition-all duration-300"
               style={{
@@ -123,7 +123,7 @@ export default function Home() {
                 transition: 'opacity 0.3s',
               }}
             >
-              Loopscale
+            Loopscale
             </span>
           </span>
           <button
@@ -137,10 +137,10 @@ export default function Home() {
         <section id="vision" className="min-h-screen flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-1">
           <div className="mb-16">
             <div className="text-base sm:text-lg font-light text-center mt-8 mb-10">
-              <span className="text-black dark:text-white">A research-led venture</span><span className="inline-block animate-blink align-middle text-gray-400" style={{fontSize: '0.7em'}}>&#9608;</span>
+              <span className="text-black dark:text-white">A research-led studio</span><span className="inline-block animate-blink align-middle text-gray-400" style={{fontSize: '0.7em'}}>&#9608;</span>
             </div>
-            <p className="text-4xl sm:text-6xl font-extralight text-black dark:text-white text-center">
-              We're <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">refining</span><br />frontier AI.
+            <p className="text-4xl sm:text-6xl font-light text-black dark:text-white text-center">
+              We're <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">refining</span> frontier AI into <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">usable</span> tools.
             </p>
           </div>
         </section>
@@ -148,7 +148,7 @@ export default function Home() {
         {/* Main Content */}
         <section id="solution" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-1">
           <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white">
-            We envision a future where AI-driven tools are defined by anticipatory interactions—seamlessly molding frontier models into reliable coworkers that enhance operational capabilities.
+            The future of AI-driven tools is defined by anticipatory interactions—seamlessly molding models into reliable coworkers that enhance operational capabilities.
             <br />
             <br />
             Introducing:
@@ -172,7 +172,7 @@ export default function Home() {
             </div>
             <div className="w-px h-8 sm:h-12 bg-gray-400 dark:bg-gray-700 mx-2 sm:mx-6" />
             <div className="flex-1 flex items-center">
-              <span className="text-lg sm:text-xl md:text-2xl font-normal text-black dark:text-white">Personalized<br />Adaptive<br />Conversational</span>
+              <span className="text-lg sm:text-xl md:text-2xl font-light text-black dark:text-white">Personalized<br />Adaptive<br />Conversational</span>
             </div>
           </div>
         </section>
@@ -198,7 +198,7 @@ export default function Home() {
               By partnering with select clients in pilot, we craft bespoke <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">IX</span> tools that deliver real strategic value.
               </p>
               <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white">
-                In parallel, we're pioneering a product for broader applications. If you're interested in becoming an early adopter, please fill out this <a href="https://tally.so/r/mRla1p" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-600 dark:hover:text-blue-400 transition-colors">form</a>.
+                In parallel, we're pioneering a product for broader applications. If you'd like to becoming an early adopter, please fill out this <a href="https://tally.so/r/mRla1p" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-600 dark:hover:text-blue-400 transition-colors">form</a>.
               </p>
 
               {/* Capabilities Accordion */}
@@ -314,7 +314,7 @@ export default function Home() {
           <section id="about" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-1">
             <div className="space-y-4">
               <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white">
-                While Loopscale is still in its early stages, we believe that if we are successful, <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">IX</span>-powered products will create noticeable results across multiple industries. This makes us extremely excited to work on this. Our goal is to assemble a team of relentless problem solvers and shape the next phase of Generative AI. We have an opportunity to build a generational company.
+                While Loopscale is still in its early stages, we believe that if we are successful, <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">IX</span>-powered products will create noticeable results across multiple industries. This makes us extremely excited to work on this. Our goal is to assemble a team of relentless problem solvers and shape the next phase of Generative AI. We have an opportunity to build a generational studio.
               </p>
             </div>
           </section>
