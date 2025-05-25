@@ -1,5 +1,6 @@
 import React from 'react';
 import type { Metadata } from 'next';
+import { altform } from './fonts';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -12,8 +13,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className="font-sans">{children}</body>
+    <html lang="en" className={`${altform.variable} antialiased`}>
+      <body className={`${altform.className} antialiased`}>{children}</body>
     </html>
   );
 } 
