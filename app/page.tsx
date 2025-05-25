@@ -101,7 +101,7 @@ export default function Home() {
 
   const progress = (currentSection / (totalSections - 1)) * 100;
 
-  const handleAccordionKey = (e, toggleFn) => {
+  const handleAccordionKey = (e: React.KeyboardEvent, toggleFn: (fn: (open: boolean) => boolean) => void) => {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
       toggleFn((open) => !open);
