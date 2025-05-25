@@ -114,19 +114,9 @@ export default function Home() {
         {/* Theme Toggle */}
         <div className="fixed top-8 left-0 right-0 flex justify-between items-center px-8 z-50">
           <span className="flex items-center text-lg sm:text-2xl text-black dark:text-white transition-all duration-300">
-            <Image
-              src="/images/loopscale.png"
-              alt="Loopscale Logo"
-              width={32}
-              height={32}
-              className="mr-2"
-              priority
-              onError={(e) => {
-                console.error('Error loading image:', e);
-              }}
-            />
+            <span className="mr-1 text-lg sm:text-xl md:text-2xl">⌘</span>
             <span
-              className="font-normal text-xl sm:text-2xl md:text-3xl text-black dark:text-white transition-all duration-300"
+              className="font-normal text-base sm:text-lg md:text-xl text-black dark:text-white transition-all duration-300"
               style={{
                 opacity: hasScrolled ? 0 : 1,
                 display: 'inline-block',
@@ -325,9 +315,6 @@ export default function Home() {
             <div className="space-y-4">
               <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white">
                 While Loopscale is still in its early stages, we believe that if we are successful, <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">IX</span>-powered products will create noticeable results across multiple industries. This makes us extremely excited to work on this. Our goal is to assemble a team of relentless problem solvers and shape the next phase of Generative AI. We have an opportunity to build a generational company.
-                <br />
-                <br />
-                — <a href="https://www.linkedin.com/in/yannick-bruderlein-423b0226a" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Yannick</a>
               </p>
             </div>
           </section>
