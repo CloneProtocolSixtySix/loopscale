@@ -121,7 +121,6 @@ export default function Home() {
               height={32}
               className="mr-2"
               priority
-              unoptimized
               onError={(e) => {
                 console.error('Error loading image:', e);
               }}
