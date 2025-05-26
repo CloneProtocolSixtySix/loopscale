@@ -122,8 +122,7 @@ export default function Home() {
                 display: 'inline-block',
                 transition: 'opacity 0.3s',
               }}
-            >
-            Loopscale
+            >Loopscale
             </span>
           </span>
           <button
@@ -183,7 +182,7 @@ export default function Home() {
               <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">Intelligent Experiences (IX)</span> are configured to client specifications, trained on enterprise data, and housed within human-centred interfaces.
             </p>
             <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white">
-              Once deployed, these tools can support everything from intricate task automations to complex team workflows by matching queries with precision, and through iterative learning, <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">IX</span>-powered products are capable of handling chaotic environments where system maintenance is paramount, freeing professionals to focus on higher-leverage and more intellectually stimulating problems.
+              Once deployed, these tools can handle everything from intricate task automation to complex team workflows by precisely matching user queries. Through iterative learning, <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">IX</span>-powered products adapt to chaotic environments where maintaining systems is critical, freeing professionals to concentrate on higher-leverage and more intellectually demanding work.
             </p>
           </div>
         </section>
