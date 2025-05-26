@@ -114,7 +114,7 @@ export default function Home() {
         {/* Theme Toggle */}
         <div className="fixed top-8 left-0 right-0 flex justify-between items-center px-8 z-50">
           <span className="flex items-center text-lg sm:text-2xl text-black dark:text-white transition-all duration-300">
-            <span className="mr-1 text-lg sm:text-xl">ᦠ</span>
+            <span className="mr-1 text-2xl sm:text-3xl font-extralight transform rotate-45 inline-block">∞</span>
             <span
               className="font-normal text-base sm:text-lg md:text-xl text-black dark:text-white transition-all duration-300"
               style={{
@@ -182,7 +182,7 @@ export default function Home() {
               <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">Intelligent Experiences (IX)</span> are configured to client specifications, trained on enterprise data, and housed within human-centred interfaces.
             </p>
             <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white">
-              Once deployed, these tools can handle everything from intricate task automation to complex team workflows by precisely matching user queries. Through iterative learning, <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">IX</span>-powered products adapt to chaotic environments where maintaining systems is critical, freeing professionals to concentrate on higher-leverage and more intellectually demanding work.
+              Once deployed, <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">IX</span> tools can support everything from intricate task automation to complex team workflows by precisely matching user queries. Through iterative learning, <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">IX</span>-powered products can handle chaotic environments where maintaining systems is critical, freeing professionals to concentrate on higher-leverage and more intellectually stimulating work.
             </p>
           </div>
         </section>
