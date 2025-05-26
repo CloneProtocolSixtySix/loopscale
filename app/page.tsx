@@ -114,7 +114,7 @@ export default function Home() {
         {/* Theme Toggle */}
         <div className="fixed top-8 left-0 right-0 flex justify-between items-center px-8 z-50">
           <span className="flex items-center text-lg sm:text-2xl text-black dark:text-white transition-all duration-300">
-            <span className="mr-1 text-base sm:text-lg md:text-xl">⌘</span>
+            <span className="mr-1 text-lg sm:text-xl">ᦠ</span>
             <span
               className="font-normal text-base sm:text-lg md:text-xl text-black dark:text-white transition-all duration-300"
               style={{
@@ -128,7 +128,7 @@ export default function Home() {
           </span>
           <button
             onClick={toggleTheme}
-            className="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-black dark:bg-white transition-colors duration-300 cursor-pointer self-center mt-1"
+            className="w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-black dark:bg-white transition-colors duration-300 cursor-pointer self-center mt-1"
             aria-label="Toggle theme"
           />
         </div>
@@ -137,7 +137,7 @@ export default function Home() {
         <section id="vision" className="min-h-screen flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-1">
           <div className="mb-16">
             <div className="text-base sm:text-lg font-light text-center mt-8 mb-10">
-              <span className="text-black dark:text-white">A research-led studio</span><span className="inline-block animate-blink align-middle text-gray-400" style={{fontSize: '0.7em'}}>&#9608;</span>
+              <span className="text-black dark:text-white">A research-led design studio</span><span className="inline-block animate-blink align-middle text-gray-400" style={{fontSize: '0.7em'}}>&#9608;</span>
             </div>
             <p className="text-4xl sm:text-6xl font-light text-black dark:text-white text-center">
               We're <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">refining</span> frontier AI into <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">usable</span> tools.
@@ -148,7 +148,7 @@ export default function Home() {
         {/* Main Content */}
         <section id="solution" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-1">
           <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white">
-            The future of AI-driven tools is defined by anticipatory interactions—seamlessly molding models into reliable coworkers that enhance operational capabilities.
+          There exists a disconnect between the multifaceted capabilities of contemporary AI models and the constrained means through which non-technical users can interact with them. Our work seeks to address this limitation by designing intuitive access to advanced configurations. The future of AI-driven systems will be defined by anticipatory interactions, seamlessly molding models into reliable coworkers that increase operational efficiency, navigate complexity, and uncover solutions.
             <br />
             <br />
             Introducing:
@@ -183,10 +183,7 @@ export default function Home() {
               <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">Intelligent Experiences (IX)</span> are configured to client specifications, trained on enterprise data, and housed within human-centred interfaces.
             </p>
             <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white">
-              Once deployed, these tools can support everything from intricate task automations to complex team workflows by matching queries with precision.
-            </p>
-            <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white">
-              Through iterative learning, <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">IX</span>-powered products are capable of handling chaotic environments where system maintenance is paramount—freeing professionals to focus on higher-leverage and more intellectually stimulating problems.
+              Once deployed, these tools can support everything from intricate task automations to complex team workflows by matching queries with precision, and through iterative learning, <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">IX</span>-powered products are capable of handling chaotic environments where system maintenance is paramount, freeing professionals to focus on higher-leverage and more intellectually stimulating problems.
             </p>
           </div>
         </section>
@@ -195,10 +192,7 @@ export default function Home() {
           <section id="contact" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-1">
             <div className="space-y-4">
               <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white">
-              By partnering with select clients in pilot, we craft bespoke <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">IX</span> tools that deliver real strategic value.
-              </p>
-              <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white">
-                In parallel, we're pioneering a product for broader applications. If you'd like to becoming an early adopter, please fill out this <a href="https://tally.so/r/mRla1p" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-600 dark:hover:text-blue-400 transition-colors">form</a>.
+                We partner with select clients, crafting bespoke <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">IX</span> tools that deliver real strategic value. In parallel, we're pioneering a product for broader applications. If you'd like to become an early adopter, please fill out this <a href="https://tally.so/r/mRla1p" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-600 dark:hover:text-blue-400 transition-colors">form</a>.
               </p>
 
               {/* Capabilities Accordion */}
@@ -330,11 +324,9 @@ export default function Home() {
         </section>
       </div>
       {atBottom && (
-        <>
-          <div className="fixed bottom-4 right-8 z-50 text-sm text-gray-400 dark:text-gray-400">
-            © 2025 Loopscale AI · <a href="mailto:hello@loopscale.ai" className="underline hover:text-blue-600 dark:hover:text-blue-400">hello@loopscale.ai</a> · Montreal
-          </div>
-        </>
+        <div className="fixed bottom-4 right-8 z-50 text-sm text-gray-400 dark:text-gray-400">
+          © 2025 Loopscale AI · <a href="mailto:hello@loopscale.ai" className="underline hover:text-blue-600 dark:hover:text-blue-400">hello@loopscale.ai</a> · Montreal
+        </div>
       )}
     </main>
   );
