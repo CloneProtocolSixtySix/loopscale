@@ -114,7 +114,7 @@ export default function Home() {
         {/* Theme Toggle */}
         <div className="fixed top-8 left-0 right-0 flex justify-between items-center px-8 z-50">
           <span className="flex items-center text-lg sm:text-2xl text-black dark:text-white transition-all duration-300">
-            <span className="mr-1 text-2xl sm:text-3xl font-extralight transform rotate-45 inline-block">∞</span>
+            <span className="mr-2 text-base sm:text-lg md:text-xl font-extralight transform rotate-180 inline-block">⁞⁞⁞</span>
             <span
               className="font-normal text-base sm:text-lg md:text-xl text-black dark:text-white transition-all duration-300"
               style={{
@@ -122,7 +122,7 @@ export default function Home() {
                 display: 'inline-block',
                 transition: 'opacity 0.3s',
               }}
-            >Loopscale
+            >Alongside Labs
             </span>
           </span>
           <button
@@ -147,7 +147,7 @@ export default function Home() {
         {/* Main Content */}
         <section id="solution" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-1">
           <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white">
-          There exists a disconnect between the multifaceted capabilities of contemporary AI models and the constrained means through which non-technical users can interact with them. Our work seeks to address this limitation by designing intuitive access to advanced configurations. The future of AI-driven systems will be defined by anticipatory interactions, seamlessly molding models into reliable coworkers that increase operational efficiency, navigate complexity, and uncover solutions.
+          There exists a disconnect between the multifaceted capabilities of contemporary AI models and the constrained means through which non-specialist or resource-limited teams can work with them. Our work seeks to address this limitation by designing intuitive access to advanced configurations. The future of AI tools will be defined by anticipatory interactions, seamlessly molding models into reliable coworkers that increase operational efficiency, navigate complexity, and uncover solutions.
             <br />
             <br />
             Introducing:
@@ -307,7 +307,7 @@ export default function Home() {
           <section id="about" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-1">
             <div className="space-y-4">
               <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white">
-                While Loopscale is still in its early stages, we believe that if we are successful, <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">IX</span>-powered products will create noticeable results across multiple industries. This makes us extremely excited to work on this. Our goal is to assemble a team of relentless problem solvers and shape the next phase of Generative AI. We have an opportunity to build a generational studio.
+                While Alongside Labs is still in its early stages, we believe that if we are successful, <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">IX</span>-powered products will create noticeable results across multiple industries. This makes us extremely excited to work on this. Our goal is to assemble a team of relentless problem solvers and shape the next phase of Generative AI. We have an opportunity to build a generational studio.
               </p>
             </div>
           </section>
