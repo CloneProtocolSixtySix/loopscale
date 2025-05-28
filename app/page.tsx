@@ -109,14 +109,14 @@ export default function Home() {
   };
 
   return (
-    <main ref={mainRef} className="h-screen overflow-y-scroll scroll-smooth bg-white dark:bg-black transition-colors duration-300 pb-32">
+    <main ref={mainRef} className="h-screen overflow-y-scroll scroll-smooth bg-[#F3F3F5] dark:bg-black transition-colors duration-300 pb-32">
       <div className="max-w-2xl w-full px-6 mx-auto">
         {/* Theme Toggle */}
-        <div className="fixed top-8 left-0 right-0 flex justify-between items-center px-8 z-50">
+        <div className="fixed top-10 left-0 right-0 flex justify-between items-center px-8 z-50">
           <span className="flex items-center text-lg sm:text-2xl text-black dark:text-white transition-all duration-300">
-            <span className="mr-2 text-base sm:text-lg md:text-xl font-extralight transform rotate-180 inline-block">⁞⁞⁞</span>
+            <span className="mr-2 text-base sm:text-lg md:text-xl font-extralight transform inline-block text-black dark:text-white font-['Playfair_Display']">⁞⁞⁞</span>
             <span
-              className="font-normal text-base sm:text-lg md:text-xl text-black dark:text-white transition-all duration-300"
+              className="font-['Playfair_Display'] text-base sm:text-lg md:text-xl text-black dark:text-white transition-all duration-300"
               style={{
                 opacity: hasScrolled ? 0 : 1,
                 display: 'inline-block',
@@ -136,9 +136,9 @@ export default function Home() {
         <section id="vision" className="min-h-screen flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-1">
           <div className="mb-16">
             <div className="text-base sm:text-lg font-light text-center mt-8 mb-10">
-              <span className="text-black dark:text-white">A research-led design studio</span><span className="inline-block animate-blink align-middle text-gray-400" style={{fontSize: '0.7em'}}>&#9608;</span>
+              <span className="text-black dark:text-white">A research-led design & technology company</span><span className="inline-block animate-blink align-middle text-black dark:text-white" style={{fontSize: '0.7em'}}>&#9608;</span>
             </div>
-            <p className="text-4xl sm:text-6xl font-light text-black dark:text-white text-center">
+            <p className="text-4xl sm:text-6xl font-thin text-black dark:text-white text-center font-['Playfair_Display']">
               We're <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">refining</span> frontier AI into <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">usable</span> tools.
             </p>
           </div>
@@ -147,7 +147,7 @@ export default function Home() {
         {/* Main Content */}
         <section id="solution" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-1">
           <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white">
-          There exists a disconnect between the multifaceted capabilities of contemporary AI models and the constrained means through which non-specialist or resource-limited teams can work with them. Our work seeks to address this limitation by designing intuitive access to advanced configurations. The future of AI tools will be defined by anticipatory interactions, seamlessly molding models into reliable coworkers that increase operational efficiency, navigate complexity, and uncover solutions.
+          There exists a <span className="text-black dark:text-white">disconnect between the multifaceted capabilities of contemporary AI/ML models</span> and the <span className="text-black dark:text-white">non-specialist or resource-limited teams</span> can work with them. Our work seeks to address this limitation by designing <span className="text-black dark:text-white">intuitive access to advanced configurations</span>. The future of AI tools will be defined by <span className="text-black dark:text-white">anticipatory interactions</span>, seamlessly molding models into <span className="text-black dark:text-white">reliable coworkers</span> that <span className="text-black dark:text-white">increase operational efficiency</span>, <span className="text-black dark:text-white">navigate complexity</span>, and <span className="text-black dark:text-white">uncover solutions</span>.
             <br />
             <br />
             Introducing:
@@ -164,14 +164,14 @@ export default function Home() {
                 </p>
               </div>
               <div className="relative z-10">
-                <p className="text-[2.5rem] sm:text-[3.5rem] md:text-[6rem] font-extralight text-black dark:text-white text-left leading-none">
+                <p className="text-4xl sm:text-6xl font-light text-black dark:text-white text-left leading-none font-['Playfair_Display'] mt-10">
                   IX
                 </p>
               </div>
             </div>
             <div className="w-px h-8 sm:h-12 bg-gray-400 dark:bg-gray-700 mx-2 sm:mx-6" />
             <div className="flex-1 flex items-center">
-              <span className="text-lg sm:text-xl md:text-2xl font-light text-black dark:text-white">Personalized<br />Adaptive<br />Conversational</span>
+              <span className="font-['Playfair_Display'] text-base sm:text-lg md:text-xl text-black dark:text-white">Personalized<br />Adaptive<br />Conversational</span>
             </div>
           </div>
         </section>
@@ -179,10 +179,10 @@ export default function Home() {
         <section id="about" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-1">
           <div className="space-y-4">
             <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white">
-              <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">Intelligent Experiences (IX)</span> are configured to client specifications, trained on enterprise data, and housed within human-centred interfaces.
+              <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">Intelligent Experiences (IX)</span> are <span className="text-black dark:text-white">configured to client specifications</span>, <span className="text-black dark:text-white">trained on enterprise data</span>, and housed within <span className="text-black dark:text-white">human-centred interfaces</span>.
             </p>
             <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white">
-              Once deployed, <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">IX</span> tools can support everything from intricate task automation to complex team workflows by precisely matching user queries. Through iterative learning, <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">IX</span>-powered products can handle chaotic environments where maintaining systems is critical, freeing professionals to concentrate on higher-leverage and more intellectually stimulating work.
+              Once deployed, <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">IX</span> tools can support everything from <span className="text-black dark:text-white">intricate task automation</span> to <span className="text-black dark:text-white">complex team workflows</span> by <span className="text-black dark:text-white">precisely matching user queries</span>. Through <span className="text-black dark:text-white">iterative learning</span>, <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">IX</span>-powered products can handle <span className="text-black dark:text-white">chaotic environments</span> where <span className="text-black dark:text-white">maintaining systems is critical</span>, freeing professionals to concentrate on <span className="text-black dark:text-white">higher-leverage and more intellectually stimulating work</span>.
             </p>
           </div>
         </section>
@@ -191,7 +191,7 @@ export default function Home() {
           <section id="contact" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-1">
             <div className="space-y-4">
               <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white">
-                We partner with select clients, crafting bespoke <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">IX</span> tools that deliver real strategic value. In parallel, we're pioneering a product for broader applications. If you'd like to become an early adopter, please fill out this <a href="https://tally.so/r/mRla1p" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-600 dark:hover:text-blue-400 transition-colors">form</a>.
+                We partner with select clients, crafting <span className="text-black dark:text-white">bespoke <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">IX</span> tools</span> that deliver <span className="text-black dark:text-white">real strategic value</span>. In parallel, we're pioneering a product for <span className="text-black dark:text-white">broader applications</span>. If you'd like to become an <span className="text-black dark:text-white">early adopter</span>, please fill out this <a href="https://tally.so/r/mRla1p" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-600 dark:hover:text-blue-400 transition-colors">form</a>.
               </p>
 
               {/* Capabilities Accordion */}
@@ -222,23 +222,27 @@ export default function Home() {
                   <ul className="bg-transparent text-black dark:text-white">
                     <li className="px-2 py-1">
                       <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">✦</span> Automate
-                      <div className="text-base text-gray-400 dark:text-gray-400 mt-1">Recognize patterns and trigger actions.</div>
+                      <div className="text-base text-gray-500 dark:text-gray-400 mt-1">Recognize patterns and trigger actions.</div>
+                    </li>
+                    <li className="px-2 py-1">
+                      <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">𖡎</span> Remember
+                      <div className="text-base text-gray-500 dark:text-gray-400 mt-1">Store and recall information and instructions.</div>
                     </li>
                     <li className="px-2 py-1">
                       <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">⊹</span> Focus
-                      <div className="text-base text-gray-400 dark:text-gray-400 mt-1">Prioritize tasks and surface what matters.</div>
+                      <div className="text-base text-gray-500 dark:text-gray-400 mt-1">Prioritize tasks and surface what matters.</div>
                     </li>
                     <li className="px-2 py-1">
                       <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">⚒</span> Repair
-                      <div className="text-base text-gray-400 dark:text-gray-400 mt-1">Identify discrepancies and fix issues.</div>
+                      <div className="text-base text-gray-500 dark:text-gray-400 mt-1">Identify discrepancies and fix issues.</div>
                     </li>
                     <li className="px-2 py-1">
                       <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">↔</span> Move
-                      <div className="text-base text-gray-400 dark:text-gray-400 mt-1">Streamline transitions and workflows.</div>
+                      <div className="text-base text-gray-500 dark:text-gray-400 mt-1">Streamline transitions and workflows.</div>
                     </li>
                     <li className="px-2 py-1">
                       <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">▣</span> Display
-                      <div className="text-base text-gray-400 dark:text-gray-400 mt-1"> Suggest improvements, and visualize insights.</div>
+                      <div className="text-base text-gray-500 dark:text-gray-400 mt-1">Suggest improvements, and visualize insights.</div>
                     </li>
                   </ul>
                 </div>
@@ -276,23 +280,23 @@ export default function Home() {
                   <ul className="bg-transparent text-black dark:text-white">
                     <li className="px-2 py-1">
                       <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">⛶</span> Research & Development Ops
-                      <div className="text-base text-gray-400 dark:text-gray-400 mt-1">Generate structured insights and surface patterns.</div>
+                      <div className="text-base text-gray-500 dark:text-gray-400 mt-1">Generate structured insights and surface patterns.</div>
                     </li>
                     <li className="px-2 py-1">
                       <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">?</span> Internal &amp; External Support
-                      <div className="text-base text-gray-400 dark:text-gray-400 mt-1">Query or request for help make better decisions.</div>
+                      <div className="text-base text-gray-500 dark:text-gray-400 mt-1">Query or request for help make better decisions.</div>
                     </li>
                     <li className="px-2 py-1">
                       <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">⧉</span> Deployment & Maintenance Ops
-                      <div className="text-base text-gray-400 dark:text-gray-400 mt-1">Diagnose issues and sustain performance.</div>
+                      <div className="text-base text-gray-500 dark:text-gray-400 mt-1">Diagnose issues and sustain performance.</div>
                     </li>
                     <li className="px-2 py-1">
                       <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">≡</span> Workflow Orchestration &amp; Execution
-                      <div className="text-base text-gray-400 dark:text-gray-400 mt-1">Coordinate actions across layered processes.</div>
+                      <div className="text-base text-gray-500 dark:text-gray-400 mt-1">Coordinate actions across layered processes.</div>
                     </li>
                     <li className="px-2 py-1">
                       <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">§</span> Regulatory &amp; Policy
-                      <div className="text-base text-gray-400 dark:text-gray-400 mt-1">Align outputs with legal and policy frameworks.</div>
+                      <div className="text-base text-gray-500 dark:text-gray-400 mt-1">Align outputs with legal and policy frameworks.</div>
                     </li>
                   </ul>
                 </div>
@@ -307,7 +311,7 @@ export default function Home() {
           <section id="about" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-1">
             <div className="space-y-4">
               <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white">
-                While Alongside Labs is still in its early stages, we believe that if we are successful, <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">IX</span>-powered products will create noticeable results across multiple industries. This makes us extremely excited to work on this. Our goal is to assemble a team of relentless problem solvers and shape the next phase of Generative AI. We have an opportunity to build a generational studio.
+                While Alongside Labs is still in its <span className="text-black dark:text-white">early stages</span>, we believe that if we are successful, <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">IX</span>-powered products will create <span className="text-black dark:text-white">noticeable results across multiple industries</span>. This makes us <span className="text-black dark:text-white">extremely excited to work on this</span>. Our goal is to assemble a team of <span className="text-black dark:text-white">relentless problem solvers</span> and shape the <span className="text-black dark:text-white">next phase of AI tools</span>. We have an opportunity to build a <span className="text-black dark:text-white">generational studio</span>.
               </p>
             </div>
           </section>
@@ -315,7 +319,7 @@ export default function Home() {
           <section id="contact" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-1">
             <div className="space-y-4">
               <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white">
-                If you're interested in learning more about our work or joining the team, feel free to <a href="mailto:hello@loopscale.ai" className="underline hover:text-blue-600 dark:hover:text-blue-400 transition-colors">reach out</a>.
+                If you're <span className="text-black dark:text-white">interested in learning more</span> about our work or <span className="text-black dark:text-white">joining the team</span>, feel free to <a href="mailto:hello@alongsidelabs.com" className="text-black dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors underline">reach out</a>.
               </p>
             </div>
           </section>
@@ -323,8 +327,8 @@ export default function Home() {
         </section>
       </div>
       {atBottom && (
-        <div className="fixed bottom-4 right-8 z-50 text-sm text-gray-400 dark:text-gray-400">
-          © 2025 Loopscale AI · <a href="mailto:hello@loopscale.ai" className="underline hover:text-blue-600 dark:hover:text-blue-400">hello@loopscale.ai</a> · Montreal
+        <div className="fixed bottom-4 right-8 z-50 text-sm text-black dark:text-white">
+          © 2025 Alongside Labs · <a href="mailto:hello@alongsidelabs.com" className="underline hover:text-blue-600 dark:hover:text-blue-400">hello@alongsidelabs.com</a> · Montreal
         </div>
       )}
     </main>
