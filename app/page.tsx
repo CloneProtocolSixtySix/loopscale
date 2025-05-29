@@ -110,6 +110,12 @@ export default function Home() {
 
   return (
     <main ref={mainRef} className="h-screen overflow-y-scroll scroll-smooth bg-[#F3F3F5] dark:bg-black transition-colors duration-300 pb-32">
+      {/* Background Pattern */}
+      <div className="fixed inset-0 flex items-center justify-center pointer-events-none z-0">
+        <div className="text-[600px] text-black/10 dark:text-white/10 font-['Playfair_Display'] blur-[400px] select-none">
+          ⁞⁞⁞
+        </div>
+      </div>
       <div className="max-w-2xl w-full px-6 mx-auto">
         {/* Theme Toggle */}
         <div className="fixed top-10 left-0 right-0 flex justify-between items-center px-8 z-50">
@@ -136,7 +142,7 @@ export default function Home() {
         <section id="vision" className="min-h-screen flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-1">
           <div className="mb-16">
             <div className="text-base sm:text-lg font-light text-center mt-8 mb-10">
-              <span className="text-black dark:text-white">A research-led design & technology company</span><span className="inline-block animate-blink align-middle text-black dark:text-white" style={{fontSize: '0.7em'}}>&#9608;</span>
+              <span className="text-black dark:text-white">A research-led design project</span><span className="inline-block animate-blink align-middle text-gray-400 dark:text-gray-500" style={{fontSize: '0.7em'}}>&#9608;</span>
             </div>
             <p className="text-4xl sm:text-6xl font-thin text-black dark:text-white text-center font-['Playfair_Display']">
               We're <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">refining</span> frontier AI into <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">usable</span> tools.
@@ -147,7 +153,7 @@ export default function Home() {
         {/* Main Content */}
         <section id="solution" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-1">
           <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white">
-          There exists a <span className="text-black dark:text-white">disconnect between the multifaceted capabilities of contemporary AI/ML models</span> and the <span className="text-black dark:text-white">non-specialist or resource-limited teams</span> can work with them. Our work seeks to address this limitation by designing <span className="text-black dark:text-white">intuitive access to advanced configurations</span>. The future of AI tools will be defined by <span className="text-black dark:text-white">anticipatory interactions</span>, seamlessly molding models into <span className="text-black dark:text-white">reliable coworkers</span> that <span className="text-black dark:text-white">increase operational efficiency</span>, <span className="text-black dark:text-white">navigate complexity</span>, and <span className="text-black dark:text-white">uncover solutions</span>.
+          There exists a <span className="text-black dark:text-white">disconnect between the multifaceted capabilities of contemporary AI/ML models</span> and the <span className="text-black dark:text-white">non-specialist or resource-limited team's</span> ability to engange with them. Our work seeks to address this limitation by designing <span className="text-black dark:text-white">intuitive access to advanced configurations</span>. The future of AI tools will be defined by <span className="text-black dark:text-white">anticipatory interactions</span>, seamlessly molding models into <span className="text-black dark:text-white">reliable coworkers</span> that <span className="text-black dark:text-white">increase operational efficiency</span>, <span className="text-black dark:text-white">navigate complexity</span>, and <span className="text-black dark:text-white">uncover solutions</span>.
             <br />
             <br />
             Introducing:
@@ -157,14 +163,14 @@ export default function Home() {
         {/* IX Box Section */}
         <section id="work" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-1">
           <div className="flex items-center justify-start gap-4 sm:gap-8 relative">
-            <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-64 md:h-64 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 border border-black dark:border-white p-2 sm:p-4 md:p-6 flex flex-col justify-between overflow-hidden">
+            <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-64 md:h-64 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 p-2 sm:p-4 md:p-6 flex flex-col justify-between overflow-hidden">
               <div className="relative z-10">
-                <p className="text-sm sm:text-base md:text-lg font-normal text-black dark:text-white text-left leading-tight">
+                <p className="text-sm sm:text-base md:text-lg font-normal text-white dark:text-black text-left leading-tight">
                   Intelligent<br />Experiences
                 </p>
               </div>
               <div className="relative z-10">
-                <p className="text-4xl sm:text-6xl font-light text-black dark:text-white text-left leading-none font-['Playfair_Display'] mt-10">
+                <p className="text-7xl sm:text-9xl font-light text-white dark:text-black text-left leading-none mt-10 mr-6">
                   IX
                 </p>
               </div>
@@ -305,13 +311,20 @@ export default function Home() {
               <div className="w-full max-w-xs">
                 {/* Removed divider */}
               </div>
+              {/* Case Studies Link */}
+              <div className="w-full max-w-xs mt-2">
+                <div className="block text-base sm:text-lg text-gray-400 dark:text-gray-500 opacity-70 flex items-center gap-2 select-none">
+                  Case Studies <span aria-hidden="true">→</span>
+                  <span className="ml-1 px-2 py-0.5 rounded-full bg-gray-200 dark:bg-gray-700 text-xs font-medium text-gray-600 dark:text-gray-300">coming soon</span>
+                </div>
+              </div>
             </div>
           </section>
 
           <section id="about" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-1">
             <div className="space-y-4">
               <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white">
-                While Alongside Labs is still in its <span className="text-black dark:text-white">early stages</span>, we believe that if we are successful, <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">IX</span>-powered products will create <span className="text-black dark:text-white">noticeable results across multiple industries</span>. This makes us <span className="text-black dark:text-white">extremely excited to work on this</span>. Our goal is to assemble a team of <span className="text-black dark:text-white">relentless problem solvers</span> and shape the <span className="text-black dark:text-white">next phase of AI tools</span>. We have an opportunity to build a <span className="text-black dark:text-white">generational studio</span>.
+                While Alongside Labs is still in its <span className="text-black dark:text-white">early stages</span>, we believe that if we are successful, <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">IX</span>-powered products will create <span className="text-black dark:text-white">noticeable results across multiple industries</span>. This makes us <span className="text-black dark:text-white">extremely excited to work on this</span>. Our goal is to assemble a team of <span className="text-black dark:text-white">relentless problem solvers</span> and shape the <span className="text-black dark:text-white">next phase of AI tools</span>. We have an opportunity to turn this project into a <span className="text-black dark:text-white">generational company</span>.
               </p>
             </div>
           </section>
