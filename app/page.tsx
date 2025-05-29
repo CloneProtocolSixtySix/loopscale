@@ -118,7 +118,7 @@ export default function Home() {
       </div>
       <div className="max-w-2xl w-full px-6 mx-auto">
         {/* Theme Toggle */}
-        <div className="fixed top-6 left-0 right-0 flex justify-between items-center px-8 z-50">
+        <div className="fixed top-6 left-0 right-0 flex justify-between items-center px-4 sm:px-8 z-50">
           <span className="flex items-center text-lg sm:text-2xl text-black dark:text-white transition-all duration-300">
             <span className="mr-2 text-base sm:text-lg md:text-xl font-extralight transform inline-block text-black dark:text-white font-['Playfair_Display']">⁞⁞⁞</span>
             <span
