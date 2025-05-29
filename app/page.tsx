@@ -127,7 +127,7 @@ export default function Home() {
           </span>
           <button
             onClick={toggleTheme}
-            className="w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-black dark:bg-white transition-colors duration-300 cursor-pointer self-center mt-1"
+            className="w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-black dark:bg-white transition-colors duration-300 cursor-pointer self-center mt-0"
             aria-label="Toggle theme"
           />
         </div>
@@ -319,7 +319,7 @@ export default function Home() {
           <section id="contact" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-1">
             <div className="space-y-4">
               <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white">
-                If you're <span className="text-black dark:text-white">interested in learning more</span> about our work or <span className="text-black dark:text-white">joining the team</span>, feel free to <a href="mailto:hello@alongsidelabs.com" className="text-black dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors underline">reach out</a>.
+                If you're <span className="text-black dark:text-white">interested in learning more</span> about our work, feel free to <a href="mailto:hello@alongsidelabs.com" className="text-black dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors underline">reach out</a>.
               </p>
             </div>
           </section>
@@ -328,7 +328,7 @@ export default function Home() {
       </div>
       {atBottom && (
         <div className="fixed bottom-4 right-8 z-50 text-sm text-black dark:text-white">
-          © 2025 Alongside Labs · <a href="mailto:hello@alongsidelabs.com" className="underline hover:text-blue-600 dark:hover:text-blue-400">hello@alongsidelabs.com</a> · Montreal
+          © 2025 Alongside Labs · <a href="mailto:hello@alongsidelabs.com" className="underline hover:text-blue-600 dark:hover:text-blue-400">hello@alongsidelabs.com</a>
         </div>
       )}
     </main>
