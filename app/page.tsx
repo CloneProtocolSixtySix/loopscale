@@ -118,7 +118,7 @@ export default function Home() {
       </div>
       <div className="max-w-2xl w-full px-6 mx-auto">
         {/* Theme Toggle */}
-        <div className="fixed top-10 left-0 right-0 flex justify-between items-center px-8 z-50">
+        <div className="fixed top-6 left-0 right-0 flex justify-between items-center px-8 z-50">
           <span className="flex items-center text-lg sm:text-2xl text-black dark:text-white transition-all duration-300">
             <span className="mr-2 text-base sm:text-lg md:text-xl font-extralight transform inline-block text-black dark:text-white font-['Playfair_Display']">⁞⁞⁞</span>
             <span
@@ -142,7 +142,7 @@ export default function Home() {
         <section id="vision" className="min-h-screen flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-1">
           <div className="mb-16">
             <div className="text-base sm:text-lg font-light text-center mt-8 mb-10">
-              <span className="text-black dark:text-white">A research-led design project</span><span className="inline-block animate-blink align-middle text-gray-400 dark:text-gray-500" style={{fontSize: '0.7em'}}>&#9608;</span>
+              <span className="text-black dark:text-white">A research-led design & technology studio</span><span className="inline-block animate-blink align-middle text-gray-400 dark:text-gray-500" style={{fontSize: '0.7em'}}>&#9608;</span>
             </div>
             <p className="text-4xl sm:text-6xl font-thin text-black dark:text-white text-center font-['Playfair_Display']">
               We're <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">refining</span> frontier AI into <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">usable</span> tools.
@@ -153,7 +153,7 @@ export default function Home() {
         {/* Main Content */}
         <section id="solution" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-1">
           <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white">
-          There exists a <span className="text-black dark:text-white">disconnect between the multifaceted capabilities of contemporary AI/ML models</span> and the <span className="text-black dark:text-white">non-specialist or resource-limited team's</span> ability to engange with them. Our work seeks to address this limitation by designing <span className="text-black dark:text-white">intuitive access to advanced configurations</span>. The future of AI tools will be defined by <span className="text-black dark:text-white">anticipatory interactions</span>, seamlessly molding models into <span className="text-black dark:text-white">reliable coworkers</span> that <span className="text-black dark:text-white">increase operational efficiency</span>, <span className="text-black dark:text-white">navigate complexity</span>, and <span className="text-black dark:text-white">uncover solutions</span>.
+            There exists a <span className="text-black dark:text-white">disconnect between the multifaceted capabilities of contemporary AI/ML models and non-specialist or resource-limited teams' ability to engage with them.</span> Our work seeks to address this limitation by designing <span className="text-black dark:text-white">intuitive access to advanced configurations</span>. The future of AI tools will be defined by <span className="text-black dark:text-white">anticipatory interactions</span>, seamlessly molding models into <span className="text-black dark:text-white">reliable coworkers</span> that <span className="text-black dark:text-white">increase operational efficiency</span>, <span className="text-black dark:text-white">navigate complexity</span>, and <span className="text-black dark:text-white">uncover solutions</span>.
             <br />
             <br />
             Introducing:
@@ -324,7 +324,7 @@ export default function Home() {
           <section id="about" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-1">
             <div className="space-y-4">
               <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white">
-                While Alongside Labs is still in its <span className="text-black dark:text-white">early stages</span>, we believe that if we are successful, <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">IX</span>-powered products will create <span className="text-black dark:text-white">noticeable results across multiple industries</span>. This makes us <span className="text-black dark:text-white">extremely excited to work on this</span>. Our goal is to assemble a team of <span className="text-black dark:text-white">relentless problem solvers</span> and shape the <span className="text-black dark:text-white">next phase of AI tools</span>. We have an opportunity to turn this project into a <span className="text-black dark:text-white">generational company</span>.
+                While Alongside Labs is still in its <span className="text-black dark:text-white">early stages</span>, we believe that if we are successful, <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">IX</span>-powered products will create <span className="text-black dark:text-white">noticeable results across multiple industries</span>. This makes us <span className="text-black dark:text-white">extremely excited to work on this</span>. Our goal is to assemble a team of <span className="text-black dark:text-white">relentless problem solvers</span> and shape the <span className="text-black dark:text-white">next phase of AI tools</span>. We have an opportunity to build a <span className="text-black dark:text-white">generational studio</span>.
               </p>
             </div>
           </section>
@@ -340,8 +340,8 @@ export default function Home() {
         </section>
       </div>
       {atBottom && (
-        <div className="fixed bottom-4 right-8 z-50 text-sm text-black dark:text-white">
-          © 2025 Alongside Labs · <a href="mailto:hello@alongsidelabs.com" className="underline hover:text-blue-600 dark:hover:text-blue-400">hello@alongsidelabs.com</a>
+        <div className="fixed bottom-4 right-8 z-50 text-xs sm:text-sm text-black dark:text-white">
+          © 2025 Alongside Labs · <a href="mailto:hello@alongsidelabs.com" className="underline hover:text-blue-600 dark:hover:text-blue-400">hello@alongsidelabs.com</a> · Montreal
         </div>
       )}
     </main>
