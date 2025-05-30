@@ -173,16 +173,17 @@ export default function Home() {
         {/* IX Box Section */}
         <section id="work" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-1">
           <div className="flex items-center justify-start gap-4 sm:gap-8 relative">
-            <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-64 md:h-64 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 p-4 flex flex-col justify-between overflow-hidden">
-              <div className="relative z-10">
+            <div className="w-32 h-32 sm:w-44 sm:h-44 lg:w-64 lg:h-64 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 p-4 flex flex-col items-center justify-center overflow-hidden">
+              <div className="relative z-10 w-full h-full flex flex-col items-start justify-center gap-y-4 lg:gap-y-24">
                 <p className="text-sm sm:text-base md:text-lg font-normal text-white dark:text-black text-left leading-tight">
                   Intelligent Experiences
                 </p>
-              </div>
-              <div className="relative z-10">
-                <p className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-light text-white dark:text-black text-left leading-none mt-4 sm:mt-10 mr-2">
+                <span
+                  className="font-light text-white dark:text-black leading-none text-left"
+                  style={{ fontSize: 'clamp(2rem, 10vw, 7rem)' }}
+                >
                   IX
-                </p>
+                </span>
               </div>
             </div>
             <div className="w-px h-8 sm:h-12 bg-gray-400 dark:bg-gray-700 mx-2 sm:mx-6" />
