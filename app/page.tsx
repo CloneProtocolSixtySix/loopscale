@@ -47,6 +47,8 @@ export default function Home() {
   const [atBottom, setAtBottom] = useState(false);
   const [ixOpen, setIxOpen] = useState(false);
   const [useCasesOpen, setUseCasesOpen] = useState(false);
+  const [toolsOpen, setToolsOpen] = useState(true);
+  const [frameworksOpen, setFrameworksOpen] = useState(false);
 
   useEffect(() => {
     // Check if user has a theme preference in localStorage
@@ -153,7 +155,7 @@ export default function Home() {
         {/* Main Content */}
         <section id="solution" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-1">
           <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white">
-            There exists a <span className="text-black dark:text-white">disconnect between the multifaceted capabilities of contemporary AI/ML models and non-specialist or resource-limited teams' ability to engage with them.</span> Our work seeks to address this limitation by designing <span className="text-black dark:text-white">intuitive access to advanced configurations</span>. The future of AI tools will be defined by <span className="text-black dark:text-white">anticipatory interactions</span>, seamlessly molding models into <span className="text-black dark:text-white">reliable coworkers</span> that <span className="text-black dark:text-white">increase operational efficiency</span>, <span className="text-black dark:text-white">navigate complexity</span>, and <span className="text-black dark:text-white">uncover solutions</span>.
+            There exists a <span className="text-black dark:text-white">disconnect between the multifaceted capabilities of contemporary AI/ML models and non-specialist or resource-limited teams' ability to engage with them.</span> Our work seeks to address this limitation by designing <span className="text-black dark:text-white">intuitive access to advanced configurations</span>. The future of AI tools will be defined by <span className="text-black dark:text-white">anticipatory interactions</span>, seamlessly molding models into <span className="text-black dark:text-white">reliable workflow-native collaborators</span> that <span className="text-black dark:text-white">increase operational efficiency</span>, <span className="text-black dark:text-white">navigate complexity</span>, and <span className="text-black dark:text-white">uncover solutions</span>.
             <br />
             <br />
             Introducing:
@@ -170,13 +172,13 @@ export default function Home() {
                 </p>
               </div>
               <div className="relative z-10">
-                <p className="text-5xl sm:text-9xl font-light text-white dark:text-black text-left leading-none mt-4 sm:mt-10 mr-6">
+                <p className="text-5xl sm:text-9xl font-light text-white dark:text-black text-left leading-none mt-4 sm:mt-10 mr-2">
                   IX
                 </p>
               </div>
             </div>
             <div className="w-px h-8 sm:h-12 bg-gray-400 dark:bg-gray-700 mx-2 sm:mx-6" />
-            <div className="flex-1 flex items-center">
+            <div className="flex-1 flex items-start">
               <span className="font-['Playfair_Display'] text-base sm:text-lg md:text-xl text-black dark:text-white">Personalized<br />Adaptive<br />Conversational</span>
             </div>
           </div>
@@ -184,11 +186,112 @@ export default function Home() {
 
         <section id="about" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-1">
           <div className="space-y-4">
-            <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white">
-              <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">Intelligent Experiences (IX)</span> are <span className="text-black dark:text-white">configured to client specifications</span>, <span className="text-black dark:text-white">trained on enterprise data</span>, and housed within <span className="text-black dark:text-white">human-centred interfaces</span>.
+            <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white mb-2">
+              Intelligent Experiences (IX) are configured to client specifications, trained on enterprise data, and housed within human-centred interfaces.
             </p>
-            <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white">
+            <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white mb-2">
               Once deployed, <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">IX</span> tools can support everything from <span className="text-black dark:text-white">intricate task automation</span> to <span className="text-black dark:text-white">complex team workflows</span> by <span className="text-black dark:text-white">precisely matching user queries</span>. Through <span className="text-black dark:text-white">iterative learning</span>, <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">IX</span>-powered products can handle <span className="text-black dark:text-white">chaotic environments</span> where <span className="text-black dark:text-white">maintaining systems is critical</span>, freeing professionals to concentrate on <span className="text-black dark:text-white">higher-leverage and more intellectually stimulating work</span>.
+            </p>
+            <div className="w-full max-w-xs">
+              <button
+                type="button"
+                onClick={() => setToolsOpen((open) => !open)}
+                onKeyDown={(e) => handleAccordionKey(e, setToolsOpen)}
+                tabIndex={0}
+                aria-expanded={toolsOpen}
+                aria-controls="tools-panel"
+                id="tools-header"
+                className="w-full flex justify-between items-center px-0 py-2 bg-transparent text-gray-400 dark:text-gray-400 font-normal text-base sm:text-lg transition-colors focus:outline-none focus:ring-0 text-left hover:bg-transparent rounded-none"
+                style={{ letterSpacing: '0.01em' }}
+              >
+                <span className="text-left flex-1">Tools</span>
+                <span className="ml-2 text-base sm:text-lg flex-shrink-0 transition-transform duration-200">
+                  {toolsOpen ? '−' : '+'}
+                </span>
+              </button>
+              <div
+                id="tools-panel"
+                role="region"
+                aria-labelledby="tools-header"
+                className={`overflow-hidden transition-all duration-300 ease-in-out ${toolsOpen ? 'max-h-96 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'}`}
+                aria-hidden={!toolsOpen}
+              >
+                {/* Agent SVG with IX Gradient and text above it */}
+                <div className="flex flex-col items-start my-6 ml-2">
+                  <svg width="32" height="32" viewBox="0 0 71 71" fill="none" xmlns="http://www.w3.org/2000/svg" className="mb-2">
+                    <defs>
+                      <linearGradient id="ix-gradient-agent" x1="0" y1="0" x2="71" y2="71" gradientUnits="userSpaceOnUse">
+                        <stop stopColor="#3B82F6" />
+                        <stop offset="0.5" stopColor="#A78BFA" />
+                        <stop offset="1" stopColor="#EC4899" />
+                      </linearGradient>
+                    </defs>
+                    <rect x="1" y="1" width="69" height="69" stroke="url(#ix-gradient-agent)" strokeWidth="2" />
+                    <circle cx="35.5" cy="35.5" r="16.5" fill="url(#ix-gradient-agent)" />
+                  </svg>
+                  <div className="max-w-[280px]">
+                    <div className="text-base text-black dark:text-white">AI-Coworker</div>
+                    <div className="text-sm text-gray-600 dark:text-gray-300">Designed to support teams by automating tasks, answering complex queries, and adapting to evolving operational needs.</div>
+                  </div>
+                </div>
+                {/* Dashboard1 SVG with IX Gradient and text above it */}
+                <div className="flex flex-col items-start my-6 ml-2">
+                  <svg width="32" height="32" viewBox="0 0 71 71" fill="none" xmlns="http://www.w3.org/2000/svg" className="mb-2">
+                    <defs>
+                      <linearGradient id="ix-gradient-agent" x1="0" y1="0" x2="71" y2="71" gradientUnits="userSpaceOnUse">
+                        <stop stopColor="#3B82F6" />
+                        <stop offset="0.5" stopColor="#A78BFA" />
+                        <stop offset="1" stopColor="#EC4899" />
+                      </linearGradient>
+                    </defs>
+                    <path d="M35.7482 70H1V44M35.7482 70H70V26.813M35.7482 70L35.5928 26.813M35.5 1H1V22V44M35.5 1H70V26.813M35.5 1L35.5928 26.813M35.5928 26.813H70M35.5 44H1" stroke="url(#ix-gradient-agent)" strokeWidth="2" />
+                  </svg>
+                  <div className="max-w-[280px]">
+                    <div className="text-base text-black dark:text-white">Turnkey Dashboard</div>
+                    <div className="text-sm text-gray-600 dark:text-gray-300">A no-code interface for managing and monitoring AI-Coworkers, enabling performance insights, workflow automation, prompt refinement, model behavior control, and a customizable feature set.</div>
+                  </div>
+                </div>
+              </div>
+              <hr className="border-t border-gray-400 dark:border-gray-700 h-px mb-6 max-w-xs" />
+            </div>
+            <div className="w-full max-w-xs">
+              <button
+                type="button"
+                onClick={() => setFrameworksOpen((open) => !open)}
+                onKeyDown={(e) => handleAccordionKey(e, setFrameworksOpen)}
+                tabIndex={0}
+                aria-expanded={frameworksOpen}
+                aria-controls="frameworks-panel"
+                id="frameworks-header"
+                className="w-full flex justify-between items-center px-0 py-2 bg-transparent text-gray-400 dark:text-gray-400 font-normal text-base sm:text-lg transition-colors focus:outline-none focus:ring-0 text-left hover:bg-transparent rounded-none"
+                style={{ letterSpacing: '0.01em' }}
+              >
+                <span className="text-left flex-1">Frameworks</span>
+                <span className="ml-2 text-base sm:text-lg flex-shrink-0 transition-transform duration-200">
+                  {frameworksOpen ? '−' : '+'}
+                </span>
+              </button>
+              <div
+                id="frameworks-panel"
+                role="region"
+                aria-labelledby="frameworks-header"
+                className={`overflow-hidden transition-all duration-300 ease-in-out ${frameworksOpen ? 'max-h-96 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'}`}
+                aria-hidden={!frameworksOpen}
+              >
+                <div className="flex items-start my-6 ml-2">
+                  <div className="max-w-[280px]">
+                    <div className="flex items-center">
+                      <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">⛾</span>
+                      <span className="text-base text-black dark:text-white ml-2">AL Coffeehouse™</span>
+                    </div>
+                    <div className="text-sm text-gray-500 dark:text-gray-400 mt-1 max-w-[280px]">Our proprietary IX framework is purpose-built for small, retail-based establishments and fully configurable to each client's needs. It integrates a suite of interconnected tools and management systems to elevate operational efficiency, without the heavy cost of complex implementation.</div>
+                  </div>
+                </div>
+              </div>
+              <hr className="border-t border-gray-400 dark:border-gray-700 h-px mb-6 max-w-xs" />
+            </div>
+            <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white mb-2">
+              We partner with select clients, crafting <span className="text-black dark:text-white">bespoke <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">IX</span> tools</span> that deliver <span className="text-black dark:text-white">real strategic value</span>. In parallel, we're pioneering a product for <span className="text-black dark:text-white">broader applications</span>. If you'd like to become an <span className="text-black dark:text-white">early adopter</span>, please fill out this <a href="https://tally.so/r/mRla1p" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-600 dark:hover:text-blue-400 transition-colors">form</a>.
             </p>
           </div>
         </section>
@@ -196,10 +299,6 @@ export default function Home() {
         <section id="accordions" className="w-full flex flex-col items-start">
           <section id="contact" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-1">
             <div className="space-y-4">
-              <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white">
-                We partner with select clients, crafting <span className="text-black dark:text-white">bespoke <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">IX</span> tools</span> that deliver <span className="text-black dark:text-white">real strategic value</span>. In parallel, we're pioneering a product for <span className="text-black dark:text-white">broader applications</span>. If you'd like to become an <span className="text-black dark:text-white">early adopter</span>, please fill out this <a href="https://tally.so/r/mRla1p" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-600 dark:hover:text-blue-400 transition-colors">form</a>.
-              </p>
-
               {/* Capabilities Accordion */}
               <div className="w-full max-w-xs">
                 <button
@@ -222,33 +321,29 @@ export default function Home() {
                   id="ix-capabilities-panel"
                   role="region"
                   aria-labelledby="ix-capabilities-header"
-                  className={`overflow-y-auto transition-all duration-300 ease-in-out ${ixOpen ? 'max-h-96 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'}`}
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${ixOpen ? 'max-h-96 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'}`}
                   aria-hidden={!ixOpen}
                 >
                   <ul className="bg-transparent text-black dark:text-white">
                     <li className="px-2 py-1">
                       <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">✦</span> Automate
-                      <div className="text-base text-gray-500 dark:text-gray-400 mt-1">Recognize patterns and trigger actions.</div>
+                      <div className="text-sm text-gray-500 dark:text-gray-400 mt-1 max-w-[280px]">Detect patterns and trigger actions automatically.</div>
                     </li>
                     <li className="px-2 py-1">
                       <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">𖡎</span> Remember
-                      <div className="text-base text-gray-500 dark:text-gray-400 mt-1">Store and recall information and instructions.</div>
+                      <div className="text-sm text-gray-500 dark:text-gray-400 mt-1 max-w-[280px]">Store and recall data, context, and instructions.</div>
                     </li>
                     <li className="px-2 py-1">
                       <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">⊹</span> Focus
-                      <div className="text-base text-gray-500 dark:text-gray-400 mt-1">Prioritize tasks and surface what matters.</div>
+                      <div className="text-sm text-gray-500 dark:text-gray-400 mt-1 max-w-[280px]">Highlight what's important and prioritize tasks.</div>
                     </li>
                     <li className="px-2 py-1">
                       <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">⚒</span> Repair
-                      <div className="text-base text-gray-500 dark:text-gray-400 mt-1">Identify discrepancies and fix issues.</div>
+                      <div className="text-sm text-gray-500 dark:text-gray-400 mt-1 max-w-[280px]">Spot and resolve errors or inconsistencies.</div>
                     </li>
                     <li className="px-2 py-1">
                       <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">↔</span> Move
-                      <div className="text-base text-gray-500 dark:text-gray-400 mt-1">Streamline transitions and workflows.</div>
-                    </li>
-                    <li className="px-2 py-1">
-                      <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">▣</span> Display
-                      <div className="text-base text-gray-500 dark:text-gray-400 mt-1">Suggest improvements, and visualize insights.</div>
+                      <div className="text-sm text-gray-500 dark:text-gray-400 mt-1 max-w-[280px]">Enable smooth transitions across tools and tasks.</div>
                     </li>
                   </ul>
                 </div>
@@ -280,29 +375,29 @@ export default function Home() {
                   id="use-cases-panel"
                   role="region"
                   aria-labelledby="use-cases-header"
-                  className={`overflow-y-auto transition-all duration-300 ease-in-out ${useCasesOpen ? 'max-h-[500px] opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'}`}
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${useCasesOpen ? 'max-h-[500px] opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'}`}
                   aria-hidden={!useCasesOpen}
                 >
                   <ul className="bg-transparent text-black dark:text-white">
                     <li className="px-2 py-1">
-                      <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">⛶</span> Research & Development Ops
-                      <div className="text-base text-gray-500 dark:text-gray-400 mt-1">Generate structured insights and surface patterns.</div>
+                      <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">⛶</span> R&D Ops
+                      <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">Extract insights and surface key patterns.</div>
                     </li>
                     <li className="px-2 py-1">
-                      <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">?</span> Internal &amp; External Support
-                      <div className="text-base text-gray-500 dark:text-gray-400 mt-1">Query or request for help make better decisions.</div>
+                      <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">?</span> Support
+                      <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">Answer questions and guide better decisions.</div>
                     </li>
                     <li className="px-2 py-1">
-                      <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">⧉</span> Deployment & Maintenance Ops
-                      <div className="text-base text-gray-500 dark:text-gray-400 mt-1">Diagnose issues and sustain performance.</div>
+                      <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">⧉</span> Maintenance Ops
+                      <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">Monitor systems and fix issues proactively.</div>
                     </li>
                     <li className="px-2 py-1">
-                      <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">≡</span> Workflow Orchestration &amp; Execution
-                      <div className="text-base text-gray-500 dark:text-gray-400 mt-1">Coordinate actions across layered processes.</div>
+                      <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">≡</span> Workflow Execution
+                      <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">Coordinate actions across complex processes.</div>
                     </li>
                     <li className="px-2 py-1">
-                      <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">§</span> Regulatory &amp; Policy
-                      <div className="text-base text-gray-500 dark:text-gray-400 mt-1">Align outputs with legal and policy frameworks.</div>
+                      <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">§</span> Regulatory & Policy
+                      <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">Ensure outputs meet compliance standards.</div>
                     </li>
                   </ul>
                 </div>
