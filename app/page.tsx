@@ -180,7 +180,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="relative z-10">
-                <p className="text-5xl sm:text-9xl font-light text-white dark:text-black text-left leading-none mt-4 sm:mt-10 mr-2">
+                <p className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-light text-white dark:text-black text-left leading-none mt-4 sm:mt-10 mr-2">
                   IX
                 </p>
               </div>
