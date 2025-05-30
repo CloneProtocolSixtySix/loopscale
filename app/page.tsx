@@ -114,23 +114,23 @@ export default function Home() {
     <main ref={mainRef} className="h-screen overflow-y-scroll scroll-smooth bg-[#F3F3F5] dark:bg-black transition-colors duration-300 pb-32">
       {/* Background Pattern */}
       <div className="fixed inset-0 flex items-center justify-center pointer-events-none z-0">
-        <div className="text-[600px] text-black/10 dark:text-white/10 font-['Playfair_Display'] blur-[400px] select-none">
-          ⁞⁞⁞
+        <div className="text-[1000px] text-black/10 dark:text-white/10 blur-[400px] select-none" style={{ display: 'inline-block', transform: 'rotate(45deg)' }}>
+          ∞
         </div>
       </div>
       <div className="max-w-2xl w-full px-6 mx-auto">
         {/* Theme Toggle */}
         <div className="fixed top-6 left-0 right-0 flex justify-between items-center px-4 sm:px-8 z-50">
           <span className="flex items-center text-lg sm:text-2xl text-black dark:text-white transition-all duration-300">
-            <span className="mr-2 text-base sm:text-lg md:text-xl font-extralight transform inline-block text-black dark:text-white font-['Playfair_Display']">⁞⁞⁞</span>
+            <span className="mr-2 text-xl sm:text-2xl md:text-3xl font-extralight transform inline-block text-black dark:text-white" style={{ display: 'inline-block', transform: 'rotate(45deg)' }}>∞</span>
             <span
-              className="font-['Playfair_Display'] text-base sm:text-lg md:text-xl text-black dark:text-white transition-all duration-300"
+              className="text-base sm:text-lg md:text-xl text-black dark:text-white transition-all duration-300"
               style={{
                 opacity: hasScrolled ? 0 : 1,
                 display: 'inline-block',
                 transition: 'opacity 0.3s',
               }}
-            >Alongside Labs
+            >Loopscale
             </span>
           </span>
           <button
@@ -146,8 +146,8 @@ export default function Home() {
             <div className="text-base sm:text-lg font-light text-center mt-8 mb-10">
               <span className="text-black dark:text-white">A research-led design & technology studio</span><span className="inline-block animate-blink align-middle text-gray-400 dark:text-gray-500" style={{fontSize: '0.7em'}}>&#9608;</span>
             </div>
-            <p className="text-4xl sm:text-6xl font-thin text-black dark:text-white text-center font-['Playfair_Display']">
-              We're <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">refining</span> frontier AI into <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">usable</span> tools.
+            <p className="text-4xl sm:text-6xl font-thin text-black dark:text-white text-center">
+              We're <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient italic">refining</span> frontier AI into <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient italic">usable</span> tools.
             </p>
           </div>
         </section>
@@ -179,7 +179,7 @@ export default function Home() {
             </div>
             <div className="w-px h-8 sm:h-12 bg-gray-400 dark:bg-gray-700 mx-2 sm:mx-6" />
             <div className="flex-1 flex items-start">
-              <span className="font-['Playfair_Display'] text-base sm:text-lg md:text-xl text-black dark:text-white">Personalized<br />Adaptive<br />Conversational</span>
+              <span className="text-base sm:text-lg md:text-xl text-black dark:text-white">Personalized<br />Adaptive<br />Conversational</span>
             </div>
           </div>
         </section>
@@ -282,7 +282,7 @@ export default function Home() {
                   <div className="max-w-[280px]">
                     <div className="flex items-center">
                       <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">⛾</span>
-                      <span className="text-base text-black dark:text-white ml-2">AL Coffeehouse™</span>
+                      <span className="text-base text-black dark:text-white ml-2">Loopscale Coffeehouse™</span>
                     </div>
                     <div className="text-sm text-gray-500 dark:text-gray-400 mt-1 max-w-[280px]">Our proprietary IX framework is purpose-built for small, retail-based establishments and fully configurable to each client's needs. It integrates a suite of interconnected tools and management systems to elevate operational efficiency, without the heavy cost of complex implementation.</div>
                   </div>
@@ -419,7 +419,7 @@ export default function Home() {
           <section id="about" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-1">
             <div className="space-y-4">
               <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white">
-                While Alongside Labs is still in its <span className="text-black dark:text-white">early stages</span>, we believe that if we are successful, <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">IX</span>-powered products will create <span className="text-black dark:text-white">noticeable results across multiple industries</span>. This makes us <span className="text-black dark:text-white">extremely excited to work on this</span>. Our goal is to assemble a team of <span className="text-black dark:text-white">relentless problem solvers</span> and shape the <span className="text-black dark:text-white">next phase of AI tools</span>. We have an opportunity to build a <span className="text-black dark:text-white">generational studio</span>.
+                While Loopscale is still in its <span className="text-black dark:text-white">early stages</span>, we believe that if we are successful, <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">IX</span>-powered products will create <span className="text-black dark:text-white">noticeable results across multiple industries</span>. This makes us <span className="text-black dark:text-white">extremely excited to work on this</span>. Our goal is to assemble a team of <span className="text-black dark:text-white">relentless problem solvers</span> and shape the <span className="text-black dark:text-white">next phase of AI tools</span>. We have an opportunity to build a <span className="text-black dark:text-white">generational studio</span>.
               </p>
             </div>
           </section>
@@ -427,7 +427,7 @@ export default function Home() {
           <section id="contact" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-1">
             <div className="space-y-4">
               <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white">
-                If you're <span className="text-black dark:text-white">interested in learning more</span> about our work, feel free to <a href="mailto:hello@alongsidelabs.com" className="text-black dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors underline">reach out</a>.
+                If you're <span className="text-black dark:text-white">interested in learning more</span> about our work, feel free to <a href="mailto:hello@loopscale.com" className="text-black dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors underline">reach out</a>.
               </p>
             </div>
           </section>
@@ -436,7 +436,7 @@ export default function Home() {
       </div>
       {atBottom && (
         <div className="fixed bottom-4 right-8 z-50 text-xs sm:text-sm text-black dark:text-white">
-          © 2025 Alongside Labs · <a href="mailto:hello@alongsidelabs.com" className="underline hover:text-blue-600 dark:hover:text-blue-400">hello@alongsidelabs.com</a> · Montreal
+          © 2025 Loopscale · <a href="mailto:hello@loopscale.com" className="underline hover:text-blue-600 dark:hover:text-blue-400">hello@loopscale.com</a> · Montreal
         </div>
       )}
     </main>
