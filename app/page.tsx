@@ -47,7 +47,7 @@ export default function Home() {
   const [atBottom, setAtBottom] = useState(false);
   const [ixOpen, setIxOpen] = useState(false);
   const [useCasesOpen, setUseCasesOpen] = useState(false);
-  const [toolsOpen, setToolsOpen] = useState(true);
+  const [toolsOpen, setToolsOpen] = useState(false);
   const [frameworksOpen, setFrameworksOpen] = useState(false);
 
   useEffect(() => {
