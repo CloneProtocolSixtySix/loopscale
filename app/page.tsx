@@ -50,6 +50,14 @@ export default function Home() {
   const [toolsOpen, setToolsOpen] = useState(false);
   const [frameworksOpen, setFrameworksOpen] = useState(false);
 
+  // Helper to toggle accordions: open if closed, close if open
+  const openOnly = (section: 'tools' | 'frameworks' | 'capabilities' | 'usecases') => {
+    setToolsOpen((prev) => section === 'tools' ? !toolsOpen : false);
+    setFrameworksOpen((prev) => section === 'frameworks' ? !frameworksOpen : false);
+    setIxOpen((prev) => section === 'capabilities' ? !ixOpen : false);
+    setUseCasesOpen((prev) => section === 'usecases' ? !useCasesOpen : false);
+  };
+
   useEffect(() => {
     // Check if user has a theme preference in localStorage
     const savedTheme = localStorage.getItem('theme');
@@ -122,7 +130,7 @@ export default function Home() {
         {/* Theme Toggle */}
         <div className="fixed top-6 left-0 right-0 flex justify-between items-center px-4 sm:px-8 z-50">
           <span className="flex items-center text-lg sm:text-2xl text-black dark:text-white transition-all duration-300">
-            <span className="mr-2 text-xl sm:text-2xl md:text-3xl font-extralight transform inline-block text-black dark:text-white" style={{ display: 'inline-block', transform: 'rotate(45deg)' }}>∞</span>
+            <span className="mr-1 text-lg sm:text-xl md:text-2xl font-normal transform inline-block text-black dark:text-white" style={{ display: 'inline-block', transform: 'rotate(45deg)' }}>∞</span>
             <span
               className="text-base sm:text-lg md:text-xl text-black dark:text-white transition-all duration-300"
               style={{
@@ -144,7 +152,7 @@ export default function Home() {
         <section id="vision" className="min-h-screen flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-1">
           <div className="mb-16">
             <div className="text-base sm:text-lg font-light text-center mt-8 mb-10">
-              <span className="text-black dark:text-white">A research-led design & technology studio</span><span className="inline-block animate-blink align-middle text-gray-400 dark:text-gray-500" style={{fontSize: '0.7em'}}>&#9608;</span>
+              <span className="text-black dark:text-white">A research-led design studio</span><span className="inline-block animate-blink align-middle text-gray-400 dark:text-gray-500" style={{fontSize: '0.7em'}}>&#9608;</span>
             </div>
             <p className="text-4xl sm:text-6xl font-thin text-black dark:text-white text-center">
               We're <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient italic">refining</span> frontier AI into <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient italic">usable</span> tools.
@@ -168,7 +176,7 @@ export default function Home() {
             <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-64 md:h-64 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 p-2 sm:p-4 md:p-6 flex flex-col justify-between overflow-hidden">
               <div className="relative z-10">
                 <p className="text-sm sm:text-base md:text-lg font-normal text-white dark:text-black text-left leading-tight">
-                  Intelligent<br />Experiences
+                  Intelligent Experiences
                 </p>
               </div>
               <div className="relative z-10">
@@ -187,16 +195,20 @@ export default function Home() {
         <section id="about" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-1">
           <div className="space-y-4">
             <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white mb-2">
-              Intelligent Experiences (IX) are configured to client specifications, trained on enterprise data, and housed within human-centred interfaces.
+              <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">Intelligent Experiences (IX)</span> are configured to client specifications, trained on enterprise data, and housed within human-centred interfaces.
             </p>
             <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white mb-2">
               Once deployed, <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">IX</span> tools can support everything from <span className="text-black dark:text-white">intricate task automation</span> to <span className="text-black dark:text-white">complex team workflows</span> by <span className="text-black dark:text-white">precisely matching user queries</span>. Through <span className="text-black dark:text-white">iterative learning</span>, <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">IX</span>-powered products can handle <span className="text-black dark:text-white">chaotic environments</span> where <span className="text-black dark:text-white">maintaining systems is critical</span>, freeing professionals to concentrate on <span className="text-black dark:text-white">higher-leverage and more intellectually stimulating work</span>.
             </p>
-            <div className="w-full max-w-xs">
+            <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white mb-2">
+              We partner with select clients, crafting <span className="text-black dark:text-white">bespoke <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">IX</span> tools</span> that deliver <span className="text-black dark:text-white">real strategic value</span>. In parallel, we're pioneering a product for <span className="text-black dark:text-white">broader applications</span>.
+            </p>
+            <div className="w-full max-w-xs space-y-0">
+              {/* Tools Accordion */}
               <button
                 type="button"
-                onClick={() => setToolsOpen((open) => !open)}
-                onKeyDown={(e) => handleAccordionKey(e, setToolsOpen)}
+                onClick={() => openOnly('tools')}
+                onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openOnly('tools'); } }}
                 tabIndex={0}
                 aria-expanded={toolsOpen}
                 aria-controls="tools-panel"
@@ -252,13 +264,13 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <hr className="border-t border-gray-400 dark:border-gray-700 h-px mb-6 max-w-xs" />
-            </div>
-            <div className="w-full max-w-xs">
+              <hr className="border-t border-gray-400 dark:border-gray-700 h-px" />
+
+              {/* Frameworks Accordion */}
               <button
                 type="button"
-                onClick={() => setFrameworksOpen((open) => !open)}
-                onKeyDown={(e) => handleAccordionKey(e, setFrameworksOpen)}
+                onClick={() => openOnly('frameworks')}
+                onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openOnly('frameworks'); } }}
                 tabIndex={0}
                 aria-expanded={frameworksOpen}
                 aria-controls="frameworks-panel"
@@ -288,151 +300,132 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <hr className="border-t border-gray-400 dark:border-gray-700 h-px mb-6 max-w-xs" />
+              <hr className="border-t border-gray-400 dark:border-gray-700 h-px" />
+
+              {/* Capabilities Accordion */}
+              <button
+                type="button"
+                onClick={() => openOnly('capabilities')}
+                onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openOnly('capabilities'); } }}
+                tabIndex={0}
+                aria-expanded={ixOpen}
+                aria-controls="ix-capabilities-panel"
+                id="ix-capabilities-header"
+                className="w-full flex justify-between items-center px-0 py-2 bg-transparent text-gray-400 dark:text-gray-400 font-normal text-base sm:text-lg transition-colors focus:outline-none focus:ring-0 text-left hover:bg-transparent rounded-none"
+                style={{ letterSpacing: '0.01em' }}
+              >
+                <span className="text-left flex-1">Capabilities</span>
+                <span className="ml-2 text-base sm:text-lg flex-shrink-0 transition-transform duration-200">
+                  {ixOpen ? '−' : '+'}
+                </span>
+              </button>
+              <div
+                id="ix-capabilities-panel"
+                role="region"
+                aria-labelledby="ix-capabilities-header"
+                className={`overflow-hidden transition-all duration-300 ease-in-out ${ixOpen ? 'max-h-96 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'}`}
+                aria-hidden={!ixOpen}
+              >
+                <ul className="bg-transparent text-black dark:text-white">
+                  <li className="px-2 py-1">
+                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">✦</span> Automate
+                    <div className="text-sm text-gray-500 dark:text-gray-400 mt-1 max-w-[280px]">Detect patterns and trigger actions automatically.</div>
+                  </li>
+                  <li className="px-2 py-1">
+                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">𖡎</span> Remember
+                    <div className="text-sm text-gray-500 dark:text-gray-400 mt-1 max-w-[280px]">Store and recall data, context, and instructions.</div>
+                  </li>
+                  <li className="px-2 py-1">
+                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">⊹</span> Focus
+                    <div className="text-sm text-gray-500 dark:text-gray-400 mt-1 max-w-[280px]">Highlight what's important and prioritize tasks.</div>
+                  </li>
+                  <li className="px-2 py-1">
+                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">⚒</span> Repair
+                    <div className="text-sm text-gray-500 dark:text-gray-400 mt-1 max-w-[280px]">Spot and resolve errors or inconsistencies.</div>
+                  </li>
+                  <li className="px-2 py-1">
+                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">↔</span> Move
+                    <div className="text-sm text-gray-500 dark:text-gray-400 mt-1 max-w-[280px]">Enable smooth transitions across tools and tasks.</div>
+                  </li>
+                </ul>
+              </div>
+              <hr className="border-t border-gray-400 dark:border-gray-700 h-px" />
+
+              {/* Use Cases Accordion */}
+              <button
+                type="button"
+                onClick={() => openOnly('usecases')}
+                onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openOnly('usecases'); } }}
+                tabIndex={0}
+                aria-expanded={useCasesOpen}
+                aria-controls="use-cases-panel"
+                id="use-cases-header"
+                className="w-full flex justify-between items-center px-0 py-2 bg-transparent text-gray-400 dark:text-gray-400 font-normal text-base sm:text-lg transition-colors focus:outline-none focus:ring-0 text-left hover:bg-transparent rounded-none"
+                style={{ letterSpacing: '0.01em' }}
+              >
+                <span className="text-left flex-1">Use Cases</span>
+                <span className="ml-2 text-base sm:text-lg flex-shrink-0 transition-transform duration-200">
+                  {useCasesOpen ? '−' : '+'}
+                </span>
+              </button>
+              <div
+                id="use-cases-panel"
+                role="region"
+                aria-labelledby="use-cases-header"
+                className={`overflow-hidden transition-all duration-300 ease-in-out ${useCasesOpen ? 'max-h-[500px] opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'}`}
+                aria-hidden={!useCasesOpen}
+              >
+                <ul className="bg-transparent text-black dark:text-white">
+                  <li className="px-2 py-1">
+                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">⛶</span> R&D Ops
+                    <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">Extract insights and surface key patterns.</div>
+                  </li>
+                  <li className="px-2 py-1">
+                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">?</span> Support
+                    <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">Answer questions and guide better decisions.</div>
+                  </li>
+                  <li className="px-2 py-1">
+                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">⧉</span> Maintenance Ops
+                    <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">Monitor systems and fix issues proactively.</div>
+                  </li>
+                  <li className="px-2 py-1">
+                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">≡</span> Workflow Execution
+                    <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">Coordinate actions across complex processes.</div>
+                  </li>
+                  <li className="px-2 py-1">
+                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">§</span> Regulatory & Policy
+                    <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">Ensure outputs meet compliance standards.</div>
+                  </li>
+                </ul>
+              </div>
+              <hr className="border-t border-gray-400 dark:border-gray-700 h-px" />
             </div>
-            <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white mb-2">
-              We partner with select clients, crafting <span className="text-black dark:text-white">bespoke <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">IX</span> tools</span> that deliver <span className="text-black dark:text-white">real strategic value</span>. In parallel, we're pioneering a product for <span className="text-black dark:text-white">broader applications</span>. If you'd like to become an <span className="text-black dark:text-white">early adopter</span>, please fill out this <a href="https://tally.so/r/mRla1p" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-600 dark:hover:text-blue-400 transition-colors">form</a>.
-            </p>
           </div>
         </section>
 
-        <section id="accordions" className="w-full flex flex-col items-start">
-          <section id="contact" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-1">
-            <div className="space-y-4">
-              {/* Capabilities Accordion */}
-              <div className="w-full max-w-xs">
-                <button
-                  type="button"
-                  onClick={() => setIxOpen((open) => !open)}
-                  onKeyDown={(e) => handleAccordionKey(e, setIxOpen)}
-                  tabIndex={0}
-                  aria-expanded={ixOpen}
-                  aria-controls="ix-capabilities-panel"
-                  id="ix-capabilities-header"
-                  className="w-full flex justify-between items-center px-0 py-2 bg-transparent text-gray-400 dark:text-gray-400 font-normal text-base sm:text-lg transition-colors focus:outline-none focus:ring-0 text-left hover:bg-transparent rounded-none"
-                  style={{ letterSpacing: '0.01em' }}
-                >
-                  <span className="text-left flex-1">Capabilities</span>
-                  <span className="ml-2 text-base sm:text-lg flex-shrink-0 transition-transform duration-200">
-                    {ixOpen ? '−' : '+'}
-                  </span>
-                </button>
-                <div
-                  id="ix-capabilities-panel"
-                  role="region"
-                  aria-labelledby="ix-capabilities-header"
-                  className={`overflow-hidden transition-all duration-300 ease-in-out ${ixOpen ? 'max-h-96 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'}`}
-                  aria-hidden={!ixOpen}
-                >
-                  <ul className="bg-transparent text-black dark:text-white">
-                    <li className="px-2 py-1">
-                      <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">✦</span> Automate
-                      <div className="text-sm text-gray-500 dark:text-gray-400 mt-1 max-w-[280px]">Detect patterns and trigger actions automatically.</div>
-                    </li>
-                    <li className="px-2 py-1">
-                      <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">𖡎</span> Remember
-                      <div className="text-sm text-gray-500 dark:text-gray-400 mt-1 max-w-[280px]">Store and recall data, context, and instructions.</div>
-                    </li>
-                    <li className="px-2 py-1">
-                      <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">⊹</span> Focus
-                      <div className="text-sm text-gray-500 dark:text-gray-400 mt-1 max-w-[280px]">Highlight what's important and prioritize tasks.</div>
-                    </li>
-                    <li className="px-2 py-1">
-                      <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">⚒</span> Repair
-                      <div className="text-sm text-gray-500 dark:text-gray-400 mt-1 max-w-[280px]">Spot and resolve errors or inconsistencies.</div>
-                    </li>
-                    <li className="px-2 py-1">
-                      <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">↔</span> Move
-                      <div className="text-sm text-gray-500 dark:text-gray-400 mt-1 max-w-[280px]">Enable smooth transitions across tools and tasks.</div>
-                    </li>
-                  </ul>
-                </div>
-                <hr className="border-t border-gray-400 dark:border-gray-700 h-px mb-0.5" />
-              </div>
-              <div className="w-full max-w-xs">
-                {/* Removed divider */}
-              </div>
-
-              {/* Use Cases Accordion */}
-              <div className="w-full max-w-xs">
-                <button
-                  type="button"
-                  onClick={() => setUseCasesOpen((open) => !open)}
-                  onKeyDown={(e) => handleAccordionKey(e, setUseCasesOpen)}
-                  tabIndex={0}
-                  aria-expanded={useCasesOpen}
-                  aria-controls="use-cases-panel"
-                  id="use-cases-header"
-                  className="w-full flex justify-between items-center px-0 py-2 bg-transparent text-gray-400 dark:text-gray-400 font-normal text-base sm:text-lg transition-colors focus:outline-none focus:ring-0 text-left hover:bg-transparent rounded-none"
-                  style={{ letterSpacing: '0.01em' }}
-                >
-                  <span className="text-left flex-1">Use Cases</span>
-                  <span className="ml-2 text-base sm:text-lg flex-shrink-0 transition-transform duration-200">
-                    {useCasesOpen ? '−' : '+'}
-                  </span>
-                </button>
-                <div
-                  id="use-cases-panel"
-                  role="region"
-                  aria-labelledby="use-cases-header"
-                  className={`overflow-hidden transition-all duration-300 ease-in-out ${useCasesOpen ? 'max-h-[500px] opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'}`}
-                  aria-hidden={!useCasesOpen}
-                >
-                  <ul className="bg-transparent text-black dark:text-white">
-                    <li className="px-2 py-1">
-                      <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">⛶</span> R&D Ops
-                      <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">Extract insights and surface key patterns.</div>
-                    </li>
-                    <li className="px-2 py-1">
-                      <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">?</span> Support
-                      <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">Answer questions and guide better decisions.</div>
-                    </li>
-                    <li className="px-2 py-1">
-                      <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">⧉</span> Maintenance Ops
-                      <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">Monitor systems and fix issues proactively.</div>
-                    </li>
-                    <li className="px-2 py-1">
-                      <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">≡</span> Workflow Execution
-                      <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">Coordinate actions across complex processes.</div>
-                    </li>
-                    <li className="px-2 py-1">
-                      <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">§</span> Regulatory & Policy
-                      <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">Ensure outputs meet compliance standards.</div>
-                    </li>
-                  </ul>
-                </div>
-                <hr className="border-t border-gray-400 dark:border-gray-700 h-px mb-2" />
-              </div>
-              <div className="w-full max-w-xs">
-                {/* Removed divider */}
-              </div>
-              {/* Case Studies Link */}
-              <div className="w-full max-w-xs mt-2">
-                <div className="block text-base sm:text-lg text-gray-400 dark:text-gray-500 opacity-70 flex items-center gap-2 select-none">
-                  Case Studies <span aria-hidden="true">→</span>
-                  <span className="ml-1 px-2 py-0.5 rounded-full bg-gray-200 dark:bg-gray-700 text-xs font-medium text-gray-600 dark:text-gray-300">coming soon</span>
-                </div>
+        <section id="about" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-1">
+          <div className="space-y-4">
+            <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white">
+              While Loopscale is still in its <span className="text-black dark:text-white">early stages</span>, we believe that if we are successful, <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">IX</span>-powered products will create <span className="text-black dark:text-white">noticeable results across multiple industries</span>. This makes us <span className="text-black dark:text-white">extremely excited to work on this</span>. Our goal is to assemble a team of <span className="text-black dark:text-white">relentless problem solvers</span> and shape the <span className="text-black dark:text-white">next phase of AI tools</span>. We have an opportunity to build a <span className="text-black dark:text-white">generational studio</span>.
+            </p>
+            {/* Case Studies Link */}
+            <div className="w-full max-w-xs mt-8">
+              <div className="block text-base sm:text-lg text-gray-400 dark:text-gray-500 opacity-70 flex items-center gap-2 select-none">
+                Case Studies <span aria-hidden="true">→</span>
+                <span className="ml-1 px-2 py-0.5 rounded-full bg-gray-200 dark:bg-gray-700 text-xs font-medium text-gray-600 dark:text-gray-300">coming soon</span>
               </div>
             </div>
-          </section>
-
-          <section id="about" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-1">
-            <div className="space-y-4">
-              <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white">
-                While Loopscale is still in its <span className="text-black dark:text-white">early stages</span>, we believe that if we are successful, <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">IX</span>-powered products will create <span className="text-black dark:text-white">noticeable results across multiple industries</span>. This makes us <span className="text-black dark:text-white">extremely excited to work on this</span>. Our goal is to assemble a team of <span className="text-black dark:text-white">relentless problem solvers</span> and shape the <span className="text-black dark:text-white">next phase of AI tools</span>. We have an opportunity to build a <span className="text-black dark:text-white">generational studio</span>.
-              </p>
-            </div>
-          </section>
-
-          <section id="contact" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-1">
-            <div className="space-y-4">
-              <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white">
-                If you're <span className="text-black dark:text-white">interested in learning more</span> about our work, feel free to <a href="mailto:hello@loopscale.com" className="text-black dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors underline">reach out</a>.
-              </p>
-            </div>
-          </section>
-          <div className="h-64"></div>
+          </div>
         </section>
+
+        <section id="contact" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-1">
+          <div className="space-y-4">
+            <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white">
+              If you'd like to become an <span className="text-black dark:text-white">early adopter</span>, please fill out this <a href="https://tally.so/r/mRla1p" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-600 dark:hover:text-blue-400 transition-colors">form</a>. To learn more about our work, feel free to <a href="mailto:hello@loopscale.com" className="text-black dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors underline">reach out</a>.
+            </p>
+          </div>
+        </section>
+        <div className="h-64"></div>
       </div>
       {atBottom && (
         <div className="fixed bottom-4 right-8 z-50 text-xs sm:text-sm text-black dark:text-white">
