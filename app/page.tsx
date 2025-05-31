@@ -162,6 +162,7 @@ export default function Home() {
 
         {/* Main Content */}
         <section id="solution" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-1">
+          <h2 className="text-lg sm:text-xl md:text-2xl font-normal text-black dark:text-white mb-6">Our Work — Designing Access</h2>
           <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white">
             There exists a <span className="text-black dark:text-white">disconnect between the multifaceted capabilities of contemporary AI/ML models and non-specialist or resource-limited teams' ability to engage with them.</span> Our work seeks to address this limitation by designing <span className="text-black dark:text-white">intuitive access to advanced configurations</span>. The future of AI tools will be defined by <span className="text-black dark:text-white">anticipatory interactions</span>, seamlessly molding models into <span className="text-black dark:text-white">reliable workflow-native collaborators</span> that <span className="text-black dark:text-white">increase operational efficiency</span>, <span className="text-black dark:text-white">navigate complexity</span>, and <span className="text-black dark:text-white">uncover solutions</span>.
             <br />
@@ -188,7 +189,7 @@ export default function Home() {
             </div>
             <div className="w-px h-8 sm:h-12 bg-gray-400 dark:bg-gray-700 mx-2 sm:mx-6" />
             <div className="flex-1 flex items-start">
-              <span className="text-base sm:text-lg md:text-xl text-black dark:text-white">Personalized<br />Adaptive<br />Conversational</span>
+              <span className="text-lg sm:text-xl md:text-2xl text-black dark:text-white">Personalized<br />Adaptive<br />Conversational</span>
             </div>
           </div>
         </section>
@@ -198,9 +199,11 @@ export default function Home() {
             <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white mb-2">
               <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">Intelligent Experiences (IX)</span> are configured to client specifications, trained on enterprise data, and housed within human-centred interfaces.
             </p>
+            <h2 className="text-lg sm:text-xl md:text-2xl font-normal text-black dark:text-white mb-6">IX — Core Functions</h2>
             <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white mb-2">
               Once deployed, <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">IX</span> tools can support everything from <span className="text-black dark:text-white">intricate task automation</span> to <span className="text-black dark:text-white">complex team workflows</span> by <span className="text-black dark:text-white">precisely matching user queries</span>. Through <span className="text-black dark:text-white">iterative learning</span>, <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">IX</span>-powered products can handle <span className="text-black dark:text-white">chaotic environments</span> where <span className="text-black dark:text-white">maintaining systems is critical</span>, freeing professionals to concentrate on <span className="text-black dark:text-white">higher-leverage and more intellectually stimulating work</span>.
             </p>
+            <h2 className="text-lg sm:text-xl md:text-2xl font-normal text-black dark:text-white mb-6">Our Solutions — Applying IX</h2>
             <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white mb-2">
               We partner with select clients, crafting <span className="text-black dark:text-white">bespoke <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">IX</span> tools</span> that deliver <span className="text-black dark:text-white">real strategic value</span>. In parallel, we're pioneering ready-to-deploy frameworks tailored to sector-specific use.
             </p>
@@ -401,14 +404,13 @@ export default function Home() {
               </div>
               <hr className="border-t border-gray-400 dark:border-gray-700 h-px" />
             </div>
-          </div>
-        </section>
-
-        <section id="about" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-1">
-          <div className="space-y-4">
-            <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white">
-              While Loopscale is still in its <span className="text-black dark:text-white">early stages</span>, we believe that if we are successful, <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">IX</span>-powered products will create <span className="text-black dark:text-white">noticeable results across multiple industries</span>. This makes us <span className="text-black dark:text-white">extremely excited to work on this</span>. Our goal is to assemble a team of <span className="text-black dark:text-white">relentless problem solvers</span> and shape the <span className="text-black dark:text-white">next phase of AI tools</span>. We have an opportunity to build a <span className="text-black dark:text-white">generational studio</span>.
-            </p>
+            <div className="h-2"></div>
+            <div className="mt-2">
+              <h2 className="text-lg sm:text-xl md:text-2xl font-normal text-black dark:text-white mb-6">Our Vision — What We're Building</h2>
+              <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white mb-2">
+                While Loopscale is still in its <span className="text-black dark:text-white">early stages</span>, we believe that if we are successful, <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">IX</span>-powered products will create <span className="text-black dark:text-white">noticeable results across multiple industries</span>. This makes us <span className="text-black dark:text-white">extremely excited to work on this</span>. Our goal is to assemble a team of <span className="text-black dark:text-white">relentless problem solvers</span> and shape the <span className="text-black dark:text-white">next phase of AI tools</span>. We have an opportunity to build a <span className="text-black dark:text-white">generational studio</span>.
+              </p>
+            </div>
             {/* Case Studies Link */}
             <div className="w-full max-w-xs mt-12">
               <div className="block text-base sm:text-lg text-gray-400 dark:text-gray-500 opacity-70 flex items-center gap-2 select-none">
@@ -421,6 +423,7 @@ export default function Home() {
 
         <section id="contact" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-1">
           <div className="space-y-4">
+            <h2 className="text-lg sm:text-xl md:text-2xl font-normal text-black dark:text-white mb-6">Contact — Let's Talk About Working Together</h2>
             <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white">
               If you'd like to become an <span className="text-black dark:text-white">early adopter</span>, please fill out this <a href="https://tally.so/r/mRla1p" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-600 dark:hover:text-blue-400 transition-colors">form</a>. To learn more about our work, feel free to <a href="mailto:hello@loopscale.com" className="text-black dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors underline">reach out</a>.
             </p>
