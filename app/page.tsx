@@ -130,9 +130,9 @@ export default function Home() {
         {/* Theme Toggle */}
         <div className="fixed top-6 left-0 right-0 flex justify-between items-center px-4 sm:px-8 z-50">
           <span className="flex items-center text-lg sm:text-2xl text-black dark:text-white transition-all duration-300">
-            <span className="mr-1 text-lg sm:text-xl md:text-2xl font-normal transform inline-block text-black dark:text-white" style={{ display: 'inline-block', transform: 'rotate(45deg)' }}>∞</span>
+            <span className="mr-1 text-xl sm:text-2xl md:text-3xl font-light transform inline-block text-black dark:text-white" style={{ display: 'inline-block', transform: 'rotate(45deg)' }}>∞</span>
             <span
-              className="text-base sm:text-lg md:text-xl text-black dark:text-white transition-all duration-300"
+              className="text-base sm:text-lg md:text-xl font-normal text-black dark:text-white transition-all duration-300"
               style={{
                 opacity: hasScrolled ? 0 : 1,
                 display: 'inline-block',
@@ -202,7 +202,7 @@ export default function Home() {
               Once deployed, <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">IX</span> tools can support everything from <span className="text-black dark:text-white">intricate task automation</span> to <span className="text-black dark:text-white">complex team workflows</span> by <span className="text-black dark:text-white">precisely matching user queries</span>. Through <span className="text-black dark:text-white">iterative learning</span>, <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">IX</span>-powered products can handle <span className="text-black dark:text-white">chaotic environments</span> where <span className="text-black dark:text-white">maintaining systems is critical</span>, freeing professionals to concentrate on <span className="text-black dark:text-white">higher-leverage and more intellectually stimulating work</span>.
             </p>
             <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white mb-2">
-              We partner with select clients, crafting <span className="text-black dark:text-white">bespoke <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">IX</span> tools</span> that deliver <span className="text-black dark:text-white">real strategic value</span>. In parallel, we're pioneering a product for <span className="text-black dark:text-white">broader applications</span>.
+              We partner with select clients, crafting <span className="text-black dark:text-white">bespoke <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">IX</span> tools</span> that deliver <span className="text-black dark:text-white">real strategic value</span>. In parallel, we're pioneering ready-to-deploy frameworks tailored to sector-specific use.
             </p>
             <div className="w-full max-w-xs space-y-0">
               {/* Tools Accordion */}
@@ -297,7 +297,7 @@ export default function Home() {
                       <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">⛾</span>
                       <span className="text-base text-black dark:text-white ml-2">Loopscale Coffeehouse™</span>
                     </div>
-                    <div className="text-sm text-gray-500 dark:text-gray-400 mt-1 max-w-[280px]">Our proprietary IX framework is purpose-built for small, retail-based establishments and fully configurable to each client's needs. It integrates a suite of interconnected tools and management systems to elevate operational efficiency, without the heavy cost of complex implementation.</div>
+                    <div className="text-sm text-gray-500 dark:text-gray-400 mt-1 max-w-[280px]">Our first proprietary IX framework is purpose-built for small, retail-based establishments and fully configurable to each client's needs. It integrates a suite of interconnected tools and management systems to elevate operational efficiency, without the heavy cost of complex implementation.</div>
                   </div>
                 </div>
               </div>
@@ -410,7 +410,7 @@ export default function Home() {
               While Loopscale is still in its <span className="text-black dark:text-white">early stages</span>, we believe that if we are successful, <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">IX</span>-powered products will create <span className="text-black dark:text-white">noticeable results across multiple industries</span>. This makes us <span className="text-black dark:text-white">extremely excited to work on this</span>. Our goal is to assemble a team of <span className="text-black dark:text-white">relentless problem solvers</span> and shape the <span className="text-black dark:text-white">next phase of AI tools</span>. We have an opportunity to build a <span className="text-black dark:text-white">generational studio</span>.
             </p>
             {/* Case Studies Link */}
-            <div className="w-full max-w-xs mt-8">
+            <div className="w-full max-w-xs mt-12">
               <div className="block text-base sm:text-lg text-gray-400 dark:text-gray-500 opacity-70 flex items-center gap-2 select-none">
                 Case Studies <span aria-hidden="true">→</span>
                 <span className="ml-1 px-2 py-0.5 rounded-full bg-gray-200 dark:bg-gray-700 text-xs font-medium text-gray-600 dark:text-gray-300">coming soon</span>
