@@ -375,7 +375,7 @@ export default function Home() {
                     <div className="text-sm text-gray-500 dark:text-gray-400 mt-1 max-w-[280px]">Highlight key tasks or data.</div>
                   </li>
                   <li className="px-2 py-1">
-                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">⧉</span> Repair
+                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">⊠</span> Repair
                     <div className="text-sm text-gray-500 dark:text-gray-400 mt-1 max-w-[280px]">Detect and fix problems autonomously.</div>
                   </li>
                   <li className="px-2 py-1">
