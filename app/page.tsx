@@ -450,7 +450,7 @@ export default function Home() {
       </div>
       {atBottom && (
         <div className="fixed bottom-4 right-8 z-50 text-xs sm:text-sm text-black dark:text-white">
-          © 2025 Loopscale · <a href="mailto:hello@loopscale.com" className="underline hover:text-blue-600 dark:hover:text-blue-400">hello@loopscale.com</a> · Montreal
+          © 2025 Loopscale AI · <a href="mailto:hello@loopscale.ai" className="underline hover:text-blue-600 dark:hover:text-blue-400">hello@loopscale.ai</a> · Montreal
         </div>
       )}
     </main>
