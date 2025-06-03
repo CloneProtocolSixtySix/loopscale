@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import asixLogo from './assets/asix1.svg';
 
 import { altform } from './fonts';
 
@@ -125,7 +126,7 @@ export default function Home() {
   return (
     <main ref={mainRef} className="h-screen overflow-y-scroll scroll-smooth bg-[#F3F3F5] dark:bg-black transition-colors duration-300 pb-32">
       {/* Background Pattern */}
-      <div className="fixed inset-0 flex items-center justify-center pointer-events-none z-0">
+      <div className="fixed inset-0 flex items-start justify-center pointer-events-none z-0 pt-8">
         <div className="text-[1000px] text-black/10 dark:text-white/10 blur-[400px] select-none" style={{ display: 'inline-block', transform: 'rotate(45deg)' }}>
           ∞
         </div>
@@ -134,7 +135,7 @@ export default function Home() {
         {/* Theme Toggle */}
         <div className="fixed top-6 left-0 right-0 flex justify-between items-center px-4 sm:px-8 z-50">
           <span className="flex items-center text-lg sm:text-2xl text-black dark:text-white transition-all duration-300">
-            <span className="mr-1 text-xl sm:text-2xl md:text-3xl font-thin transform inline-block text-black dark:text-white -mt-0.5" style={{ display: 'inline-block', transform: 'rotate(45deg)' }}>∞</span>
+            <span className="mr-1 text-xl sm:text-2xl md:text-3xl font-light transform inline-block text-black dark:text-white" style={{ display: 'inline-block', transform: 'rotate(45deg)' }}>∞</span>
             <span
               className="text-base sm:text-lg md:text-xl font-normal text-black dark:text-white transition-all duration-300"
               style={{
@@ -181,7 +182,7 @@ export default function Home() {
               <div className="flex items-center gap-2">
                 <span className={altform.className}>Introducing</span>
                 <Image
-                  src="/images/asix1.svg"
+                  src={asixLogo}
                   alt="ASIX Logo"
                   width={32}
                   height={30}
