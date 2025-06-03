@@ -38,4 +38,8 @@ body {
 
 .animate-blink {
   animation: blink 1s linear infinite;
+}
+
+.font-doto {
+  font-family: 'Doto', sans-serif;
 } 
