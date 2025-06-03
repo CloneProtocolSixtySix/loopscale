@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import asixLogo from './assets/asix1.svg';
+import loopscale3 from './assets/loopscale3.png';
 
 import { altform } from './fonts';
 
@@ -155,13 +156,26 @@ export default function Home() {
 
         {/* Hero Section */}
         <section id="vision" className="min-h-screen flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-16">
-          <div className="mb-16">
-            <div className="text-base sm:text-lg font-light text-center mt-8 mb-10">
-              <span className="text-black dark:text-white">A research-led design studio</span><span className="inline-block animate-blink align-middle text-gray-400 dark:text-gray-500" style={{fontSize: '0.7em'}}>&#9608;</span>
+          <div className="mb-16 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-0">
+            <div className="flex-1">
+              <div className="text-base sm:text-lg font-light text-left mt-8 mb-10">
+                <span className="text-black dark:text-white">A research-led design studio</span>
+                <span className="inline-block animate-blink align-middle text-gray-400 dark:text-gray-500" style={{fontSize: '0.7em'}}>&#9608;</span>
+              </div>
+              <p className="text-4xl sm:text-6xl font-thin text-black dark:text-white text-left">
+                We're <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">refining</span> frontier AI into <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">usable</span> tools.
+              </p>
             </div>
-            <p className="text-4xl sm:text-6xl font-thin text-black dark:text-white text-center">
-              We're <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">refining</span> frontier AI into <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">usable</span> tools.
-            </p>
+            <div className="flex-1 flex justify-center items-center">
+              <Image
+                src={loopscale3}
+                alt="@loopscale3"
+                width={400}
+                height={400}
+                className="w-auto h-[300px] md:h-[400px] lg:h-[500px] object-contain"
+                priority
+              />
+            </div>
           </div>
         </section>
 
