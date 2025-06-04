@@ -4,7 +4,7 @@ import { altform } from './fonts';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: "Loopscale",
+  title: "Alongside",
 };
 
 export default function RootLayout({
