@@ -126,32 +126,22 @@ export default function Home() {
 
   return (
     <main ref={mainRef} className="h-screen overflow-y-scroll scroll-smooth bg-[#F3F3F5] dark:bg-black transition-colors duration-300 pb-32">
-      {/* Background Pattern */}
-      <div className="fixed inset-0 flex items-start justify-center pointer-events-none z-0 pt-8">
-        <div className="text-[1000px] text-black/10 dark:text-white/10 blur-[400px] select-none" style={{ display: 'inline-block', transform: 'rotate(45deg)' }}>
-          ∞
-        </div>
-      </div>
       <div className="max-w-2xl w-full px-6 mx-auto">
         {/* Theme Toggle */}
         <div className="fixed top-6 left-0 right-0 flex justify-between items-center px-4 sm:px-8 z-50">
           <span className="flex items-center text-lg sm:text-2xl text-black dark:text-white transition-all duration-300">
-            <span className="mr-1 text-xl sm:text-2xl md:text-3xl font-light transform inline-block text-black dark:text-white" style={{ display: 'inline-block', transform: 'rotate(45deg)' }}>∞</span>
+            <span className="mr-1 text-xl sm:text-xl md:text-xl font-light inline-block text-black dark:text-white">⡾</span>
             <span
-              className="text-base sm:text-lg md:text-xl font-normal text-black dark:text-white transition-all duration-300"
+              className="text-base sm:text-lg md:text-xl text-black dark:text-white transition-all duration-300 font-playfair"
               style={{
                 opacity: hasScrolled ? 0 : 1,
                 display: 'inline-block',
                 transition: 'opacity 0.3s',
               }}
-            >Loopscale
+            >
+              Alongside
             </span>
           </span>
-          <button
-            onClick={toggleTheme}
-            className="w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-black dark:bg-white transition-colors duration-300 cursor-pointer self-center mt-0"
-            aria-label="Toggle theme"
-          />
         </div>
 
         {/* Hero Section */}
@@ -162,7 +152,7 @@ export default function Home() {
                 <span className="text-black dark:text-white">A research-led design studio</span>
                 <span className="inline-block animate-blink align-middle text-gray-400 dark:text-gray-500" style={{fontSize: '0.7em'}}>&#9608;</span>
               </div>
-              <p className="text-4xl sm:text-6xl font-thin text-black dark:text-white text-left">
+              <p className="text-4xl sm:text-6xl font-thin text-black dark:text-white text-left font-playfair">
                 We're <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">refining</span> frontier AI into <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">usable</span> tools.
               </p>
             </div>
@@ -202,7 +192,7 @@ export default function Home() {
                   height={30}
                   className="w-8 h-8"
                 />
-                <span className="text-black dark:text-white">ASIX</span>
+                <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">ASIX</span>
               </div>
             </h2>
             <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white mb-8">
@@ -268,7 +258,8 @@ export default function Home() {
           <div>
             <h2 className="text-lg sm:text-xl md:text-2xl font-normal text-black dark:text-white mb-6">Our Solutions</h2>
             <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white mb-8">
-              We partner with select clients, crafting <span className="text-black dark:text-white">bespoke <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">ASIX</span> tools</span> that deliver <span className="text-black dark:text-white">real strategic value</span>. In parallel, we're pioneering ready-to-deploy frameworks tailored to sector-specific use.
+              We partner with select clients, crafting <span className="text-black dark:text-white">bespoke <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">ASIX</span> tools</span> that deliver <span className="text-black dark:text-white">real strategic value</span>. In parallel, we're pioneering ready-to-deploy frameworks tailored to sector-specific use. While Alongside is still in its early stages, we believe that if we are successful, ASIX-powered products will create measurable results across industries. We have an opportunity to build a generational studio.
+
             </p>
             <div className="w-full max-w-xs space-y-0">
               {/* Tools Accordion */}
@@ -343,7 +334,7 @@ export default function Home() {
                   <div className="max-w-[280px]">
                     <div className="flex items-center">
                       <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">⛾</span>
-                      <span className="text-base text-black dark:text-white ml-2">Loopscale Coffeehouse™</span>
+                      <span className="text-base text-black dark:text-white ml-2">Alongside Coffeehouse™</span>
                     </div>
                     <div className="text-sm text-gray-500 dark:text-gray-400 mt-1 max-w-[280px]">Sector-specific, plug-and-play ASIX framework built for small retail teams.</div>
                   </div>
@@ -456,7 +447,7 @@ export default function Home() {
           <div className="space-y-4">
             <h2 className="text-lg sm:text-xl md:text-2xl font-normal text-black dark:text-white mb-6">Let's Talk</h2>
             <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white">
-              If you'd like to become an <span className="text-black dark:text-white">early adopter</span>, please fill out this <a href="https://tally.so/r/mRla1p" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-600 dark:hover:text-blue-400 transition-colors">form</a>. To learn more about our work, feel free to <a href="mailto:hello@loopscale.com" className="text-black dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors underline">reach out</a>.
+              If you'd like to become an <span className="text-black dark:text-white">early adopter</span>, please fill out this <a href="https://tally.so/r/mRla1p" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-600 dark:hover:text-blue-400 transition-colors">form</a>. To learn more about our work, feel free to <a href="mailto:hello@alongsidelabs.com" className="text-black dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors underline">reach out</a>.
             </p>
           </div>
         </section>
@@ -464,7 +455,7 @@ export default function Home() {
       </div>
       {atBottom && (
         <div className="fixed bottom-4 right-8 z-50 text-xs sm:text-sm text-black dark:text-white">
-          © 2025 Loopscale AI · <a href="mailto:hello@loopscale.ai" className="underline hover:text-blue-600 dark:hover:text-blue-400">hello@loopscale.ai</a> · Montreal
+          © 2025 Alongside AI · <a href="mailto:hello@alongsidelabs.com" className="underline hover:text-blue-600 dark:hover:text-blue-400">hello@alongsidelabs.com</a> · Montreal
         </div>
       )}
     </main>
