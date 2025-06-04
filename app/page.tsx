@@ -36,7 +36,7 @@ function Typewriter({ words, speed = 80, pause = 1200 }: { words: string[]; spee
   }, [charIndex, deleting, wordIndex, words, speed, pause]);
 
   return (
-    <span className="text-blue-500 dark:text-blue-400">
+    <span className="text-blue-500">
       {displayed}
     </span>
   );
@@ -125,14 +125,14 @@ export default function Home() {
   };
 
   return (
-    <main ref={mainRef} className="h-screen overflow-y-scroll scroll-smooth bg-[#F3F3F5] dark:bg-black transition-colors duration-300 pb-32">
+    <main ref={mainRef} className="h-screen overflow-y-scroll scroll-smooth bg-white transition-colors duration-300 pb-32">
       <div className="max-w-2xl w-full px-6 mx-auto">
         {/* Theme Toggle */}
         <div className="fixed top-6 left-0 right-0 flex justify-between items-center px-4 sm:px-8 z-50">
-          <span className="flex items-center text-lg sm:text-2xl text-black dark:text-white transition-all duration-300">
-            <span className="mr-1 text-xl sm:text-xl md:text-xl font-light inline-block text-black dark:text-white">⡾</span>
+          <span className="flex items-center text-lg sm:text-2xl text-black transition-all duration-300">
+            <span className="mr-1 text-xl sm:text-xl md:text-xl font-light inline-block text-black">⡾</span>
             <span
-              className="text-base sm:text-lg md:text-xl text-black dark:text-white transition-all duration-300 font-playfair"
+              className="text-base sm:text-lg md:text-xl text-black transition-all duration-300 font-playfair"
               style={{
                 opacity: hasScrolled ? 0 : 1,
                 display: 'inline-block',
@@ -149,11 +149,11 @@ export default function Home() {
           <div className="mb-16 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-0">
             <div className="flex-1">
               <div className="text-base sm:text-lg font-light text-left mt-8 mb-10">
-                <span className="text-black dark:text-white">A research-led design studio</span>
-                <span className="inline-block animate-blink align-middle text-gray-400 dark:text-gray-500" style={{fontSize: '0.7em'}}>&#9608;</span>
+                <span className="text-black">A research-led design studio</span>
+                <span className="inline-block animate-blink align-middle text-gray-400" style={{fontSize: '0.7em'}}>&#9608;</span>
               </div>
-              <p className="text-4xl sm:text-6xl font-thin text-black dark:text-white text-left font-playfair">
-                We're <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">refining</span> frontier AI into <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">usable</span> tools.
+              <p className="text-4xl sm:text-6xl font-thin text-black text-left font-playfair">
+                We're <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-gradient">refining</span> frontier AI into <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-gradient">usable</span> tools.
               </p>
             </div>
             <div className="flex-1 flex justify-center items-center">
@@ -171,20 +171,20 @@ export default function Home() {
 
         {/* Main Content */}
         <section id="solution" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-16">
-          <h2 className="text-lg sm:text-xl md:text-2xl font-normal text-black dark:text-white mb-6">Our Work</h2>
-          <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white">
-            There exists a <span className="text-black dark:text-white">disconnect between the multifaceted capabilities of contemporary AI/ML models and non-specialist or resource-limited teams' ability to engage with them.</span> Our work seeks to address this limitation by designing <span className="text-black dark:text-white">intuitive access to advanced configurations</span>.
+          <h2 className="text-lg sm:text-xl md:text-2xl font-normal text-black mb-6">Our Work</h2>
+          <p className="text-base sm:text-lg leading-relaxed text-black">
+            There exists a <span className="text-black">disconnect between the multifaceted capabilities of contemporary AI/ML models and non-specialist or resource-limited teams' ability to engage with them.</span> Our work seeks to address this limitation by designing <span className="text-black">intuitive access to advanced configurations</span>.
             <br />
             <br />
-            The future of AI tools will be defined by <span className="text-black dark:text-white">anticipatory interactions</span>, seamlessly molding models into <span className="text-black dark:text-white">reliable, collaborators</span> that <span className="text-black dark:text-white">enhance operational efficiency</span>, <span className="text-black dark:text-white">navigate complexity</span>, and <span className="text-black dark:text-white">uncover solutions</span>.
+            The future of AI tools will be defined by <span className="text-black">anticipatory interactions</span>, seamlessly molding models into <span className="text-black">reliable, collaborators</span> that <span className="text-black">enhance operational efficiency</span>, <span className="text-black">navigate complexity</span>, and <span className="text-black">uncover solutions</span>.
           </p>
         </section>
 
         <section id="about" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-16">
           <div className="space-y-4">
-            <h2 className="text-lg sm:text-xl md:text-2xl font-normal text-black dark:text-white mb-6">
+            <h2 className="text-lg sm:text-xl md:text-2xl font-normal text-black mb-6">
               <div className="flex items-center gap-2">
-                <span className={altform.className}>Introducing</span>
+                <span className={altform.className}>Introducing Alongside</span>
                 <Image
                   src={asixLogo}
                   alt="ASIX Logo"
@@ -192,11 +192,11 @@ export default function Home() {
                   height={30}
                   className="w-8 h-8"
                 />
-                <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">ASIX</span>
+                <span className={altform.className + " text-black"}>ASIX-1</span>
               </div>
             </h2>
-            <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white mb-8">
-              We're combining <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">Agentic Systems</span>—autonomous multi-agent AI capable of completing layered tasks with minimal supervision—with <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">Intelligent Experiences</span>—adaptive, human-centered interfaces that personalize interactions in real time—to create <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">ASIX</span>: a system where intelligent agents operate in the background while users engage through seamless, configurable, and conversational interfaces. It enables advanced orchestration, performance display, and frictionless system control, freeing professionals to concentrate on higher-leverage and more intellectually stimulating work.
+            <p className="text-base sm:text-lg leading-relaxed text-black mb-8">
+              We're combining <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-gradient">Agentic Systems (AS)</span>—autonomous multi-agent AI capable of completing layered tasks with minimal supervision—with <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-gradient">Intelligent Experiences (IX)</span>—adaptive, human-centered interfaces that personalize interactions in real time—to create <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-gradient">ASIX</span>: a system where intelligent agents operate in the background while users engage through seamless, configurable, and conversational interfaces. It enables advanced orchestration, performance display, and frictionless system control, freeing professionals to concentrate on higher-leverage and more intellectually stimulating work.
             </p>
             <div className="w-full max-w-xs space-y-0 mt-4">
               <button
@@ -207,7 +207,7 @@ export default function Home() {
                 aria-expanded={coreFunctionsOpen}
                 aria-controls="core-functions-panel"
                 id="core-functions-header"
-                className="w-full flex justify-between items-center px-0 py-2 bg-transparent text-gray-400 dark:text-gray-400 font-normal text-base sm:text-lg transition-colors focus:outline-none focus:ring-0 text-left hover:bg-transparent rounded-none"
+                className="w-full flex justify-between items-center px-0 py-2 bg-transparent text-gray-400 font-normal text-base sm:text-lg transition-colors focus:outline-none focus:ring-0 text-left hover:bg-transparent rounded-none"
                 style={{ letterSpacing: '0.01em' }}
               >
                 <span className="text-left flex-1">Core Functions</span>
@@ -222,44 +222,43 @@ export default function Home() {
                 className={`overflow-hidden transition-all duration-300 ease-in-out ${coreFunctionsOpen ? 'max-h-[800px] opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'}`}
                 aria-hidden={!coreFunctionsOpen}
               >
-                <ul className="bg-transparent text-black dark:text-white">
+                <ul className="bg-transparent text-black">
                   <li className="px-2 py-1">
-                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">⟡</span> Autonomous Execution
-                    <div className="text-sm text-gray-500 dark:text-gray-400 mt-1 max-w-[280px]">Completes complex tasks with minimal supervision and adapts over time.</div>
+                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">⟡</span> Autonomous Execution
+                    <div className="text-sm text-gray-500 mt-1 max-w-[280px]">Completes complex tasks with minimal supervision and adapts over time.</div>
                   </li>
                   <li className="px-2 py-1">
-                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">⤷</span> Conversational Interface
-                    <div className="text-sm text-gray-500 dark:text-gray-400 mt-1 max-w-[280px]">Engages users through intuitive, natural language inputs.</div>
+                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">⤷</span> Conversational Interface
+                    <div className="text-sm text-gray-500 mt-1 max-w-[280px]">Engages users through intuitive, natural language inputs.</div>
                   </li>
                   <li className="px-2 py-1">
-                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">〜</span> Real-Time Adaptation
-                    <div className="text-sm text-gray-500 dark:text-gray-400 mt-1 max-w-[280px]">Adjusts to new inputs, contexts, and feedback instantly.</div>
+                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">〜</span> Real-Time Adaptation
+                    <div className="text-sm text-gray-500 mt-1 max-w-[280px]">Adjusts to new inputs, contexts, and feedback instantly.</div>
                   </li>
                   <li className="px-2 py-1">
-                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">⧖</span> Context & Reasoning
-                    <div className="text-sm text-gray-500 dark:text-gray-400 mt-1 max-w-[280px]">Understands environment, sets goals, and makes intelligent decisions.</div>
+                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">⧖</span> Context & Reasoning
+                    <div className="text-sm text-gray-500 mt-1 max-w-[280px]">Understands environment, sets goals, and makes intelligent decisions.</div>
                   </li>
                   <li className="px-2 py-1">
-                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">❉</span> Orchestration & Control
-                    <div className="text-sm text-gray-500 dark:text-gray-400 mt-1 max-w-[280px]">Coordinates tools and agents while simplifying management.</div>
+                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">❉</span> Orchestration & Control
+                    <div className="text-sm text-gray-500 mt-1 max-w-[280px]">Coordinates tools and agents while simplifying management.</div>
                   </li>
                   <li className="px-2 py-1">
-                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">⧆</span> Personalization & Insights
-                    <div className="text-sm text-gray-500 dark:text-gray-400 mt-1 max-w-[280px]">Tailors responses and displays performance with clarity.</div>
+                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">⧆</span> Personalization & Insights
+                    <div className="text-sm text-gray-500 mt-1 max-w-[280px]">Tailors responses and displays performance with clarity.</div>
                   </li>
                 </ul>
               </div>
-              <hr className="border-t border-gray-400 dark:border-gray-700 h-px" />
+              <hr className="border-t border-gray-400 h-px" />
             </div>
           </div>
         </section>
 
         <section id="solutions" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-16">
           <div>
-            <h2 className="text-lg sm:text-xl md:text-2xl font-normal text-black dark:text-white mb-6">Our Solutions</h2>
-            <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white mb-8">
-              We partner with select clients, crafting <span className="text-black dark:text-white">bespoke <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-gradient">ASIX</span> tools</span> that deliver <span className="text-black dark:text-white">real strategic value</span>. In parallel, we're pioneering ready-to-deploy frameworks tailored to sector-specific use. While Alongside is still in its early stages, we believe that if we are successful, ASIX-powered products will create measurable results across industries. We have an opportunity to build a generational studio.
-
+            <h2 className="text-lg sm:text-xl md:text-2xl font-normal text-black mb-6">Our Solutions</h2>
+            <p className="text-base sm:text-lg leading-relaxed text-black mb-8">
+              We partner with select clients, crafting <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-gradient">ASIX</span>-powered tools that deliver real strategic value. In parallel, we're pioneering ready-to-deploy frameworks tailored to sector-specific use. While Alongside is still in its early stages, we believe that if we are successful, our products will create measurable results across industries. We have an opportunity to build a generational studio.
             </p>
             <div className="w-full max-w-xs space-y-0">
               {/* Tools Accordion */}
@@ -271,7 +270,7 @@ export default function Home() {
                 aria-expanded={toolsOpen}
                 aria-controls="tools-panel"
                 id="tools-header"
-                className="w-full flex justify-between items-center px-0 py-2 bg-transparent text-gray-400 dark:text-gray-400 font-normal text-base sm:text-lg transition-colors focus:outline-none focus:ring-0 text-left hover:bg-transparent rounded-none"
+                className="w-full flex justify-between items-center px-0 py-2 bg-transparent text-gray-400 font-normal text-base sm:text-lg transition-colors focus:outline-none focus:ring-0 text-left hover:bg-transparent rounded-none"
                 style={{ letterSpacing: '0.01em' }}
               >
                 <span className="text-left flex-1">Tools</span>
@@ -289,22 +288,22 @@ export default function Home() {
                 {/* Tools content */}
                 <div className="flex flex-col items-start my-6 ml-2">
                   <div className="max-w-[280px]">
-                    <div className="text-base text-black dark:text-white">
-                      <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">⧇</span> AI-Collaborators
+                    <div className="text-base text-black">
+                      <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">⧇</span> AI-Collaborators
                     </div>
-                    <div className="text-sm text-gray-600 dark:text-gray-300">Supports teams by automating tasks and evolving with operational needs.</div>
+                    <div className="text-sm text-gray-600">Supports teams by automating tasks and evolving with operational needs.</div>
                   </div>
                 </div>
                 <div className="flex flex-col items-start my-6 ml-2">
                   <div className="max-w-[280px]">
-                    <div className="text-base text-black dark:text-white">
-                      <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">⧈</span> Turnkey Dashboard
+                    <div className="text-base text-black">
+                      <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">⧈</span> Turnkey Dashboard
                     </div>
-                    <div className="text-sm text-gray-600 dark:text-gray-300">No-code interface for managing AI-Coworkers, refining prompts, and monitoring performance.</div>
+                    <div className="text-sm text-gray-600">No-code interface for managing AI-Coworkers, refining prompts, and monitoring performance.</div>
                   </div>
                 </div>
               </div>
-              <hr className="border-t border-gray-400 dark:border-gray-700 h-px" />
+              <hr className="border-t border-gray-400 h-px" />
 
               {/* Frameworks Accordion */}
               <button
@@ -315,7 +314,7 @@ export default function Home() {
                 aria-expanded={frameworksOpen}
                 aria-controls="frameworks-panel"
                 id="frameworks-header"
-                className="w-full flex justify-between items-center px-0 py-2 bg-transparent text-gray-400 dark:text-gray-400 font-normal text-base sm:text-lg transition-colors focus:outline-none focus:ring-0 text-left hover:bg-transparent rounded-none"
+                className="w-full flex justify-between items-center px-0 py-2 bg-transparent text-gray-400 font-normal text-base sm:text-lg transition-colors focus:outline-none focus:ring-0 text-left hover:bg-transparent rounded-none"
                 style={{ letterSpacing: '0.01em' }}
               >
                 <span className="text-left flex-1">Frameworks</span>
@@ -333,14 +332,14 @@ export default function Home() {
                 <div className="flex items-start my-6 ml-2">
                   <div className="max-w-[280px]">
                     <div className="flex items-center">
-                      <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">⛾</span>
-                      <span className="text-base text-black dark:text-white ml-2">Alongside Coffeehouse™</span>
+                      <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">⛾</span>
+                      <span className="text-base text-black ml-2">Alongside Coffeehouse™</span>
                     </div>
-                    <div className="text-sm text-gray-500 dark:text-gray-400 mt-1 max-w-[280px]">Sector-specific, plug-and-play ASIX framework built for small retail teams.</div>
+                    <div className="text-sm text-gray-500 mt-1 max-w-[280px]">Sector-specific, plug-and-play ASIX framework built for small retail teams.</div>
                   </div>
                 </div>
               </div>
-              <hr className="border-t border-gray-400 dark:border-gray-700 h-px" />
+              <hr className="border-t border-gray-400 h-px" />
 
               {/* Capabilities Accordion */}
               <button
@@ -351,7 +350,7 @@ export default function Home() {
                 aria-expanded={ixOpen}
                 aria-controls="ix-capabilities-panel"
                 id="ix-capabilities-header"
-                className="w-full flex justify-between items-center px-0 py-2 bg-transparent text-gray-400 dark:text-gray-400 font-normal text-base sm:text-lg transition-colors focus:outline-none focus:ring-0 text-left hover:bg-transparent rounded-none"
+                className="w-full flex justify-between items-center px-0 py-2 bg-transparent text-gray-400 font-normal text-base sm:text-lg transition-colors focus:outline-none focus:ring-0 text-left hover:bg-transparent rounded-none"
                 style={{ letterSpacing: '0.01em' }}
               >
                 <span className="text-left flex-1">Capabilities</span>
@@ -366,30 +365,30 @@ export default function Home() {
                 className={`overflow-hidden transition-all duration-300 ease-in-out ${ixOpen ? 'max-h-96 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'}`}
                 aria-hidden={!ixOpen}
               >
-                <ul className="bg-transparent text-black dark:text-white">
+                <ul className="bg-transparent text-black">
                   <li className="px-2 py-1">
-                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">●</span> Automate
-                    <div className="text-sm text-gray-500 dark:text-gray-400 mt-1 max-w-[280px]">Trigger actions based on patterns.</div>
+                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">●</span> Automate
+                    <div className="text-sm text-gray-500 mt-1 max-w-[280px]">Trigger actions based on patterns.</div>
                   </li>
                   <li className="px-2 py-1">
-                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">𖡎</span> Remember
-                    <div className="text-sm text-gray-500 dark:text-gray-400 mt-1 max-w-[280px]">Retain and apply context across tasks.</div>
+                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">𖡎</span> Remember
+                    <div className="text-sm text-gray-500 mt-1 max-w-[280px]">Retain and apply context across tasks.</div>
                   </li>
                   <li className="px-2 py-1">
-                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">⊹</span> Focus
-                    <div className="text-sm text-gray-500 dark:text-gray-400 mt-1 max-w-[280px]">Highlight key tasks or data.</div>
+                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">⊹</span> Focus
+                    <div className="text-sm text-gray-500 mt-1 max-w-[280px]">Highlight key tasks or data.</div>
                   </li>
                   <li className="px-2 py-1">
-                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">⊠</span> Repair
-                    <div className="text-sm text-gray-500 dark:text-gray-400 mt-1 max-w-[280px]">Detect and fix problems autonomously.</div>
+                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">⊠</span> Repair
+                    <div className="text-sm text-gray-500 mt-1 max-w-[280px]">Detect and fix problems autonomously.</div>
                   </li>
                   <li className="px-2 py-1">
-                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">↔</span> Move
-                    <div className="text-sm text-gray-500 dark:text-gray-400 mt-1 max-w-[280px]">Integrate seamlessly across tools.</div>
+                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">↔</span> Move
+                    <div className="text-sm text-gray-500 mt-1 max-w-[280px]">Integrate seamlessly across tools.</div>
                   </li>
                 </ul>
               </div>
-              <hr className="border-t border-gray-400 dark:border-gray-700 h-px" />
+              <hr className="border-t border-gray-400 h-px" />
 
               {/* Use Cases Accordion */}
               <button
@@ -400,7 +399,7 @@ export default function Home() {
                 aria-expanded={useCasesOpen}
                 aria-controls="use-cases-panel"
                 id="use-cases-header"
-                className="w-full flex justify-between items-center px-0 py-2 bg-transparent text-gray-400 dark:text-gray-400 font-normal text-base sm:text-lg transition-colors focus:outline-none focus:ring-0 text-left hover:bg-transparent rounded-none"
+                className="w-full flex justify-between items-center px-0 py-2 bg-transparent text-gray-400 font-normal text-base sm:text-lg transition-colors focus:outline-none focus:ring-0 text-left hover:bg-transparent rounded-none"
                 style={{ letterSpacing: '0.01em' }}
               >
                 <span className="text-left flex-1">Use Cases</span>
@@ -415,47 +414,47 @@ export default function Home() {
                 className={`overflow-hidden transition-all duration-300 ease-in-out ${useCasesOpen ? 'max-h-[500px] opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'}`}
                 aria-hidden={!useCasesOpen}
               >
-                <ul className="bg-transparent text-black dark:text-white">
+                <ul className="bg-transparent text-black">
                   <li className="px-2 py-1">
-                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">⧉</span> R&D Ops
-                    <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">Extract insights and surface patterns.</div>
+                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">⧉</span> R&D Ops
+                    <div className="text-sm text-gray-500 mt-1">Extract insights and surface patterns.</div>
                   </li>
                   <li className="px-2 py-1">
-                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">?</span> Support
-                    <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">Answer questions and guide decisions.</div>
+                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">?</span> Support
+                    <div className="text-sm text-gray-500 mt-1">Answer questions and guide decisions.</div>
                   </li>
                   <li className="px-2 py-1">
-                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">⛭</span> Maintenance
-                    <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">Proactively monitor and fix issues.</div>
+                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">⛭</span> Maintenance
+                    <div className="text-sm text-gray-500 mt-1">Proactively monitor and fix issues.</div>
                   </li>
                   <li className="px-2 py-1">
-                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">☰</span> Workflow Execution
-                    <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">Run coordinated, multi-step processes.</div>
+                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">☰</span> Workflow Execution
+                    <div className="text-sm text-gray-500 mt-1">Run coordinated, multi-step processes.</div>
                   </li>
                   <li className="px-2 py-1">
-                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">§</span> Compliance
-                    <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">Ensure outputs meet standards.</div>
+                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">§</span> Compliance
+                    <div className="text-sm text-gray-500 mt-1">Ensure outputs meet standards.</div>
                   </li>
                 </ul>
               </div>
-              <hr className="border-t border-gray-400 dark:border-gray-700 h-px" />
+              <hr className="border-t border-gray-400 h-px" />
             </div>
           </div>
         </section>
 
         <section id="contact" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-16">
           <div className="space-y-4">
-            <h2 className="text-lg sm:text-xl md:text-2xl font-normal text-black dark:text-white mb-6">Let's Talk</h2>
-            <p className="text-base sm:text-lg leading-relaxed text-black dark:text-white">
-              If you'd like to become an <span className="text-black dark:text-white">early adopter</span>, please fill out this <a href="https://tally.so/r/mRla1p" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-600 dark:hover:text-blue-400 transition-colors">form</a>. To learn more about our work, feel free to <a href="mailto:hello@alongsidelabs.com" className="text-black dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors underline">reach out</a>.
+            <h2 className="text-lg sm:text-xl md:text-2xl font-normal text-black mb-6">Let's Talk</h2>
+            <p className="text-base sm:text-lg leading-relaxed text-black">
+              If you'd like to become an <span className="text-black">early adopter</span>, please fill out this <a href="https://tally.so/r/mRla1p" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-600 transition-colors">form</a>. To learn more about our work, feel free to <a href="mailto:hello@alongsidelabs.com" className="text-black hover:text-blue-600 transition-colors underline">reach out</a>.
             </p>
           </div>
         </section>
         <div className="h-64"></div>
       </div>
       {atBottom && (
-        <div className="fixed bottom-4 right-8 z-50 text-xs sm:text-sm text-black dark:text-white">
-          © 2025 Alongside AI · <a href="mailto:hello@alongsidelabs.com" className="underline hover:text-blue-600 dark:hover:text-blue-400">hello@alongsidelabs.com</a> · Montreal
+        <div className="fixed bottom-4 right-8 z-50 text-xs sm:text-sm text-black">
+          © 2025 Alongside Labs · <a href="mailto:hello@alongsidelabs.com" className="underline hover:text-blue-600">hello@alongsidelabs.com</a> · Montreal
         </div>
       )}
     </main>
