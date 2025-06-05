@@ -3,7 +3,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import asixLogo from './assets/asix1.svg';
 import loopscale3 from './assets/loopscale3.png';
 
 import { altform } from './fonts';
@@ -128,7 +127,7 @@ export default function Home() {
     <main ref={mainRef} className="h-screen overflow-y-scroll scroll-smooth bg-white transition-colors duration-300 pb-32">
       <div className="max-w-2xl w-full px-6 mx-auto">
         {/* Theme Toggle */}
-        <div className="fixed top-6 left-0 right-0 flex justify-between items-center px-4 sm:px-8 z-50">
+   <div className="fixed top-6 left-0 right-0 flex justify-between items-center px-4 sm:px-8 z-50">
           <span className="flex items-center text-lg sm:text-2xl text-black transition-all duration-300">
             <span className="mr-1 text-xl sm:text-xl md:text-xl font-light inline-block text-black">⡾</span>
             <span
@@ -145,24 +144,20 @@ export default function Home() {
         </div>
 
         {/* Hero Section */}
-        <section id="vision" className="min-h-screen flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-16">
-          <div className="mb-16 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-0">
+        <section id="vision" className="min-h-screen flex flex-col justify-center transition-all duration-300 ease-in-out p-4 pt-0 md:pt-4 mb-16">
+          <div className="mb-4 md:mb-16 flex flex-col md:flex-row items-center justify-between gap-0 md:gap-8 md:gap-0">
             <div className="flex-1">
-              <div className="text-base sm:text-lg font-light text-left mt-8 mb-10">
-                <span className="text-black">A research-led design studio</span>
-                <span className="inline-block animate-blink align-middle text-gray-400" style={{fontSize: '0.7em'}}>&#9608;</span>
+              <div className="text-lg sm:text-xl md:text-2xl text-center md:text-left mt-32 md:mt-8 mb-2 md:mb-10">
+                <span className="text-black"> Alongside is a research-led design studio refining general-purpose AI into human-centred tools.</span>
               </div>
-              <p className="text-4xl sm:text-6xl font-thin text-black text-left font-playfair">
-                We're <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-gradient">refining</span> frontier AI into <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-gradient">usable</span> tools.
-              </p>
             </div>
-            <div className="flex-1 flex justify-center items-center">
+            <div className="flex-1 flex justify-center items-center -mt-24 md:mt-0">
               <Image
                 src={loopscale3}
                 alt="@loopscale3"
-                width={400}
-                height={400}
-                className="w-auto h-[300px] md:h-[400px] lg:h-[500px] object-contain"
+                width={1000}
+                height={1000}
+                className="w-auto h-[700px] md:h-[900px] lg:h-[1100px] object-contain"
                 priority
               />
             </div>
@@ -176,7 +171,7 @@ export default function Home() {
             There exists a <span className="text-black">disconnect between the multifaceted capabilities of contemporary AI/ML models and non-specialist or resource-limited teams' ability to engage with them.</span> Our work seeks to address this limitation by designing <span className="text-black">intuitive access to advanced configurations</span>.
             <br />
             <br />
-            The future of AI tools will be defined by <span className="text-black">anticipatory interactions</span>, seamlessly molding models into <span className="text-black">reliable, collaborators</span> that <span className="text-black">enhance operational efficiency</span>, <span className="text-black">navigate complexity</span>, and <span className="text-black">uncover solutions</span>.
+            The future of AI tools will be defined by <span className="text-black">anticipatory interactions</span>, seamlessly molding models into <span className="text-black">reliable collaborators</span> that <span className="text-black">enhance operational efficiency</span>, <span className="text-black">navigate complexity</span>, and <span className="text-black">uncover solutions. We call them: Usable Intelligence (UI)</span>.
           </p>
         </section>
 
@@ -184,19 +179,14 @@ export default function Home() {
           <div className="space-y-4">
             <h2 className="text-lg sm:text-xl md:text-2xl font-normal text-black mb-6">
               <div className="flex items-center gap-2">
-                <span className={altform.className}>Introducing Alongside</span>
-                <Image
-                  src={asixLogo}
-                  alt="ASIX Logo"
-                  width={32}
-                  height={30}
-                  className="w-8 h-8"
-                />
-                <span className={altform.className + " text-black"}>ASIX-1</span>
+                <span className={altform.className + " text-black"}>Introducing Alongside UI Gen-1</span>
               </div>
             </h2>
             <p className="text-base sm:text-lg leading-relaxed text-black mb-8">
-              We're combining <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-gradient">Agentic Systems (AS)</span>—autonomous multi-agent AI capable of completing layered tasks with minimal supervision—with <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-gradient">Intelligent Experiences (IX)</span>—adaptive, human-centered interfaces that personalize interactions in real time—to create <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-gradient">ASIX</span>: a system where intelligent agents operate in the background while users engage through seamless, configurable, and conversational interfaces. It enables advanced orchestration, performance display, and frictionless system control, freeing professionals to concentrate on higher-leverage and more intellectually stimulating work.
+              We combine <span className="text-black font-semibold">Agentic Systems</span>, autonomous multi-agent AI that completes layered tasks with minimal supervision, and <span className="text-black font-semibold">Intelligent Experiences</span>, adaptive interfaces that personalize interactions in real time.
+
+              <br /><br />
+              Together, they form <span className="font-semibold">UI Gen‑1</span> — a system where intelligent agents work in the background while users engage through seamless, configurable, and conversational interfaces. It enables advanced orchestration, performance display, and effortless system control, allowing professionals to focus on higher-impact, more meaningful work.
             </p>
             <div className="w-full max-w-xs space-y-0 mt-4">
               <button
@@ -224,27 +214,27 @@ export default function Home() {
               >
                 <ul className="bg-transparent text-black">
                   <li className="px-2 py-1">
-                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">⟡</span> Autonomous Execution
+                    <span className="text-black">⟡</span> Autonomous Execution
                     <div className="text-sm text-gray-500 mt-1 max-w-[280px]">Completes complex tasks with minimal supervision and adapts over time.</div>
                   </li>
                   <li className="px-2 py-1">
-                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">⤷</span> Conversational Interface
+                    <span className="text-black">⤷</span> Conversational Interface
                     <div className="text-sm text-gray-500 mt-1 max-w-[280px]">Engages users through intuitive, natural language inputs.</div>
                   </li>
                   <li className="px-2 py-1">
-                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">〜</span> Real-Time Adaptation
+                    <span className="text-black">〜</span> Real-Time Adaptation
                     <div className="text-sm text-gray-500 mt-1 max-w-[280px]">Adjusts to new inputs, contexts, and feedback instantly.</div>
                   </li>
                   <li className="px-2 py-1">
-                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">⧖</span> Context & Reasoning
+                    <span className="text-black">⧖</span> Context & Reasoning
                     <div className="text-sm text-gray-500 mt-1 max-w-[280px]">Understands environment, sets goals, and makes intelligent decisions.</div>
                   </li>
                   <li className="px-2 py-1">
-                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">❉</span> Orchestration & Control
+                    <span className="text-black">❉</span> Orchestration & Control
                     <div className="text-sm text-gray-500 mt-1 max-w-[280px]">Coordinates tools and agents while simplifying management.</div>
                   </li>
                   <li className="px-2 py-1">
-                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">⧆</span> Personalization & Insights
+                    <span className="text-black">⧆</span> Personalization & Insights
                     <div className="text-sm text-gray-500 mt-1 max-w-[280px]">Tailors responses and displays performance with clarity.</div>
                   </li>
                 </ul>
@@ -258,7 +248,7 @@ export default function Home() {
           <div>
             <h2 className="text-lg sm:text-xl md:text-2xl font-normal text-black mb-6">Our Solutions</h2>
             <p className="text-base sm:text-lg leading-relaxed text-black mb-8">
-              We partner with select clients, crafting <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-gradient">ASIX</span>-powered tools that deliver real strategic value. In parallel, we're pioneering ready-to-deploy frameworks tailored to sector-specific use. While Alongside is still in its early stages, we believe that if we are successful, our products will create measurable results across industries. We have an opportunity to build a generational studio.
+              We partner with select clients, crafting <span className="text-black">UI</span>-powered tools that deliver real strategic value. In parallel, we're pioneering ready-to-deploy frameworks tailored to sector-specific use. While Alongside is still in its early stages, we believe that if we are successful, our products will create measurable results across industries. We have an opportunity to build a generational studio.
             </p>
             <div className="w-full max-w-xs space-y-0">
               {/* Tools Accordion */}
@@ -289,7 +279,7 @@ export default function Home() {
                 <div className="flex flex-col items-start my-6 ml-2">
                   <div className="max-w-[280px]">
                     <div className="text-base text-black">
-                      <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">⧇</span> AI-Collaborators
+                      <span className="text-black">⧇</span> Agents
                     </div>
                     <div className="text-sm text-gray-600">Supports teams by automating tasks and evolving with operational needs.</div>
                   </div>
@@ -297,9 +287,9 @@ export default function Home() {
                 <div className="flex flex-col items-start my-6 ml-2">
                   <div className="max-w-[280px]">
                     <div className="text-base text-black">
-                      <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">⧈</span> Turnkey Dashboard
+                      <span className="text-black">⧈</span> Dashboard
                     </div>
-                    <div className="text-sm text-gray-600">No-code interface for managing AI-Coworkers, refining prompts, and monitoring performance.</div>
+                    <div className="text-sm text-gray-600">No-code interface for managing agents, refining prompts, and monitoring performance.</div>
                   </div>
                 </div>
               </div>
@@ -332,10 +322,10 @@ export default function Home() {
                 <div className="flex items-start my-6 ml-2">
                   <div className="max-w-[280px]">
                     <div className="flex items-center">
-                      <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">⛾</span>
-                      <span className="text-base text-black ml-2">Alongside Coffeehouse™</span>
+                      <span className="text-black inline-block transform rotate-90">▮</span>
+                      <span className="text-base text-black ml-2">Counter</span>
                     </div>
-                    <div className="text-sm text-gray-500 mt-1 max-w-[280px]">Sector-specific, plug-and-play ASIX framework built for small retail teams.</div>
+                    <div className="text-sm text-gray-500 mt-1 max-w-[280px]">Sector-specific, plug-and-play UI framework built for small retail teams.</div>
                   </div>
                 </div>
               </div>
@@ -367,24 +357,24 @@ export default function Home() {
               >
                 <ul className="bg-transparent text-black">
                   <li className="px-2 py-1">
-                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">●</span> Automate
+                    <span className="text-black">●</span> Automate
                     <div className="text-sm text-gray-500 mt-1 max-w-[280px]">Trigger actions based on patterns.</div>
                   </li>
                   <li className="px-2 py-1">
-                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">𖡎</span> Remember
+                    <span className="text-black">𖡎</span> Remember
                     <div className="text-sm text-gray-500 mt-1 max-w-[280px]">Retain and apply context across tasks.</div>
                   </li>
                   <li className="px-2 py-1">
-                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">⊹</span> Focus
+                    <span className="text-black">⊹</span> Focus
                     <div className="text-sm text-gray-500 mt-1 max-w-[280px]">Highlight key tasks or data.</div>
                   </li>
                   <li className="px-2 py-1">
-                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">⊠</span> Repair
+                    <span className="text-black">⊠</span> Repair
                     <div className="text-sm text-gray-500 mt-1 max-w-[280px]">Detect and fix problems autonomously.</div>
                   </li>
                   <li className="px-2 py-1">
-                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">↔</span> Move
-                    <div className="text-sm text-gray-500 mt-1 max-w-[280px]">Integrate seamlessly across tools.</div>
+                    <span className="text-black">↔</span> Move
+                    <div className="text-sm text-gray-500 mt-1 max-w-[280px]">Quickly apply across systems and infrastructure.</div>
                   </li>
                 </ul>
               </div>
@@ -416,23 +406,23 @@ export default function Home() {
               >
                 <ul className="bg-transparent text-black">
                   <li className="px-2 py-1">
-                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">⧉</span> R&D Ops
+                    <span className="text-black">⧉</span> R&D Ops
                     <div className="text-sm text-gray-500 mt-1">Extract insights and surface patterns.</div>
                   </li>
                   <li className="px-2 py-1">
-                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">?</span> Support
+                    <span className="text-black">?</span> Support
                     <div className="text-sm text-gray-500 mt-1">Answer questions and guide decisions.</div>
                   </li>
                   <li className="px-2 py-1">
-                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">⛭</span> Maintenance
+                    <span className="text-black">⛭</span> Maintenance
                     <div className="text-sm text-gray-500 mt-1">Proactively monitor and fix issues.</div>
                   </li>
                   <li className="px-2 py-1">
-                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">☰</span> Workflow Execution
+                    <span className="text-black">☰</span> Workflow Execution
                     <div className="text-sm text-gray-500 mt-1">Run coordinated, multi-step processes.</div>
                   </li>
                   <li className="px-2 py-1">
-                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">§</span> Compliance
+                    <span className="text-black">§</span> Compliance
                     <div className="text-sm text-gray-500 mt-1">Ensure outputs meet standards.</div>
                   </li>
                 </ul>
@@ -440,6 +430,13 @@ export default function Home() {
               <hr className="border-t border-gray-400 h-px" />
             </div>
           </div>
+        </section>
+
+        <section id="approach" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-16">
+          <h2 className="text-lg sm:text-xl md:text-2xl font-normal text-black mb-6">Our Approach</h2>
+          <p className="text-base sm:text-lg leading-relaxed text-black">
+          We're focused on building AI alignment that preserves cognitive reasoning and human-made work — not to dilute or replace it, but to thoughtfully amplify it, just as the shift from pen and paper to the typewriter, and then to the laptop, transformed how we create and scale ideas.
+          </p>
         </section>
 
         <section id="contact" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-16">
