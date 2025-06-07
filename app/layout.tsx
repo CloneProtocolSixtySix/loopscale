@@ -4,7 +4,7 @@ import { altform } from './fonts';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: "Alongside | Usable Intelligence",
+  title: "Typecase | Usable Intelligence",
 };
 
 export default function RootLayout({
