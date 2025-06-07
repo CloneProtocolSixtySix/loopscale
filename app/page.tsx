@@ -148,7 +148,7 @@ export default function Home() {
           <div className="mb-4 md:mb-16 flex flex-col md:flex-row items-center justify-between gap-0 md:gap-8 md:gap-0">
             <div className="flex-1">
               <div className="text-lg sm:text-xl md:text-2xl text-center md:text-left mt-32 md:mt-8 mb-2 md:mb-10">
-                <span className="text-black"> A research-led design studio refining general-purpose AI into human-centred tools.</span>
+                <span className="text-black"> Typecase is a research-led design studio refining general-purpose AI into human-centred tools.</span>
               </div>
             </div>
             <div className="flex-1 flex justify-center items-center -mt-24 md:mt-0">
@@ -179,7 +179,9 @@ export default function Home() {
           <div className="space-y-4">
             <h2 className="text-lg sm:text-xl md:text-2xl font-normal text-black mb-6">
               <div className="flex items-center gap-2">
-                <span className={altform.className + " text-black"}>Introducing Typecase UI Gen-1</span>
+                <span className={altform.className + " text-black"}>
+                  Introducing Typecase UI Gen-1
+                </span>
               </div>
             </h2>
             <p className="text-base sm:text-lg leading-relaxed text-black mb-8">
