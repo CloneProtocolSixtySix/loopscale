@@ -4,7 +4,7 @@ import { altform } from './fonts';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: "Typecase | Usable Intelligence",
+  title: "Fieldstone | Usable Intelligence",
 };
 
 export default function RootLayout({

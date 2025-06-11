@@ -129,16 +129,8 @@ export default function Home() {
         {/* Theme Toggle */}
    <div className="fixed top-6 left-0 right-0 flex justify-between items-center px-4 sm:px-8 z-50">
           <span className="flex items-center text-lg sm:text-2xl text-black transition-all duration-300">
-            <span className="mr-1 text-xl sm:text-xl md:text-xl font-semibold inline-block text-black align-middle">■</span>
-            <span
-              className={altform.className + " font-semibold text-base sm:text-lg md:text-xl text-black"}
-              style={{
-                opacity: hasScrolled ? 0 : 1,
-                display: 'inline-block',
-                transition: 'opacity 0.3s',
-              }}
-            >
-              typecase
+            <span className="mr-1 text-xl sm:text-xl md:text-xl font-regular inline-block text-black align-middle transition-all duration-300">
+              {hasScrolled ? "F" : "Fieldstone"}
             </span>
           </span>
         </div>
@@ -148,18 +140,8 @@ export default function Home() {
           <div className="mb-4 md:mb-16 flex flex-col md:flex-row items-center justify-between gap-0 md:gap-8 md:gap-0">
             <div className="flex-1">
               <div className="text-lg sm:text-xl md:text-2xl text-center md:text-left mt-32 md:mt-8 mb-2 md:mb-10">
-                <span className="text-black"> Typecase is a research-led design studio refining general-purpose AI into human-centred tools.</span>
+                <span className="text-black"> Fieldstone is a research-led design studio refining general-purpose AI into human-centred tools.</span>
               </div>
-            </div>
-            <div className="flex-1 flex justify-center items-center -mt-24 md:mt-0">
-              <Image
-                src={loopscale3}
-                alt="@loopscale3"
-                width={1000}
-                height={1000}
-                className="w-auto h-[700px] md:h-[900px] lg:h-[1100px] object-contain"
-                priority
-              />
             </div>
           </div>
         </section>
@@ -180,7 +162,7 @@ export default function Home() {
             <h2 className="text-lg sm:text-xl md:text-2xl font-normal text-black mb-6">
               <div className="flex items-center gap-2">
                 <span className={altform.className + " text-black"}>
-                  Introducing Typecase UI Gen-1
+                  Introducing Fieldstone UI Gen-1
                 </span>
               </div>
             </h2>
@@ -250,7 +232,7 @@ export default function Home() {
           <div>
             <h2 className="text-lg sm:text-xl md:text-2xl font-normal text-black mb-6">Our Solutions</h2>
             <p className="text-base sm:text-lg leading-relaxed text-black mb-8">
-              We partner with select clients, crafting <span className="text-black">UI</span>-powered tools that deliver real strategic value. In parallel, we're pioneering ready-to-deploy frameworks tailored to sector-specific use. While Typecase is still in its early stages, we believe that if we are successful, our products will create measurable results across industries. We have an opportunity to build a generational studio.
+              We partner with select clients, crafting <span className="text-black">UI</span>-powered tools that deliver real strategic value. In parallel, we're pioneering ready-to-deploy frameworks tailored to sector-specific use. While Fieldstone is still in its early stages, we believe that if we are successful, our products will create measurable results across industries. We have an opportunity to build a generational studio.
             </p>
             <div className="w-full max-w-xs space-y-0">
               {/* Tools Accordion */}
@@ -445,7 +427,7 @@ export default function Home() {
           <div className="space-y-4">
             <h2 className="text-lg sm:text-xl md:text-2xl font-normal text-black mb-6">Let's Talk</h2>
             <p className="text-base sm:text-lg leading-relaxed text-black">
-              If you'd like to become an <span className="text-black">early adopter</span>, please fill out this <a href="https://tally.so/r/mRla1p" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-600 transition-colors">form</a>. To learn more about our work, feel free to <a href="mailto:hello@typecase.ai" className="text-black hover:text-blue-600 transition-colors underline">reach out</a>.
+              If you'd like to become an <span className="text-black">early adopter</span>, please fill out this <a href="https://tally.so/r/mRla1p" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-600 transition-colors">form</a>. To learn more about our work, feel free to <a href="mailto:hello@fieldstone.studio" className="text-black hover:text-blue-600 transition-colors underline">reach out</a>.
             </p>
           </div>
         </section>
@@ -453,7 +435,7 @@ export default function Home() {
       </div>
       {atBottom && (
         <div className="fixed bottom-4 right-8 z-50 text-xs sm:text-sm text-black">
-          © 2025 Typecase AI · <a href="mailto:hello@typecase.ai" className="underline hover:text-blue-600">hello@typecase.ai</a> · Montreal
+          © 2025 Fieldstone Studio · <a href="mailto:hello@fieldstone.studio" className="underline hover:text-blue-600">hello@fieldstone.studio</a> · Montreal
         </div>
       )}
     </main>
