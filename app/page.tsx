@@ -3,7 +3,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import loopscale3 from './assets/loopscale3.png';
 
 import { altform } from './fonts';
 
@@ -127,11 +126,8 @@ export default function Home() {
     <main ref={mainRef} className="h-screen overflow-y-scroll scroll-smooth bg-white transition-colors duration-300 pb-32">
       <div className="max-w-2xl w-full px-6 mx-auto">
         {/* Theme Toggle */}
-   <div className="fixed top-6 left-0 right-0 flex justify-between items-center px-4 sm:px-8 z-50">
+        <div className="fixed top-6 left-0 right-0 flex justify-between items-center px-4 sm:px-8 z-50">
           <span className="flex items-center text-lg sm:text-2xl text-black transition-all duration-300">
-            <span className="mr-1 text-xl sm:text-xl md:text-xl font-regular inline-block text-black align-middle transition-all duration-300">
-              {hasScrolled ? "F" : "Fieldstone"}
-            </span>
           </span>
         </div>
 
@@ -139,8 +135,11 @@ export default function Home() {
         <section id="vision" className="min-h-screen flex flex-col justify-center transition-all duration-300 ease-in-out p-4 pt-0 md:pt-4 mb-16">
           <div className="mb-4 md:mb-16 flex flex-col md:flex-row items-center justify-between gap-0 md:gap-8 md:gap-0">
             <div className="flex-1">
-              <div className="text-lg sm:text-xl md:text-2xl text-center md:text-left mt-32 md:mt-8 mb-2 md:mb-10">
-                <span className="text-black"> Fieldstone is a research-led design studio refining general-purpose AI into human-centred tools.</span>
+              <div className="text-base sm:text-lg md:text-2xl text-center md:text-left mt-32 md:mt-8 mb-2 md:mb-10">
+                <div className="text-black mb-2 text-2xl font-light">⁞⁞⁞</div>
+                <span className="text-black font-light">
+                  <span className="font-normal">Fieldstone</span> is a research-led design studio refining general-purpose AI into human-centred solutions.
+                </span>
               </div>
             </div>
           </div>
@@ -148,18 +147,18 @@ export default function Home() {
 
         {/* Main Content */}
         <section id="solution" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-16">
-          <h2 className="text-lg sm:text-xl md:text-2xl font-normal text-black mb-6">Our Work</h2>
+          <h2 className="text-lg sm:text-xl md:text-2xl font-light text-black mb-6">Our Work</h2>
           <p className="text-base sm:text-lg leading-relaxed text-black">
             There exists a <span className="text-black">disconnect between the multifaceted capabilities of contemporary AI/ML models and non-specialist or resource-limited teams' ability to engage with them.</span> Our work seeks to address this limitation by designing <span className="text-black">intuitive access to advanced configurations</span>.
             <br />
             <br />
-            The future of AI tools will be defined by <span className="text-black">anticipatory interactions</span>, seamlessly molding models into <span className="text-black">reliable collaborators</span> that <span className="text-black">enhance operational efficiency</span>, <span className="text-black">navigate complexity</span>, and <span className="text-black">uncover solutions. We call this:</span> <span className="text-black font-semibold">Usable Intelligence (UI)</span>.
+            The future of AI tools will be defined by <span className="text-black">anticipatory interactions</span>, seamlessly molding models into <span className="text-black">reliable collaborators</span> that <span className="text-black">enhance operational efficiency</span>, <span className="text-black">navigate complexity</span>, and <span className="text-black">uncover solutions. We call this:</span> <span className="text-black">Usable Intelligence (UI)</span>.
           </p>
         </section>
 
         <section id="about" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-16">
           <div className="space-y-4">
-            <h2 className="text-lg sm:text-xl md:text-2xl font-normal text-black mb-6">
+            <h2 className="text-lg sm:text-xl md:text-2xl font-light text-black mb-6">
               <div className="flex items-center gap-2">
                 <span className={altform.className + " text-black"}>
                   Introducing Fieldstone UI Gen-1
@@ -167,10 +166,7 @@ export default function Home() {
               </div>
             </h2>
             <p className="text-base sm:text-lg leading-relaxed text-black mb-8">
-              We combine <span className="text-black font-semibold">Agentic Systems</span>, autonomous multi-agent AI that completes layered tasks with minimal supervision, and <span className="text-black font-semibold">Intelligent Experiences</span>, adaptive interfaces that personalize interactions in real time.
-
-              <br /><br />
-              Together, they form <span className="font-semibold">UI Gen‑1</span> — a system where intelligent agents work in the background while users engage through seamless, configurable, and conversational interfaces. It enables advanced orchestration, performance display, and effortless system control, allowing professionals to focus on higher-impact, more meaningful work.
+              We combine <span className="text-black">Agentic Systems</span>—autonomous AI that completes layered tasks—and <span className="text-black">Intelligent Experiences</span>—adaptive interfaces that personalize interactions. Together, they form <span>UI Gen‑1</span>: intelligent agents operate in the background while users engage through seamless, configurable interfaces. The system enables advanced orchestration, insight display, and intuitive control, freeing professionals to focus on higher-leverage work.
             </p>
             <div className="w-full max-w-xs space-y-0 mt-4">
               <button
@@ -230,9 +226,9 @@ export default function Home() {
 
         <section id="solutions" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-16">
           <div>
-            <h2 className="text-lg sm:text-xl md:text-2xl font-normal text-black mb-6">Our Solutions</h2>
+            <h2 className="text-lg sm:text-xl md:text-2xl font-light text-black mb-6">Our Solutions</h2>
             <p className="text-base sm:text-lg leading-relaxed text-black mb-8">
-              We partner with select clients, crafting <span className="text-black">UI</span>-powered tools that deliver real strategic value. In parallel, we're pioneering ready-to-deploy frameworks tailored to sector-specific use. While Fieldstone is still in its early stages, we believe that if we are successful, our products will create measurable results across industries. We have an opportunity to build a generational studio.
+              We're pioneering ready-to-deploy UI-powered tools and frameworks tailored to sector-specific use. While Fieldstone is still in its early stages, we believe that if we are successful, our products will create measurable results across industries. We have an opportunity to build a generational studio.
             </p>
             <div className="w-full max-w-xs space-y-0">
               {/* Tools Accordion */}
@@ -417,7 +413,7 @@ export default function Home() {
         </section>
 
         <section id="approach" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-16">
-          <h2 className="text-lg sm:text-xl md:text-2xl font-normal text-black mb-6">Our Approach</h2>
+          <h2 className="text-lg sm:text-xl md:text-2xl font-light text-black mb-6">Our Approach</h2>
           <p className="text-base sm:text-lg leading-relaxed text-black">
           We're focused on building AI alignment that preserves cognitive reasoning and human-made work — not to dilute or replace it, but to thoughtfully amplify it, just as the shift from pen and paper to the typewriter, and then to the laptop, transformed how we create and scale ideas.
           </p>
@@ -425,7 +421,7 @@ export default function Home() {
 
         <section id="contact" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-16">
           <div className="space-y-4">
-            <h2 className="text-lg sm:text-xl md:text-2xl font-normal text-black mb-6">Let's Talk</h2>
+            <h2 className="text-lg sm:text-xl md:text-2xl font-light text-black mb-6">Let's Talk</h2>
             <p className="text-base sm:text-lg leading-relaxed text-black">
               If you'd like to become an <span className="text-black">early adopter</span>, please fill out this <a href="https://tally.so/r/mRla1p" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-600 transition-colors">form</a>. To learn more about our work, feel free to <a href="mailto:hello@fieldstone.studio" className="text-black hover:text-blue-600 transition-colors underline">reach out</a>.
             </p>
