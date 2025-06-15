@@ -424,7 +424,23 @@ export default function Home() {
           <div className="space-y-4">
             <h2 className="text-base text-black mb-6">Let's Talk</h2>
             <p className="text-base leading-relaxed text-black mb-2">
-              If you'd like to become an early adopter, please fill out this form. To learn more about our work, feel free to reach out.
+              If you'd like to become an early adopter, please fill out this
+              <a
+                href="https://tally.so/r/mRla1p"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-blue-600 transition-colors mx-1"
+              >
+                form
+              </a>
+              . To learn more about our work, feel free to
+              <a
+                href="mailto:hello@loopscale.ai"
+                className="underline hover:text-blue-600 transition-colors mx-1"
+              >
+                reach out
+              </a>
+              .
             </p>
             <div className="text-sm text-black mt-4">© 2025 Loopscale AI · Montreal</div>
           </div>
