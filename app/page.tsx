@@ -123,7 +123,7 @@ export default function Home() {
   };
 
   return (
-    <main ref={mainRef} className="h-screen overflow-y-scroll scroll-smooth bg-white transition-colors duration-300 pb-32">
+    <main ref={mainRef} className="overflow-y-scroll scroll-smooth bg-white transition-colors duration-300 pb-32">
       <div className="max-w-2xl w-full px-6 mx-auto">
         {/* Theme Toggle */}
         <div className="fixed top-6 left-0 right-0 flex justify-between items-center px-4 sm:px-8 z-50">
@@ -132,13 +132,17 @@ export default function Home() {
         </div>
 
         {/* Hero Section */}
-        <section id="vision" className="min-h-screen flex flex-col justify-center transition-all duration-300 ease-in-out p-4 pt-0 md:pt-4 mb-16">
-          <div className="mb-4 md:mb-16 flex flex-col md:flex-row items-center justify-between gap-0 md:gap-8 md:gap-0">
+        <section id="vision" className="flex flex-col transition-all duration-300 ease-in-out p-4 pt-0 md:pt-4 mb-16">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-0 md:gap-8 md:gap-0">
             <div className="flex-1">
-              <div className="text-base sm:text-lg md:text-2xl text-center md:text-left mt-32 md:mt-8 mb-2 md:mb-10">
-                <div className="text-black mb-2 text-2xl font-light">⁞⁞⁞</div>
-                <span className="text-black font-light">
-                  <span className="font-normal">Fieldstone</span> is a research-led design studio refining general-purpose AI into human-centred solutions.
+              <div className="text-base text-left mt-48 md:mt-48 mb-2 md:mb-10">
+                <div className="mb-6 flex items-center gap-2 justify-start">
+                  <div>
+                    <span className="inline-block transform rotate-45 text-2xl text-black font-light">∞</span>
+                  </div>
+                </div>
+                <span className="text-black">
+                  <span className="font-regular">Loopscale</span> is a research-led design studio refining general-purpose AI into human-centred workflow automations.
                 </span>
               </div>
             </div>
@@ -147,26 +151,23 @@ export default function Home() {
 
         {/* Main Content */}
         <section id="solution" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-16">
-          <h2 className="text-lg sm:text-xl md:text-2xl font-light text-black mb-6">Our Work</h2>
-          <p className="text-base sm:text-lg leading-relaxed text-black">
-            There exists a <span className="text-black">disconnect between the multifaceted capabilities of contemporary AI/ML models and non-specialist or resource-limited teams' ability to engage with them.</span> Our work seeks to address this limitation by designing <span className="text-black">intuitive access to advanced configurations</span>.
-            <br />
-            <br />
-            The future of AI tools will be defined by <span className="text-black">anticipatory interactions</span>, seamlessly molding models into <span className="text-black">reliable collaborators</span> that <span className="text-black">enhance operational efficiency</span>, <span className="text-black">navigate complexity</span>, and <span className="text-black">uncover solutions. We call this:</span> <span className="text-black">Usable Intelligence (UI)</span>.
+          <h2 className="text-base text-black mb-6">Our Work</h2>
+          <p className="text-base leading-relaxed text-black">
+            There is a gap between the capabilities of modern AI/ML models and the ability of non-specialist teams to apply them. We address this by designing intuitive access to advanced configurations. We believe the future of AI tools lies in anticipatory interactions—molding models into reliable collaborators that enhance efficiency, navigate complexity, and uncover solutions. We call this: Usable Intelligence (UI).
           </p>
         </section>
 
         <section id="about" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-16">
           <div className="space-y-4">
-            <h2 className="text-lg sm:text-xl md:text-2xl font-light text-black mb-6">
+            <h2 className="text-base text-black mb-6">
               <div className="flex items-center gap-2">
                 <span className={altform.className + " text-black"}>
-                  Introducing Fieldstone UI Gen-1
+                  Introducing Loopscale UI Gen-1
                 </span>
               </div>
             </h2>
-            <p className="text-base sm:text-lg leading-relaxed text-black mb-8">
-              We combine <span className="text-black">Agentic Systems</span>—autonomous AI that completes layered tasks—and <span className="text-black">Intelligent Experiences</span>—adaptive interfaces that personalize interactions. Together, they form <span>UI Gen‑1</span>: intelligent agents operate in the background while users engage through seamless, configurable interfaces. The system enables advanced orchestration, insight display, and intuitive control, freeing professionals to focus on higher-leverage work.
+            <p className="text-base leading-relaxed text-black mb-8">
+              We combine Agentic Systems—autonomous AI that completes layered tasks—with Intelligent Experiences—adaptive interfaces that personalize interactions. Together they form UI Gen‑1: agents operate in the background while users engage through seamless, configurable interfaces. Freeing professionals to focus on higher-leverage work.
             </p>
             <div className="w-full max-w-xs space-y-0 mt-4">
               <button
@@ -177,11 +178,11 @@ export default function Home() {
                 aria-expanded={coreFunctionsOpen}
                 aria-controls="core-functions-panel"
                 id="core-functions-header"
-                className="w-full flex justify-between items-center px-0 py-2 bg-transparent text-gray-400 font-normal text-base sm:text-lg transition-colors focus:outline-none focus:ring-0 text-left hover:bg-transparent rounded-none"
+                className="w-full flex justify-between items-center px-0 py-2 bg-transparent text-gray-400 text-base transition-colors focus:outline-none focus:ring-0 text-left hover:bg-transparent rounded-none"
                 style={{ letterSpacing: '0.01em' }}
               >
                 <span className="text-left flex-1">Core Functions</span>
-                <span className="ml-2 text-base sm:text-lg flex-shrink-0 transition-transform duration-200">
+                <span className="ml-2 text-base flex-shrink-0 transition-transform duration-200">
                   {coreFunctionsOpen ? '−' : '+'}
                 </span>
               </button>
@@ -226,9 +227,9 @@ export default function Home() {
 
         <section id="solutions" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-16">
           <div>
-            <h2 className="text-lg sm:text-xl md:text-2xl font-light text-black mb-6">Our Solutions</h2>
-            <p className="text-base sm:text-lg leading-relaxed text-black mb-8">
-              We're pioneering ready-to-deploy UI-powered tools and frameworks tailored to sector-specific use. While Fieldstone is still in its early stages, we believe that if we are successful, our products will create measurable results across industries. We have an opportunity to build a generational studio.
+            <h2 className="text-base text-black mb-6">Our Solutions</h2>
+            <p className="text-base leading-relaxed text-black mb-8">
+              We're developing ready-to-deploy UI-tools and frameworks tailored to sector-specific needs. Though still early-stage, we aim to create measurable impact across industries—and build a generational studio.
             </p>
             <div className="w-full max-w-xs space-y-0">
               {/* Tools Accordion */}
@@ -240,11 +241,11 @@ export default function Home() {
                 aria-expanded={toolsOpen}
                 aria-controls="tools-panel"
                 id="tools-header"
-                className="w-full flex justify-between items-center px-0 py-2 bg-transparent text-gray-400 font-normal text-base sm:text-lg transition-colors focus:outline-none focus:ring-0 text-left hover:bg-transparent rounded-none"
+                className="w-full flex justify-between items-center px-0 py-2 bg-transparent text-gray-400 text-base transition-colors focus:outline-none focus:ring-0 text-left hover:bg-transparent rounded-none"
                 style={{ letterSpacing: '0.01em' }}
               >
                 <span className="text-left flex-1">Tools</span>
-                <span className="ml-2 text-base sm:text-lg flex-shrink-0 transition-transform duration-200">
+                <span className="ml-2 text-base flex-shrink-0 transition-transform duration-200">
                   {toolsOpen ? '−' : '+'}
                 </span>
               </button>
@@ -284,11 +285,11 @@ export default function Home() {
                 aria-expanded={frameworksOpen}
                 aria-controls="frameworks-panel"
                 id="frameworks-header"
-                className="w-full flex justify-between items-center px-0 py-2 bg-transparent text-gray-400 font-normal text-base sm:text-lg transition-colors focus:outline-none focus:ring-0 text-left hover:bg-transparent rounded-none"
+                className="w-full flex justify-between items-center px-0 py-2 bg-transparent text-gray-400 text-base transition-colors focus:outline-none focus:ring-0 text-left hover:bg-transparent rounded-none"
                 style={{ letterSpacing: '0.01em' }}
               >
                 <span className="text-left flex-1">Frameworks</span>
-                <span className="ml-2 text-base sm:text-lg flex-shrink-0 transition-transform duration-200">
+                <span className="ml-2 text-base flex-shrink-0 transition-transform duration-200">
                   {frameworksOpen ? '−' : '+'}
                 </span>
               </button>
@@ -320,11 +321,11 @@ export default function Home() {
                 aria-expanded={ixOpen}
                 aria-controls="ix-capabilities-panel"
                 id="ix-capabilities-header"
-                className="w-full flex justify-between items-center px-0 py-2 bg-transparent text-gray-400 font-normal text-base sm:text-lg transition-colors focus:outline-none focus:ring-0 text-left hover:bg-transparent rounded-none"
+                className="w-full flex justify-between items-center px-0 py-2 bg-transparent text-gray-400 text-base transition-colors focus:outline-none focus:ring-0 text-left hover:bg-transparent rounded-none"
                 style={{ letterSpacing: '0.01em' }}
               >
                 <span className="text-left flex-1">Capabilities</span>
-                <span className="ml-2 text-base sm:text-lg flex-shrink-0 transition-transform duration-200">
+                <span className="ml-2 text-base flex-shrink-0 transition-transform duration-200">
                   {ixOpen ? '−' : '+'}
                 </span>
               </button>
@@ -369,11 +370,11 @@ export default function Home() {
                 aria-expanded={useCasesOpen}
                 aria-controls="use-cases-panel"
                 id="use-cases-header"
-                className="w-full flex justify-between items-center px-0 py-2 bg-transparent text-gray-400 font-normal text-base sm:text-lg transition-colors focus:outline-none focus:ring-0 text-left hover:bg-transparent rounded-none"
+                className="w-full flex justify-between items-center px-0 py-2 bg-transparent text-gray-400 text-base transition-colors focus:outline-none focus:ring-0 text-left hover:bg-transparent rounded-none"
                 style={{ letterSpacing: '0.01em' }}
               >
                 <span className="text-left flex-1">Use Cases</span>
-                <span className="ml-2 text-base sm:text-lg flex-shrink-0 transition-transform duration-200">
+                <span className="ml-2 text-base flex-shrink-0 transition-transform duration-200">
                   {useCasesOpen ? '−' : '+'}
                 </span>
               </button>
@@ -413,27 +414,22 @@ export default function Home() {
         </section>
 
         <section id="approach" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-16">
-          <h2 className="text-lg sm:text-xl md:text-2xl font-light text-black mb-6">Our Approach</h2>
-          <p className="text-base sm:text-lg leading-relaxed text-black">
-          We're focused on building AI alignment that preserves cognitive reasoning and human-made work — not to dilute or replace it, but to thoughtfully amplify it, just as the shift from pen and paper to the typewriter, and then to the laptop, transformed how we create and scale ideas.
+          <h2 className="text-base text-black mb-6">Our Approach</h2>
+          <p className="text-base leading-relaxed text-black">
+            We're building AI alignment that preserves and amplifies human reasoning and work similar to the shift from pen and paper to laptops enhanced the way we solve problems.
           </p>
         </section>
 
         <section id="contact" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-16">
           <div className="space-y-4">
-            <h2 className="text-lg sm:text-xl md:text-2xl font-light text-black mb-6">Let's Talk</h2>
-            <p className="text-base sm:text-lg leading-relaxed text-black">
-              If you'd like to become an <span className="text-black">early adopter</span>, please fill out this <a href="https://tally.so/r/mRla1p" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-600 transition-colors">form</a>. To learn more about our work, feel free to <a href="mailto:hello@fieldstone.studio" className="text-black hover:text-blue-600 transition-colors underline">reach out</a>.
+            <h2 className="text-base text-black mb-6">Let's Talk</h2>
+            <p className="text-base leading-relaxed text-black mb-2">
+              If you'd like to become an early adopter, please fill out this form. To learn more about our work, feel free to reach out.
             </p>
+            <div className="text-sm text-black mt-4">© 2025 Loopscale AI · Montreal</div>
           </div>
         </section>
-        <div className="h-64"></div>
       </div>
-      {atBottom && (
-        <div className="fixed bottom-4 right-8 z-50 text-xs sm:text-sm text-black">
-          © 2025 Fieldstone Studio · <a href="mailto:hello@fieldstone.studio" className="underline hover:text-blue-600">hello@fieldstone.studio</a> · Montreal
-        </div>
-      )}
     </main>
   );
 } 
