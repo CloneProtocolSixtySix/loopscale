@@ -138,11 +138,11 @@ export default function Home() {
               <div className="text-base text-left mt-48 md:mt-48 mb-2 md:mb-10">
                 <div className="mb-6 flex items-center gap-2 justify-start">
                   <div>
-                    <span className="inline-block transform rotate-45 text-2xl text-black font-light">∞</span>
+                    <span className="inline-block transform rotate-0 text-2xl text-black font-semibold">◾ reasonlab</span>
                   </div>
                 </div>
                 <span className="text-black">
-                  <span className="font-regular">Loopscale</span> is a research-led design studio refining general-purpose AI into human-centred workflow automations.
+                  <span className="font-regular">Reasonlab</span> is a research-led design studio refining general-purpose AI into human-centred workflow automations.
                 </span>
               </div>
             </div>
@@ -162,12 +162,13 @@ export default function Home() {
             <h2 className="text-base text-black mb-6">
               <div className="flex items-center gap-2">
                 <span className={altform.className + " text-black"}>
-                  Introducing Loopscale UI Gen-1
+                  Introducing Reasonlab UI Gen-1
                 </span>
+                <span className="bg-black text-white text-xs font-semibold px-2 py-1 rounded-full">pre-alpha</span>
               </div>
             </h2>
             <p className="text-base leading-relaxed text-black mb-8">
-              We combine Agentic Systems—autonomous AI that completes layered tasks—with Intelligent Experiences—adaptive interfaces that personalize interactions. Together they form UI Gen‑1: agents operate in the background while users engage through seamless, configurable interfaces. Freeing professionals to focus on higher-leverage work.
+              Our research focuses on combining Agentic Systems—autonomous AI that completes layered tasks—with Intelligent Experiences—adaptive interfaces that personalize interactions. Together they form UI Gen‑1: agents operate in the background while users engage through seamless, configurable interfaces. Freeing professionals to focus on higher-leverage work.
             </p>
             <div className="w-full max-w-xs space-y-0 mt-4">
               <button
@@ -227,7 +228,7 @@ export default function Home() {
 
         <section id="solutions" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-16">
           <div>
-            <h2 className="text-base text-black mb-6">Our Solutions</h2>
+            <h2 className="text-base text-black mb-6">Our Products</h2>
             <p className="text-base leading-relaxed text-black mb-8">
               We're developing ready-to-deploy UI-tools and frameworks tailored to sector-specific needs. Though still early-stage, we aim to create measurable impact across industries—and build a generational studio.
             </p>
@@ -435,14 +436,14 @@ export default function Home() {
               </a>
               . To learn more about our work, feel free to
               <a
-                href="mailto:hello@loopscale.ai"
+                href="mailto:hello@reasonlab.ai"
                 className="underline hover:text-blue-600 transition-colors mx-1"
               >
                 reach out
               </a>
               .
             </p>
-            <div className="text-sm text-black mt-4">© 2025 Loopscale AI · Montreal</div>
+            <div className="text-sm text-black mt-4">© 2025 Reasonlab · Montreal</div>
           </div>
         </section>
       </div>
