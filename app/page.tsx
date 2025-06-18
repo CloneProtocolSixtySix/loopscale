@@ -138,7 +138,7 @@ export default function Home() {
               <div className="text-base text-left mt-48 md:mt-48 mb-2 md:mb-10">
                 <div className="mb-6 flex items-center gap-2 justify-start">
                   <div>
-                    <span className="inline-block transform rotate-0 text-2xl text-black font-semibold">■ Reasonlab</span>
+                    <span className="inline-block transform rotate-0 text-2xl text-black font-semibold">◾ reasonlab</span>
                   </div>
                 </div>
                 <h2 className="text-1xl text-black font-semibold mb-2">

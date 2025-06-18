@@ -4,7 +4,7 @@ import { altform } from './fonts';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: "Fieldstone | Usable Intelligence",
+  title: "Reasonlab | Usable Intelligence",
 };
 
 export default function RootLayout({
