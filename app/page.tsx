@@ -138,12 +138,12 @@ export default function Home() {
               <div className="text-base text-left mt-48 md:mt-48 mb-2 md:mb-10">
                 <div className="mb-6 flex items-center gap-2 justify-start">
                   <div>
-                    <span className="inline-block transform rotate-0 text-2xl text-black font-semibold">◾ reasonlab</span>
+                    <span className="inline-block transform rotate-0 text-2xl text-black font-semibold">■ Reasonlab</span>
                   </div>
                 </div>
-                <span className="text-black">
-                  <span className="font-regular">Reasonlab</span> is a research-led design studio refining general-purpose AI into human-centred workflow automations.
-                </span>
+                <h2 className="text-1xl text-black font-semibold mb-2">
+                  Reasonlab is developing a new generation of consistent and controllable AI.
+                </h2>
               </div>
             </div>
           </div>
@@ -153,7 +153,7 @@ export default function Home() {
         <section id="solution" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-16">
           <h2 className="text-base text-black mb-6">Our Work</h2>
           <p className="text-base leading-relaxed text-black">
-            There is a gap between the capabilities of modern AI/ML models and the ability of non-specialist teams to apply them. We address this by designing intuitive access to advanced configurations. We believe the future of AI tools lies in anticipatory interactions—molding models into reliable collaborators that enhance efficiency, navigate complexity, and uncover solutions. We call this: Usable Intelligence (UI).
+            There is a gap between the capabilities of general-purpose AI models and the ability of non-specialist teams to apply them. We address this by designing intuitive access to advanced configurations. We believe the future of AI tools lies in anticipatory interactions—molding models into reliable collaborators that enhance efficiency, navigate complexity, and uncover solutions. We call this: Usable Intelligence (UI).
           </p>
         </section>
 
@@ -201,7 +201,7 @@ export default function Home() {
                   </li>
                   <li className="px-2 py-1">
                     <span className="text-black">⤷</span> Conversational Interface
-                    <div className="text-sm text-gray-500 mt-1 max-w-[280px]">Engages users through intuitive, natural language inputs.</div>
+                    <div className="text-sm text-gray-500 mt-1 max-w-[280px]">Engages users through human-centred inputs.</div>
                   </li>
                   <li className="px-2 py-1">
                     <span className="text-black">〜</span> Real-Time Adaptation
@@ -209,7 +209,7 @@ export default function Home() {
                   </li>
                   <li className="px-2 py-1">
                     <span className="text-black">⧖</span> Context & Reasoning
-                    <div className="text-sm text-gray-500 mt-1 max-w-[280px]">Understands environment, sets goals, and makes intelligent decisions.</div>
+                    <div className="text-sm text-gray-500 mt-1 max-w-[280px]">Understands environment, sets goals, and makes decisions.</div>
                   </li>
                   <li className="px-2 py-1">
                     <span className="text-black">❉</span> Orchestration & Control
@@ -230,7 +230,7 @@ export default function Home() {
           <div>
             <h2 className="text-base text-black mb-6">Our Products</h2>
             <p className="text-base leading-relaxed text-black mb-8">
-              We're developing ready-to-deploy UI-tools and frameworks tailored to sector-specific needs. Though still early-stage, we aim to create measurable impact across industries—and build a generational studio.
+              We're developing ready-to-deploy UI-tools and frameworks tailored to sector-specific needs. Though still early-stage, we aim to create measurable impact across industries—and build a generational company.
             </p>
             <div className="w-full max-w-xs space-y-0">
               {/* Tools Accordion */}
