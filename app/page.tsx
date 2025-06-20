@@ -138,12 +138,88 @@ export default function Home() {
               <div className="text-base text-left mt-48 md:mt-48 mb-2 md:mb-10">
                 <div className="mb-6 flex items-center gap-2 justify-start">
                   <div>
-                    <span className="inline-block transform rotate-0 text-2xl text-black font-semibold">◾ reasonlab</span>
+                    <span className="inline-block transform rotate-0 text-1xl text-black font-semibold">Loopscale</span>
                   </div>
                 </div>
-                <h2 className="text-1xl text-black font-semibold mb-2">
-                  Reasonlab is developing a new generation of consistent and controllable AI.
+                <p className="text-base text-black font-regular italic mb-2">A research-led venture</p>
+                <h2 className="text-2xl text-black font-light mb-2">
+                  Building a new generation of consistent and controllable workflow automations.
                 </h2>
+              </div>
+            </div>
+            <div className="flex-1 flex justify-center">
+              <style jsx>{`
+                @keyframes fadeInOut {
+                  0%, 100% { opacity: 0.7; }
+                  50% { opacity: 1; }
+                }
+                .ascii-animation {
+                  animation: fadeInOut 3s ease-in-out infinite;
+                }
+                @keyframes typeLine {
+                  0% { width: 0; opacity: 1; }
+                  100% { width: 100%; opacity: 1; }
+                }
+                .type-line {
+                  overflow: hidden;
+                  white-space: nowrap;
+                  opacity: 0;
+                  animation: typeLine 0.5s steps(40) forwards;
+                }
+                .line-1 { animation-delay: 0s; }
+                .line-2 { animation-delay: 0.1s; }
+                .line-3 { animation-delay: 0.2s; }
+                .line-4 { animation-delay: 0.3s; }
+                .line-5 { animation-delay: 0.4s; }
+                .line-6 { animation-delay: 0.5s; }
+                .line-7 { animation-delay: 0.6s; }
+                .line-8 { animation-delay: 0.7s; }
+                .line-9 { animation-delay: 0.8s; }
+                .line-10 { animation-delay: 0.9s; }
+                .line-11 { animation-delay: 1s; }
+                .line-12 { animation-delay: 1.1s; }
+                .line-13 { animation-delay: 1.2s; }
+                .line-14 { animation-delay: 1.3s; }
+                .line-15 { animation-delay: 1.4s; }
+                .line-16 { animation-delay: 1.5s; }
+                .line-17 { animation-delay: 1.6s; }
+                .line-18 { animation-delay: 1.7s; }
+                .line-19 { animation-delay: 1.8s; }
+                .line-20 { animation-delay: 1.9s; }
+                .line-21 { animation-delay: 2s; }
+                .line-22 { animation-delay: 2.1s; }
+                .line-23 { animation-delay: 2.2s; }
+                .line-24 { animation-delay: 2.3s; }
+                .line-25 { animation-delay: 2.4s; }
+                .line-26 { animation-delay: 2.5s; }
+              `}</style>
+              <div className="text-[8px] leading-tight text-center text-black mt-16 md:mt-48 ascii-animation">
+                <div className="type-line line-1"> ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
+                <div className="type-line line-2"> ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
+                <div className="type-line line-3"> ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
+                <div className="type-line line-4"> ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
+                <div className="type-line line-5"> ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
+                <div className="type-line line-6"> ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
+                <div className="type-line line-7"> ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠟⠛⠛⠛⠛⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
+                <div className="type-line line-8"> ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠁⠀⢀⣀⣀⣀⡀⠀⠀⠙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
+                <div className="type-line line-9"> ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠁⠀⢠⣶⣿⣿⣿⣿⣿⣷⣄⠀⠀⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
+                <div className="type-line line-10">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠁⠀⢀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⠀⠀⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
+                <div className="type-line line-11">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
+                <div className="type-line line-12">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⠀⠀⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
+                <div className="type-line line-13">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⠀⠀⠈⠛⠿⠿⠿⠿⠿⠿⠿⠀⠀⠘⠛⠛⠛⠛⠛⠻⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
+                <div className="type-line line-14">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣦⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⣀⣀⣀⠀⠀⠀⠙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
+                <div className="type-line line-15">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣶⣶⣿⠇⠀⠀⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
+                <div className="type-line line-16">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⢰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
+                <div className="type-line line-17">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
+                <div className="type-line line-18">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠀⠹⣿⣿⣿⣿⣿⣿⣿⣿⠟⠀⠀⣸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
+                <div className="type-line line-19">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡀⠀⠉⠻⠿⣿⣿⠿⠟⠋⠀⢀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
+                <div className="type-line line-20">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣦⣀⠀⠀⠀⠀⠀⠀⣀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
+                <div className="type-line line-21">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣶⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
+                <div className="type-line line-22">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
+                <div className="type-line line-23">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
+                <div className="type-line line-24">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
+                <div className="type-line line-25">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
+                <div className="type-line line-26">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
               </div>
             </div>
           </div>
@@ -153,7 +229,7 @@ export default function Home() {
         <section id="solution" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-16">
           <h2 className="text-base text-black mb-6">Our Work</h2>
           <p className="text-base leading-relaxed text-black">
-            There is a gap between the capabilities of general-purpose AI models and the ability of non-specialist teams to apply them. We address this by designing intuitive access to advanced configurations. We believe the future of AI tools lies in anticipatory interactions—molding models into reliable collaborators that enhance efficiency, navigate complexity, and uncover solutions. We call this: Usable Intelligence (UI).
+            There is a gap between the capabilities of general-purpose AI models and the ability of non-specialist teams to apply them. We address this by designing intuitive access to advanced configurations. We believe the future of AI products lies in anticipatory interactions—molding models into reliable collaborators that enhance efficiency, navigate complexity, and uncover solutions. We call this: Usable Intelligence (UI).
           </p>
         </section>
 
@@ -162,7 +238,7 @@ export default function Home() {
             <h2 className="text-base text-black mb-6">
               <div className="flex items-center gap-2">
                 <span className={altform.className + " text-black"}>
-                  Introducing Reasonlab UI Gen-1
+                  Introducing Loopscale UI Gen-1
                 </span>
                 <span className="bg-black text-white text-xs font-semibold px-2 py-1 rounded-full">pre-alpha</span>
               </div>
@@ -436,14 +512,14 @@ export default function Home() {
               </a>
               . To learn more about our work, feel free to
               <a
-                href="mailto:hello@reasonlab.ai"
+                href="mailto:hello@loopscale.ai"
                 className="underline hover:text-blue-600 transition-colors mx-1"
               >
                 reach out
               </a>
               .
             </p>
-            <div className="text-sm text-black mt-4">© 2025 Reasonlab · Montreal</div>
+            <div className="text-sm text-black mt-4">© 2025 Loopscale AI · Montreal</div>
           </div>
         </section>
       </div>
