@@ -40,6 +40,162 @@ function Typewriter({ words, speed = 80, pause = 1200 }: { words: string[]; spee
   );
 }
 
+// ASCII morphing component
+function AsciiMorph({ isDarkMode }: { isDarkMode: boolean }) {
+  const [currentShape, setCurrentShape] = useState(0);
+  const [morphProgress, setMorphProgress] = useState(0);
+
+  // Define the different ASCII shapes
+  const shapes = [
+    // Shape 1 - Complex geometric pattern
+    [
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏⢸⡇⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠃⠀⢸⡇⠀⠘⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠁⠀⠀⢸⡇⠀⠀⠈⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣤⣀⠀⠀⢸⡇⠀⢀⣀⣤⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣼⣧⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
+    ],
+    // Shape 2 - Organic flowing pattern
+    [
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⢹⡟⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠁⢸⡇⠈⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠀⠀⢸⡇⠀⠀⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠀⠀⡠⠜⠢⢄⠀⠀⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣏⠴⠂⠁⠀⠀⠀⠀⠈⠐⠄⣹⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
+    ],
+    // Shape 3 - Abstract geometric composition
+    [
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠁⡌⠀⠈⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠁⠀⢰⠀⠀⠀⠀⠈⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣥⠄⣀⣀⣇⣀⣀⢀⣀⡠⠤⢬⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡀⠀⢃⠀⠀⠀⠀⢀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡌⠄⠀⢀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣾⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
+    ],
+    // Shape 4 - Dynamic wave pattern
+    [
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠛⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠋⢀⠇⠈⢎⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠁⠀⠀⠘⠀⠀⠀⠳⡀⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣅⡀⠀⠀⠀⠇⠀⠀⠀⠀⠐⢄⢸⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣯⡒⢄⣰⢀⣀⣀⠤⢤⠤⣨⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡘⡄⠀⠀⣀⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
+    ],
+    // Shape 5 - Complex geometric pattern
+    [
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠛⠛⠛⠛⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⢉⡀⠀⠀⣀⡠⢧⠈⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠀⠀⠀⡏⠁⠀⠀⠀⠱⡀⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⡇⠀⠀⠀⠀⠀⡸⠺⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⣀⠤⠓⠤⣀⠀⠀⠌⠀⣸⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣄⠀⠀⠀⠀⠈⡏⣀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣤⣤⣤⣤⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
+    ]
+  ];
+
+  // Function to interpolate between two strings
+  const interpolateString = (str1: string, str2: string, progress: number) => {
+    if (progress <= 0) return str1;
+    if (progress >= 1) return str2;
+    
+    const chars1 = str1.split('');
+    const chars2 = str2.split('');
+    const maxLength = Math.max(chars1.length, chars2.length);
+    
+    let result = '';
+    for (let i = 0; i < maxLength; i++) {
+      const char1 = chars1[i] || ' ';
+      const char2 = chars2[i] || ' ';
+      
+      if (Math.random() < progress) {
+        result += char2;
+      } else {
+        result += char1;
+      }
+    }
+    
+    return result;
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setMorphProgress(prev => {
+        if (prev >= 1) {
+          setCurrentShape((currentShape + 1) % shapes.length);
+          return 0;
+        }
+        return prev + 0.02; // Adjust speed here
+      });
+    }, 50); // Adjust timing here
+
+    return () => clearInterval(interval);
+  }, [currentShape, shapes.length]);
+
+  const currentShapeData = shapes[currentShape];
+  const nextShapeData = shapes[(currentShape + 1) % shapes.length];
+
+  return (
+    <div className={`text-[8px] leading-tight text-center mt-16 md:mt-48 ${isDarkMode ? 'text-white' : 'text-black'}`}>
+      {currentShapeData.map((line, index) => {
+        const nextLine = nextShapeData[index] || line;
+        const morphedLine = interpolateString(line, nextLine, morphProgress);
+        
+        return (
+          <div key={index} className="overflow-hidden whitespace-nowrap">
+            {morphedLine}
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [currentSection, setCurrentSection] = useState(0);
@@ -47,17 +203,11 @@ export default function Home() {
   const mainRef = useRef<HTMLDivElement>(null);
   const [hasScrolled, setHasScrolled] = useState(false);
   const [atBottom, setAtBottom] = useState(false);
-  const [ixOpen, setIxOpen] = useState(false);
   const [useCasesOpen, setUseCasesOpen] = useState(false);
-  const [toolsOpen, setToolsOpen] = useState(false);
-  const [frameworksOpen, setFrameworksOpen] = useState(false);
   const [coreFunctionsOpen, setCoreFunctionsOpen] = useState(false);
 
   // Helper to toggle accordions: open if closed, close if open
-  const openOnly = (section: 'tools' | 'frameworks' | 'capabilities' | 'usecases' | 'corefunctions') => {
-    setToolsOpen((prev) => section === 'tools' ? !toolsOpen : false);
-    setFrameworksOpen((prev) => section === 'frameworks' ? !frameworksOpen : false);
-    setIxOpen((prev) => section === 'capabilities' ? !ixOpen : false);
+  const openOnly = (section: 'usecases' | 'corefunctions') => {
     setUseCasesOpen((prev) => section === 'usecases' ? !useCasesOpen : false);
     setCoreFunctionsOpen((prev) => section === 'corefunctions' ? !coreFunctionsOpen : false);
   };
@@ -106,9 +256,13 @@ export default function Home() {
     setIsDarkMode(newTheme);
     if (newTheme) {
       document.documentElement.classList.add('dark');
+      document.body.style.backgroundColor = 'black';
+      document.body.style.color = 'white';
       localStorage.setItem('theme', 'dark');
     } else {
       document.documentElement.classList.remove('dark');
+      document.body.style.backgroundColor = 'white';
+      document.body.style.color = 'black';
       localStorage.setItem('theme', 'light');
     }
   };
@@ -123,128 +277,62 @@ export default function Home() {
   };
 
   return (
-    <main ref={mainRef} className="overflow-y-scroll scroll-smooth bg-white transition-colors duration-300 pb-32">
+    <main ref={mainRef} className={`overflow-y-scroll scroll-smooth transition-colors duration-300 pb-32 ${isDarkMode ? 'bg-black text-white' : 'bg-white text-black'}`}>
       <div className="max-w-2xl w-full px-6 mx-auto">
         {/* Theme Toggle */}
         <div className="fixed top-6 left-0 right-0 flex justify-between items-center px-4 sm:px-8 z-50">
-          <span className="flex items-center text-lg sm:text-2xl text-black transition-all duration-300">
+          <span className={`flex items-center text-lg sm:text-2xl transition-all duration-300 ${isDarkMode ? 'text-white' : 'text-black'}`}>
+            <span className={`inline-block transform rotate-45 text-3xl font-regular ${isDarkMode ? 'text-white' : 'text-black'}`}>∞</span>
           </span>
+          <button
+            onClick={toggleTheme}
+            className={`p-2 rounded-lg transition-colors duration-200 ${isDarkMode ? 'bg-gray-800 hover:bg-gray-700 text-white' : 'bg-gray-100 hover:bg-gray-200 text-black'}`}
+            aria-label="Toggle theme"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+          </button>
         </div>
 
         {/* Hero Section */}
         <section id="vision" className="flex flex-col transition-all duration-300 ease-in-out p-4 pt-0 md:pt-4 mb-16">
           <div className="flex flex-col md:flex-row items-center justify-between gap-0 md:gap-8 md:gap-0">
             <div className="flex-1">
-              <div className="text-base text-left mt-48 md:mt-48 mb-2 md:mb-10">
+              <div className={`text-base text-left mt-48 md:mt-48 mb-2 md:mb-10 ${isDarkMode ? 'text-white' : 'text-black'}`}>
                 <div className="mb-6 flex items-center gap-2 justify-start">
-                  <div>
-                    <span className="inline-block transform rotate-0 text-1xl text-black font-semibold">Loopscale</span>
-                  </div>
                 </div>
-                <p className="text-base text-black font-regular italic mb-2">A research-led venture</p>
-                <h2 className="text-2xl text-black font-light mb-2">
-                  Building a new generation of consistent and controllable workflow automations.
+                <h2 className={`text-xl font-regular mb-2 ${isDarkMode ? 'text-white' : 'text-black'}`}>
+                  <span className="font-semibold">Leeway</span> is a research-led operation pioneering a new generation of consistent and controllable knowledge tools.
                 </h2>
               </div>
             </div>
             <div className="flex-1 flex justify-center">
-              <style jsx>{`
-                @keyframes fadeInOut {
-                  0%, 100% { opacity: 0.7; }
-                  50% { opacity: 1; }
-                }
-                .ascii-animation {
-                  animation: fadeInOut 3s ease-in-out infinite;
-                }
-                @keyframes typeLine {
-                  0% { width: 0; opacity: 1; }
-                  100% { width: 100%; opacity: 1; }
-                }
-                .type-line {
-                  overflow: hidden;
-                  white-space: nowrap;
-                  opacity: 0;
-                  animation: typeLine 0.5s steps(40) forwards;
-                }
-                .line-1 { animation-delay: 0s; }
-                .line-2 { animation-delay: 0.1s; }
-                .line-3 { animation-delay: 0.2s; }
-                .line-4 { animation-delay: 0.3s; }
-                .line-5 { animation-delay: 0.4s; }
-                .line-6 { animation-delay: 0.5s; }
-                .line-7 { animation-delay: 0.6s; }
-                .line-8 { animation-delay: 0.7s; }
-                .line-9 { animation-delay: 0.8s; }
-                .line-10 { animation-delay: 0.9s; }
-                .line-11 { animation-delay: 1s; }
-                .line-12 { animation-delay: 1.1s; }
-                .line-13 { animation-delay: 1.2s; }
-                .line-14 { animation-delay: 1.3s; }
-                .line-15 { animation-delay: 1.4s; }
-                .line-16 { animation-delay: 1.5s; }
-                .line-17 { animation-delay: 1.6s; }
-                .line-18 { animation-delay: 1.7s; }
-                .line-19 { animation-delay: 1.8s; }
-                .line-20 { animation-delay: 1.9s; }
-                .line-21 { animation-delay: 2s; }
-                .line-22 { animation-delay: 2.1s; }
-                .line-23 { animation-delay: 2.2s; }
-                .line-24 { animation-delay: 2.3s; }
-                .line-25 { animation-delay: 2.4s; }
-                .line-26 { animation-delay: 2.5s; }
-              `}</style>
-              <div className="text-[8px] leading-tight text-center text-black mt-16 md:mt-48 ascii-animation">
-                <div className="type-line line-1"> ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
-                <div className="type-line line-2"> ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
-                <div className="type-line line-3"> ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
-                <div className="type-line line-4"> ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
-                <div className="type-line line-5"> ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
-                <div className="type-line line-6"> ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
-                <div className="type-line line-7"> ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠟⠛⠛⠛⠛⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
-                <div className="type-line line-8"> ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠁⠀⢀⣀⣀⣀⡀⠀⠀⠙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
-                <div className="type-line line-9"> ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠁⠀⢠⣶⣿⣿⣿⣿⣿⣷⣄⠀⠀⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
-                <div className="type-line line-10">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠁⠀⢀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⠀⠀⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
-                <div className="type-line line-11">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
-                <div className="type-line line-12">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⠀⠀⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
-                <div className="type-line line-13">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⠀⠀⠈⠛⠿⠿⠿⠿⠿⠿⠿⠀⠀⠘⠛⠛⠛⠛⠛⠻⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
-                <div className="type-line line-14">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣦⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⣀⣀⣀⠀⠀⠀⠙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
-                <div className="type-line line-15">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣶⣶⣿⠇⠀⠀⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
-                <div className="type-line line-16">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⢰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
-                <div className="type-line line-17">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
-                <div className="type-line line-18">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠀⠹⣿⣿⣿⣿⣿⣿⣿⣿⠟⠀⠀⣸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
-                <div className="type-line line-19">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡀⠀⠉⠻⠿⣿⣿⠿⠟⠋⠀⢀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
-                <div className="type-line line-20">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣦⣀⠀⠀⠀⠀⠀⠀⣀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
-                <div className="type-line line-21">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣶⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
-                <div className="type-line line-22">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
-                <div className="type-line line-23">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
-                <div className="type-line line-24">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
-                <div className="type-line line-25">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
-                <div className="type-line line-26">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</div>
-              </div>
+              <AsciiMorph isDarkMode={isDarkMode} />
             </div>
           </div>
         </section>
 
         {/* Main Content */}
         <section id="solution" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-16">
-          <h2 className="text-base text-black mb-6">Our Work</h2>
-          <p className="text-base leading-relaxed text-black">
-            There is a gap between the capabilities of general-purpose AI models and the ability of non-specialist teams to apply them. We address this by designing intuitive access to advanced configurations. We believe the future of AI products lies in anticipatory interactions—molding models into reliable collaborators that enhance efficiency, navigate complexity, and uncover solutions. We call this: Usable Intelligence (UI).
+          <h2 className={`text-base mb-6 ${isDarkMode ? 'text-white' : 'text-black'}`}>Our Work</h2>
+          <p className={`text-base leading-relaxed ${isDarkMode ? 'text-white' : 'text-black'}`}>
+          We believe the future of general-purpose AI tools lies in anticipatory interactions, molding models into reliable collaborators that enhance efficiency, navigate multi-layered complexity, and uncover solutions. Our research focuses on designing intuitive access to advanced configurations. We call this: Usable Intelligence (UI).
           </p>
         </section>
 
         <section id="about" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-16">
           <div className="space-y-4">
-            <h2 className="text-base text-black mb-6">
+            <h2 className={`text-base mb-6 ${isDarkMode ? 'text-white' : 'text-black'}`}>
               <div className="flex items-center gap-2">
-                <span className={altform.className + " text-black"}>
-                  Introducing Loopscale UI Gen-1
+                <span className={`${altform.className} ${isDarkMode ? 'text-white' : 'text-black'}`}>
+                  Introducing Leeway UI Gen-1
                 </span>
                 <span className="bg-black text-white text-xs font-semibold px-2 py-1 rounded-full">pre-alpha</span>
               </div>
             </h2>
-            <p className="text-base leading-relaxed text-black mb-8">
-              Our research focuses on combining Agentic Systems—autonomous AI that completes layered tasks—with Intelligent Experiences—adaptive interfaces that personalize interactions. Together they form UI Gen‑1: agents operate in the background while users engage through seamless, configurable interfaces. Freeing professionals to focus on higher-leverage work.
+            <p className={`text-base leading-relaxed mb-8 ${isDarkMode ? 'text-white' : 'text-black'}`}>
+            We combine Agentic Systems with Intelligent Experiences to create UI Gen-1: autonomous agents operating behind seamless, adaptive interfaces. Our early-stage tools and frameworks enable professionals to focus on high-leverage work.
             </p>
             <div className="w-full max-w-xs space-y-0 mt-4">
               <button
@@ -255,10 +343,10 @@ export default function Home() {
                 aria-expanded={coreFunctionsOpen}
                 aria-controls="core-functions-panel"
                 id="core-functions-header"
-                className="w-full flex justify-between items-center px-0 py-2 bg-transparent text-gray-400 text-base transition-colors focus:outline-none focus:ring-0 text-left hover:bg-transparent rounded-none"
+                className={`w-full flex justify-between items-center px-0 py-2 bg-transparent text-base transition-colors focus:outline-none focus:ring-0 text-left hover:bg-transparent rounded-none ${isDarkMode ? 'text-gray-300' : 'text-gray-400'}`}
                 style={{ letterSpacing: '0.01em' }}
               >
-                <span className="text-left flex-1">Core Functions</span>
+                <span className="text-left flex-1">Capabilities</span>
                 <span className="ml-2 text-base flex-shrink-0 transition-transform duration-200">
                   {coreFunctionsOpen ? '−' : '+'}
                 </span>
@@ -270,169 +358,30 @@ export default function Home() {
                 className={`overflow-hidden transition-all duration-300 ease-in-out ${coreFunctionsOpen ? 'max-h-[800px] opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'}`}
                 aria-hidden={!coreFunctionsOpen}
               >
-                <ul className="bg-transparent text-black">
+                <ul className="bg-transparent">
                   <li className="px-2 py-1">
-                    <span className="text-black">⟡</span> Autonomous Execution
-                    <div className="text-sm text-gray-500 mt-1 max-w-[280px]">Completes complex tasks with minimal supervision and adapts over time.</div>
+                    <span className={isDarkMode ? 'text-white' : 'text-black'}>⟡</span> Autonomous Execution
+                    <div className={`text-sm mt-1 max-w-[280px] ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>Completes complex and focused tasks with minimal supervision and adapts over time.</div>
                   </li>
                   <li className="px-2 py-1">
-                    <span className="text-black">⤷</span> Conversational Interface
-                    <div className="text-sm text-gray-500 mt-1 max-w-[280px]">Engages users through human-centred inputs.</div>
+                    <span className={isDarkMode ? 'text-white' : 'text-black'}>⤷</span> Conversational Interface
+                    <div className={`text-sm mt-1 max-w-[280px] ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>Engages users through human-centred inputs.</div>
                   </li>
                   <li className="px-2 py-1">
-                    <span className="text-black">〜</span> Real-Time Adaptation
-                    <div className="text-sm text-gray-500 mt-1 max-w-[280px]">Adjusts to new inputs, contexts, and feedback instantly.</div>
+                    <span className={isDarkMode ? 'text-white' : 'text-black'}>〜</span> Real-Time Adaptation
+                    <div className={`text-sm mt-1 max-w-[280px] ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>Adjusts to new inputs, contexts, and feedback instantly.</div>
                   </li>
                   <li className="px-2 py-1">
-                    <span className="text-black">⧖</span> Context & Reasoning
-                    <div className="text-sm text-gray-500 mt-1 max-w-[280px]">Understands environment, sets goals, and makes decisions.</div>
+                    <span className={isDarkMode ? 'text-white' : 'text-black'}>𖡎</span> Context & Reasoning
+                    <div className={`text-sm mt-1 max-w-[280px] ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>Understands environment, sets goals, and makes decisions, identify patterns</div>
                   </li>
                   <li className="px-2 py-1">
-                    <span className="text-black">❉</span> Orchestration & Control
-                    <div className="text-sm text-gray-500 mt-1 max-w-[280px]">Coordinates tools and agents while simplifying management.</div>
+                    <span className={isDarkMode ? 'text-white' : 'text-black'}>❉</span> Orchestration & Control
+                    <div className={`text-sm mt-1 max-w-[280px] ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>Coordinates tools and agents while simplifying management.</div>
                   </li>
                   <li className="px-2 py-1">
-                    <span className="text-black">⧆</span> Personalization & Insights
-                    <div className="text-sm text-gray-500 mt-1 max-w-[280px]">Tailors responses and displays performance with clarity.</div>
-                  </li>
-                </ul>
-              </div>
-              <hr className="border-t border-gray-400 h-px" />
-            </div>
-          </div>
-        </section>
-
-        <section id="solutions" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-16">
-          <div>
-            <h2 className="text-base text-black mb-6">Our Products</h2>
-            <p className="text-base leading-relaxed text-black mb-8">
-              We're developing ready-to-deploy UI-tools and frameworks tailored to sector-specific needs. Though still early-stage, we aim to create measurable impact across industries—and build a generational company.
-            </p>
-            <div className="w-full max-w-xs space-y-0">
-              {/* Tools Accordion */}
-              <button
-                type="button"
-                onClick={() => openOnly('tools')}
-                onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openOnly('tools'); } }}
-                tabIndex={0}
-                aria-expanded={toolsOpen}
-                aria-controls="tools-panel"
-                id="tools-header"
-                className="w-full flex justify-between items-center px-0 py-2 bg-transparent text-gray-400 text-base transition-colors focus:outline-none focus:ring-0 text-left hover:bg-transparent rounded-none"
-                style={{ letterSpacing: '0.01em' }}
-              >
-                <span className="text-left flex-1">Tools</span>
-                <span className="ml-2 text-base flex-shrink-0 transition-transform duration-200">
-                  {toolsOpen ? '−' : '+'}
-                </span>
-              </button>
-              <div
-                id="tools-panel"
-                role="region"
-                aria-labelledby="tools-header"
-                className={`overflow-hidden transition-all duration-300 ease-in-out ${toolsOpen ? 'max-h-96 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'}`}
-                aria-hidden={!toolsOpen}
-              >
-                {/* Tools content */}
-                <div className="flex flex-col items-start my-6 ml-2">
-                  <div className="max-w-[280px]">
-                    <div className="text-base text-black">
-                      <span className="text-black">⧇</span> Agents
-                    </div>
-                    <div className="text-sm text-gray-600">Supports teams by automating tasks and evolving with operational needs.</div>
-                  </div>
-                </div>
-                <div className="flex flex-col items-start my-6 ml-2">
-                  <div className="max-w-[280px]">
-                    <div className="text-base text-black">
-                      <span className="text-black">⧈</span> Dashboard
-                    </div>
-                    <div className="text-sm text-gray-600">No-code interface for managing agents, refining prompts, and monitoring performance.</div>
-                  </div>
-                </div>
-              </div>
-              <hr className="border-t border-gray-400 h-px" />
-
-              {/* Frameworks Accordion */}
-              <button
-                type="button"
-                onClick={() => openOnly('frameworks')}
-                onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openOnly('frameworks'); } }}
-                tabIndex={0}
-                aria-expanded={frameworksOpen}
-                aria-controls="frameworks-panel"
-                id="frameworks-header"
-                className="w-full flex justify-between items-center px-0 py-2 bg-transparent text-gray-400 text-base transition-colors focus:outline-none focus:ring-0 text-left hover:bg-transparent rounded-none"
-                style={{ letterSpacing: '0.01em' }}
-              >
-                <span className="text-left flex-1">Frameworks</span>
-                <span className="ml-2 text-base flex-shrink-0 transition-transform duration-200">
-                  {frameworksOpen ? '−' : '+'}
-                </span>
-              </button>
-              <div
-                id="frameworks-panel"
-                role="region"
-                aria-labelledby="frameworks-header"
-                className={`overflow-hidden transition-all duration-300 ease-in-out ${frameworksOpen ? 'max-h-96 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'}`}
-                aria-hidden={!frameworksOpen}
-              >
-                <div className="flex items-start my-6 ml-2">
-                  <div className="max-w-[280px]">
-                    <div className="flex items-center">
-                      <span className="text-black inline-block transform rotate-90">▮</span>
-                      <span className="text-base text-black ml-2">UI-Counter</span>
-                    </div>
-                    <div className="text-sm text-gray-500 mt-1 max-w-[280px]">Sector-specific, plug-and-play UI framework built for small retail teams.</div>
-                  </div>
-                </div>
-              </div>
-              <hr className="border-t border-gray-400 h-px" />
-
-              {/* Capabilities Accordion */}
-              <button
-                type="button"
-                onClick={() => openOnly('capabilities')}
-                onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openOnly('capabilities'); } }}
-                tabIndex={0}
-                aria-expanded={ixOpen}
-                aria-controls="ix-capabilities-panel"
-                id="ix-capabilities-header"
-                className="w-full flex justify-between items-center px-0 py-2 bg-transparent text-gray-400 text-base transition-colors focus:outline-none focus:ring-0 text-left hover:bg-transparent rounded-none"
-                style={{ letterSpacing: '0.01em' }}
-              >
-                <span className="text-left flex-1">Capabilities</span>
-                <span className="ml-2 text-base flex-shrink-0 transition-transform duration-200">
-                  {ixOpen ? '−' : '+'}
-                </span>
-              </button>
-              <div
-                id="ix-capabilities-panel"
-                role="region"
-                aria-labelledby="ix-capabilities-header"
-                className={`overflow-hidden transition-all duration-300 ease-in-out ${ixOpen ? 'max-h-96 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'}`}
-                aria-hidden={!ixOpen}
-              >
-                <ul className="bg-transparent text-black">
-                  <li className="px-2 py-1">
-                    <span className="text-black">●</span> Automate
-                    <div className="text-sm text-gray-500 mt-1 max-w-[280px]">Trigger actions based on patterns.</div>
-                  </li>
-                  <li className="px-2 py-1">
-                    <span className="text-black">𖡎</span> Remember
-                    <div className="text-sm text-gray-500 mt-1 max-w-[280px]">Retain and apply context across tasks.</div>
-                  </li>
-                  <li className="px-2 py-1">
-                    <span className="text-black">⊹</span> Focus
-                    <div className="text-sm text-gray-500 mt-1 max-w-[280px]">Highlight key tasks or data.</div>
-                  </li>
-                  <li className="px-2 py-1">
-                    <span className="text-black">⊠</span> Repair
-                    <div className="text-sm text-gray-500 mt-1 max-w-[280px]">Detect and fix problems autonomously.</div>
-                  </li>
-                  <li className="px-2 py-1">
-                    <span className="text-black">↔</span> Move
-                    <div className="text-sm text-gray-500 mt-1 max-w-[280px]">Quickly apply across systems and infrastructure.</div>
+                    <span className={isDarkMode ? 'text-white' : 'text-black'}>⧆</span> Personalization & Insights
+                    <div className={`text-sm mt-1 max-w-[280px] ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>Tailors responses and displays performance with clarity.</div>
                   </li>
                 </ul>
               </div>
@@ -447,7 +396,7 @@ export default function Home() {
                 aria-expanded={useCasesOpen}
                 aria-controls="use-cases-panel"
                 id="use-cases-header"
-                className="w-full flex justify-between items-center px-0 py-2 bg-transparent text-gray-400 text-base transition-colors focus:outline-none focus:ring-0 text-left hover:bg-transparent rounded-none"
+                className={`w-full flex justify-between items-center px-0 py-2 bg-transparent text-base transition-colors focus:outline-none focus:ring-0 text-left hover:bg-transparent rounded-none ${isDarkMode ? 'text-gray-300' : 'text-gray-400'}`}
                 style={{ letterSpacing: '0.01em' }}
               >
                 <span className="text-left flex-1">Use Cases</span>
@@ -462,26 +411,26 @@ export default function Home() {
                 className={`overflow-hidden transition-all duration-300 ease-in-out ${useCasesOpen ? 'max-h-[500px] opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'}`}
                 aria-hidden={!useCasesOpen}
               >
-                <ul className="bg-transparent text-black">
+                <ul className="bg-transparent">
                   <li className="px-2 py-1">
-                    <span className="text-black">⧉</span> R&D Ops
-                    <div className="text-sm text-gray-500 mt-1">Extract insights and surface patterns.</div>
+                    <span className={isDarkMode ? 'text-white' : 'text-black'}>⧉</span> R&D Ops
+                    <div className={`text-sm mt-1 max-w-[280px] ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>Extract insights and surface patterns.</div>
                   </li>
                   <li className="px-2 py-1">
-                    <span className="text-black">?</span> Support
-                    <div className="text-sm text-gray-500 mt-1">Answer questions and guide decisions.</div>
+                    <span className={isDarkMode ? 'text-white' : 'text-black'}>?</span> Support
+                    <div className={`text-sm mt-1 max-w-[280px] ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>Answer questions and guide decisions.</div>
                   </li>
                   <li className="px-2 py-1">
-                    <span className="text-black">⛭</span> Maintenance
-                    <div className="text-sm text-gray-500 mt-1">Proactively monitor and fix issues.</div>
+                    <span className={isDarkMode ? 'text-white' : 'text-black'}>⛭</span> Maintenance
+                    <div className={`text-sm mt-1 max-w-[280px] ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>Proactively monitor and fix issues.</div>
                   </li>
                   <li className="px-2 py-1">
-                    <span className="text-black">☰</span> Workflow Execution
-                    <div className="text-sm text-gray-500 mt-1">Run coordinated, multi-step processes.</div>
+                    <span className={isDarkMode ? 'text-white' : 'text-black'}>☰</span> Workflow Execution
+                    <div className={`text-sm mt-1 max-w-[280px] ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>Run coordinated, multi-step processes.</div>
                   </li>
                   <li className="px-2 py-1">
-                    <span className="text-black">§</span> Compliance
-                    <div className="text-sm text-gray-500 mt-1">Ensure outputs meet standards.</div>
+                    <span className={isDarkMode ? 'text-white' : 'text-black'}>§</span> Compliance
+                    <div className={`text-sm mt-1 max-w-[280px] ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>Ensure outputs meet standards.</div>
                   </li>
                 </ul>
               </div>
@@ -491,16 +440,16 @@ export default function Home() {
         </section>
 
         <section id="approach" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-16">
-          <h2 className="text-base text-black mb-6">Our Approach</h2>
-          <p className="text-base leading-relaxed text-black">
+          <h2 className={`text-base mb-6 ${isDarkMode ? 'text-white' : 'text-black'}`}>Our Approach</h2>
+          <p className={`text-base leading-relaxed ${isDarkMode ? 'text-white' : 'text-black'}`}>
             We're building AI alignment that preserves and amplifies human reasoning and work similar to the shift from pen and paper to laptops enhanced the way we solve problems.
           </p>
         </section>
 
         <section id="contact" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-16">
           <div className="space-y-4">
-            <h2 className="text-base text-black mb-6">Let's Talk</h2>
-            <p className="text-base leading-relaxed text-black mb-2">
+            <h2 className={`text-base mb-6 ${isDarkMode ? 'text-white' : 'text-black'}`}>Let's Talk</h2>
+            <p className={`text-base leading-relaxed mb-2 ${isDarkMode ? 'text-white' : 'text-black'}`}>
               If you'd like to become an early adopter, please fill out this
               <a
                 href="https://tally.so/r/mRla1p"
@@ -512,14 +461,14 @@ export default function Home() {
               </a>
               . To learn more about our work, feel free to
               <a
-                href="mailto:hello@loopscale.ai"
+                href="mailto:hello@leeway.ai"
                 className="underline hover:text-blue-600 transition-colors mx-1"
               >
                 reach out
               </a>
               .
             </p>
-            <div className="text-sm text-black mt-4">© 2025 Loopscale AI · Montreal</div>
+            <div className={`text-sm mt-4 ${isDarkMode ? 'text-white' : 'text-black'}`}>© 2025 Leeway Labs · Montreal</div>
           </div>
         </section>
       </div>
