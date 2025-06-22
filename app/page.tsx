@@ -299,8 +299,8 @@ export default function Home() {
         <section id="vision" className="flex flex-col transition-all duration-300 ease-in-out p-4 pt-0 md:pt-4 mb-16">
           <div className="flex flex-col md:flex-row items-center justify-between gap-0 md:gap-8 md:gap-0">
             <div className="flex-1">
-              <div className={`text-base text-left mt-48 md:mt-48 mb-2 md:mb-10 ${isDarkMode ? 'text-white' : 'text-black'}`}>
-                <div className="mb-6 flex items-center gap-2 justify-start">
+              <div className={`text-base text-center md:text-left mt-48 md:mt-48 mb-2 md:mb-10 ${isDarkMode ? 'text-white' : 'text-black'}`}>
+                <div className="mb-6 flex items-center gap-2 justify-center md:justify-start">
                 </div>
                 <h2 className={`text-xl font-regular mb-2 ${isDarkMode ? 'text-white' : 'text-black'}`}>
                   <span className="font-semibold">Leeway</span> is a research-led design studio pioneering a new generation of consistent and controllable knowledge tools.
@@ -317,7 +317,7 @@ export default function Home() {
         <section id="solution" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-16">
           <h2 className={`text-base mb-6 ${isDarkMode ? 'text-white' : 'text-black'}`}>Our Work</h2>
           <p className={`text-base leading-relaxed ${isDarkMode ? 'text-white' : 'text-black'}`}>
-          We believe the future of general-purpose AI tools lies in anticipatory interactions, molding models into reliable collaborators that enhance efficiency, navigate multi-layered complexity, and uncover solutions. Our research focuses on designing intuitive access to advanced configurations. We call this: Usable Intelligence (UI).
+          We believe the future of general-purpose AI lies in anticipatory interactions. Interfaces that proactively adapt to user needs. By shaping models into reliable collaborators, they enhance efficiency, manage layered complexity, and reveal actionable insights. Our research focuses on designing intuitive access to advanced configurations. We call this: Usable Intelligence (UI).
           </p>
         </section>
 
@@ -328,11 +328,10 @@ export default function Home() {
                 <span className={`${altform.className} ${isDarkMode ? 'text-white' : 'text-black'}`}>
                   Introducing Leeway UI Gen-1
                 </span>
-                <span className="bg-black text-white text-xs font-semibold px-2 py-1 rounded-full">pre-alpha</span>
               </div>
             </h2>
             <p className={`text-base leading-relaxed mb-8 ${isDarkMode ? 'text-white' : 'text-black'}`}>
-            We combine Agentic Systems with Intelligent Experiences to create UI Gen-1: autonomous agents operating behind seamless, adaptive interfaces. Our early-stage tools and frameworks enable professionals to focus on high-leverage work.
+            We combine Agentic Systems with Intelligent Experiences to create UI Gen-1: autonomous agents operating behind seamless, adaptive interfaces enabling professionals to focus on higher-leverage, more intellectually stimulating work.
             </p>
             <div className="w-full max-w-xs space-y-0 mt-4">
               <button
@@ -442,7 +441,7 @@ export default function Home() {
         <section id="approach" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-16">
           <h2 className={`text-base mb-6 ${isDarkMode ? 'text-white' : 'text-black'}`}>Our Approach</h2>
           <p className={`text-base leading-relaxed ${isDarkMode ? 'text-white' : 'text-black'}`}>
-            We're building AI alignment that preserves and amplifies human reasoning and work similar to the shift from pen and paper to laptops enhanced the way we solve problems.
+            We're building alignment that preserves and amplifies human reasoning and work similar to the shift from pen and paper to laptops augmented the way we solve problems and scale ideas.
           </p>
         </section>
 
@@ -461,7 +460,7 @@ export default function Home() {
               </a>
               . To learn more about our work, feel free to
               <a
-                href="mailto:hello@leeway.ai"
+                href="mailto:hello@leewaylabs.ai"
                 className="underline hover:text-blue-600 transition-colors mx-1"
               >
                 reach out
