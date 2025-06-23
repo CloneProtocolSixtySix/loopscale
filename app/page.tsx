@@ -47,6 +47,24 @@ function AsciiMorph({ isDarkMode }: { isDarkMode: boolean }) {
 
   // Define the different ASCII shapes
   const shapes = [
+    // Shape 0 - New geometric pattern
+    [
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠁⠀⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠀⠀⠀⠀⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏⠀⠀⠀⠀⠀⠀⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣷⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
+    ],
     // Shape 1 - Complex geometric pattern
     [
       "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
@@ -281,8 +299,8 @@ export default function Home() {
       <div className="max-w-2xl w-full px-6 mx-auto">
         {/* Theme Toggle */}
         <div className="fixed top-6 left-0 right-0 flex justify-between items-center px-4 sm:px-8 z-50">
-          <span className={`flex items-center text-lg sm:text-2xl transition-all duration-300 ${isDarkMode ? 'text-white' : 'text-black'}`}>
-            <span className={`inline-block transform rotate-45 text-3xl font-regular ${isDarkMode ? 'text-white' : 'text-black'}`}>∞</span>
+          <span className={`flex items-center text-lg sm:text-xl transition-all duration-300 ${isDarkMode ? 'text-white' : 'text-black'}`}>
+            <span className={`inline-block transform text-xl font-semibold ${isDarkMode ? 'text-white' : 'text-black'}`}>▲</span>
           </span>
           <button
             onClick={toggleTheme}
@@ -317,7 +335,7 @@ export default function Home() {
         <section id="solution" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-16">
           <h2 className={`text-base mb-6 ${isDarkMode ? 'text-white' : 'text-black'}`}>Our Work</h2>
           <p className={`text-base leading-relaxed ${isDarkMode ? 'text-white' : 'text-black'}`}>
-          We believe the future of general-purpose AI lies in anticipatory interactions. Interfaces that proactively adapt to user needs. By shaping models into reliable collaborators, they enhance efficiency, manage layered complexity, and reveal actionable insights. Our research focuses on designing intuitive access to advanced configurations. We call this: Usable Intelligence (UI).
+          We believe the future of general-purpose AI lies in anticipatory interactions. Tools that proactively adapt to user needs. By shaping models into reliable collaborators, they enhance efficiency, manage layered complexity, and reveal actionable insights. Our research focuses on designing intuitive access to advanced configurations. We call this: Usable Intelligence (UI).
           </p>
         </section>
 
@@ -441,7 +459,7 @@ export default function Home() {
         <section id="approach" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-16">
           <h2 className={`text-base mb-6 ${isDarkMode ? 'text-white' : 'text-black'}`}>Our Approach</h2>
           <p className={`text-base leading-relaxed ${isDarkMode ? 'text-white' : 'text-black'}`}>
-            We're building alignment that preserves and amplifies human reasoning and work similar to the shift from pen and paper to laptops augmented the way we solve problems and scale ideas.
+            We're building alignment that preserves human reasoning and work similar to the shift from pen and paper to laptops enhanced the way we solve problems and scale ideas.
           </p>
         </section>
 
