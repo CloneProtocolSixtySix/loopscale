@@ -113,7 +113,7 @@ function AsciiMorph({ isDarkMode }: { isDarkMode: boolean }) {
       "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣥⠄⣀⣀⣇⣀⣀⢀⣀⡠⠤⢬⣿⣿⣿⣿⣿⣿⣿⣿⣿",
       "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡀⠀⢃⠀⠀⠀⠀⢀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
       "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡌⠄⠀⢀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣾⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣾⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
       "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
       "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
       "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
@@ -199,16 +199,11 @@ function AsciiMorph({ isDarkMode }: { isDarkMode: boolean }) {
   const nextShapeData = shapes[(currentShape + 1) % shapes.length];
 
   return (
-    <div className={`text-[8px] leading-tight text-center mt-16 md:mt-48 ${isDarkMode ? 'text-white' : 'text-black'}`}>
+    <div className={`text-base leading-tight text-center mt-16 md:mt-48 ${isDarkMode ? 'text-white' : 'text-black'}`}>
       {currentShapeData.map((line, index) => {
         const nextLine = nextShapeData[index] || line;
         const morphedLine = interpolateString(line, nextLine, morphProgress);
-        
-        return (
-          <div key={index} className="overflow-hidden whitespace-nowrap">
-            {morphedLine}
-          </div>
-        );
+        return <div key={index}>{morphedLine}</div>;
       })}
     </div>
   );
@@ -321,7 +316,7 @@ export default function Home() {
                 <div className="mb-6 flex items-center gap-2 justify-center md:justify-start">
                 </div>
                 <h2 className={`text-xl font-regular mb-2 ${isDarkMode ? 'text-white' : 'text-black'}`}>
-                  <span className="font-semibold">Leeway</span> is a research-led design studio pioneering a new generation of consistent and controllable knowledge tools.
+                  <span className="font-semibold">Leeway</span> is research-led design studio pioneering a new generation of consistent and controllable knowledge tools.
                 </h2>
               </div>
             </div>
@@ -335,7 +330,7 @@ export default function Home() {
         <section id="solution" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-16">
           <h2 className={`text-base mb-6 ${isDarkMode ? 'text-white' : 'text-black'}`}>Our Work</h2>
           <p className={`text-base leading-relaxed ${isDarkMode ? 'text-white' : 'text-black'}`}>
-          We believe the future of general-purpose AI lies in anticipatory interactions. Tools that proactively adapt to user needs. By shaping models into reliable collaborators, they enhance efficiency, manage layered complexity, and reveal actionable insights. Our research focuses on designing intuitive access to advanced configurations. We call this: Usable Intelligence (UI).
+          We believe the future of general-purpose AI lies in anticipatory interactions — tools that proactively adapt to user needs. By shaping models into reliable collaborators, they enhance efficiency, manage layered complexity, and reveal actionable insights. Our research focuses on designing intuitive access to advanced configurations. We call this: Usable Intelligence (UI).
           </p>
         </section>
 
@@ -378,27 +373,27 @@ export default function Home() {
                 <ul className="bg-transparent">
                   <li className="px-2 py-1">
                     <span className={isDarkMode ? 'text-white' : 'text-black'}>⟡</span> Autonomous Execution
-                    <div className={`text-sm mt-1 max-w-[280px] ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>Completes complex and focused tasks with minimal supervision and adapts over time.</div>
+                    <div className={`text-base mt-1 max-w-[280px] ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>Completes tasks with minimal supervision.</div>
                   </li>
                   <li className="px-2 py-1">
                     <span className={isDarkMode ? 'text-white' : 'text-black'}>⤷</span> Conversational Interface
-                    <div className={`text-sm mt-1 max-w-[280px] ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>Engages users through human-centred inputs.</div>
+                    <div className={`text-base mt-1 max-w-[280px] ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>Engages through human-centred inputs.</div>
                   </li>
                   <li className="px-2 py-1">
                     <span className={isDarkMode ? 'text-white' : 'text-black'}>〜</span> Real-Time Adaptation
-                    <div className={`text-sm mt-1 max-w-[280px] ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>Adjusts to new inputs, contexts, and feedback instantly.</div>
+                    <div className={`text-base mt-1 max-w-[280px] ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>Adjusts to new inputs instantly.</div>
                   </li>
                   <li className="px-2 py-1">
                     <span className={isDarkMode ? 'text-white' : 'text-black'}>𖡎</span> Context & Reasoning
-                    <div className={`text-sm mt-1 max-w-[280px] ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>Understands environment, sets goals, and makes decisions, identify patterns</div>
+                    <div className={`text-base mt-1 max-w-[280px] ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>Understands environment and sets goals.</div>
                   </li>
                   <li className="px-2 py-1">
                     <span className={isDarkMode ? 'text-white' : 'text-black'}>❉</span> Orchestration & Control
-                    <div className={`text-sm mt-1 max-w-[280px] ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>Coordinates tools and agents while simplifying management.</div>
+                    <div className={`text-base mt-1 max-w-[280px] ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>Coordinates tools and agents.</div>
                   </li>
                   <li className="px-2 py-1">
                     <span className={isDarkMode ? 'text-white' : 'text-black'}>⧆</span> Personalization & Insights
-                    <div className={`text-sm mt-1 max-w-[280px] ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>Tailors responses and displays performance with clarity.</div>
+                    <div className={`text-base mt-1 max-w-[280px] ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>Tailors responses with clarity.</div>
                   </li>
                 </ul>
               </div>
@@ -431,27 +426,73 @@ export default function Home() {
                 <ul className="bg-transparent">
                   <li className="px-2 py-1">
                     <span className={isDarkMode ? 'text-white' : 'text-black'}>⧉</span> R&D Ops
-                    <div className={`text-sm mt-1 max-w-[280px] ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>Extract insights and surface patterns.</div>
+                    <div className={`text-base mt-1 max-w-[280px] ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>Extract insights and patterns.</div>
                   </li>
                   <li className="px-2 py-1">
                     <span className={isDarkMode ? 'text-white' : 'text-black'}>?</span> Support
-                    <div className={`text-sm mt-1 max-w-[280px] ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>Answer questions and guide decisions.</div>
+                    <div className={`text-base mt-1 max-w-[280px] ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>Answer questions and guide decisions.</div>
                   </li>
                   <li className="px-2 py-1">
                     <span className={isDarkMode ? 'text-white' : 'text-black'}>⛭</span> Maintenance
-                    <div className={`text-sm mt-1 max-w-[280px] ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>Proactively monitor and fix issues.</div>
+                    <div className={`text-base mt-1 max-w-[280px] ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>Monitor and fix issues.</div>
                   </li>
                   <li className="px-2 py-1">
                     <span className={isDarkMode ? 'text-white' : 'text-black'}>☰</span> Workflow Execution
-                    <div className={`text-sm mt-1 max-w-[280px] ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>Run coordinated, multi-step processes.</div>
+                    <div className={`text-base mt-1 max-w-[280px] ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>Run multi-step processes.</div>
                   </li>
                   <li className="px-2 py-1">
                     <span className={isDarkMode ? 'text-white' : 'text-black'}>§</span> Compliance
-                    <div className={`text-sm mt-1 max-w-[280px] ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>Ensure outputs meet standards.</div>
+                    <div className={`text-base mt-1 max-w-[280px] ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>Ensure outputs meet standards.</div>
                   </li>
                 </ul>
               </div>
               <hr className="border-t border-gray-400 h-px" />
+            </div>
+          </div>
+        </section>
+
+        <section id="ui-counter" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-16">
+          <h2 className={`text-base mb-6 ${isDarkMode ? 'text-white' : 'text-black'}`}>Our Product</h2>
+          <div className="mb-16">
+            <div className="mb-8">
+              <p className={`text-base leading-relaxed ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+              We apply UI-Gen 1 through sector-specific knowledge suites that elevate operational capabilities and gamify AI workflow experiences.
+              </p>
+            </div>
+          </div>
+          <div className={`border rounded-lg p-4 w-[300px] h-[300px] relative overflow-hidden ${isDarkMode ? 'bg-white text-black border-gray-200' : 'bg-black text-white border-gray-800'}`}>
+            <div className={`text-xs font-semibold ${isDarkMode ? 'text-gray-700' : 'text-gray-300'}`}>
+              Products
+            </div>
+            <div className={`text-xl font-bold mt-2 ${isDarkMode ? 'text-black' : 'text-white'}`}>
+              Meet Counter
+            </div>
+            <div className={`text-base leading-relaxed mt-2 ${isDarkMode ? 'text-gray-800' : 'text-gray-200'}`}>
+             A ready-to-use framework and toolkit built for retail teams.
+            </div>
+            <div className={`text-xs mt-2 ${isDarkMode ? 'text-gray-600' : 'text-gray-400'}`}>
+              | configurable components
+            </div>
+            <div className="absolute bottom-4 left-4">
+              <button 
+                onClick={() => window.open('https://tally.so/r/your-form-id', '_blank')}
+                className={`px-4 py-2 text-sm font-bold rounded-lg transition-colors ${isDarkMode ? 'bg-black text-white hover:bg-gray-800' : 'bg-white text-black hover:bg-gray-200'}`}
+              >
+                Book Demo
+              </button>
+            </div>
+            <div className={`absolute top-40 left-30 text-base font-mono leading-none ${isDarkMode ? 'text-gray-400 opacity-60' : 'text-gray-200 opacity-60'} pointer-events-none select-none`}>
+              ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠘⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br/>
+              ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣷⣄⠙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br/>
+              ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣷⣄⠙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br/>
+              ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣷⣄⠙⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br/>
+              ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br/>
+              ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br/>
+              ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br/>
+              ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣿⣿⣿⣿⣿⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br/>
+              ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣿⣿⣿⣿⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br/>
+              ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣿⣿⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br/>
+              ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇
             </div>
           </div>
         </section>
@@ -467,16 +508,7 @@ export default function Home() {
           <div className="space-y-4">
             <h2 className={`text-base mb-6 ${isDarkMode ? 'text-white' : 'text-black'}`}>Let's Talk</h2>
             <p className={`text-base leading-relaxed mb-2 ${isDarkMode ? 'text-white' : 'text-black'}`}>
-              If you'd like to become an early adopter, please fill out this
-              <a
-                href="https://tally.so/r/mRla1p"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline hover:text-blue-600 transition-colors mx-1"
-              >
-                form
-              </a>
-              . To learn more about our work, feel free to
+              if you'd like to learn more about our work, feel free to
               <a
                 href="mailto:hello@leewaylabs.ai"
                 className="underline hover:text-blue-600 transition-colors mx-1"
