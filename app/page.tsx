@@ -475,13 +475,13 @@ export default function Home() {
             </div>
             <div className="absolute bottom-4 left-4">
               <button 
-                onClick={() => window.open('https://tally.so/r/your-form-id', '_blank')}
+                onClick={() => window.open('https://tally.so/r/mRla1p', '_blank')}
                 className={`px-4 py-2 text-sm font-bold rounded-lg transition-colors ${isDarkMode ? 'bg-black text-white hover:bg-gray-800' : 'bg-white text-black hover:bg-gray-200'}`}
               >
                 Book Demo
               </button>
             </div>
-            <div className={`absolute top-40 left-30 text-base font-mono leading-none ${isDarkMode ? 'text-gray-400 opacity-60' : 'text-gray-200 opacity-60'} pointer-events-none select-none`}>
+            <div className={`absolute top-40 left-30 text-base font-mono leading-none ${isDarkMode ? 'text-gray-400 opacity-100' : 'text-gray-200 opacity-100'} pointer-events-none select-none`}>
               ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠘⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br/>
               ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣷⣄⠙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br/>
               ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣷⣄⠙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br/>
