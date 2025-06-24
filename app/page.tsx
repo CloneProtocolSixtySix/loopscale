@@ -316,7 +316,7 @@ export default function Home() {
                 <div className="mb-6 flex items-center gap-2 justify-center md:justify-start">
                 </div>
                 <h2 className={`text-xl font-regular mb-2 ${isDarkMode ? 'text-white' : 'text-black'}`}>
-                  <span className="font-semibold">Leeway</span> is research-led design studio pioneering a new generation of consistent and controllable knowledge tools.
+                  <span className="font-semibold">Leeway</span> is a research-led design studio pioneering a new generation of consistent and controllable knowledge tools.
                 </h2>
               </div>
             </div>
