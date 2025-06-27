@@ -199,7 +199,7 @@ function AsciiMorph({ isDarkMode }: { isDarkMode: boolean }) {
   const nextShapeData = shapes[(currentShape + 1) % shapes.length];
 
   return (
-    <div className={`text-base leading-tight text-center mt-16 md:mt-48 ${isDarkMode ? 'text-white' : 'text-black'}`}>
+    <div className={`text-lg leading-tight text-center mt-8 md:mt-16 ${isDarkMode ? 'text-white' : 'text-black'}`}>
       {currentShapeData.map((line, index) => {
         const nextLine = nextShapeData[index] || line;
         const morphedLine = interpolateString(line, nextLine, morphProgress);
@@ -295,7 +295,15 @@ export default function Home() {
         {/* Theme Toggle */}
         <div className="fixed top-6 left-0 right-0 flex justify-between items-center px-4 sm:px-8 z-50">
           <span className={`flex items-center text-lg sm:text-xl transition-all duration-300 ${isDarkMode ? 'text-white' : 'text-black'}`}>
-            <span className={`inline-block transform text-xl font-semibold ${isDarkMode ? 'text-white' : 'text-black'}`}>▲</span>
+            <Image
+              src="/leeway.png"
+              alt="Leeway Logo"
+              width={22}
+              height={22}
+              unoptimized
+              className="inline-block align-middle mr-2"
+              priority
+            />
           </span>
           <button
             onClick={toggleTheme}
@@ -312,38 +320,55 @@ export default function Home() {
         <section id="vision" className="flex flex-col transition-all duration-300 ease-in-out p-4 pt-0 md:pt-4 mb-16">
           <div className="flex flex-col md:flex-row items-center justify-between gap-0 md:gap-8 md:gap-0">
             <div className="flex-1">
-              <div className={`text-base text-center md:text-left mt-48 md:mt-48 mb-2 md:mb-10 ${isDarkMode ? 'text-white' : 'text-black'}`}>
-                <div className="mb-6 flex items-center gap-2 justify-center md:justify-start">
+              <div className={`text-base text-center mt-48 md:mt-48 mb-2 md:mb-10 ${isDarkMode ? 'text-white' : 'text-black'}`}>
+                <div className="mb-6 flex items-center gap-2 justify-center">
                 </div>
-                <h2 className={`text-xl font-regular mb-2 ${isDarkMode ? 'text-white' : 'text-black'}`}>
+                <h1 className={`text-5xl font-regular mb-8 mt-32 text-center ${isDarkMode ? 'text-white' : 'text-black'}`}>
+                  Intelligence, for use.
+                </h1>
+                <h2 className={`text-lg font-regular mb-1 text-center ${isDarkMode ? 'text-white' : 'text-black'}`}>
                   <span className="font-semibold">Leeway</span> is a research-led design studio pioneering a new generation of consistent and controllable knowledge tools.
                 </h2>
+                <div className="flex gap-4 mt-6 justify-center">
+                  <button 
+                    onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+                    className={`px-3 py-1 rounded-full border border-black text-sm font-semibold transition-colors ${isDarkMode ? 'text-white hover:bg-white hover:text-black' : 'text-black hover:bg-black hover:text-white'}`}
+                  >
+                    UI Gen-1
+                  </button>
+                  <button 
+                    onClick={() => document.getElementById('ui-counter')?.scrollIntoView({ behavior: 'smooth' })}
+                    className={`px-3 py-1 rounded-full border border-black text-sm font-semibold transition-colors ${isDarkMode ? 'text-white hover:bg-white hover:text-black' : 'text-black hover:bg-black hover:text-white'}`}
+                  >
+                    Counter
+                  </button>
+                </div>
               </div>
             </div>
-            <div className="flex-1 flex justify-center">
-              <AsciiMorph isDarkMode={isDarkMode} />
-            </div>
+          </div>
+          <div className="flex-1 flex justify-center">
+            <AsciiMorph isDarkMode={isDarkMode} />
           </div>
         </section>
 
         {/* Main Content */}
         <section id="solution" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-16">
-          <h2 className={`text-base mb-6 ${isDarkMode ? 'text-white' : 'text-black'}`}>Our Work</h2>
-          <p className={`text-base leading-relaxed ${isDarkMode ? 'text-white' : 'text-black'}`}>
-          We believe the future of general-purpose AI lies in anticipatory interactions — tools that proactively adapt to user needs. By shaping models into reliable collaborators, they enhance efficiency, manage layered complexity, and reveal actionable insights. Our research focuses on designing intuitive access to advanced configurations. We call this: Usable Intelligence (UI).
+          <h2 className={`text-lg mb-6 ${isDarkMode ? 'text-white' : 'text-black'}`}>Our Work</h2>
+          <p className={`text-lg leading-relaxed ${isDarkMode ? 'text-white' : 'text-black'}`}>
+          We believe the future of general-purpose AI lies in anticipatory interactions - tools that proactively adapt to user needs. By shaping models into reliable collaborators, they enhance efficiency, manage layered complexity, and reveal actionable insights. Our research focuses on designing intuitive access to advanced configurations. We call this: Usable Intelligence (UI).
           </p>
         </section>
 
         <section id="about" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-16">
           <div className="space-y-4">
-            <h2 className={`text-base mb-6 ${isDarkMode ? 'text-white' : 'text-black'}`}>
+            <h2 className={`text-lg mb-6 ${isDarkMode ? 'text-white' : 'text-black'}`}>
               <div className="flex items-center gap-2">
                 <span className={`${altform.className} ${isDarkMode ? 'text-white' : 'text-black'}`}>
                   Introducing Leeway UI Gen-1
                 </span>
               </div>
             </h2>
-            <p className={`text-base leading-relaxed mb-8 ${isDarkMode ? 'text-white' : 'text-black'}`}>
+            <p className={`text-lg leading-relaxed mb-8 ${isDarkMode ? 'text-white' : 'text-black'}`}>
             We combine Agentic Systems with Intelligent Experiences to create UI Gen-1: autonomous agents operating behind seamless, adaptive interfaces enabling professionals to focus on higher-leverage, more intellectually stimulating work.
             </p>
             <div className="w-full max-w-xs space-y-0 mt-4">
@@ -452,17 +477,17 @@ export default function Home() {
         </section>
 
         <section id="ui-counter" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-16">
-          <h2 className={`text-base mb-6 ${isDarkMode ? 'text-white' : 'text-black'}`}>Our Product</h2>
+          <h2 className={`text-lg mb-6 ${isDarkMode ? 'text-white' : 'text-black'}`}>Our Product</h2>
           <div className="mb-16">
             <div className="mb-8">
-              <p className={`text-base leading-relaxed ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+              <p className={`text-lg leading-relaxed ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
               We apply UI-Gen 1 through sector-specific knowledge suites that elevate operational capabilities and gamify AI workflow experiences.
               </p>
             </div>
           </div>
           <div className={`border rounded-lg p-4 w-[300px] h-[300px] relative overflow-hidden ${isDarkMode ? 'bg-white text-black border-gray-200' : 'bg-black text-white border-gray-800'}`}>
             <div className={`text-xs font-semibold ${isDarkMode ? 'text-gray-700' : 'text-gray-300'}`}>
-              Products
+              Product
             </div>
             <div className={`text-xl font-bold mt-2 ${isDarkMode ? 'text-black' : 'text-white'}`}>
               Meet Counter
@@ -498,16 +523,16 @@ export default function Home() {
         </section>
 
         <section id="approach" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-16">
-          <h2 className={`text-base mb-6 ${isDarkMode ? 'text-white' : 'text-black'}`}>Our Approach</h2>
-          <p className={`text-base leading-relaxed ${isDarkMode ? 'text-white' : 'text-black'}`}>
+          <h2 className={`text-lg mb-6 ${isDarkMode ? 'text-white' : 'text-black'}`}>Our Approach</h2>
+          <p className={`text-lg leading-relaxed ${isDarkMode ? 'text-white' : 'text-black'}`}>
             We're building alignment that preserves human reasoning and work similar to the shift from pen and paper to laptops enhanced the way we solve problems and scale ideas.
           </p>
         </section>
 
         <section id="contact" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-16">
           <div className="space-y-4">
-            <h2 className={`text-base mb-6 ${isDarkMode ? 'text-white' : 'text-black'}`}>Let's Talk</h2>
-            <p className={`text-base leading-relaxed mb-2 ${isDarkMode ? 'text-white' : 'text-black'}`}>
+            <h2 className={`text-lg mb-6 ${isDarkMode ? 'text-white' : 'text-black'}`}>Let's Talk</h2>
+            <p className={`text-lg leading-relaxed mb-2 ${isDarkMode ? 'text-white' : 'text-black'}`}>
               if you'd like to learn more about our work, feel free to
               <a
                 href="mailto:hello@leewaylabs.ai"
