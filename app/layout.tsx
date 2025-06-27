@@ -4,7 +4,7 @@ import { altform } from './fonts';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: "Leeway | Usable Intelligence",
+  title: "Leeway",
 };
 
 export default function RootLayout({
