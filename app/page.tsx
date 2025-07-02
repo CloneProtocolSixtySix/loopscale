@@ -74,7 +74,7 @@ function AsciiMorph({ isDarkMode }: { isDarkMode: boolean }) {
       "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
       "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏⢸⡇⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
       "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠃⠀⢸⡇⠀⠘⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠁⠀⠀⢸⡇⠀⠀⠈⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠀⠀⢸⡇⠀⠀⠈⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
       "⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿",
       "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣤⣀⠀⠀⢸⡇⠀⢀⣀⣤⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿",
       "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣼⣧⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
@@ -341,13 +341,7 @@ export default function Home() {
                     onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
                     className={`px-3 py-1 rounded-full border text-sm font-semibold transition-all duration-300 ${isDarkMode ? 'border-white text-white hover:bg-white hover:text-black' : 'border-black text-black hover:bg-black hover:text-white'}`}
                   >
-                    UI Gen-1
-                  </button>
-                  <button 
-                    onClick={() => document.getElementById('ui-counter')?.scrollIntoView({ behavior: 'smooth' })}
-                    className={`px-3 py-1 rounded-full border text-sm font-semibold transition-all duration-300 ${isDarkMode ? 'border-white text-white hover:bg-white hover:text-black' : 'border-black text-black hover:bg-black hover:text-white'}`}
-                  >
-                    Counter
+                    Discover UI-Gen 1
                   </button>
                 </div>
               </div>
@@ -360,186 +354,47 @@ export default function Home() {
 
         {/* Main Content */}
         <section id="solution" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-16">
-          <h2 className={`text-lg mb-6 ${isDarkMode ? 'text-white' : 'text-black'}`}>Our Work</h2>
+          <h2 className={`text-lg mb-6 ${isDarkMode ? 'text-white' : 'text-black'}`}>Research</h2>
           <p className={`text-lg leading-relaxed ${isDarkMode ? 'text-white' : 'text-black'}`}>
-          We create general-purpose AI that anticipates user needs. These reliable collaborators help save time, navigate complexity, and perform layered tasks. Our work is to make their power accessible. We call this: Usable Intelligence.
+            We're molding general-purpose AI into human-centered collaborators that anticipate user needs, navigate complexity, and perform layered tasks. We call this <span className="font-semibold">Usable Intelligence (UI)</span>.
           </p>
         </section>
 
         <section id="about" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-16">
-          <div className="space-y-4">
-            <h2 className={`text-lg mb-6 ${isDarkMode ? 'text-white' : 'text-black'}`}>
-              <div className="flex items-center gap-2">
-                <span className={`${altform.className} ${isDarkMode ? 'text-white' : 'text-black'}`}>
-                  Our Technology: Leeway UI Gen‑1
-                </span>
-              </div>
-            </h2>
-            <p className={`text-lg leading-relaxed mb-8 ${isDarkMode ? 'text-white' : 'text-black'}`}>
-            We combine agentic systems with intuitive interfaces to create UI Gen‑1. These tools operate in the background, freeing professionals to focus on higher leverage, more intellectually stimulating work.
+          <h2 className={`text-lg mb-6 ${isDarkMode ? 'text-white' : 'text-black'}`}>
+            <span className={`${altform.className} ${isDarkMode ? 'text-white' : 'text-black'}`}>Technology</span>
+          </h2>
+          <p className={`text-lg leading-relaxed mb-6 ${isDarkMode ? 'text-white' : 'text-black'}`}>
+            Leeway UI Gen‑1: Introducing Agentic Interfaces (AI)
+          </p>
+          <p className={`text-lg leading-relaxed mb-6 text- ${isDarkMode ? 'text-white' : 'text-black'}`}>
+            Our first iteration of UI introduces AI: gamified workflow automations that enable the intuitive orchestration of multi-agent systems, freeing professionals to focus on higher-leverage, more intellectually stimulating work. If you're interested in getting early access, please fill out <a href="https://tally.so/r/mRla1p" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-600 transition-colors">the form</a>.
+          </p>
+          <blockquote className={`border-l-4 pl-2 mb-6 ${isDarkMode ? 'border-gray-400' : 'border-gray-600'}`}>
+            <p className={`text-xs font-mono uppercase ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+              continually evolving
             </p>
-            <div className="w-full max-w-xs space-y-0 mt-4">
-              <button
-                type="button"
-                onClick={() => openOnly('corefunctions')}
-                onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openOnly('corefunctions'); } }}
-                tabIndex={0}
-                aria-expanded={coreFunctionsOpen}
-                aria-controls="core-functions-panel"
-                id="core-functions-header"
-                className={`w-full flex justify-between items-center px-0 py-2 bg-transparent text-base transition-colors focus:outline-none focus:ring-0 text-left hover:bg-transparent rounded-none ${isDarkMode ? 'text-gray-300' : 'text-gray-400'}`}
-                style={{ letterSpacing: '0.01em' }}
-              >
-                <span className="text-left flex-1">Capabilities</span>
-                <span className="ml-2 text-base flex-shrink-0 transition-transform duration-200">
-                  {coreFunctionsOpen ? '−' : '+'}
-                </span>
-              </button>
-              <div
-                id="core-functions-panel"
-                role="region"
-                aria-labelledby="core-functions-header"
-                className={`overflow-hidden transition-all duration-300 ease-in-out ${coreFunctionsOpen ? 'max-h-[800px] opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'}`}
-                aria-hidden={!coreFunctionsOpen}
-              >
-                <ul className="bg-transparent">
-                  <li className="px-2 py-1">
-                    <span className={isDarkMode ? 'text-white' : 'text-black'}>Autonomous Execution</span>
-                  </li>
-                  <li className="px-2 py-1">
-                    <span className={isDarkMode ? 'text-white' : 'text-black'}>Conversational Interface</span>
-                  </li>
-                  <li className="px-2 py-1">
-                    <span className={isDarkMode ? 'text-white' : 'text-black'}>Real-Time Adaptation</span>
-                  </li>
-                  <li className="px-2 py-1">
-                    <span className={isDarkMode ? 'text-white' : 'text-black'}>Contextual Reasoning</span>
-                  </li>
-                  <li className="px-2 py-1">
-                    <span className={isDarkMode ? 'text-white' : 'text-black'}>Orchestration</span>
-                  </li>
-                  <li className="px-2 py-1">
-                    <span className={isDarkMode ? 'text-white' : 'text-black'}>Personalized Insights</span>
-                  </li>
-                </ul>
-              </div>
-              <hr className="border-t border-gray-400 h-px" />
-
-              {/* Use Cases Accordion */}
-              <button
-                type="button"
-                onClick={() => openOnly('usecases')}
-                onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openOnly('usecases'); } }}
-                tabIndex={0}
-                aria-expanded={useCasesOpen}
-                aria-controls="use-cases-panel"
-                id="use-cases-header"
-                className={`w-full flex justify-between items-center px-0 py-2 bg-transparent text-base transition-colors focus:outline-none focus:ring-0 text-left hover:bg-transparent rounded-none ${isDarkMode ? 'text-gray-300' : 'text-gray-400'}`}
-                style={{ letterSpacing: '0.01em' }}
-              >
-                <span className="text-left flex-1">Use Cases</span>
-                <span className="ml-2 text-base flex-shrink-0 transition-transform duration-200">
-                  {useCasesOpen ? '−' : '+'}
-                </span>
-              </button>
-              <div
-                id="use-cases-panel"
-                role="region"
-                aria-labelledby="use-cases-header"
-                className={`overflow-hidden transition-all duration-300 ease-in-out ${useCasesOpen ? 'max-h-[500px] opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'}`}
-                aria-hidden={!useCasesOpen}
-              >
-                <ul className="bg-transparent">
-                  <li className="px-2 py-1">
-                    <span className={isDarkMode ? 'text-white' : 'text-black'}>R&D Ops</span>
-                  </li>
-                  <li className="px-2 py-1">
-                    <span className={isDarkMode ? 'text-white' : 'text-black'}>Support</span>
-                  </li>
-                  <li className="px-2 py-1">
-                    <span className={isDarkMode ? 'text-white' : 'text-black'}>Maintenance</span>
-                  </li>
-                  <li className="px-2 py-1">
-                    <span className={isDarkMode ? 'text-white' : 'text-black'}>Workflow</span>
-                  </li>
-                  <li className="px-2 py-1">
-                    <span className={isDarkMode ? 'text-white' : 'text-black'}>Compliance</span>
-                  </li>
-                </ul>
-              </div>
-              <hr className="border-t border-gray-400 h-px" />
-            </div>
-          </div>
-        </section>
-
-        <section id="ui-counter" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-16">
-          <h2 className={`text-lg mb-6 ${isDarkMode ? 'text-white' : 'text-black'}`}>Our Product</h2>
-          <div className="mb-16">
-            <div className="mb-8">
-              <p className={`text-lg leading-relaxed ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-              We apply UI-Gen 1 through sector-specific knowledge suites that elevate operational capabilities and gamify AI workflow experiences.
-              </p>
-            </div>
-          </div>
-          <div className={`border rounded-lg p-4 w-[300px] h-[300px] relative overflow-hidden ${isDarkMode ? 'bg-white text-black border-gray-200' : 'bg-black text-white border-gray-800'}`}>
-            <div className={`text-xs font-semibold ${isDarkMode ? 'text-gray-700' : 'text-gray-300'}`}>
-              Product
-            </div>
-            <div className={`text-xl font-bold mt-2 ${isDarkMode ? 'text-black' : 'text-white'}`}>
-              Meet Counter
-            </div>
-            <div className={`text-base leading-relaxed mt-2 ${isDarkMode ? 'text-gray-800' : 'text-gray-200'}`}>
-             A ready-to-use framework and toolkit built for retail teams.
-            </div>
-            <div className={`text-xs mt-2 ${isDarkMode ? 'text-gray-600' : 'text-gray-400'}`}>
-              | configurable components
-            </div>
-            <div className="absolute bottom-4 left-4">
-              <button 
-                onClick={() => window.open('https://tally.so/r/mRla1p', '_blank')}
-                className={`px-4 py-2 text-sm font-bold rounded-lg transition-colors ${isDarkMode ? 'bg-black text-white hover:bg-gray-800' : 'bg-white text-black hover:bg-gray-200'}`}
-              >
-                Book Demo
-              </button>
-            </div>
-            <div className={`absolute top-40 left-30 text-base font-mono leading-none ${isDarkMode ? 'text-gray-400 opacity-100' : 'text-gray-200 opacity-100'} pointer-events-none select-none`}>
-              ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠘⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br/>
-              ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣷⣄⠙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br/>
-              ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣷⣄⠙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br/>
-              ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣷⣄⠙⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br/>
-              ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br/>
-              ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br/>
-              ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br/>
-              ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣿⣿⣿⣿⣿⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br/>
-              ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣿⣿⣿⣿⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br/>
-              ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣿⣿⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br/>
-              ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇
-            </div>
-          </div>
+          </blockquote>
         </section>
 
         <section id="approach" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-16">
-          <h2 className={`text-lg mb-6 ${isDarkMode ? 'text-white' : 'text-black'}`}>Our Approach</h2>
-          <p className={`text-lg leading-relaxed ${isDarkMode ? 'text-white' : 'text-black'}`}>
-            We're building alignment that preserves human reasoning, similar to the shift from pen and paper to laptopt changed how we solve problems and scale ideas.
+          <h2 className={`text-lg mb-6 ${isDarkMode ? 'text-white' : 'text-black'}`}>Approach</h2>
+          <p className={`text-lg leading-relaxed ${isDarkMode ? 'text-white' : 'text-black'}`}> 
+            We're building foundational instruments for alignment and safety that preserve and extend human reasoning—much like how the shift from pen and paper to laptops transformed how we solve problems and scale ideas.
           </p>
         </section>
 
         <section id="contact" className="flex flex-col justify-center transition-all duration-300 ease-in-out p-4 mb-16">
-          <div className="space-y-4">
-            <h2 className={`text-lg mb-6 ${isDarkMode ? 'text-white' : 'text-black'}`}>Let's Talk</h2>
-            <p className={`text-lg leading-relaxed mb-2 ${isDarkMode ? 'text-white' : 'text-black'}`}>
-              if you'd like to learn more about our work, feel free to
-              <a
-                href="mailto:hello@leewaylabs.ai"
-                className="underline hover:text-blue-600 transition-colors mx-1"
-              >
-                reach out
-              </a>
-              .
-            </p>
-            <div className={`text-sm mt-4 ${isDarkMode ? 'text-white' : 'text-black'}`}>© 2025 Leeway Labs · Montreal</div>
-          </div>
+          <h2 className={`text-lg mb-6 ${isDarkMode ? 'text-white' : 'text-black'}`}>Let's Talk</h2>
+          <p className={`text-lg leading-relaxed mb-2 ${isDarkMode ? 'text-white' : 'text-black'}`}>
+            If you'd like to learn more about our work, feel free to
+            <a
+              href="mailto:hello@leewaylabs.ai"
+              className="underline hover:text-blue-600 transition-colors mx-1"
+            >
+              reach out</a>.
+          </p>
+          <div className={`text-xs font-mono uppercase mt-6 ${isDarkMode ? 'text-white' : 'text-black'}`}>© 2025 Leeway Labs · Montreal</div>
         </section>
       </div>
     </main>
