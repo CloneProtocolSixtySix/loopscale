@@ -368,7 +368,7 @@ export default function Home() {
             Leeway UI Gen‑1: Introducing Agentic Interfaces (AI)
           </p>
           <p className={`text-lg leading-relaxed mb-6 text- ${isDarkMode ? 'text-white' : 'text-black'}`}>
-            Our first iteration of UI introduces AI: gamified workflow automations that enable the intuitive orchestration of multi-agent systems, freeing professionals to focus on higher-leverage, more intellectually stimulating work. If you're interested in getting early access, please fill out <a href="https://tally.so/r/mRla1p" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-600 transition-colors">the form</a>.
+            Our first iteration of UI introduces AI: gamified workflow automations that enable the intuitive orchestration of multi-agent systems, freeing professionals to focus on higher-leverage, more intellectually stimulating work. If you're interested in getting early access, please fill out the <a href="https://tally.so/r/mRla1p" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600 transition-colors">form</a>.
           </p>
           <blockquote className={`border-l-4 pl-2 mb-6 ${isDarkMode ? 'border-gray-400' : 'border-gray-600'}`}>
             <p className={`text-xs font-mono uppercase ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
@@ -390,7 +390,7 @@ export default function Home() {
             If you'd like to learn more about our work, feel free to
             <a
               href="mailto:hello@leewaylabs.ai"
-              className="underline hover:text-blue-600 transition-colors mx-1"
+              className="underline hover:text-gray-600 transition-colors mx-1"
             >
               reach out</a>.
           </p>
