@@ -229,9 +229,13 @@ export default function Home() {
   useEffect(() => {
     // Check if user has a theme preference in localStorage
     const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    if (savedTheme === 'dark') {
       setIsDarkMode(true);
       document.documentElement.classList.add('dark');
+    } else {
+      // Default to light mode
+      setIsDarkMode(false);
+      document.documentElement.classList.remove('dark');
     }
   }, []);
 
@@ -364,11 +368,11 @@ export default function Home() {
           <h2 className={`text-lg mb-6 ${isDarkMode ? 'text-white' : 'text-black'}`}>
             <span className={`${altform.className} ${isDarkMode ? 'text-white' : 'text-black'}`}>Technology</span>
           </h2>
-          <p className={`text-lg leading-relaxed mb-6 ${isDarkMode ? 'text-white' : 'text-black'}`}>
+          <p className={`text-lg leading-relaxed mb-6 font-semibold ${isDarkMode ? 'text-white' : 'text-black'}`}>
             Leeway UI Gen‑1: Introducing Agentic Interfaces (AI)
           </p>
           <p className={`text-lg leading-relaxed mb-6 text- ${isDarkMode ? 'text-white' : 'text-black'}`}>
-            Our first iteration of UI introduces AI: gamified workflow automations that enable the intuitive orchestration of multi-agent systems, freeing professionals to focus on higher-leverage, more intellectually stimulating work. If you're interested in getting early access, please fill out the <a href="https://tally.so/r/mRla1p" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600 transition-colors">form</a>.
+            Our first iteration of UI introduces AI: gamified workflow automations that enable intuitive orchestration of multi-agent systems, freeing professionals to focus on higher-leverage, more intellectually stimulating work. If you're interested in getting early access, please fill out the <a href="https://tally.so/r/mRla1p" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600 transition-colors">form</a>.
           </p>
           <blockquote className={`border-l-4 pl-2 mb-6 ${isDarkMode ? 'border-gray-400' : 'border-gray-600'}`}>
             <p className={`text-xs font-mono uppercase ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
