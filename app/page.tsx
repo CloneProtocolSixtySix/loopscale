@@ -40,175 +40,6 @@ function Typewriter({ words, speed = 80, pause = 1200 }: { words: string[]; spee
   );
 }
 
-// ASCII morphing component
-function AsciiMorph({ isDarkMode }: { isDarkMode: boolean }) {
-  const [currentShape, setCurrentShape] = useState(0);
-  const [morphProgress, setMorphProgress] = useState(0);
-
-  // Define the different ASCII shapes
-  const shapes = [
-    // Shape 0 - New geometric pattern
-    [
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠁⠀⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠀⠀⠀⠀⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏⠀⠀⠀⠀⠀⠀⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣷⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
-    ],
-    // Shape 1 - Complex geometric pattern
-    [
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏⢸⡇⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠃⠀⢸⡇⠀⠘⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠀⠀⢸⡇⠀⠀⠈⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣤⣀⠀⠀⢸⡇⠀⢀⣀⣤⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣼⣧⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
-    ],
-    // Shape 2 - Organic flowing pattern
-    [
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⢹⡟⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠁⢸⡇⠈⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠀⠀⢸⡇⠀⠀⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠀⠀⡠⠜⠢⢄⠀⠀⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣏⠴⠂⠁⠀⠀⠀⠀⠈⠐⠄⣹⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
-    ],
-    // Shape 3 - Abstract geometric composition
-    [
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠁⡌⠀⠈⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠁⠀⢰⠀⠀⠀⠀⠈⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣥⠄⣀⣀⣇⣀⣀⢀⣀⡠⠤⢬⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡀⠀⢃⠀⠀⠀⠀⢀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡌⠄⠀⢀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣾⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
-    ],
-    // Shape 4 - Dynamic wave pattern
-    [
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠛⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠋⢀⠇⠈⢎⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠁⠀⠀⠘⠀⠀⠀⠳⡀⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣅⡀⠀⠀⠀⠇⠀⠀⠀⠀⠐⢄⢸⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣯⡒⢄⣰⢀⣀⣀⠤⢤⠤⣨⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡘⡄⠀⠀⣀⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
-    ],
-    // Shape 5 - Complex geometric pattern
-    [
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠛⠛⠛⠛⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⢉⡀⠀⠀⣀⡠⢧⠈⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠀⠀⠀⡏⠁⠀⠀⠀⠱⡀⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⡇⠀⠀⠀⠀⠀⡸⠺⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⣀⠤⠓⠤⣀⠀⠀⠌⠀⣸⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣄⠀⠀⠀⠀⠈⡏⣀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣤⣤⣤⣤⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
-      "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
-    ]
-  ];
-
-  // Function to interpolate between two strings
-  const interpolateString = (str1: string, str2: string, progress: number) => {
-    if (progress <= 0) return str1;
-    if (progress >= 1) return str2;
-    
-    const chars1 = str1.split('');
-    const chars2 = str2.split('');
-    const maxLength = Math.max(chars1.length, chars2.length);
-    
-    let result = '';
-    for (let i = 0; i < maxLength; i++) {
-      const char1 = chars1[i] || ' ';
-      const char2 = chars2[i] || ' ';
-      
-      if (Math.random() < progress) {
-        result += char2;
-      } else {
-        result += char1;
-      }
-    }
-    
-    return result;
-  };
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setMorphProgress(prev => {
-        if (prev >= 1) {
-          setCurrentShape((currentShape + 1) % shapes.length);
-          return 0;
-        }
-        return prev + 0.02; // Adjust speed here
-      });
-    }, 50); // Adjust timing here
-
-    return () => clearInterval(interval);
-  }, [currentShape, shapes.length]);
-
-  const currentShapeData = shapes[currentShape];
-  const nextShapeData = shapes[(currentShape + 1) % shapes.length];
-
-  return (
-    <div className={`text-lg leading-tight text-center mt-8 md:mt-16 ${isDarkMode ? 'text-white' : 'text-black'}`}>
-      {currentShapeData.map((line, index) => {
-        const nextLine = nextShapeData[index] || line;
-        const morphedLine = interpolateString(line, nextLine, morphProgress);
-        return <div key={index}>{morphedLine}</div>;
-      })}
-    </div>
-  );
-}
-
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [currentSection, setCurrentSection] = useState(0);
@@ -302,28 +133,16 @@ export default function Home() {
       <div className="max-w-2xl w-full px-6 mx-auto">
         {/* Theme Toggle */}
         <div className="fixed top-6 left-0 right-0 flex justify-between items-center px-4 sm:px-8 z-50">
-          <span className={`flex items-center text-xl sm:text-2xl font-bold transition-all duration-300 ${isDarkMode ? 'text-white' : 'text-black'}`}>
-            <Image
-              src="/leeway.png"
-              alt="Leeway Logo"
-              width={22}
-              height={22}
-              unoptimized
-              className={`inline-block align-middle mr-2 transition-all duration-300 ${isDarkMode ? 'invert brightness-0' : ''}`}
-              priority
-            />
-            <span className={`transition-all duration-300 ${isScrolled ? 'w-0 overflow-hidden opacity-0' : 'w-auto opacity-100'}`}>
-              Leeway
-            </span>
+          <span className={`flex items-center text-xl sm:text-2xl transition-all duration-300 ${isDarkMode ? 'text-white' : 'text-black'}`}>
+            <span className="mr-2 font-bold">⛶</span>
+            <span className={`transition-all duration-300 ${isScrolled ? 'w-0 overflow-hidden opacity-0' : 'w-auto opacity-100'}`}>Leeway</span>
           </span>
           <button
             onClick={toggleTheme}
             className={`p-2 rounded-lg transition-colors duration-200 ${isDarkMode ? 'bg-gray-800 hover:bg-gray-700 text-white' : 'bg-gray-100 hover:bg-gray-200 text-black'}`}
             aria-label="Toggle theme"
           >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-            </svg>
+            <span className="block w-3 h-3 rounded-full bg-current"></span>
           </button>
         </div>
 
@@ -351,8 +170,13 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="flex-1 flex justify-center">
-            <AsciiMorph isDarkMode={isDarkMode} />
+          <div className="flex-1 flex justify-center items-center mt-16">
+            <div className="relative w-full max-w-2xl flex justify-center items-center">
+              <img src="/gif.gif" alt="Animated hero visual" className="w-full object-contain" />
+              <span className="absolute inset-0 flex items-center justify-center text-[12rem] md:text-[18rem] z-10 pointer-events-none select-none text-white font-light" style={{mixBlendMode: 'difference'}}>
+                ⛶
+              </span>
+            </div>
           </div>
         </section>
 
@@ -369,10 +193,10 @@ export default function Home() {
             <span className={`${altform.className} ${isDarkMode ? 'text-white' : 'text-black'}`}>Technology</span>
           </h2>
           <p className={`text-lg leading-relaxed mb-6 font-semibold ${isDarkMode ? 'text-white' : 'text-black'}`}>
-            Leeway UI Gen‑1: Introducing Agentic Interfaces (AI)
+            Leeway UI Gen‑1: Agentic Interfaces (AI)
           </p>
           <p className={`text-lg leading-relaxed mb-6 text- ${isDarkMode ? 'text-white' : 'text-black'}`}>
-            Our first iteration of UI introduces AI: gamified workflow automations that enable intuitive orchestration of multi-agent systems, freeing professionals to focus on higher-leverage, more intellectually stimulating work. If you're interested in getting early access, please fill out the <a href="https://tally.so/r/mRla1p" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600 transition-colors">form</a>.
+            Our first iteration of UI introduces AI: gamified workflow automations that enable the orchestration of multiple agents within a system, freeing professionals to focus on higher-leverage, more intellectually stimulating work. If you're interested in early access, please fill out the <a href="https://tally.so/r/mRla1p" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600 transition-colors">form</a>.
           </p>
           <blockquote className={`border-l-4 pl-2 mb-6 ${isDarkMode ? 'border-gray-400' : 'border-gray-600'}`}>
             <p className={`text-xs font-mono uppercase ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
