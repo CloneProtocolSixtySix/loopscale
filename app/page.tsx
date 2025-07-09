@@ -3,9 +3,16 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Playfair_Display } from 'next/font/google';
 
 import { altform } from './fonts';
 import DottedEffect from './components/DottedEffect';
+
+const playfair = Playfair_Display({ 
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-playfair'
+});
 
 function Typewriter({ words, speed = 80, pause = 1200 }: { words: string[]; speed?: number; pause?: number }) {
   const [displayed, setDisplayed] = useState('');
@@ -154,7 +161,7 @@ export default function Home() {
               <div className={`text-base text-center mt-24 md:mt-48 mb-2 md:mb-10 ${isDarkMode ? 'text-white' : 'text-black'}`}>
                 <div className="mb-6 flex items-center gap-2 justify-center">
                 </div>
-                <h1 className={`text-4xl font-regular mb-8 mt-16 md:mt-32 text-center ${isDarkMode ? 'text-white' : 'text-black'}`}>
+                <h1 className={`text-4xl font-regular mb-8 mt-16 md:mt-32 text-center ${isDarkMode ? 'text-white' : 'text-black'} ${playfair.className}`}>
                   Intelligence, for human-use.
                 </h1>
                 <h2 className={`text-lg font-regular mb-1 text-center ${isDarkMode ? 'text-white' : 'text-black'}`}>
