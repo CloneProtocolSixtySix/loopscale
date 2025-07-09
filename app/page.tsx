@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import { altform } from './fonts';
+import DottedEffect from './components/DottedEffect';
 
 function Typewriter({ words, speed = 80, pause = 1200 }: { words: string[]; speed?: number; pause?: number }) {
   const [displayed, setDisplayed] = useState('');
@@ -153,11 +154,11 @@ export default function Home() {
               <div className={`text-base text-center mt-24 md:mt-48 mb-2 md:mb-10 ${isDarkMode ? 'text-white' : 'text-black'}`}>
                 <div className="mb-6 flex items-center gap-2 justify-center">
                 </div>
-                <h1 className={`text-5xl font-regular mb-8 mt-16 md:mt-32 text-center ${isDarkMode ? 'text-white' : 'text-black'}`}>
-                  Intelligence, for use.
+                <h1 className={`text-4xl font-regular mb-8 mt-16 md:mt-32 text-center ${isDarkMode ? 'text-white' : 'text-black'}`}>
+                  Intelligence, for human-use.
                 </h1>
                 <h2 className={`text-lg font-regular mb-1 text-center ${isDarkMode ? 'text-white' : 'text-black'}`}>
-                  <span className="font-regular">Leeway</span> is a research-led design studio pioneering a new generation of consistent and controllable knowledge tools.
+                  <span className="font-regular">Leeway</span> is a research-led design studio pioneering a generation of consistent and controllable knowledge tools.
                 </h2>
                 <div className="flex gap-4 mt-6 justify-center">
                   <button 
@@ -172,7 +173,9 @@ export default function Home() {
           </div>
           <div className="flex-1 flex justify-center items-center mt-16">
             <div className="relative w-full max-w-2xl flex justify-center items-center">
-              <img src="/gif.gif" alt="Animated hero visual" className="w-full object-contain" />
+              <div className="w-full h-[500px]">
+                <DottedEffect isDarkMode={isDarkMode} />
+              </div>
               <span className="absolute inset-0 flex items-center justify-center text-[12rem] md:text-[18rem] z-10 pointer-events-none select-none text-white font-light" style={{mixBlendMode: 'difference'}}>
                 ⛶
               </span>
