@@ -25,8 +25,8 @@ export default function Home() {
 
 
   useLayoutEffect(() => {
-    if (tabRefs.current[currentIndex]) {
-      const currentTab = tabRefs.current[currentIndex];
+    const currentTab = tabRefs.current[currentIndex];
+    if (currentTab) {
       setIndicatorStyle({
         left: currentTab.offsetLeft,
         width: currentTab.offsetWidth,
