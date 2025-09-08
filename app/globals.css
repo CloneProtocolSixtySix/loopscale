@@ -13,8 +13,7 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb));
+  background-color: #F5F4EE;
 }
 
 .animate-gradient {
@@ -47,3 +46,11 @@ body {
 .font-playfair {
   font-family: 'Playfair', serif;
 } 
+
+.mono {
+  font-family: var(--font-plex-mono), monospace;
+}
+
+.serif {
+  font-family: var(--font-plex-serif), serif;
+}
