@@ -15,7 +15,7 @@ export default function Home() {
   const [isAccordionOpen, setIsAccordionOpen] = useState(false);
   const [selectedAccordionItem, setSelectedAccordionItem] = useState(null);
 
-  const handleToggleContent = (section) => {
+  const handleToggleContent = (section: string) => {
     setActiveSection(section);
   };
 
