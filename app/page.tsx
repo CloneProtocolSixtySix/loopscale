@@ -37,13 +37,16 @@ export default function Home() {
   return (
     <main className="min-h-screen" style={{ backgroundColor: '#F5F4EE' }}>
       <div className="max-w-2xl w-full px-6 py-16 mx-auto space-y-6">
+        <div className="flex items-center space-x-2">
+          <img src="/lightship.svg" alt="Lightship Logo" className="w-6 h-6" />
+        </div>
         <h1 className="text-xl font-normal">
           <button onClick={() => handleToggleContent('home')} className="mr-2">
           </button>
         </h1>
         <div className="flex items-center space-x-4 text-sm mono">
-          <button onClick={() => handleToggleContent('home')} className="mr-1">
-            <img src="/lightship.svg" alt="Lightship Logo" className="w-5 h-5 min-w-5 min-h-5" />
+          <button onClick={() => handleToggleContent('home')} className={activeSection === 'home' ? '' : 'underline'}>
+            <span className="text-sm mono font-normal">Home</span>
           </button>
           <span>·</span>
           <button onClick={() => handleToggleContent('about')} className={activeSection === 'about' ? '' : 'underline'}>
@@ -70,7 +73,7 @@ export default function Home() {
       Lightship explores and measures change, identifying hidden patterns that define the trajectory of human ingenuity.
     </p>
     <p className="text-sm mono">
-      Though early, our tools aim to help the world's venture pioneers perceive once-invisible change, we have an opportunity to build a monumental company.
+      Though early, our tools aim to help the industry captains and venture pioneers perceive once-invisible change, we have an opportunity to build a monumental company.
     </p>
     <p className="text-sm mono">
       Yannick Bruderlein, Founder
@@ -79,36 +82,39 @@ export default function Home() {
 ) : activeSection === 'tools' ? (
   <>
     <p className="text-lg font-normal serif">
-      Introducing Deep Thought*<br/>
+      Introducing Deep Thought 1<br/>
     </p>
     <p className="text-sm mono">
-    DT consists of a bespoke set of language models capable of multidisciplinary reasoning.
+    DT1 consists of a bespoke set of language models capable of multidisciplinary reasoning.
     </p>
     <div className="mt-4">
       <button 
         onClick={() => setIsAccordionOpen(!isAccordionOpen)}
-        className="flex items-center justify-between w-full text-xs mono text-left p-2 border border-black transition-colors"
+        className="flex items-center justify-between w-full text-sm mono text-left p-2 border border-black transition-colors"
       >
-        <span>Interface Components</span>
+        <span>Capabilities</span>
         <span className={`transform transition-transform ${isAccordionOpen ? 'rotate-180' : ''}`}>
         ↑
         </span>
       </button>
       {isAccordionOpen && (
         <div className="border-l border-r border-b border-black" style={{ backgroundColor: '#F5F4EE' }}>
-          <div className="p-2 text-xs mono border-b border-gray-200">
+          <div className="p-2 text-sm mono border-b border-gray-200">
             <div className="font-normal">Agent · Create agents that can reason, make decisions, and act based on contextual understanding in evolving environments.</div>
           </div>
-          <div className="p-2 text-xs mono border-b border-gray-200 cursor-pointer">Workflow</div>
-          <div className="p-2 text-xs mono border-b border-gray-200 cursor-pointer">Observability</div>
-          <div className="p-2 text-xs mono border-b border-gray-200 cursor-pointer">Orchestration</div>
-          <div className="p-2 text-xs mono border-b border-gray-200 cursor-pointer">Fellow (𝑓✦) · Match research projects to sector-specific commercialization and investment opportunities and mitigate industry uncertainty with academic integrity.
+          {/* <div className="p-2 text-sm mono border-b border-gray-200 cursor-pointer">Workflow</div>
+          <div className="p-2 text-sm mono border-b border-gray-200 cursor-pointer">Observability</div>
+          <div className="p-2 text-sm mono border-b border-gray-200 cursor-pointer">Orchestration</div> */}
+          <div className="p-2 text-sm mono border-b border-gray-200 cursor-pointer">Peer · Match research projects to sector-specific commercialization and investment opportunities and mitigate industry uncertainty with academic integrity.
 
 </div>
 
         </div>
         
       )}
+      <div className="mt-3">
+        <a href="#" className="text-sm mono underline">Work with DT1↗</a>
+      </div>
     </div>
   </>
 ) : (

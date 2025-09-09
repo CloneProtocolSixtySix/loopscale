@@ -16,7 +16,7 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Lightship",
+  title: "Lightship · An intelligence partner",
 };
 
 export default function RootLayout({
