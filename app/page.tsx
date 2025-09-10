@@ -38,15 +38,15 @@ export default function Home() {
     <main className="min-h-screen" style={{ backgroundColor: '#F5F4EE' }}>
       <div className="max-w-2xl w-full px-6 py-16 mx-auto space-y-6">
         <div className="flex items-center space-x-2">
-          <img src="/lightship.svg" alt="Lightship Logo" className="w-6 h-6" />
+          <img src="/lightship.svg" alt="Lightship Logo" className="w-8 h-8" />
         </div>
         <h1 className="text-xl font-normal">
           <button onClick={() => handleToggleContent('home')} className="mr-2">
           </button>
         </h1>
-        <div className="flex items-center space-x-4 text-sm mono">
+        <div className="flex items-center space-x-2 text-sm mono">
           <button onClick={() => handleToggleContent('home')} className={activeSection === 'home' ? '' : 'underline'}>
-            <span className="text-sm mono font-normal">Home</span>
+            <span className="text-sm mono font-normal">Lightship</span> <br />
           </button>
           <span>·</span>
           <button onClick={() => handleToggleContent('about')} className={activeSection === 'about' ? '' : 'underline'}>
@@ -61,7 +61,7 @@ export default function Home() {
             Research↗
           </a>
         </div>
-        <hr className="my-4 border-t-2 border-black border-dashed" />
+        <hr className="my-4 border-t border-black border-dashed" />
         {activeSection === 'about' ? (
   <>
     <h2 className="text-lg font-normal serif">Founder's Note</h2>
@@ -73,7 +73,7 @@ export default function Home() {
       Lightship explores and measures change, identifying hidden patterns that define the trajectory of human ingenuity.
     </p>
     <p className="text-sm mono">
-      Though early, our tools aim to help the industry captains and venture pioneers perceive once-invisible change, we have an opportunity to build a monumental company.
+      Though early, our tools aim to help industry captains once-invisible change, we have an opportunity to build a monumental company.
     </p>
     <p className="text-sm mono">
       Yannick Bruderlein, Founder
@@ -82,15 +82,15 @@ export default function Home() {
 ) : activeSection === 'tools' ? (
   <>
     <p className="text-lg font-normal serif">
-      Introducing Deep Thought 1<br/>
+      Introducing Deep Thought<br/>
     </p>
     <p className="text-sm mono">
-    DT1 consists of a bespoke set of language models capable of multidisciplinary reasoning.
+    DT consists of a bespoke set of language models capable of multidisciplinary reasoning.
     </p>
     <div className="mt-4">
       <button 
         onClick={() => setIsAccordionOpen(!isAccordionOpen)}
-        className="flex items-center justify-between w-full text-sm mono text-left p-2 border border-black transition-colors"
+        className="flex items-center justify-between w-full text-sm mono text-left p-2 border border-black border-dashed transition-colors"
       >
         <span>Capabilities</span>
         <span className={`transform transition-transform ${isAccordionOpen ? 'rotate-180' : ''}`}>
@@ -98,14 +98,14 @@ export default function Home() {
         </span>
       </button>
       {isAccordionOpen && (
-        <div className="border-l border-r border-b border-black" style={{ backgroundColor: '#F5F4EE' }}>
-          <div className="p-2 text-sm mono border-b border-gray-200">
+        <div className="border-l border-r border-b border-black border-dashed" style={{ backgroundColor: '#F5F4EE' }}>
+          <div className="p-2 text-sm mono border-b border-gray-200 border-dashed">
             <div className="font-normal">Agent · Create agents that can reason, make decisions, and act based on contextual understanding in evolving environments.</div>
           </div>
           {/* <div className="p-2 text-sm mono border-b border-gray-200 cursor-pointer">Workflow</div>
           <div className="p-2 text-sm mono border-b border-gray-200 cursor-pointer">Observability</div>
           <div className="p-2 text-sm mono border-b border-gray-200 cursor-pointer">Orchestration</div> */}
-          <div className="p-2 text-sm mono border-b border-gray-200 cursor-pointer">Peer · Match research projects to sector-specific commercialization and investment opportunities and mitigate industry uncertainty with academic integrity.
+          <div className="p-2 text-sm mono border-b border-gray-200 border-dashed cursor-pointer">Peer · Match research projects to sector-specific commercialization and investment opportunities and mitigate industry uncertainty with academic integrity.
 
 </div>
 
@@ -113,7 +113,7 @@ export default function Home() {
         
       )}
       <div className="mt-3">
-        <a href="#" className="text-sm mono underline">Work with DT1↗</a>
+        <a href="#" className="text-sm mono underline">Work with DT↗ (coming soon)</a>
       </div>
     </div>
   </>
@@ -121,12 +121,16 @@ export default function Home() {
   <>
     <h2 className="text-lg font-normal serif">An intelligence partner</h2>
     <p className="text-sm mono">
-         At Lightship, we develop and apply tools that navigate complexity at the intersection of data, design and decision.
+         We build tools that navigate complexity at the intersection of data, design and decision.
     </p>
   </>
 )}
-        <hr className="my-4 border-t-2 border-black border-dashed" />
-        <p className="text-sm mono">© 2025 Lightship · <a href="mailto:hello@lightship.xyz" className="underline">hello@lightship.xyz↗</a> · <a href="https://www.linkedin.com/company/lightship-studio" className="underline">@lightship↗</a></p>
+        <hr className="my-4 border-t border-black border-dashed" />
+        <div className="flex items-center space-x-2 text-sm mono">
+          <span>© 2025 Lightship</span>
+          <span>·</span>
+          <a href="mailto:hello@lightship.xyz" className="underline">hello@lightship.xyz↗</a>
+        </div>
       </div>
     </main>
   );

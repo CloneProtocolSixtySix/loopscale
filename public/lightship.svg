@@ -1,11 +1,3 @@
 <svg width="480" height="480" viewBox="0 0 480 480" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="68.5703" y="274.969" width="68.5705" height="136.457" fill="black"/>
-<rect x="342.859" y="274.969" width="68.5705" height="205.028" fill="black"/>
-<rect x="205.703" y="137.133" width="68.5705" height="68.5713" fill="black"/>
-<rect x="274.289" y="68.5703" width="68.5705" height="68.5713" fill="black"/>
-<rect x="205.703" width="68.5705" height="68.5713" fill="black"/>
-<rect x="137.133" y="68.5703" width="68.5705" height="68.5713" fill="black"/>
-<rect x="274.289" y="274.289" width="205.712" height="68.5713" fill="black"/>
-<rect y="274.289" width="205.712" height="68.5713" fill="black"/>
-<rect x="137.133" y="411.43" width="274.282" height="68.5713" fill="black"/>
+<path d="M205.712 342.861H137.139V411.428H342.856V342.861H274.288V274.29H480V342.861H411.427V480H342.856V479.999H137.137V411.429H68.5684V342.861H0V274.29H205.712V342.861ZM274.275 68.5713H205.707V137.138H274.275V205.709H205.705V137.14H137.137V68.5684H205.705V0H274.275V68.5713ZM342.859 137.14H274.288V68.5684H342.859V137.14Z" fill="black"/>
 </svg>
