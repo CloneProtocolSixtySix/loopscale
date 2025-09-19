@@ -45,19 +45,19 @@ export default function Home() {
           </button>
         </h1>
         <div className="flex items-center space-x-2 text-sm mono">
-          <button onClick={() => handleToggleContent('home')} className={activeSection === 'home' ? '' : 'underline'}>
+          <button onClick={() => handleToggleContent('home')} className={activeSection === 'home' ? 'text-black' : 'text-gray-500'}>
             <span className="text-sm mono font-normal">Home</span> <br />
           </button>
           <span></span>
-          <button onClick={() => handleToggleContent('about')} className={activeSection === 'about' ? '' : 'underline'}>
+          <button onClick={() => handleToggleContent('about')} className={activeSection === 'about' ? 'text-black' : 'text-gray-500'}>
             About
           </button>
           <span></span>
-          <button onClick={() => handleToggleContent('tools')} className={activeSection === 'tools' ? '' : 'underline'}>
+          <button onClick={() => handleToggleContent('tools')} className={activeSection === 'tools' ? 'text-black' : 'text-gray-500'}>
             Tools
           </button>
           <span></span>
-          <a href="https://medium.com/@lightship" className="text-sm mono underline">
+          <a href="https://medium.com/@lightship" className="text-sm mono">
             Research↗
           </a>
         </div>
@@ -115,7 +115,7 @@ export default function Home() {
         
       )}
       <div className="mt-3">
-        <a href="#" className="text-sm mono underline">Work with IO-1↗ (coming soon)</a>
+        <a href="#" className="text-sm mono">Work with IO-1↗ (coming soon)</a>
       </div>
     </div>
   </>
@@ -131,7 +131,7 @@ export default function Home() {
         <div className="flex items-center space-x-2 text-xs mono">
           <span>© 2025 Integrality AI</span>
           <span></span>
-          <a href="mailto:hello@integrality.ai" className="underline">hello@integrality.ai↗</a>
+          <a href="mailto:hello@integrality.ai" className="">hello@integrality.ai↗</a>
         </div>
       </div>
     </main>
