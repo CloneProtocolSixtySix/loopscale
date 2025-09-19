@@ -72,7 +72,7 @@ export default function Home() {
       The truth is: while things ebb and flow, change itself is perpetual.
     </p>
     <p className="text-sm mono">
-      Integrality is focused on building ML that explores and measures change as a whole, identifying hidden patterns that define the trajectory of human ingenuity.
+      Integrality is building ML that explores and measures change as a whole, identifying hidden patterns that define the trajectory of human ingenuity.
     </p>
     <p className="text-sm mono">
       Though early, our tools aim to help venture pioneers see once-invisible change, we have an opportunity to build a monumental company.
