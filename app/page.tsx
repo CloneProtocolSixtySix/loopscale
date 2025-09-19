@@ -57,7 +57,7 @@ export default function Home() {
             Tools
           </button>
           <span></span>
-          <a href="https://medium.com/@lightship" className="text-sm mono">
+          <a href="https://medium.com/@lightship" className="text-sm mono text-gray-500 hover:text-black">
             Research↗
           </a>
         </div>
@@ -131,7 +131,7 @@ export default function Home() {
         <div className="flex items-center space-x-2 text-xs mono">
           <span>© 2025 Integrality AI</span>
           <span></span>
-          <a href="mailto:hello@integrality.ai" className="">hello@integrality.ai↗</a>
+          <a href="mailto:hello@integrality.ai" className="text-gray-500 hover:text-black">hello@integrality.ai↗</a>
         </div>
       </div>
     </main>
