@@ -55,7 +55,7 @@ export default function Home() {
             Tools
           </button>
           <span></span>
-          <a href="https://medium.com/@lightship" className="text-sm mono text-gray-500 hover:text-black">
+          <a href="https://medium.com/@integrality" className="text-sm mono text-gray-500 hover:text-black">
             Research↗
           </a>
         </div>
