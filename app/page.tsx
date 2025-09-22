@@ -121,7 +121,7 @@ export default function Home() {
   <>
     <h2 className="text-sm font-normal mono">A knowledge partner</h2>
     <p className="text-sm mono">
-         We build tools that solve complex problems at the intersection of data, design, and decision.
+         Building tools that solve complex problems at the intersection of data, design, and decision.
     </p>
   </>
 )}
