@@ -70,13 +70,13 @@ export default function Home() {
       The truth is: while things ebb and flow, change itself is perpetual.
     </p>
     <p className="text-sm mono">
-      Integrality is building ML that explores and measures change as a whole, identifying hidden patterns that define the trajectory of human ingenuity.
+      Integrality explores and measures change as a whole, identifying hidden patterns that define the trajectory of human ingenuity.
     </p>
     <p className="text-sm mono">
       Though in its early stages, Integrality aims to one day become a quantitative venture capital firm capable of seeing once-invisible change.
     </p>
     <p className="text-sm mono">
-      Yannick Bruderlein, Founder
+      Yannick Bruderlein, Project Founder
     </p>
   </>
 ) : activeSection === 'tools' ? (
