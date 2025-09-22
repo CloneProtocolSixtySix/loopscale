@@ -73,7 +73,7 @@ export default function Home() {
       Integrality explores and measures change as a whole, identifying hidden patterns that define the trajectory of human ingenuity.
     </p>
     <p className="text-sm mono">
-      Though in its early stages, Integrality aims to one day become a quantitative venture capital firm capable of seeing once-invisible change.
+      Though in its early stages, Integrality aims to one day build tools capable of seeing once-invisible change.
     </p>
     <p className="text-sm mono">
       Yannick Bruderlein, Project Founder
