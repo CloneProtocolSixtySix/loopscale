@@ -36,17 +36,15 @@ export default function Home() {
 
   return (
     <main className="min-h-screen" style={{ backgroundColor: '#F5F4EE' }}>
-      <div className="max-w-2xl w-full px-6 py-16 mx-auto space-y-6">
-        <div className="flex items-center space-x-2">
-   <img src="/integrality.svg" alt="Lightship Logo" className="w-32 h-8" />
-        </div> 
+      <div className="max-w-2xl w-full px-6 py-20 mx-auto space-y-6">
+        <img src="/integrality.png" alt="Integrality Logo" className="w-10 h-auto" /> 
         <h1 className="text-xl font-normal">
           <button onClick={() => handleToggleContent('home')} className="mr-2">
           </button>
         </h1>
         <div className="flex items-center space-x-2 text-sm mono">
           <button onClick={() => handleToggleContent('home')} className={activeSection === 'home' ? 'text-black' : 'text-gray-500'}>
-            <span className="text-sm mono font-normal">Home</span> <br />
+            <span className="text-sm mono font-normal">Integrality</span> <br />
           </button>
           <span></span>
           <button onClick={() => handleToggleContent('about')} className={activeSection === 'about' ? 'text-black' : 'text-gray-500'}>
