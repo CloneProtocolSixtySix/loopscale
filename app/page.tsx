@@ -44,7 +44,7 @@ export default function Home() {
         </h1>
         <div className="flex items-center space-x-2 text-sm mono">
           <button onClick={() => handleToggleContent('home')} className={activeSection === 'home' ? 'text-black' : 'text-gray-500'}>
-            <span className="text-sm mono font-normal">Integrality</span> <br />
+            <span className="text-sm mono font-normal">Integrality | A knowledge partner</span> <br />
           </button>
           <span></span>
           <button onClick={() => handleToggleContent('about')} className={activeSection === 'about' ? 'text-black' : 'text-gray-500'}>
