@@ -64,7 +64,7 @@ export default function Home() {
   <>
 
 <p className="text-sm font-normal mono">
-      Menifesto<br/>
+      Manifesto<br/>
     </p>
     <p className="text-sm mono">
       The truth is: while things ebb and flow, change itself is perpetual.
@@ -73,7 +73,7 @@ export default function Home() {
       Integrality is building ML that explores and measures change as a whole, identifying hidden patterns that define the trajectory of human ingenuity.
     </p>
     <p className="text-sm mono">
-      Though early, our tools aim to help venture pioneers see once-invisible change, we have an opportunity to build a monumental company.
+      Though in its early stages, Integrality aims to one day become a quantitative venture capital firm capable of seeing once-invisible change.
     </p>
     <p className="text-sm mono">
       Yannick Bruderlein, Founder
@@ -121,7 +121,7 @@ export default function Home() {
   <>
     <h2 className="text-sm font-normal mono">A knowledge partner</h2>
     <p className="text-sm mono">
-         We build tools that solve complex problems at the intersection of data, design and decision.
+         We build tools that solve complex problems at the intersection of data, design, and decision.
     </p>
   </>
 )}
