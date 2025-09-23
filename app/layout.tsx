@@ -16,7 +16,7 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Iteration | A knowledge partner",
+  title: "Integrality | A knowledge partner",
 };
 
 export default function RootLayout({
