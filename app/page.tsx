@@ -37,14 +37,14 @@ export default function Home() {
   return (
     <main className="min-h-screen" style={{ backgroundColor: '#F5F4EE' }}>
       <div className="max-w-2xl w-full px-6 py-20 mx-auto space-y-6">
-        <img src="/integrality.png" alt="iteration Logo" className="w-10 h-auto" /> 
+        <img src="/integrality.png" alt="noumenon Logo" className="w-10 h-auto" /> 
         <h1 className="text-xl font-normal">
           <button onClick={() => handleToggleContent('home')} className="mr-2">
           </button>
         </h1>
         <div className="flex items-center space-x-2 text-sm mono">
           <button onClick={() => handleToggleContent('home')} className={activeSection === 'home' ? 'text-black' : 'text-gray-500'}>
-            <span className="text-sm mono font-normal">Iteration</span> <br />
+            <span className="text-sm mono font-normal">Noumenon</span> <br />
           </button>
           <span></span>
           <button onClick={() => handleToggleContent('about')} className={activeSection === 'about' ? 'text-black' : 'text-gray-500'}>
@@ -55,7 +55,7 @@ export default function Home() {
             Tools
           </button>
           <span></span>
-          <a href="https://medium.com/@iteration" className="text-sm mono text-gray-500 hover:text-black">
+          <a href="https://medium.com/@noumenon" className="text-sm mono text-gray-500 hover:text-black">
             Research↗
           </a>
         </div>
@@ -70,10 +70,10 @@ export default function Home() {
       The truth is: while things ebb and flow, change itself is perpetual.
     </p>
     <p className="text-sm mono">
-      iteration explores and measures change as a whole, identifying hidden patterns that define the trajectory of human ingenuity.
+      noumenon explores and measures change as a whole, identifying hidden patterns that define the trajectory of human ingenuity.
     </p>
     <p className="text-sm mono">
-      Though in its early stages, iteration aims to one day build tools capable of seeing once-invisible change.
+      Though in its early stages, noumenon aims to one day build tools capable of seeing once-invisible change.
     </p>
     <p className="text-sm mono">
       Yannick Bruderlein, Project Founder
@@ -82,10 +82,10 @@ export default function Home() {
 ) : activeSection === 'tools' ? (
   <>
     <p className="text-sm font-normal mono">
-      Introducing Integral Operator 1<br/>
+      Introducing Noumenon 1<br/>
     </p>
     <p className="text-sm mono">
-    IO-1 consists of a bespoke set of language models capable of multidisciplinary reasoning and action.
+    I1 consists of a bespoke set of language models capable of multidisciplinary reasoning and action.
     </p>
     <div className="mt-4">
       <button 
@@ -113,7 +113,7 @@ export default function Home() {
         
       )}
       <div className="mt-3">
-        <a href="#" className="text-sm mono">Work with IO-1↗ (coming soon)</a>
+        <a href="#" className="text-sm mono">Work with I1↗ (coming soon)</a>
       </div>
     </div>
   </>
@@ -127,9 +127,9 @@ export default function Home() {
 )}
         <hr className="my-4 border-t border-black border-dashed" />
         <div className="flex items-center space-x-2 text-xs mono">
-          <span>© 2025 iteration AI</span>
+          <span>© 2025 noumenon</span>
           <span></span>
-          <a href="mailto:hello@iteration.ai" className="text-gray-500 hover:text-black">hello@iteration.ai↗</a>
+          <a href="mailto:hello@noumenon.vc" className="text-gray-500 hover:text-black">hello@noumenon.vc↗</a>
         </div>
       </div>
     </main>
