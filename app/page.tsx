@@ -37,7 +37,7 @@ export default function Home() {
   return (
     <main className="min-h-screen" style={{ backgroundColor: '#F5F4EE' }}>
       <div className="max-w-2xl w-full px-6 py-20 mx-auto space-y-6">
-        <span className="text-2xl mono">░░</span> 
+        <img src="/integrality.svg" alt="Integrality Logo" className="w-10 h-auto" /> 
         <h1 className="text-xl font-normal">
           <button onClick={() => handleToggleContent('home')} className="mr-2">
           </button>
