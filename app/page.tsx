@@ -37,14 +37,14 @@ export default function Home() {
   return (
     <main className="min-h-screen" style={{ backgroundColor: '#F5F4EE' }}>
       <div className="max-w-2xl w-full px-6 py-20 mx-auto space-y-6">
-        <img src="/integrality.png" alt="Parameter Logo" className="w-10 h-auto" /> 
+        <span className="text-2xl mono">░░</span> 
         <h1 className="text-xl font-normal">
           <button onClick={() => handleToggleContent('home')} className="mr-2">
           </button>
         </h1>
         <div className="flex items-center space-x-2 text-sm mono">
           <button onClick={() => handleToggleContent('home')} className={activeSection === 'home' ? 'text-black' : 'text-gray-500'}>
-            <span className="text-sm mono font-normal">Parameter</span> <br />
+            <span className="text-sm mono font-normal">Pointsquare</span> <br />
           </button>
           <span></span>
           <button onClick={() => handleToggleContent('about')} className={activeSection === 'about' ? 'text-black' : 'text-gray-500'}>
@@ -55,7 +55,7 @@ export default function Home() {
             Tools
           </button>
           <span></span>
-          <a href="https://medium.com/@Parameter" className="text-sm mono text-gray-500 hover:text-black">
+          <a href="https://medium.com/@Pointsquare" className="text-sm mono text-gray-500 hover:text-black">
             Research↗
           </a>
         </div>
@@ -70,10 +70,10 @@ export default function Home() {
       The truth is: while things ebb and flow, change itself is perpetual.
     </p>
     <p className="text-sm mono">
-      Parameter explores and measures change as a whole, identifying hidden patterns that define the trajectory of human ingenuity.
+      Pointsquare explores and measures change as a whole, identifying hidden patterns that define the trajectory of human ingenuity.
     </p>
     <p className="text-sm mono">
-      Though in its early stages, Parameter aims to one day build tools capable of seeing once-invisible change.
+      Though in its early stages, Pointsquare aims to one day build tools capable of seeing once-invisible change.
     </p>
     <p className="text-sm mono">
       Yannick Bruderlein, Project Founder
@@ -85,7 +85,7 @@ export default function Home() {
       Introducing P1<br/>
     </p>
     <p className="text-sm mono">
-    IO-1 consists of a bespoke set of language models capable of multidisciplinary reasoning and action.
+    P1 consists of a bespoke set of language models capable of multidisciplinary reasoning and action.
     </p>
     <div className="mt-4">
       <button 
@@ -127,9 +127,9 @@ export default function Home() {
 )}
         <hr className="my-4 border-t border-black border-dashed" />
         <div className="flex items-center space-x-2 text-xs mono">
-          <span>© 2025 Parameter Labs</span>
+          <span>© 2025 Pointsquare</span>
           <span></span>
-          <a href="mailto:hello@parameterlabs.xyz" className="text-gray-500 hover:text-black">hello@parameterlabs.xyz↗</a>
+          <a href="mailto:hello@pointsquare.ai" className="text-gray-500 hover:text-black">hello@pointsquare.ai↗</a>
         </div>
       </div>
     </main>
