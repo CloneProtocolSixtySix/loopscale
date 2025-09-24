@@ -44,7 +44,7 @@ export default function Home() {
         </h1>
         <div className="flex items-center space-x-2 text-sm mono">
           <button onClick={() => handleToggleContent('home')} className={activeSection === 'home' ? 'text-black' : 'text-gray-500'}>
-            <span className="text-sm mono font-normal">Pointsquare</span> <br />
+            <span className="text-sm mono font-normal">Integrality</span> <br />
           </button>
           <span></span>
           <button onClick={() => handleToggleContent('about')} className={activeSection === 'about' ? 'text-black' : 'text-gray-500'}>
@@ -55,7 +55,7 @@ export default function Home() {
             Tools
           </button>
           <span></span>
-          <a href="https://medium.com/@Pointsquare" className="text-sm mono text-gray-500 hover:text-black">
+          <a href="https://medium.com/@Integrality" className="text-sm mono text-gray-500 hover:text-black">
             Research↗
           </a>
         </div>
@@ -70,10 +70,10 @@ export default function Home() {
       The truth is: while things ebb and flow, change itself is perpetual.
     </p>
     <p className="text-sm mono">
-      Pointsquare explores and measures change as a whole, identifying hidden patterns that define the trajectory of human ingenuity.
+      Integrality explores and measures change as a whole, identifying hidden patterns that define the trajectory of human ingenuity.
     </p>
     <p className="text-sm mono">
-      Though in its early stages, Pointsquare aims to one day build tools capable of seeing once-invisible change.
+      Though in its early stages, Integrality aims to one day build tools capable of seeing once-invisible change.
     </p>
     <p className="text-sm mono">
       Yannick Bruderlein, Project Founder
@@ -82,10 +82,10 @@ export default function Home() {
 ) : activeSection === 'tools' ? (
   <>
     <p className="text-sm font-normal mono">
-      Introducing P1<br/>
+      Introducing I1<br/>
     </p>
     <p className="text-sm mono">
-    P1 consists of a bespoke set of language models capable of multidisciplinary reasoning and action.
+    I1 consists of a bespoke set of language models capable of multidisciplinary reasoning and action.
     </p>
     <div className="mt-4">
       <button 
@@ -113,7 +113,7 @@ export default function Home() {
         
       )}
       <div className="mt-3">
-        <a href="#" className="text-sm mono">Work with P1↗ (coming soon)</a>
+        <a href="#" className="text-sm mono">Work with I1↗ (coming soon)</a>
       </div>
     </div>
   </>
@@ -127,9 +127,9 @@ export default function Home() {
 )}
         <hr className="my-4 border-t border-black border-dashed" />
         <div className="flex items-center space-x-2 text-xs mono">
-          <span>© 2025 Pointsquare</span>
+          <span>© 2025 Integrality</span>
           <span></span>
-          <a href="mailto:hello@pointsquare.ai" className="text-gray-500 hover:text-black">hello@pointsquare.ai↗</a>
+          <a href="mailto:hello@integrality.ai" className="text-gray-500 hover:text-black">hello@integrality.ai↗</a>
         </div>
       </div>
     </main>
