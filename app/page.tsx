@@ -37,8 +37,9 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white">
       <div className="max-w-2xl w-full px-6 py-20 mx-auto space-y-6">
-        <div className="w-10 h-10 flex items-center justify-start">
-          <span className="text-4xl text-white">▪</span>
+        <div className="flex items-center space-x-2">
+          <span className="text-xl text-white">▪</span>
+          <span className="text-xl text-white font-normal">Arkenstone</span>
         </div> 
         <h1 className="text-xl font-normal">
           <button onClick={() => handleToggleContent('home')} className="mr-2">
@@ -46,7 +47,7 @@ export default function Home() {
         </h1>
         <div className="flex items-center space-x-2 text-sm mono">
           <button onClick={() => handleToggleContent('home')} className={activeSection === 'home' ? 'text-white' : 'text-gray-400'}>
-            <span className="text-sm mono font-normal">Arkenstone</span> <br />
+            <span className="text-sm mono font-normal">Home</span> <br />
           </button>
           <span></span>
           <button onClick={() => handleToggleContent('about')} className={activeSection === 'about' ? 'text-white' : 'text-gray-400'}>
