@@ -87,10 +87,10 @@ export default function Home() {
 ) : activeSection === 'tools' ? (
   <>
     <p className="text-sm font-normal mono">
-      Introducing Toolset 1<br/>
+      Introducing Peer<br/>
     </p>
     <p className="text-sm mono">
-    T1 consists of a bespoke set of language models capable of multidisciplinary reasoning and action.
+   A bespoke set of language models capable of multidisciplinary reasoning and action.
     </p>
     <div className="mt-4">
       <button 
@@ -103,22 +103,21 @@ export default function Home() {
         </span>
       </button>
       {isAccordionOpen && (
-        <div className="border-l border-r border-b border-white border-dashed bg-black">
-          <div className="p-2 text-sm mono border-b border-gray-600 border-dashed">
-            <div className="font-normal">Agent | Create agents that can reason, make decisions, and act based on contextual understanding in evolving environments.</div>
+        <div className="border-l border-r border-b border-white border-dashed" style={{backgroundColor: '#2E588A'}}>
+          <div className="p-2 text-sm mono border-b border-white border-dashed">
+            <div className="font-normal">Match research projects with sector-specific commercialization and investment opportunities.</div>
           </div>
-          {/* <div className="p-2 text-sm mono border-b border-gray-200 cursor-pointer">Workflow</div>
-          <div className="p-2 text-sm mono border-b border-gray-200 cursor-pointer">Observability</div>
-          <div className="p-2 text-sm mono border-b border-gray-200 cursor-pointer">Orchestration</div> */}
-          <div className="p-2 text-sm mono border-b border-gray-200 border-dashed cursor-pointer">Peer | Match research projects to sector-specific commercialization and investment opportunities and mitigate industry uncertainty with academic integrity.
-
-</div>
-
+          <div className="p-2 text-sm mono border-b border-white border-dashed">
+            <div className="font-normal">Mitigate industry uncertainty through academic integrity.</div>
+          </div>
+          <div className="p-2 text-sm mono">
+            <div className="font-normal">Generate novel strategies and act with contextual understanding in evolving environments.</div>
+          </div>
         </div>
         
       )}
       <div className="mt-3">
-        <a href="#" className="text-sm mono">Work with T1↗ (coming soon)</a>
+        <a href="#" className="text-sm mono">Work with Peer↗ (coming soon)</a>
       </div>
     </div>
   </>
