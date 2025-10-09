@@ -38,8 +38,8 @@ export default function Home() {
     <main className="min-h-screen bg-black text-white">
       <div className="max-w-2xl w-full px-6 py-20 mx-auto space-y-6">
         <div className="flex items-center space-x-2">
-          <span className="text-xl text-white">▪</span>
-          <span className="text-xl text-white font-normal">Arkenstone</span>
+          <img src="/integrality.png" alt="Integrality" className="w-8 brightness-0 invert" />
+          <span className="text-lg text-white font-normal">Motionstate</span>
         </div> 
         <h1 className="text-xl font-normal">
           <button onClick={() => handleToggleContent('home')} className="mr-2">
@@ -58,7 +58,7 @@ export default function Home() {
             Tools
           </button>
           <span></span>
-          <a href="https://medium.com/@arkenstone" className="text-sm mono text-gray-400 hover:text-white">
+          <a href="https://medium.com/@motionstate" className="text-sm mono text-gray-400 hover:text-white">
             Research↗
           </a>
         </div>
@@ -66,17 +66,20 @@ export default function Home() {
         {activeSection === 'about' ? (
   <>
 
-<p className="text-sm font-normal mono">
+    <p className="text-sm font-normal mono">
       Manifesto<br/>
     </p>
     <p className="text-sm mono">
       The truth is: while things ebb and flow, change itself is perpetual.
     </p>
     <p className="text-sm mono">
-      Arkenstone explores and measures change as a whole, identifying hidden patterns that define the trajectory of human ingenuity.
+      Motionstate is a coined term which can be defined as a condition that is inherently ongoing movement or change.
     </p>
     <p className="text-sm mono">
-      Though in its early stages, arkenstone aims to one day build tools capable of seeing once-invisible change.
+      Motionstate explores and measures change as a whole, identifying hidden patterns that define the trajectory of human ingenuity.
+    </p>
+    <p className="text-sm mono">
+      Though in its early stages, Motionstate aims to one day build tools capable of seeing once-invisible change.
     </p>
     <p className="text-sm mono">
       Yannick Bruderlein, Project Founder
@@ -85,7 +88,7 @@ export default function Home() {
 ) : activeSection === 'tools' ? (
   <>
     <p className="text-sm font-normal mono">
-      Introducing Arkenstone 1<br/>
+      Introducing Motionstate 1<br/>
     </p>
     <p className="text-sm mono">
     A1 consists of a bespoke set of language models capable of multidisciplinary reasoning and action.
@@ -130,9 +133,9 @@ export default function Home() {
 )}
         <hr className="my-4 border-t border-white border-dashed" />
         <div className="flex items-center space-x-2 text-xs mono">
-          <span>© 2025 Arkenstone</span>
+          <span>© 2025 Motionstate</span>
           <span></span>
-          <a href="mailto:hello@arkenstone.xyz" className="text-gray-400 hover:text-white">hello@arkenstone.xyz↗</a>
+          <a href="mailto:hello@motionstate.xyz" className="text-gray-400 hover:text-white">hello@motionstate.xyz↗</a>
         </div>
       </div>
     </main>

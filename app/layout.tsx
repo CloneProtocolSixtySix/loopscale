@@ -16,7 +16,7 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Arkenstone | A knowledge partner",
+  title: "Motionstate | A knowledge partner",
 };
 
 export default function RootLayout({
