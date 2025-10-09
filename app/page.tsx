@@ -35,13 +35,13 @@ export default function Home() {
   }, [currentIndex]);
 
   return (
-    <main className="min-h-screen bg-black text-white">
+    <main className="min-h-screen text-white" style={{backgroundColor: '#2E588A'}}>
       <div className="max-w-2xl w-full px-6 py-20 mx-auto space-y-6">
         <div className="flex items-center space-x-2">
-          <img src="/integrality.png" alt="Integrality" className="w-8 brightness-0 invert" />
-          <span className="text-lg text-white font-normal">Motionstate</span>
+          <img src="/prehension.svg" alt="Integrality" className="w-3 brightness-0 invert" />
+          <span className="text-sm text-white font-normal">Motionstate</span>
         </div> 
-        <h1 className="text-xl font-normal">
+        <h1 className="text-sm font-normal">
           <button onClick={() => handleToggleContent('home')} className="mr-2">
           </button>
         </h1>
@@ -73,13 +73,12 @@ export default function Home() {
       The truth is: while things ebb and flow, change itself is perpetual.
     </p>
     <p className="text-sm mono">
-      Motionstate is a coined term which can be defined as a condition that is inherently ongoing movement or change.
+    Motionstate is a coined term meaning a condition whose very identity is defined by continuous change.</p>
+    <p className="text-sm mono">
+      We explore and measure change as a whole, identifying hidden patterns that define the trajectory of human ingenuity.
     </p>
     <p className="text-sm mono">
-      Motionstate explores and measures change as a whole, identifying hidden patterns that define the trajectory of human ingenuity.
-    </p>
-    <p className="text-sm mono">
-      Though in its early stages, Motionstate aims to one day build tools capable of seeing once-invisible change.
+      Though in its early stages, our aim is to build tools capable of seeing once-invisible change.
     </p>
     <p className="text-sm mono">
       Yannick Bruderlein, Project Founder
@@ -88,10 +87,10 @@ export default function Home() {
 ) : activeSection === 'tools' ? (
   <>
     <p className="text-sm font-normal mono">
-      Introducing Motionstate 1<br/>
+      Introducing Toolset 1<br/>
     </p>
     <p className="text-sm mono">
-    A1 consists of a bespoke set of language models capable of multidisciplinary reasoning and action.
+    T1 consists of a bespoke set of language models capable of multidisciplinary reasoning and action.
     </p>
     <div className="mt-4">
       <button 
@@ -119,7 +118,7 @@ export default function Home() {
         
       )}
       <div className="mt-3">
-        <a href="#" className="text-sm mono">Work with A1↗ (coming soon)</a>
+        <a href="#" className="text-sm mono">Work with T1↗ (coming soon)</a>
       </div>
     </div>
   </>
@@ -132,7 +131,7 @@ export default function Home() {
   </>
 )}
         <hr className="my-4 border-t border-white border-dashed" />
-        <div className="flex items-center space-x-2 text-xs mono">
+        <div className="flex items-center space-x-2 text-sm mono">
           <span>© 2025 Motionstate</span>
           <span></span>
           <a href="mailto:hello@motionstate.xyz" className="text-gray-400 hover:text-white">hello@motionstate.xyz↗</a>
