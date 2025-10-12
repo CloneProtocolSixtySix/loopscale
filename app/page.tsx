@@ -65,20 +65,29 @@ export default function Home() {
         <hr className="my-4 border-t border-white border-dashed" />
         {activeSection === 'about' ? (
   <>
-
     <p className="text-sm font-normal mono">
       Manifesto<br/>
     </p>
     <p className="text-sm mono">
-      The truth is: while things ebb and flow, change itself is perpetual.
+    The truth is: while things ebb and flow, change itself is perpetual.
     </p>
     <p className="text-sm mono">
-    Motionstate is a coined term meaning a condition whose very identity is defined by continuous change.</p>
-    <p className="text-sm mono">
-      We explore and measure change as a whole, identifying hidden patterns that define the trajectory of human ingenuity.
+    Motionstate is a coined term meaning a condition inherently defined by change.
     </p>
     <p className="text-sm mono">
-      Though in its early stages, our aim is to build tools capable of seeing once-invisible change.
+    We've noticed that institutional investors often place capital in environments riddled with half-baked deliverables and fanciful valuations. We believe this behavior poses a serious problem for our economy's ability to foster sovereign technology.
+    </p>
+    <p className="text-sm mono">
+    We are insatiably skeptical and obsessed with uncovering truth in possibility.
+    </p>
+    <p className="text-sm mono">
+    We're developing and applying machine learning capable of perceiving change as a whole—identifying hidden patterns that map the trajectory of human ingenuity.
+    </p>
+    <p className="text-sm mono">
+    We help clients craft robust strategies that mitigate risk and chart a path toward legacy investment.
+    </p>
+    <p className="text-sm mono">
+    Though still in its early stages, our aim is to build tools capable of revealing once-invisible change while helping clients craft robust strategies that mitigate risk and chart a path toward legacy investment.
     </p>
     <p className="text-sm mono">
       Yannick Bruderlein, Project Founder
