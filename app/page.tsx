@@ -72,22 +72,25 @@ export default function Home() {
     The truth is: while things ebb and flow, change itself is perpetual.
     </p>
     <p className="text-sm mono">
-    Motionstate is a coined term meaning a condition inherently defined by change.
+    Motionstate is a coined term meaning a condition whose nature is defined by change.
     </p>
     <p className="text-sm mono">
-    We've noticed that institutional investors often place capital in environments riddled with half-baked deliverables and fanciful valuations. We believe this behavior poses a serious problem for our economy's ability to foster sovereign technology.
+    We've noticed that institutional investors place capital in environments riddled with half-baked deliverables and fanciful valuations.
+    </p>
+    <p className="text-sm mono">
+    We believe this repeated behaviour poses a problem for our economy's ability to foster sovereign technology.
     </p>
     <p className="text-sm mono">
     We are insatiably skeptical and obsessed with uncovering truth in possibility.
     </p>
     <p className="text-sm mono">
-    We're developing and applying machine learning capable of perceiving change as a whole—identifying hidden patterns that map the trajectory of human ingenuity.
+    We're developing and applying machine learning capable of perceiving change as a whole, identifying hidden patterns that map the trajectory of human ingenuity.
     </p>
     <p className="text-sm mono">
-    We help clients craft robust strategies that mitigate risk and chart a path toward legacy investment.
+    We want to help clients craft robust strategies that mitigate risk and chart a path towards legacy investment.
     </p>
     <p className="text-sm mono">
-    Though still in its early stages, our aim is to build tools capable of revealing once-invisible change while helping clients craft robust strategies that mitigate risk and chart a path toward legacy investment.
+    Though still in its early stages, our aim is to build tools capable of revealing once-invisible change.
     </p>
     <p className="text-sm mono">
       Yannick Bruderlein, Project Founder
