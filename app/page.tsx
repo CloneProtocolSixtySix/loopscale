@@ -69,7 +69,7 @@ export default function Home() {
       Manifesto<br/>
     </p>
     <p className="text-sm mono">
-    Motionstate is a coined term meaning a condition whose nature is defined by change.
+    Motionstate is a coined term meaning a condition defined by the process of movement.
     </p>
     <p className="text-sm mono">
     We've noticed that institutional investors place capital in environments riddled with half-baked deliverables and fanciful valuations.
