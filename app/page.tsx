@@ -128,7 +128,7 @@ export default function Home() {
   <>
     <h2 className="text-sm font-normal serif">A knowledge partner</h2>
     <p className="text-sm mono">
-         Building ML to solve complex problems at the intersection of data, design, and decision.
+         Building ML to solve for complexity at the intersection of data, design, and decision.
     </p>
   </>
 )}
