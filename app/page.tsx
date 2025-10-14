@@ -65,7 +65,7 @@ export default function Home() {
         <hr className="my-4 border-t border-black border-dashed" />
         {activeSection === 'about' ? (
   <>
-    <h2 className="text-xl font-normal serif">
+    <h2 className="text-sm font-normal serif">
       Founder's Note
     </h2>
     <p className="text-sm mono">
@@ -89,7 +89,7 @@ export default function Home() {
   </>
 ) : activeSection === 'solutions' ? (
   <>
-    <h2 className="text-xl font-normal serif">
+    <h2 className="text-sm font-normal serif">
       Introducing Field Analyst
     </h2>
     <p className="text-sm mono">
@@ -126,7 +126,7 @@ export default function Home() {
   </>
 ) : (
   <>
-    <h2 className="text-xl font-normal serif">A knowledge partner</h2>
+    <h2 className="text-sm font-normal serif">A knowledge partner</h2>
     <p className="text-sm mono">
          Building ML to solve complex problems at the intersection of data, design, and decision.
     </p>
