@@ -38,8 +38,8 @@ export default function Home() {
     <main className="min-h-screen text-white" style={{backgroundColor: '#2E588A'}}>
       <div className="max-w-2xl w-full px-6 py-20 mx-auto space-y-6">
         <div className="flex items-center space-x-2">
-          <img src="/prehension.svg" alt="Integrality" className="w-3 brightness-0 invert" />
-          <span className="text-sm text-white font-normal">Motionstate</span>
+          <img src="/prehension.svg" alt="Integrality" className="w-4 brightness-0 invert" />
+          <span className="text-sm text-white font-normal"></span>
         </div> 
         <h1 className="text-sm font-normal">
           <button onClick={() => handleToggleContent('home')} className="mr-2">
@@ -47,15 +47,15 @@ export default function Home() {
         </h1>
         <div className="flex items-center space-x-2 text-sm mono">
           <button onClick={() => handleToggleContent('home')} className={activeSection === 'home' ? 'text-white' : 'text-gray-400'}>
-            <span className="text-sm mono font-normal">Home</span> <br />
+            <span className="text-sm mono font-normal">Motionstate</span> <br />
           </button>
           <span></span>
           <button onClick={() => handleToggleContent('about')} className={activeSection === 'about' ? 'text-white' : 'text-gray-400'}>
             About
           </button>
           <span></span>
-          <button onClick={() => handleToggleContent('tools')} className={activeSection === 'tools' ? 'text-white' : 'text-gray-400'}>
-            Tools
+          <button onClick={() => handleToggleContent('solutions')} className={activeSection === 'solutions' ? 'text-white' : 'text-gray-400'}>
+            Solutions
           </button>
           <span></span>
           <a href="https://medium.com/@motionstate" className="text-sm mono text-gray-400 hover:text-white">
@@ -87,13 +87,13 @@ export default function Home() {
       Yannick Bruderlein, Founder
     </p>
   </>
-) : activeSection === 'tools' ? (
+) : activeSection === 'solutions' ? (
   <>
     <p className="text-sm font-normal mono">
-      Introducing Peer<br/>
+      Introducing Field Analyst<br/>
     </p>
     <p className="text-sm mono">
-   A bespoke set of language models capable of multidisciplinary reasoning and action.
+    A bespoke set of language models capable of multidisciplinary reasoning and action.
     </p>
     <div className="mt-4">
       <button 
@@ -120,7 +120,7 @@ export default function Home() {
         
       )}
       <div className="mt-3">
-        <a href="#" className="text-sm mono">Work with Peer↗ (coming soon)</a>
+        <a href="#" className="text-sm mono">Work with Field Analyst↗ (coming soon)</a>
       </div>
     </div>
   </>
@@ -128,7 +128,7 @@ export default function Home() {
   <>
     <h2 className="text-sm font-normal mono">A knowledge partner</h2>
     <p className="text-sm mono">
-         Building tools that solve complex problems at the intersection of data, design, and decision.
+         Building ML to solve complex problems at the intersection of data, design, and decision.
     </p>
   </>
 )}
