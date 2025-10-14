@@ -13,7 +13,7 @@
 }
 
 body {
-  background-color: #2E588A;
+  background-color: #F5F4F0;
 }
 
 .animate-gradient {
@@ -48,9 +48,9 @@ body {
 } 
 
 .mono {
-  font-family: var(--font-altform), sans-serif;
+  font-family: var(--font-plex-mono), monospace;
 }
 
 .serif {
-  font-family: var(--font-altform), sans-serif;
+  font-family: var(--font-plex-serif), serif;
 }
