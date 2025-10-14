@@ -66,7 +66,7 @@ export default function Home() {
         {activeSection === 'about' ? (
   <>
     <p className="text-sm font-normal mono">
-      Manifesto<br/>
+      Founder's Note<br/>
     </p>
     <p className="text-sm mono">
     Motionstate is a coined term meaning a condition defined by the process of movement.
@@ -81,7 +81,7 @@ export default function Home() {
     We are insatiably skeptical and obsessed with uncovering truth in possibility.
     </p>
     <p className="text-sm mono">
-    We develop and apply machine learning capable of holistic perception, identifying hidden patterns that map the trajectory of human ingenuity.
+    We develop and apply ML capable of holistic perception, identifying hidden patterns that map the trajectory of human ingenuity.
     </p>
     <p className="text-sm mono">
       Yannick Bruderlein, Founder
