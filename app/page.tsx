@@ -38,8 +38,7 @@ export default function Home() {
     <main className="min-h-screen text-black" style={{backgroundColor: '#F5F4F0'}}>
       <div className="max-w-2xl w-full px-6 py-20 mx-auto space-y-6">
         <div className="flex items-center space-x-2">
-          <img src="/prehension.svg" alt="Integrality" className="w-4" />
-          <span className="text-sm text-black font-normal"></span>
+          <span className="text-sm text-black font-normal">*_</span>
         </div> 
         <h1 className="text-sm font-normal">
           <button onClick={() => handleToggleContent('home')} className="mr-2">
@@ -47,7 +46,7 @@ export default function Home() {
         </h1>
         <div className="flex items-center space-x-2 text-sm mono">
           <button onClick={() => handleToggleContent('home')} className={activeSection === 'home' ? 'text-black' : 'text-gray-600'}>
-            <span className="text-sm mono font-normal">Motionstate</span> <br />
+            <span className="text-sm mono font-normal">Applied Reasoning</span> <br />
           </button>
           <span></span>
           <button onClick={() => handleToggleContent('about')} className={activeSection === 'about' ? 'text-black' : 'text-gray-600'}>
@@ -58,7 +57,7 @@ export default function Home() {
             Solutions
           </button>
           <span></span>
-          <a href="https://medium.com/@motionstate" className="text-sm mono text-gray-600 hover:text-black">
+          <a href="https://medium.com/@appliedreasoning" className="text-sm mono text-gray-600 hover:text-black">
             Research↗
           </a>
         </div>
@@ -69,7 +68,6 @@ export default function Home() {
       Founder's Note
     </h2>
     <p className="text-sm mono">
-    Motionstate is a coined term meaning a condition defined by the process of movement.
     </p>
     <p className="text-sm mono">
     We've noticed that institutional investors place capital in environments riddled with half-baked deliverables and fanciful valuations.
@@ -90,10 +88,10 @@ export default function Home() {
 ) : activeSection === 'solutions' ? (
   <>
     <h2 className="text-sm font-normal serif">
-      Introducing Field Analyst
+      Introducing Analyst
     </h2>
     <p className="text-sm mono">
-    A bespoke set of language models capable of multidisciplinary reasoning and action.
+    A bespoke set of language models capable of multidisciplinary precision.
     </p>
     <div className="mt-4">
       <button 
@@ -126,7 +124,6 @@ export default function Home() {
   </>
 ) : (
   <>
-    <h2 className="text-sm font-normal serif">A knowledge partner</h2>
     <p className="text-sm mono">
          Building ML to solve for complexity at the intersection of data, design, and decision.
     </p>
@@ -134,9 +131,9 @@ export default function Home() {
 )}
         <hr className="my-4 border-t border-black border-dashed" />
         <div className="flex items-center space-x-2 text-sm mono">
-          <span>© 2025 Motionstate</span>
+          <span>© 2025 Applied Reasoning AI</span>
           <span></span>
-          <a href="mailto:hello@motionstate.xyz" className="text-gray-600 hover:text-white">hello@motionstate.xyz↗</a>
+          <a href="mailto:hello@appliedreasoning.xyz" className="text-gray-600 hover:text-white">hello@appliedreasoning.ai</a>
         </div>
       </div>
     </main>

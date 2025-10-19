@@ -16,7 +16,7 @@ const plexSerif = IBM_Plex_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Motionstate | A knowledge partner",
+  title: "Applied Reasoning",
 };
 
 export default function RootLayout({
