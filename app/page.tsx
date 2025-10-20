@@ -38,7 +38,7 @@ export default function Home() {
     <main className="min-h-screen text-black" style={{backgroundColor: '#F5F4F0'}}>
       <div className="max-w-2xl w-full px-6 py-20 mx-auto space-y-6">
         <div className="flex items-center space-x-2">
-          <span className="text-sm text-black font-normal">*_</span>
+          <span className="text-sm text-black font-normal">⠙⣿⣄</span>
         </div> 
         <h1 className="text-sm font-normal">
           <button onClick={() => handleToggleContent('home')} className="mr-2">
@@ -46,7 +46,7 @@ export default function Home() {
         </h1>
         <div className="flex items-center space-x-2 text-sm mono">
           <button onClick={() => handleToggleContent('home')} className={activeSection === 'home' ? 'text-black' : 'text-gray-600'}>
-            <span className="text-sm mono font-normal">Applied Reasoning</span> <br />
+            <span className="text-sm mono font-normal">Abstraction</span> <br />
           </button>
           <span></span>
           <button onClick={() => handleToggleContent('about')} className={activeSection === 'about' ? 'text-black' : 'text-gray-600'}>
@@ -57,7 +57,7 @@ export default function Home() {
             Solutions
           </button>
           <span></span>
-          <a href="https://medium.com/@appliedreasoning" className="text-sm mono text-gray-600 hover:text-black">
+          <a href="https://medium.com/@abstractionml" className="text-sm mono text-gray-600 hover:text-black">
             Research↗
           </a>
         </div>
@@ -118,7 +118,7 @@ export default function Home() {
         
       )}
       <div className="mt-3">
-        <a href="#" className="text-sm mono">Work with Field Analyst↗ (coming soon)</a>
+        <a href="#" className="text-sm mono">Work with Analyst↗ (coming soon)</a>
       </div>
     </div>
   </>
@@ -131,9 +131,9 @@ export default function Home() {
 )}
         <hr className="my-4 border-t border-black border-dashed" />
         <div className="flex items-center space-x-2 text-sm mono">
-          <span>© 2025 Applied Reasoning AI</span>
+          <span>© 2025 Abstraction ML</span>
           <span></span>
-          <a href="mailto:hello@appliedreasoning.xyz" className="text-gray-600 hover:text-white">hello@appliedreasoning.ai</a>
+          <a href="mailto:hello@abstractionml.com" className="text-gray-600 hover:text-white">hello@abstractionml.com</a>
         </div>
       </div>
     </main>
