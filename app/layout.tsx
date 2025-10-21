@@ -16,7 +16,7 @@ const plexSerif = IBM_Plex_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Abstraction",
+  title: "Abstract Engine",
 };
 
 export default function RootLayout({
