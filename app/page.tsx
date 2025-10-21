@@ -39,7 +39,7 @@ export default function Home() {
     <main className="min-h-screen text-black" style={{backgroundColor: '#F3F3F5'}}>
       <div className="max-w-2xl w-full px-6 py-20 mx-auto space-y-6">
         <div className="flex items-center space-x-2">
-          <span className="text-sm text-black font-mono">⠙⣿⣄ Abstract Engine</span>
+          <span className="text-sm text-black font-mono">⠙⣿⣄</span>
         </div> 
         <h1 className="text-sm font-normal">
           <button onClick={() => handleToggleContent('home')} className="mr-2">
