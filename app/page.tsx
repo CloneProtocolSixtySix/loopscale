@@ -35,10 +35,10 @@ export default function Home() {
   }, [currentIndex]);
 
   return (
-    <main className="min-h-screen text-black" style={{backgroundColor: '#F5F4F0'}}>
+    <main className="min-h-screen text-black" style={{backgroundColor: '#F3F3F5'}}>
       <div className="max-w-2xl w-full px-6 py-20 mx-auto space-y-6">
         <div className="flex items-center space-x-2">
-          <span className="text-sm text-black font-normal">⠙⣿⣄</span>
+          <span className="text-sm text-black font-mono">⠙⣿⣄</span>
         </div> 
         <h1 className="text-sm font-normal">
           <button onClick={() => handleToggleContent('home')} className="mr-2">
@@ -46,7 +46,7 @@ export default function Home() {
         </h1>
         <div className="flex items-center space-x-2 text-sm mono">
           <button onClick={() => handleToggleContent('home')} className={activeSection === 'home' ? 'text-black' : 'text-gray-600'}>
-            <span className="text-sm mono font-normal">Abstraction</span> <br />
+            <span className="text-sm mono font-normal">Home</span> <br />
           </button>
           <span></span>
           <button onClick={() => handleToggleContent('about')} className={activeSection === 'about' ? 'text-black' : 'text-gray-600'}>
@@ -64,7 +64,7 @@ export default function Home() {
         <hr className="my-4 border-t border-black border-dashed" />
         {activeSection === 'about' ? (
   <>
-    <h2 className="text-sm font-normal serif">
+    <h2 className="text-sm font-normal mono">
       Founder's Note
     </h2>
     <p className="text-sm mono">
@@ -87,8 +87,8 @@ export default function Home() {
   </>
 ) : activeSection === 'solutions' ? (
   <>
-    <h2 className="text-sm font-normal serif">
-      Introducing Analyst
+    <h2 className="text-sm font-normal mono">
+      Introducing Forerunner
     </h2>
     <p className="text-sm mono">
     A bespoke set of language models capable of multidisciplinary precision.
@@ -104,7 +104,7 @@ export default function Home() {
         </span>
       </button>
       {isAccordionOpen && (
-        <div className="border-l border-r border-b border-black border-dashed" style={{backgroundColor: '#F5F4F0'}}>
+        <div className="border-l border-r border-b border-black border-dashed" style={{backgroundColor: '#F3F3F5'}}>
           <div className="p-2 text-sm mono border-b border-black border-dashed">
             <div className="font-normal">Match research projects with sector-specific commercialization and investment opportunities.</div>
           </div>
@@ -118,14 +118,14 @@ export default function Home() {
         
       )}
       <div className="mt-3">
-        <a href="#" className="text-sm mono">Work with Analyst↗ (coming soon)</a>
+        <a href="#" className="text-sm mono">Work with Forerunner↗ (coming soon)</a>
       </div>
     </div>
   </>
 ) : (
   <>
     <p className="text-sm mono">
-         Building ML to solve for complexity at the intersection of data, design, and decision.
+         Solving for complexity at the intersection of data, design, and decision.
     </p>
   </>
 )}
