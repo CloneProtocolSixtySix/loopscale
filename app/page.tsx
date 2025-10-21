@@ -3,6 +3,7 @@
 import { useState, useRef, useLayoutEffect } from 'react';
 import CapabilitiesToggle from './components/DottedEffect';
 import TypingEffect from './components/TypingEffect';
+import AnimatedDots from './components/AnimatedDots';
 import Link from 'next/link';
 
 export default function Home() {
@@ -38,7 +39,7 @@ export default function Home() {
     <main className="min-h-screen text-black" style={{backgroundColor: '#F3F3F5'}}>
       <div className="max-w-2xl w-full px-6 py-20 mx-auto space-y-6">
         <div className="flex items-center space-x-2">
-          <span className="text-sm text-black font-mono">⠙⣿⣄</span>
+          <span className="text-sm text-black font-mono">⠙⣿⣄ Abstract Engine</span>
         </div> 
         <h1 className="text-sm font-normal">
           <button onClick={() => handleToggleContent('home')} className="mr-2">
@@ -54,11 +55,15 @@ export default function Home() {
           </button>
           <span></span>
           <button onClick={() => handleToggleContent('solutions')} className={activeSection === 'solutions' ? 'text-black' : 'text-gray-600'}>
-            Solutions
+            Tools
           </button>
           <span></span>
-          <a href="https://medium.com/@abstractionml" className="text-sm mono text-gray-600 hover:text-black">
+          <a href="https://medium.com/@abstractengine" className="text-sm mono text-gray-600 hover:text-black">
             Research↗
+          </a>
+          <span></span>
+          <a href="mailto:hello@abstractengine.ai"className="text-sm mono text-gray-600 hover:text-black">
+            Inquiries↗
           </a>
         </div>
         <hr className="my-4 border-t border-black border-dashed" />
@@ -131,9 +136,10 @@ export default function Home() {
 )}
         <hr className="my-4 border-t border-black border-dashed" />
         <div className="flex items-center space-x-2 text-sm mono">
-          <span>© 2025 Abstraction ML</span>
-          <span></span>
-          <a href="mailto:hello@abstractionml.com" className="text-gray-600 hover:text-white">hello@abstractionml.com</a>
+          <span>© 2025 Abstract Engine</span>
+        </div>
+        <div className="mt-8">
+          <AnimatedDots />
         </div>
       </div>
     </main>
