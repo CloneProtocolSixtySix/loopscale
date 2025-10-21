@@ -88,7 +88,7 @@ export default function Home() {
 ) : activeSection === 'solutions' ? (
   <>
     <h2 className="text-sm font-normal mono">
-      Introducing Forerunner
+      Introducing Remark
     </h2>
     <p className="text-sm mono">
     A bespoke set of language models capable of multidisciplinary precision.
@@ -118,7 +118,7 @@ export default function Home() {
         
       )}
       <div className="mt-3">
-        <a href="#" className="text-sm mono">Work with Forerunner↗ (coming soon)</a>
+        <a href="#" className="text-sm mono">Work with Remark↗ (coming soon)</a>
       </div>
     </div>
   </>
