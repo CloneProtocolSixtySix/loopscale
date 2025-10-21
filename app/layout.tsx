@@ -16,7 +16,7 @@ const plexSerif = IBM_Plex_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Applied Reasoning",
+  title: "Abstraction",
 };
 
 export default function RootLayout({
