@@ -39,7 +39,7 @@ export default function Home() {
     <main className="min-h-screen text-black" style={{backgroundColor: '#F3F3F5'}}>
       <div className="max-w-2xl w-full px-6 py-20 mx-auto space-y-6">
         <div className="flex items-center space-x-2">
-          <span className="text-sm text-black font-mono">⠙⣿⣄ Cogitation</span>
+          <span className="text-sm text-black font-mono">⠙⣿⣄</span>
         </div> 
         <h1 className="text-sm font-normal">
           <button onClick={() => handleToggleContent('home')} className="mr-2">
@@ -47,7 +47,7 @@ export default function Home() {
         </h1>
         <div className="flex items-center space-x-2 text-sm mono">
           <button onClick={() => handleToggleContent('home')} className={activeSection === 'home' ? 'text-black' : 'text-gray-600'}>
-            <span className="text-sm mono font-normal">Home</span> <br />
+            <span className="text-sm mono font-normal">Cogitation</span> <br />
           </button>
           <span></span>
           <button onClick={() => handleToggleContent('about')} className={activeSection === 'about' ? 'text-black' : 'text-gray-600'}>
@@ -136,7 +136,7 @@ export default function Home() {
 )}
         <hr className="my-4 border-t border-black border-dashed" />
         <div className="flex items-center space-x-2 text-sm mono">
-          <span>© 2025 Cogitation</span>
+          <span>© 2025 Cogitation ML</span>
         </div>
         <div className="mt-8">
           <AnimatedDots />
