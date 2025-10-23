@@ -58,11 +58,11 @@ export default function Home() {
             Tools
           </button>
           <span></span>
-          <a href="https://medium.com/@abstractengine" className="text-sm mono text-gray-600 hover:text-black">
+          <a href="https://medium.com/@cogitation" className="text-sm mono text-gray-600 hover:text-black">
             Research↗
           </a>
           <span></span>
-          <a href="mailto:hello@abstractengine.ai"className="text-sm mono text-gray-600 hover:text-black">
+          <a href="mailto:hello@cogitationml.com"className="text-sm mono text-gray-600 hover:text-black">
             Inquiries↗
           </a>
         </div>
