@@ -2,9 +2,8 @@ import React from 'react';
 import type { Metadata } from 'next';
 import { altform } from './fonts';
 import './globals.css';
-
 export const metadata: Metadata = {
-  title: "Abstract Engine",
+  title: "Cogitation | An Intelligence Parter",
 };
 
 export default function RootLayout({

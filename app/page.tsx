@@ -39,7 +39,7 @@ export default function Home() {
     <main className="min-h-screen text-black" style={{backgroundColor: '#F3F3F5'}}>
       <div className="max-w-2xl w-full px-6 py-20 mx-auto space-y-6">
         <div className="flex items-center space-x-2">
-          <span className="text-sm text-black font-mono">⠙⣿⣄</span>
+          <span className="text-sm text-black font-mono">⠙⣿⣄ Cogitation</span>
         </div> 
         <h1 className="text-sm font-normal">
           <button onClick={() => handleToggleContent('home')} className="mr-2">
@@ -123,7 +123,7 @@ export default function Home() {
         
       )}
       <div className="mt-3">
-        <a href="#" className="text-sm mono">Work with Remark↗ (coming soon)</a>
+        <a href="#" className="text-sm mono"></a>
       </div>
     </div>
   </>
@@ -136,7 +136,7 @@ export default function Home() {
 )}
         <hr className="my-4 border-t border-black border-dashed" />
         <div className="flex items-center space-x-2 text-sm mono">
-          <span>© 2025 Abstract Engine</span>
+          <span>© 2025 Cogitation</span>
         </div>
         <div className="mt-8">
           <AnimatedDots />
