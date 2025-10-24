@@ -62,7 +62,7 @@ export default function Home() {
             Research↗
           </a>
           <span></span>
-          <a href="mailto:hello@cogitationml.com"className="text-sm mono text-gray-600 hover:text-black">
+          <a href="mailto:hello@cogitationml.com" className="text-sm mono text-gray-600 hover:text-black">
             Inquiries↗
           </a>
         </div>
@@ -75,16 +75,17 @@ export default function Home() {
     <p className="text-sm mono">
     </p>
     <p className="text-sm mono">
-    We've noticed that institutional investors place capital in environments riddled with half-baked deliverables and fanciful valuations.
+    We've noticed that private equity and venture capital place investments in environments riddled with half-baked deliverables, fanciful valuations, and low-hanging fruit ideas.
+
     </p>
     <p className="text-sm mono">
-    We believe this systematic behaviour poses a significant problem for our economy's ability to foster sovereign technology.
+    We believe this systematic behavior poses a significant problem for our economy's ability to foster sovereign technology.
     </p> 
     <p className="text-sm mono">
-    We are insatiably skeptical and obsessed with uncovering truth in possibility.
+    We are insatiably skeptical and obsessed with uncovering truth in possibilities.
     </p>
     <p className="text-sm mono">
-    We develop and apply ML capable of holistic perception, identifying hidden patterns that map the trajectory of human ingenuity.
+    We're developing tools capable of holistic perception, identifying hidden patterns that map the trajectory of human ingenuity.
     </p>
     <p className="text-sm mono">
       Yannick Bruderlein, Founder
@@ -93,7 +94,7 @@ export default function Home() {
 ) : activeSection === 'solutions' ? (
   <>
     <h2 className="text-sm font-normal mono">
-      Introducing Remark
+      Introducing Remark (pre-alpha)
     </h2>
     <p className="text-sm mono">
     A bespoke set of language models capable of multidisciplinary precision.
@@ -130,13 +131,13 @@ export default function Home() {
 ) : (
   <>
     <p className="text-sm mono">
-         Solving for complexity at the intersection of data, design, and decision.
+         Solving for complexity at the intersection of data, design, and decisions.
     </p>
   </>
 )}
         <hr className="my-4 border-t border-black border-dashed" />
         <div className="flex items-center space-x-2 text-sm mono">
-          <span>© 2025 Cogitation ML</span>
+          <span>© 2025 Cogitation</span>
         </div>
         <div className="mt-8">
           <AnimatedDots />
