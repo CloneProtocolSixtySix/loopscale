@@ -40,7 +40,7 @@ export default function Home() {
       <div className="max-w-2xl w-full px-6 py-20 mx-auto space-y-6">
         <div className="flex items-center space-x-2">
           <span className="text-base text-black font-normal flex items-center space-x-1">
-            <img src="/prehension.svg" alt="cogitation" className="w-5 h-5" />
+            <img src="/prehension.svg" alt="cogitation" className="w-6 h-6" />
           </span>
         </div> 
         <h1 className="text-base font-normal">
