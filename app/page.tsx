@@ -40,7 +40,7 @@ export default function Home() {
       <div className="max-w-2xl w-full px-6 py-20 mx-auto space-y-6">
         <div className="flex items-center space-x-2">
           <span className="text-base text-black font-normal flex items-center space-x-1">
-            <img src="/prehension.svg" alt="cogitation" className="w-6 h-6" />
+            <img src="/integralmachines.svg" alt="Integral Machines" className="w-6 h-6" />
           </span>
         </div> 
         <h1 className="text-base font-normal">
@@ -49,7 +49,7 @@ export default function Home() {
         </h1>
         <div className="flex items-center space-x-2 text-base mono">
           <button onClick={() => handleToggleContent('home')} className={activeSection === 'home' ? 'text-black' : 'text-gray-600'}>
-            <span className="text-base mono font-normal">Home</span> <br />
+            <span className="text-base mono font-normal">Integrality</span> <br />
           </button>
           <span></span>
           <button onClick={() => handleToggleContent('about')} className={activeSection === 'about' ? 'text-black' : 'text-gray-600'}>
@@ -60,34 +60,34 @@ export default function Home() {
             Tools
           </button>
           <span></span>
-          <a href="https://medium.com/@cogitation" className="text-base mono text-gray-600 hover:text-black">
+          <a href="https://medium.com/@Motionstate" className="text-base mono text-gray-600 hover:text-black">
             Research↗
           </a>
           <span></span>
-          <a href="mailto:hello@cogitationml.com" className="text-base mono text-gray-600 hover:text-black">
+          <a href="mailto:hello@motionstate.xyz" className="text-base mono text-gray-600 hover:text-black">
             Inquiries↗
           </a>
         </div>
-        <hr className="my-4 border-t-2 border-black border-dashed" />
+        <hr className="my-4 border-t-1.5 border-black border-dashed" />
         {activeSection === 'about' ? (
   <>
     <h2 className="text-base font-normal mono">
       Founder's Note
     </h2>
     <p className="text-base mono">
+    Integrality (abstract noun) refers to a state of wholeness in which all parts are interdependent and operate together as a unified system. We view our work in the same way — understanding both the intricacies and the totality of information systems.
     </p>
     <p className="text-base mono">
-    We've noticed that private equity and venture capital place investments in environments riddled with half-baked deliverables, fanciful valuations, and low-hanging fruit ideas.
-
+    We’ve noticed that private equity and venture capital often place investments in complex environments that rely on novelty and promise alone.
     </p>
     <p className="text-base mono">
-    We believe this systematic behavior poses a significant problem for our economy's ability to foster sovereign technology.
+    We believe this systematic behavior poses a significant problem for our economy’s ability to foster sovereign technology.
     </p> 
     <p className="text-base mono">
     We are insatiably skeptical and obsessed with uncovering truth in possibilities.
     </p>
     <p className="text-base mono">
-    We're developing tools capable of holistic perception, identifying hidden patterns that map the trajectory of human ingenuity.
+    We’re developing ML capable of holistic perception — bypassing noise, identifying hidden patterns, and mapping the trajectory of human ingenuity.
     </p>
     <p className="text-base mono">
       Yannick Bruderlein, Founder
@@ -137,10 +137,12 @@ export default function Home() {
     </p>
   </>
 )}
-        <hr className="my-4 border-t-2 border-black border-dashed" />
+        <hr className="my-4 border-t-1.5 border-black border-dashed" />
         <div className="flex items-center space-x-2 text-base mono">
           <span className="flex items-center space-x-1">
-            <span>© 2025 Cogitation</span>
+            <span>© 2025 Integrality AI
+
+            </span>
           </span>
         </div>
         <div className="mt-8">
