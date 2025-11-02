@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import { altform } from './fonts';
 import './globals.css';
 export const metadata: Metadata = {
-  title: "Integrality AI | An Intelligence Partner",
+  title: "Integrality | An Intelligence Partner",
 };
 
 export default function RootLayout({
