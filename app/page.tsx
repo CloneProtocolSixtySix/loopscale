@@ -1,153 +1,155 @@
-'use client';
+"use client";
 
-import { useState, useRef, useLayoutEffect } from 'react';
-import CapabilitiesToggle from './components/DottedEffect';
-import TypingEffect from './components/TypingEffect';
-import AnimatedDots from './components/AnimatedDots';
-import Link from 'next/link';
+import React, { useState, useEffect } from "react";
 
 export default function Home() {
-  const options = ['Overview', 'Agent', 'Workflow', 'Observability'];
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
-  const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0 });
-  const [activeSection, setActiveSection] = useState('home');
-  const [restartTyping, setRestartTyping] = useState(0);
-  const [isAccordionOpen, setIsAccordionOpen] = useState(false);
-  const [selectedAccordionItem, setSelectedAccordionItem] = useState(null);
+  // Start with empty set to avoid hydration mismatch
+  const [visibleChars, setVisibleChars] = useState<Set<number>>(new Set());
+  const [isClient, setIsClient] = useState(false);
 
-  const handleToggleContent = (section: string) => {
-    setActiveSection(section);
+  // Set isClient to true after mount to avoid hydration issues
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  const asciiArtOriginal = 
+  
+`0002000200020002000200020002000200020002000200020002000200020002000200020002000200020002000200020002000200020002000200
+4060406040604060406040604060406040604060406040604060406040604060406040604060406040604060406040604060406040604060406040
+0301030103010301030103010301030103010301030103010301030103010301030103010301030103010301030103010301030103010301030103
+7050705070507050705070507050705070507050705070507050705070507050705070507050705070507050705070507050705070507050705070
+0002000200020002000200020002000200020002000200020002000200020002000200020002000200020002000200020002000200020002000200
+4060406040604060406040604060406040604060406040604060406040604060406040604060406040604060406040604060406040604060406040
+0301030103010301030103010301030103010301030103010301030103010301030103010301030103010301030103010301030103010301030103
+7050705070507050705070507050705070507050705070507050705070507050705070507050705070507050705070507050705070507050705070
+0002000200020002000200020002000200020002000200020002000200020002000200020002000200020002000200020002000200020002000200
+4060406040604060406040604060406040604060406040604060406040604060406040604060406040604060406040604060406040604060406040
+0301030103010301030103010301030103010301030103010301030103010301030103010301030103010301030103010301030103010301030103
+7050705070507050705070507050705070507050705070507050705070507050705070507050705070507050705070507050705070507050705070
+0002000200020002000200020002000200020002000200020002000200020002000200020002000200020002000200020002000200020002000200
+4060406040604060406040604060406040604060406040604060406040604060406040604060406040604060406040604060406040604060406040
+0301030103010301030103010301030103010301030103010301030103010301030103010301030103010301030103010301030103010301030103
+7050705070507050705070507050705070507050705070507050705070507050705070507050705070507050705070507050705070507050705070
+0002000200020002000200020002000200020002000200020002000200020002000200020002000200020002000200020002000200020002000200
+4060406040604060406040604060406040604060406040604060406040604060406040604060406040604060406040604060406040604060406040
+0301030103010301030103010301030103010301030103010301030103010301030103010301030103010301030103010301030103010301030103
+7050705070507050705070507050705070507050705070507050705070507050705070507050705070507050705070507050705070507050705070
+0002000200020002000200020002000200020002000200020002000200020002000200020002000200020002000200020002000200020002000200
+40604060406040604060406040604060406040604060406040604060406B      6040604060406040604060406040604060406040604060406040
+0301030103010301030103010301030103010301030103010301030105        0103010301030103010301030103010301030103010301030103
+705070507050705070507050705070507050705070507050705070507     50705070507050705070507050705070507050705070507050705070
+000200020002000200020002000200020002000200020002000200020    002000200020002000200020002000200020002000200020002000200
+406040604060406040604060406040604060406040604060406040604    060406040604060406040604060406040604060406040604060406040
+030103010301030103010301030103010301030103010301030103010    301030103010301030103010301030103010301030103010301030103
+705070507050705070507050705070507050705070507050705070507    050705070507050705070507050705070507050705070507050705070
+000200020002000200020002000200020002000200020002000200020    002000200020002000200020002000200020002000200020002000200
+406040604060406040604060406040604060406040604060406040604    060406040604060406040604060406040604060406040604060406040
+030103010301030103010301030103010301030103010301030103010    301030103010301030103010301030103010301030103010301030103
+705070507050705070507050705070507050705070507050705070507    050705070507050705070507050705070507050705070507050705070
+000200020002000200020002000200020002000200020002000200020    002000200020002000200020002000200020002000200020002000200
+406040604060406040604060406040604060406040604060406040604    060406040604060406040604060406040604060406040604060406040
+030103010301030103010301030103010301030103010301030103010    301030103010301030103010301030103010301030103010301030103
+705070507050705070507050705070507050705070507050705070507    050705070507050705070507050705070507050705070507050705070
+000200020002000200020002000200020002000200020002000200020    002000200020002000200020002000200020002000200020002000200
+406040604060406040604060406040604060406040604060406040604    060406040604060406040604060406040604060406040604060406040
+030103010301030103010301030103010301030103010301030103010    301030103010301030103010301030103010301030103010301030103
+705070507050705070507050705070507050705070507050705070507    050705070507050705070507050705070507050705070507050705070
+00020002000200020002000200020002000200020002000200020005     002000200020002000200020002000200020002000200020002000200
+4060406040604060406040604060406040604060406040604060        4060406040604060406040604060406040604060406040604060406040
+03010301030103010301030103010301030103010301030103015    4010301030103010301030103010301030103010301030103010301030103
+7050705070507050705070507050705070507050705070507050705070507050705070507050705070507050705070507050705070507050705070
+0002000200020002000200020002000200020002000200020002000200020002000200020002000200020002000200020002000200020002000200
+4060406040604060406040604060406040604060406040604060406040604060406040604060406040604060406040604060406040604060406040
+0301030103010301030103010301030103010301030103010301030103010301030103010301030103010301030103010301030103010301030103
+7050705070507050705070507050705070507050705070507050705070507050705070507050705070507050705070507050705070507050705070
+0002000200020002000200020002000200020002000200020002000200020002000200020002000200020002000200020002000200020002000200
+4060406040604060406040604060406040604060406040604060406040604060406040604060406040604060406040604060406040604060406040
+0301030103010301030103010301030103010301030103010301030103010301030103010301030103010301030103010301030103010301030103
+7050705070507050705070507050705070507050705070507050705070507050705070507050705070507050705070507050705070507050705070
+0002000200020002000200020002000200020002000200020002000200020002000200020002000200020002000200020002000200020002000200
+4060406040604060406040604060406040604060406040604060406040604060406040604060406040604060406040604060406040604060406040
+0301030103010301030103010301030103010301030103010301030103010301030103010301030103010301030103010301030103010301030103
+7050705070507050705070507050705070507050705070507050705070507050705070507050705070507050705070507050705070507050705070
+0002000200020002000200020002000200020002000200020002000200020002000200020002000200020002000200020002000200020002000200
+4060406040604060406040604060406040604060406040604060406040604060406040604060406040604060406040604060406040604060406040
+0301030103010301030103010301030103010301030103010301030103010301030103010301030103010301030103010301030103010301030103
+7050705070507050705070507050705070507050705070507050705070507050705070507050705070507050705070507050705070507050705070
+0002000200020002000200020002000200020002000200020002000200020002000200020002000200020002000200020002000200020002000200
+4060406040604060406040604060406040604060406040604060406040604060406040604060406040604060406040604060406040604060406040
+0301030103010301030103010301030103010301030103010301030103010301030103010301030103010301030103010301030103010301030103
+7050705070507050705070507050705070507050705070507050705070507050705070507050705070507050705070507050705070507050705070
+0002000200020002000200020002000200020002000200020002000200020002000200020002000200020002000200020002000200020002000200
+`;
+
+  useEffect(() => {
+    if (!isClient) return; // Only run animation on client side
+    
+    const interval = setInterval(() => {
+      const newVisibleChars = new Set<number>();
+      for (let i = 0; i < asciiArtOriginal.length; i++) {
+        if (asciiArtOriginal[i] !== '\n' && Math.random() > 0.3) {
+          newVisibleChars.add(i);
+        }
+      }
+      setVisibleChars(newVisibleChars);
+    }, 150);
+    return () => clearInterval(interval);
+  }, [isClient, asciiArtOriginal]);
+
+  const renderAnimatedArt = () => {
+    return asciiArtOriginal
+      .split('')
+      .map((char, index) => {
+        if (char === '\n') return char;
+        return visibleChars.has(index) ? char : ' ';
+      })
+      .join('');
   };
-
-  const handleRestartTyping = () => {
-    setRestartTyping(prev => prev + 1);
-  };
-
-
-  useLayoutEffect(() => {
-    const currentTab = tabRefs.current[currentIndex];
-    if (currentTab) {
-      setIndicatorStyle({
-        left: currentTab.offsetLeft,
-        width: currentTab.offsetWidth,
-      });
-    }
-  }, [currentIndex]);
 
   return (
-    <main className="min-h-screen text-black" style={{backgroundColor: '#F3F3F5'}}>
-      <div className="max-w-2xl w-full px-6 py-20 mx-auto space-y-6">
-        <div className="flex items-center space-x-2">
-          <span className="text-base text-black font-normal flex items-center space-x-1">
-            <img src="/integralmachines.svg" alt="Integral Machines" className="w-6 h-6" />
-          </span>
-        </div> 
-        <h1 className="text-base font-normal">
-          <button onClick={() => handleToggleContent('home')} className="mr-2">
-          </button>
-        </h1>
-        <div className="flex items-center space-x-2 text-base mono">
-          <button onClick={() => handleToggleContent('home')} className={activeSection === 'home' ? 'text-black' : 'text-gray-600'}>
-            <span className="text-base mono font-normal">Integrality</span> <br />
-          </button>
-          <span></span>
-          <button onClick={() => handleToggleContent('about')} className={activeSection === 'about' ? 'text-black' : 'text-gray-600'}>
-            About
-          </button>
-          <span></span>
-          <button onClick={() => handleToggleContent('solutions')} className={activeSection === 'solutions' ? 'text-black' : 'text-gray-600'}>
-            Tools
-          </button>
-          <span></span>
-          <a href="https://medium.com/@Motionstate" className="text-base mono text-gray-600 hover:text-black">
-            Research↗
-          </a>
-          <span></span>
-          <a href="mailto:hello@motionstate.xyz" className="text-base mono text-gray-600 hover:text-black">
-            Inquiries↗
-          </a>
-        </div>
-        <hr className="my-4 border-t-1.5 border-black border-dashed" />
-        {activeSection === 'about' ? (
-  <>
-    <h2 className="text-base font-normal mono">
-      Founder's Note
-    </h2>
-    <p className="text-base mono">
-    Integrality (abstract noun) refers to a state of wholeness in which all parts are interdependent and operate together as a unified system. We view our work in the same way — understanding both the intricacies and the totality of information systems.
-    </p>
-    <p className="text-base mono">
-    We’ve noticed that private equity and venture capital often place investments in complex environments that rely on novelty and promise alone.
-    </p>
-    <p className="text-base mono">
-    We believe this systematic behavior poses a significant problem for our economy’s ability to foster sovereign technology.
-    </p> 
-    <p className="text-base mono">
-    We are insatiably skeptical and obsessed with uncovering truth in possibilities.
-    </p>
-    <p className="text-base mono">
-    We’re developing ML capable of holistic perception — bypassing noise, identifying hidden patterns, and mapping the trajectory of human ingenuity.
-    </p>
-    <p className="text-base mono">
-      Yannick Bruderlein, Founder
-    </p>
-  </>
-) : activeSection === 'solutions' ? (
-  <>
-    <h2 className="text-base font-normal mono">
-      Introducing Remark (pre-alpha)
-    </h2>
-    <p className="text-base mono">
-    A bespoke set of language models capable of multidisciplinary precision.
-    </p>
-    <div className="mt-4">
-      <button 
-        onClick={() => setIsAccordionOpen(!isAccordionOpen)}
-        className="flex items-center justify-between w-full text-base mono text-left p-2 border-2 border-black border-dashed transition-colors text-black"
-      >
-        <span>Capabilities</span>
-        <span className={`transform transition-transform ${isAccordionOpen ? 'rotate-180' : ''}`}>
-        ↑
-        </span>
-      </button>
-      {isAccordionOpen && (
-        <div className="border-l-2 border-r-2 border-b-2 border-black border-dashed" style={{backgroundColor: '#F3F3F5'}}>
-          <div className="p-2 text-base mono border-b-2 border-black border-dashed">
-            <div className="font-normal">Match research projects with sector-specific commercialization and investment opportunities.</div>
-          </div>
-          <div className="p-2 text-base mono border-b-2 border-black border-dashed">
-            <div className="font-normal">Mitigate industry uncertainty through academic integrity.</div>
-          </div>
-          <div className="p-2 text-base mono">
-            <div className="font-normal">Generate novel strategies grounded in contextual understanding.</div>
-          </div>
-        </div>
-        
-      )}
-      <div className="mt-3">
-        <a href="#" className="text-base mono"></a>
+    <main className="min-h-screen bg-white relative">
+      {/* Desktop: Fixed elements in corners */}
+      <h1 className="hidden md:block fixed top-4 left-4 text-lg font-normal text-black font-mono uppercase z-10">∫</h1>
+      <div className="hidden md:flex fixed bottom-4 left-4 flex-col gap-2 font-mono uppercase z-10">
+        <a href="https://medium.com/@integrality" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-500 hover:text-black transition-colors duration-200 focus:outline-none focus:text-black">RESEARCH↗</a>
+        <a href="mailto:hello@integrality.ai" className="text-sm text-gray-500 hover:text-black transition-colors duration-200 focus:outline-none focus:text-black">INQUIRIES↗</a>
+        <p className="text-sm text-gray-500">© 2025 INTEGRALITY AI</p>
       </div>
-    </div>
-  </>
-) : (
-  <>
-    <p className="text-base mono">
-         Solving for complexity at the intersection of data, design, and decisions.
-    </p>
-  </>
-)}
-        <hr className="my-4 border-t-1.5 border-black border-dashed" />
-        <div className="flex items-center space-x-2 text-base mono">
-          <span className="flex items-center space-x-1">
-            <span>© 2025 Integrality AI
-
-            </span>
-          </span>
+      
+      {/* Mobile: Navigation bar */}
+      <nav className="md:hidden fixed top-0 left-0 right-0 bg-white border-b border-gray-200 px-4 py-3 z-10 flex items-center justify-between">
+        <span className="text-lg font-normal text-black font-mono uppercase">∫</span>
+        <div className="flex items-center gap-4 font-mono uppercase text-xs">
+          <a href="https://medium.com/@integrality" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-black transition-colors duration-200 focus:outline-none focus:text-black">RESEARCH↗</a>
+          <a href="mailto:hello@integrality.ai" className="text-gray-500 hover:text-black transition-colors duration-200 focus:outline-none focus:text-black">INQUIRIES↗</a>
         </div>
-        <div className="mt-8">
-          <AnimatedDots />
+      </nav>
+      
+      {/* Mobile: Footer with copyright */}
+      <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 px-4 py-2 z-10 text-center">
+        <p className="text-xs text-gray-500 font-mono uppercase">© 2025 INTEGRALITY AI</p>
+      </div>
+      <div 
+        className="custom-scrollbar fixed left-0 md:left-auto md:right-0 top-0 bottom-0 w-full md:max-w-[600px] px-6 md:pr-4 pt-[60px] pb-[60px] md:py-[100px] overflow-y-auto overflow-x-visible"
+        style={{
+          fontFamily: 'Georgia, serif',
+          fontSize: '18px',
+          lineHeight: '1.4',
+          color: '#444',
+        }}
+      >
+        <h2 className="text-xl font-normal mb-6">Introducing Integrality AI</h2>
+        <div className="overflow-x-auto mb-6 -mr-4 scrollbar-hide" style={{ width: 'calc(100% + 16px)' }}>
+          <pre className="text-[4px] md:text-[6px] font-mono leading-none whitespace-pre inline-block" style={{ fontFamily: 'monospace' }}>
+            {renderAnimatedArt()}
+          </pre>
         </div>
+        <p className="mb-6">Integrality (noun) refers to a state of wholeness and completeness. We approach our work in the same way — understanding both the intricacies and the totality of information systems.</p>
+        <p className="mb-6">We’ve noticed that private equity and venture capital often place investments in complex environments that rely on novelty and promise alone.</p>
+        <p className="mb-6">We believe this systematic behavior poses a significant problem for our economy's ability to foster sovereign technology.</p>
+        <p className="mb-6">We are insatiably skeptical and obsessed with uncovering truth in possibilities.</p>
+        <p className="mb-6">We're developing ML capable of holistic perception — bypassing noise, identifying patterns, and mapping the trajectory of human ingenuity.</p>
+        <p className="mt-8">Yannick Bruderlein, Founder</p>
       </div>
     </main>
   );

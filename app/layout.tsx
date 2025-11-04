@@ -3,7 +3,8 @@ import type { Metadata } from 'next';
 import { altform } from './fonts';
 import './globals.css';
 export const metadata: Metadata = {
-  title: "Integrality | An Intelligence Partner",
+  title: "Integrality AI",
+  description: "Solving for complexity at the intersection of data, design, and decisions.",
 };
 
 export default function RootLayout({
