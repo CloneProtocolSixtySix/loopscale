@@ -139,6 +139,7 @@ export default function Home() {
         }}
       >
         <h2 className="text-xl font-normal mb-6">Introducing Integrality AI</h2>
+        <p className="mb-6">Solving for complexity at the intersection of data, design, and decision.</p>
         <div className="overflow-x-auto mb-6 -mr-4 scrollbar-hide" style={{ width: 'calc(100% + 16px)' }}>
           <pre className="text-[4px] md:text-[6px] font-mono leading-none whitespace-pre inline-block" style={{ fontFamily: 'monospace' }}>
             {renderAnimatedArt()}
