@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import { altform } from './fonts';
 import './globals.css';
 export const metadata: Metadata = {
-  title: "Integrality AI",
+  title: "Epistemic Machines",
   description: "Solving for complexity at the intersection of data, design, and decisions.",
 };
 
