@@ -149,7 +149,7 @@ export default function Home() {
         <p className="mb-6">We’ve noticed that private equity and venture capital often place investments in complex environments that rely on novelty and promise alone.</p>
         <p className="mb-6">We believe this systematic behavior poses a significant problem for our economy's ability to foster sovereign technology.</p>
         <p className="mb-6">We are insatiably skeptical and obsessed with uncovering truth in possibilities.</p>
-        <p className="mb-6">We're developing ML capable of holistic perception — bypassing noise, identifying patterns, and mapping the trajectory of human ingenuity.</p>
+        <p className="mb-6">We're developing tools capable of holistic perception — bypassing noise, identifying patterns, and mapping the trajectory of human ingenuity.</p>
         <p className="mt-8">Yannick Bruderlein, Founder</p>
       </div>
     </main>
