@@ -14,10 +14,11 @@
 
 html {
   scroll-behavior: smooth;
+  background-color: #0000FF;
 }
 
 body {
-  background-color: #F5F4F0;
+  background-color: #0000FF;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
