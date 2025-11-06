@@ -122,9 +122,9 @@ Epistemic Machines05070507050     50705070507050705     F05070507050     5507050
         </div>
       
       {/* Mobile: Navigation bar */}
-      <nav className="md:hidden fixed top-0 left-0 right-0 border-b border-white px-4 py-3 z-10 flex items-center justify-betsen" style={{ backgroundColor: '#0000FF' }}>
+      <nav className="md:hidden fixed top-0 left-0 right-0 border-b border-white px-4 py-3 z-10 flex items-center justify-between" style={{ backgroundColor: '#0000FF' }}>
         <img src="/prehension.svg" alt="Prehension" className="w-6 h-6" />
-        <div className="flex items-center gap-4 font-mono uppercase text-xs">
+        <div className="flex items-center gap-4 font-mono uppercase text-xs ml-auto">
           <a href="https://medium.com/@epistemicmachines" target="_blank" rel="noopener noreferrer" className="text-xs text-white hover:text-gray-300 transition-colors duration-200 focus:outline-none focus:text-gray-300">RESEARCH↗</a>
           <a href="mailto:hello@epistemicmachines.xyz" className="text-white hover:text-gray-300 transition-colors duration-200 focus:outline-none focus:text-gray-300">INQUIRIES↗</a>
         </div>
@@ -150,8 +150,8 @@ Epistemic Machines05070507050     50705070507050705     F05070507050     5507050
             {renderAnimatedArt()}
           </pre>
         </div>
-        <p className="mb-6">EM is developing knowledge tools capable of holistic understanding — bypassing noise, identifying patterns, and mapping the trajectory of human ingenuity.</p>
-        <p className="mb-6">EM aims to help private equity and venture capital systematically place the right bets and enhance their ability to foster sovereign technologies.</p>
+        <p className="mb-6">EM is developing knowledge tools capable of holistic understanding — bypassing noise, identifying patterns, and mapping the trajectories of human ingenuity.</p>
+        <p className="mb-6">EM aims to help private equity and venture capital firms systematically mitigate uncertainty and enhance their capacity to foster sovereign technologies.</p>
         <p className="mb-6">EM is insatiably skeptical and obsessed with uncovering truth in possibilities.</p>
         <p className="mb-6">EM is (for now) an applied research project led by <a href="https://www.linkedin.com/in/yannick-bruderlein-423b0226a/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors duration-200 underline">Yannick Bruderlein</a>. </p>
       </div>
