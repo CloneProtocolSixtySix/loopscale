@@ -150,12 +150,10 @@ Epistemic Machines05070507050     50705070507050705     F05070507050     5507050
             {renderAnimatedArt()}
           </pre>
         </div>
-        <p className="mb-6">The truth is: While things ebb and flow, change itself is perpetual. At EM, we explore at the nooks and crannies of industry uncertainty. </p>
-        <p className="mb-6">EM has noticed that private equity and venture capital systematically place investments in environments that rely on novelty and promise alone. Without considering factors beyond hype and benchmarks. </p>
-        <p className="mb-6">EM believes this behavior poses a significant problem for our economy's ability to foster sovereign technology.</p>
-        <p className="mb-6">EM is insatiably skeptical and obsessed with uncovering truth in possibilities.</p>
         <p className="mb-6">EM is developing knowledge tools capable of holistic understanding — bypassing noise, identifying patterns, and mapping the trajectory of human ingenuity.</p>
-        <p className="mb-6">EM is a long-term project. We believe this is one of the most interesting problems we could spend the next decade of our lives on.</p>
+        <p className="mb-6">EM aims to help private equity and venture capital systematically place the right bets and enhance their ability to foster sovereign technologies.</p>
+        <p className="mb-6">EM is insatiably skeptical and obsessed with uncovering truth in possibilities.</p>
+        <p className="mb-6">EM is (for now) an applied research project led by <a href="https://www.linkedin.com/in/yannick-bruderlein-423b0226a/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors duration-200 underline">Yannick Bruderlein</a>. </p>
       </div>
     </main>
   );
