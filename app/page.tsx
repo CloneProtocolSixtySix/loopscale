@@ -117,16 +117,16 @@ Epistemic Machines05070507050     50705070507050705     F05070507050     5507050
         </div> 
       <div className="hidden md:flex fixed bottom-4 left-4 flex-col gap-2 font-mono uppercase z-10">
         <a href="https://medium.com/@epistemicmachines" target="_blank" rel="noopener noreferrer" className="text-xs text-white hover:text-gray-300 transition-colors duration-200 focus:outline-none focus:text-gray-300">RESEARCH↗</a>
-        <a href="mailto:hello@epistemicmachines.ai" className="text-xs text-white hover:text-gray-300 transition-colors duration-200 focus:outline-none focus:text-gray-300">INQUIRIES↗</a>
+        <a href="mailto:hello@epistemicmachines.xyz" className="text-xs text-white hover:text-gray-300 transition-colors duration-200 focus:outline-none focus:text-gray-300">INQUIRIES↗</a>
         <p className="text-xs text-white">© 2025 Epistemic Machines</p>
         </div>
       
       {/* Mobile: Navigation bar */}
-      <nav className="md:hidden fixed top-0 left-0 right-0 border-b border-white px-4 py-3 z-10 flex items-center justify-between" style={{ backgroundColor: '#0000FF' }}>
+      <nav className="md:hidden fixed top-0 left-0 right-0 border-b border-white px-4 py-3 z-10 flex items-center justify-betsen" style={{ backgroundColor: '#0000FF' }}>
         <img src="/prehension.svg" alt="Prehension" className="w-6 h-6" />
         <div className="flex items-center gap-4 font-mono uppercase text-xs">
           <a href="https://medium.com/@epistemicmachines" target="_blank" rel="noopener noreferrer" className="text-xs text-white hover:text-gray-300 transition-colors duration-200 focus:outline-none focus:text-gray-300">RESEARCH↗</a>
-          <a href="mailto:hello@epistemicmachines.ai" className="text-white hover:text-gray-300 transition-colors duration-200 focus:outline-none focus:text-gray-300">INQUIRIES↗</a>
+          <a href="mailto:hello@epistemicmachines.xyz" className="text-white hover:text-gray-300 transition-colors duration-200 focus:outline-none focus:text-gray-300">INQUIRIES↗</a>
         </div>
       </nav>
       
@@ -150,11 +150,12 @@ Epistemic Machines05070507050     50705070507050705     F05070507050     5507050
             {renderAnimatedArt()}
           </pre>
         </div>
-        <p className="mb-6">We’ve noticed that private equity and venture capital systematically place investments in complex environments that rely on novelty and promise alone.</p>
-        <p className="mb-6">We believe this behavior poses a significant problem for our economy's ability to foster sovereign technology.</p>
-        <p className="mb-6">We are insatiably skeptical and obsessed with uncovering truth in possibilities.</p>
-        <p className="mb-6">We're developing knowledge tools capable of holistic understanding — bypassing noise, identifying patterns, and mapping the trajectory of human ingenuity.</p>
-        <p className="mt-8">Yannick Bruderlein, Founder at EM</p>
+        <p className="mb-6">The truth is: While things ebb and flow, change itself is perpetual. At EM, we explore at the nooks and crannies of industry uncertainty. </p>
+        <p className="mb-6">EM has noticed that private equity and venture capital systematically place investments in environments that rely on novelty and promise alone. Without considering factors beyond hype and benchmarks. </p>
+        <p className="mb-6">EM believes this behavior poses a significant problem for our economy's ability to foster sovereign technology.</p>
+        <p className="mb-6">EM is insatiably skeptical and obsessed with uncovering truth in possibilities.</p>
+        <p className="mb-6">EM is developing knowledge tools capable of holistic understanding — bypassing noise, identifying patterns, and mapping the trajectory of human ingenuity.</p>
+        <p className="mb-6">EM is a long-term project. We believe this is one of the most interesting problems we could spend the next decade of our lives on.</p>
       </div>
     </main>
   );
