@@ -151,7 +151,7 @@ Epistemic Machines05070507050     50705070507050705     F05070507050     5507050
           </pre>
         </div>
         <p className="mb-6">EM is developing knowledge tools capable of holistic understanding in continually evolving environments — bypassing noise, identifying patterns, and mapping the trajectories of human ingenuity.</p>
-        <p className="mb-6">EM believes that building foundational models that foresee industry novelity is one of the most meaningful problems we can dedicate the next decade to.</p>
+        <p className="mb-6">EM believes that building foundational models that can foresee industry novelty is one of the most meaningful problems we can dedicate the next decade to.</p>
         <p className="mb-6">EM aims to help private equity and venture capital firms systematically mitigate uncertainty and enhance their capacity to foster sovereign technologies.</p>
         <p className="mb-6">EM is insatiably skeptical and obsessed with uncovering truth in possibilities.</p>
         <p className="mb-6">EM is (for now) an applied research project led by <a href="https://www.linkedin.com/in/yannick-bruderlein-423b0226a/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors duration-200 underline">Yannick Bruderlein</a>. </p>
