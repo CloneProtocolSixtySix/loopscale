@@ -144,13 +144,14 @@ Epistemic Machines05070507050     50705070507050705     F05070507050     5507050
         }}
       >
         <h2 className="text-xs font-normal mb-6 font-mono uppercase">Introducing Epistemic Machines (EM)</h2>
-        <p className="mb-6">Solving for complexity at the intersection of data, design, and decision.</p>
+        <p className="mb-6"> Sensemaking complexity at the intersection of data, design, and decision.</p>
         <div className="overflow-x-auto mb-6 -mr-4 scrollbar-hide" style={{ width: 'calc(100% + 16px)' }}>
           <pre className="text-[4px] md:text-[6px] font-mono leading-none whitespace-pre inline-block" style={{ fontFamily: 'monospace', color: '#FFFFFF' }}>
             {renderAnimatedArt()}
           </pre>
         </div>
-        <p className="mb-6">EM is developing knowledge tools capable of holistic understanding — bypassing noise, identifying patterns, and mapping the trajectories of human ingenuity.</p>
+        <p className="mb-6">EM is developing knowledge tools capable of holistic understanding in continually evolving environments — bypassing noise, identifying patterns, and mapping the trajectories of human ingenuity.</p>
+        <p className="mb-6">EM believes that building foundational models that foresee industry novelity is one of the most meaningful problems we can dedicate the next decade to.</p>
         <p className="mb-6">EM aims to help private equity and venture capital firms systematically mitigate uncertainty and enhance their capacity to foster sovereign technologies.</p>
         <p className="mb-6">EM is insatiably skeptical and obsessed with uncovering truth in possibilities.</p>
         <p className="mb-6">EM is (for now) an applied research project led by <a href="https://www.linkedin.com/in/yannick-bruderlein-423b0226a/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors duration-200 underline">Yannick Bruderlein</a>. </p>
