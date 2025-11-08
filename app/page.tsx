@@ -113,10 +113,10 @@ Epistemic Machines05070507050     50705070507050705     F05070507050     5507050
       {/* Desktop: Fixed elements in corners */}
       <div className="hidden md:flex fixed top-4 left-4 items-center gap-2 z-10">
         <img src="/prehension.svg" alt="Prehension" className="w-5 h-5" />
-        <span className="font-normal text-white" style={{ fontFamily: 'Georgia, serif', fontSize: '18px' }}>Epistemic Machines</span>
+        <span className="font-medium text-white" style={{ fontFamily: '"Noto Serif", serif', fontSize: '18px' }}> Epistemic Machines</span>
         </div> 
       <div className="hidden md:flex fixed bottom-4 left-4 flex-col gap-2 font-mono uppercase z-10">
-        <a href="https://medium.com/@epistemicmachines" target="_blank" rel="noopener noreferrer" className="text-xs text-white hover:text-gray-300 transition-colors duration-200 focus:outline-none focus:text-gray-300">RESEARCH↗</a>
+        <a href="https://medium.com/@epistemicmachines" target="_blank" rel="noopener noreferrer" className="text-xs text-white hover:text-gray-300 transition-colors duration-200 focus:outline-none focus:text-gray-300">Case Studies↗</a>
         <a href="mailto:hello@epistemicmachines.xyz" className="text-xs text-white hover:text-gray-300 transition-colors duration-200 focus:outline-none focus:text-gray-300">INQUIRIES↗</a>
         <p className="text-xs text-white">© 2025 Epistemic Machines</p>
         </div>
@@ -125,7 +125,7 @@ Epistemic Machines05070507050     50705070507050705     F05070507050     5507050
       <nav className="md:hidden fixed top-0 left-0 right-0 border-b border-white px-4 py-3 z-10 flex items-center justify-between" style={{ backgroundColor: '#0000FF' }}>
         <img src="/prehension.svg" alt="Prehension" className="w-6 h-6" />
         <div className="flex items-center gap-4 font-mono uppercase text-xs ml-auto">
-          <a href="https://medium.com/@epistemicmachines" target="_blank" rel="noopener noreferrer" className="text-xs text-white hover:text-gray-300 transition-colors duration-200 focus:outline-none focus:text-gray-300">RESEARCH↗</a>
+          <a href="https://medium.com/@epistemicmachines" target="_blank" rel="noopener noreferrer" className="text-xs text-white hover:text-gray-300 transition-colors duration-200 focus:outline-none focus:text-gray-300">Case Studies↗</a>
           <a href="mailto:hello@epistemicmachines.xyz" className="text-white hover:text-gray-300 transition-colors duration-200 focus:outline-none focus:text-gray-300">INQUIRIES↗</a>
         </div>
       </nav>
@@ -137,7 +137,7 @@ Epistemic Machines05070507050     50705070507050705     F05070507050     5507050
       <div 
         className="custom-scrollbar fixed left-0 md:left-auto md:right-0 top-0 bottom-0 w-full md:max-w-[600px] px-6 md:pr-4 pt-[60px] pb-[60px] md:py-[100px] overflow-y-auto overflow-x-visible"
         style={{
-          fontFamily: 'Georgia, serif',
+          fontFamily: '"Noto Serif", serif',
           fontSize: '18px',
           lineHeight: '1.4',
           color: '#FFFFFF',
@@ -150,8 +150,8 @@ Epistemic Machines05070507050     50705070507050705     F05070507050     5507050
             {renderAnimatedArt()}
           </pre>
         </div>
-        <p className="mb-6">EM is developing knowledge tools capable of holistic understanding in continually evolving environments — bypassing noise, identifying patterns, and mapping the trajectories of human ingenuity.</p>
-        <p className="mb-6">EM believes that building foundational models that can foresee industry novelty is one of the most meaningful problems we can dedicate the next decade to.</p>
+        <p className="mb-6">EM is developing foundational knowledge tools capable of holistic understanding in continually evolving environments — bypassing noise, identifying patterns, and mapping the trajectories of human ingenuity.</p>
+        <p className="mb-6">EM is grounded in the belief that the most meaningful indicators are often found in the nooks and crannies of information systems.</p>
         <p className="mb-6">EM aims to help private equity and venture capital firms systematically mitigate uncertainty and enhance their capacity to foster sovereign technologies.</p>
         <p className="mb-6">EM is insatiably skeptical and obsessed with uncovering truth in possibilities.</p>
         <p className="mb-6">EM is (for now) an applied research project led by <a href="https://www.linkedin.com/in/yannick-bruderlein-423b0226a/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors duration-200 underline">Yannick Bruderlein</a>. </p>
