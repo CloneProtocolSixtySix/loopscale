@@ -184,22 +184,22 @@ export default function Home() {
         <img src="/prehension.svg" alt="Augnition" className="h-6" />
         </div> 
       <div className="hidden md:flex fixed bottom-4 left-4 flex-col gap-2 font-mono uppercase z-10">
-        <a href="https://medium.com/@Augnition" target="_blank" rel="noopener noreferrer" className="text-xs text-black hover:text-gray-300 transition-colors duration-200 focus:outline-none focus:text-gray-300">Case Studies↗</a>
-        <a href="mailto:hello@brightsqaure.ai" className="text-xs text-black hover:text-gray-300 transition-colors duration-200 focus:outline-none focus:text-gray-300">INQUIRIES↗</a>
+        <a href="https://medium.com/@augnition" target="_blank" rel="noopener noreferrer" className="text-xs text-black hover:text-gray-300 transition-colors duration-200 focus:outline-none focus:text-gray-300">Case Studies↗</a>
+        <a href="mailto:hello@augnition.xyz" className="text-xs text-black hover:text-gray-300 transition-colors duration-200 focus:outline-none focus:text-gray-300">INQUIRIES↗</a>
         <p className="text-xs text-black">© 2025 Augnition Research</p>
         </div>
       
       {/* Mobile: Navigation bar */}
       <nav className="md:hidden fixed top-0 left-0 right-0 bg-white border-b border-black px-4 py-3 z-10 flex items-center justify-between">
         <div className="flex items-center gap-4 font-mono uppercase text-xs ml-auto">
-          <a href="https://medium.com/@brightsqaure" target="_blank" rel="noopener noreferrer" className="text-xs text-black hover:text-gray-300 transition-colors duration-200 focus:outline-none focus:text-gray-300">Case Studies↗</a>
-          <a href="mailto:hello@brightsqaure.ai" className="text-black hover:text-gray-300 transition-colors duration-200 focus:outline-none focus:text-gray-300">INQUIRIES↗</a>
+          <a href="https://medium.com/@augnition" target="_blank" rel="noopener noreferrer" className="text-xs text-black hover:text-gray-300 transition-colors duration-200 focus:outline-none focus:text-gray-300">Case Studies↗</a>
+          <a href="mailto:hello@augnition.xyz" className="text-black hover:text-gray-300 transition-colors duration-200 focus:outline-none focus:text-gray-300">INQUIRIES↗</a>
         </div>
       </nav>
       
       {/* Mobile: Footer with copyright */}
       <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-black px-4 py-2 z-10 text-center">
-        <p className="text-xs text-black font-mono uppercase">© 2025 Augnition</p>
+        <p className="text-xs text-black font-mono uppercase">© 2025 Augnition Research</p>
       </div>
       <div 
         className="custom-scrollbar fixed left-0 md:left-auto md:right-0 top-0 bottom-0 w-full md:max-w-[600px] px-6 md:pr-4 pt-[60px] pb-[60px] md:py-[100px] overflow-y-auto overflow-x-visible"
@@ -218,13 +218,15 @@ export default function Home() {
           </pre>
         </div>
         <p className="text-xs font-normal mb-6 font-mono uppercase" >01</p>
-        <p className="mb-6">We're developing foundational knowledge tools capable of holistic understanding in continually evolving environments — bypassing noise, identifying patterns, and mapping the trajectories of human ingenuity.</p>
+        <p className="mb-6">We're developing foundational knowledge tools native to continually evolving environments.</p>
         <p className="text-xs font-normal mb-6 font-mono uppercase" >02</p>
-        <p className="mb-6">Our aim is to help private equity and venture capital firms systematically mitigate uncertainty and enhance their capacity to foster sovereign technologies.</p>
+        <p className="mb-6">We’re bypassing noise, identifying patterns, and mapping the trajectories of human ingenuity.</p>
         <p className="text-xs font-normal mb-6 font-mono uppercase" >03</p>
-        <p className="mb-6">We're insatiably skeptical and obsessed with uncovering truth in possibilities.</p>
+        <p className="mb-6">Our aim is to help both institutional investors and founders systematically mitigate industry uncertainty and enhance their capacity to foster sovereign technologies.</p>
         <p className="text-xs font-normal mb-6 font-mono uppercase" >04</p>
-        <p className="mb-6">Augnition is (for now) an applied research project led by <a href="https://www.linkedin.com/in/yannick-bruderlein-423b0226a/" target="_blank" rel="noopener noreferrer" className="text-black hover:text-gray-300 transition-colors duration-200 underline">Yannick Bruderlein</a>. </p>
+        <p className="mb-6">We're insatiably skeptical and obsessed with uncovering truth in possibilities.</p>
+        <p className="text-xs font-normal mb-6 font-mono uppercase" >05</p>
+        <p className="mb-6">Augnition is an applied research project led by <a href="https://www.linkedin.com/in/yannick-bruderlein-423b0226a/" target="_blank" rel="noopener noreferrer" className="text-black hover:text-gray-300 transition-colors duration-200 underline">Yannick Bruderlein</a></p>
       </div>
     </main>
   );
