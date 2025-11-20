@@ -1,9 +1,8 @@
 import React from 'react';
 import type { Metadata } from 'next';
-import { altform } from './fonts';
 import './globals.css';
 export const metadata: Metadata = {
-  title: "Augnition",
+  title: "Symbolon AI",
 };
 
 export default function RootLayout({
@@ -12,14 +11,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${altform.variable} antialiased`}>
+    <html lang="en" className="antialiased">
       <head>
         {/* Favicon link removed: handled automatically by app/icon.ico */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
       </head>
-      <body className={`${altform.className} antialiased`}>{children}</body>
+      <body className="antialiased" style={{ fontFamily: '"Inter", sans-serif', fontOpticalSizing: 'auto' }}>{children}</body>
     </html>
   );
 } 
