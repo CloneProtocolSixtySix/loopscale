@@ -15,7 +15,7 @@ export default function AugmentedCognitionEffect({
   const [middleText, setMiddleText] = useState("");
   const [isTyping, setIsTyping] = useState(true);
   
-  const fullMiddle = "mented Cog";
+  const fullMiddle = "Augural AI";
 
   useEffect(() => {
     if (isTyping) {
@@ -51,7 +51,7 @@ export default function AugmentedCognitionEffect({
 
   return (
     <>
-      Aug{middleText}nition
+      {middleText}
     </>
   );
 }
