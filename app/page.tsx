@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <main className="min-h-screen relative" style={{ backgroundColor: '#FFFFFF' }}>
       {/* Logo top left */}
-      <img src="/gi.svg" alt="GI Logo" className="fixed top-[18px] left-6 z-20" width="220" height="220" />
+      <img src="/gi.svg" alt="GI Logo" className="fixed top-[18px] left-6 z-30" width="220" height="220" />
       {/* Desktop Nav top right */}
       <nav className="fixed top-6 right-6 z-20 hidden md:flex flex-row items-center gap-6">
         <a href="https://medium.com/@generalintellection" target="_blank" rel="noopener noreferrer" className="text-sm text-black underline hover:text-gray-300 transition-colors duration-200" style={{ fontFamily: '"IBM Plex Mono", monospace', fontWeight: 400 }}>Case Studies</a>
@@ -18,7 +18,7 @@ export default function Home() {
       {/* Mobile menu button */}
       <button
         onClick={() => setMenuOpen(!menuOpen)}
-        className="fixed top-4 right-6 z-30 md:hidden flex flex-col justify-center items-center w-8 h-8 gap-1.5"
+        className="fixed top-[18px] right-6 z-30 md:hidden flex flex-col justify-center items-center w-8 h-8 gap-1.5"
         aria-label="Toggle menu"
       >
         <span className={`block w-6 h-px bg-black transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-[7px]' : ''}`}></span>
