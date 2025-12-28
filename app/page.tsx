@@ -12,8 +12,9 @@ export default function Home() {
       <img src="/gi.svg" alt="GI Logo" className="fixed top-[18px] left-6 z-30" width="220" height="220" />
       {/* Desktop Nav top right */}
       <nav className="fixed top-6 right-6 z-20 hidden md:flex flex-row items-center gap-6">
-        <a href="https://medium.com/@generalintellection" target="_blank" rel="noopener noreferrer" className="text-sm text-black underline hover:text-gray-300 transition-colors duration-200" style={{ fontFamily: '"IBM Plex Mono", monospace', fontWeight: 400 }}>Case Studies</a>
+        <a href="https://medium.com/@generalintellection" target="_blank" rel="noopener noreferrer" className="text-sm text-black underline hover:text-gray-300 transition-colors duration-200" style={{ fontFamily: '"IBM Plex Mono", monospace', fontWeight: 400 }}>Research</a>
         <a href="mailto:hello@generalintellection.ai" className="text-sm text-black underline hover:text-gray-300 transition-colors duration-200" style={{ fontFamily: '"IBM Plex Mono", monospace', fontWeight: 400 }}>Inquiries</a>
+
       </nav>
       {/* Mobile menu button */}
       <button
@@ -37,13 +38,13 @@ export default function Home() {
       {/* Text content center */}
       <div className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-[90%] max-w-[500px] px-6">
         <p className="text-sm mb-6" style={{ fontFamily: '"IBM Plex Mono", monospace', fontWeight: 400 }}>
-          GI is an applied research studio operating at the intersection of probability, economics, and design.
+          GI is an applied AI studio operating at the intersection of probability, economics, and design.
           <br /><br />
           We're developing foundational models native to continually evolving environments, capable of identifying the trajectories of human ingenuity.
           <br /><br />
           We're insatiably skeptical and obsessed with uncovering truth in possibility.
           <br /><br />
-         We want to build predictive intelligence that help public and private sector institutions systematically mitigate uncertainty and enhance their capacity to foster sovereign technologies.
+          We want to help both public and private sector institutions systematically mitigate uncertainty and enhance their capacity to foster sovereign technologies.
         </p>
       </div>
       {/* Bottom line */}
