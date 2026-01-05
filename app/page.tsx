@@ -10,7 +10,7 @@ export default function Home() {
         <img src="/gi.svg" alt="General Intellection" className="mb-6 w-[220px]" />
         <p className="text-sm mb-6" style={{ fontFamily: '"IBM Plex Mono", monospace', fontWeight: 400 }}>
         01<br />
-        We’re an intelligence studio operating at the intersection of context, decision theory, and design.
+        We’re a research studio operating at the intersection of context, decision theory, and design.
           <br /><br />
         02<br />
         We're developing and applying foundational models native to human ingenuity.
