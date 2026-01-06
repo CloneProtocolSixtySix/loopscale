@@ -10,13 +10,20 @@ export default function Home() {
         <img src="/gi.svg" alt="General Intellection" className="mb-6 w-[220px]" />
         <p className="text-sm mb-6" style={{ fontFamily: '"IBM Plex Mono", monospace', fontWeight: 400 }}>
         01<br />
-        We’re a research studio operating at the intersection of context, decision theory, and design.
+        At General Intellection, we operate at the intersection of context, decision theory, and design.
           <br /><br />
         02<br />
-        We're developing and applying foundational models native to human ingenuity.
-          <br /><br />
+        We develop and apply predictive intelligence, capable of identifying the trajectories of human ingenuity
+        <br /><br />
         03<br />
-        Our aim is to help both public- and private-sector institutions systematically mitigate uncertainty, solve complex problems, and enhance their capacity to foster sovereign technologies.
+        We are insatiably curious about finding truth in possibility.
+        <br /><br />
+        04<br />
+        Our foundational models are native to complex chaos.
+          <br /><br />
+        05<br />
+        We aim to help venture pioneers systematically mitigate uncertainty, and enhance their capacity to foster sovereign technologies
+        <br /><br />
         </p>
         <div className="flex flex-col items-start gap-0.5 mt-4">
           <a href="https://medium.com/@generalintellection" target="_blank" rel="noopener noreferrer" className="text-sm text-black hover:text-gray-300 transition-colors duration-200" style={{ fontFamily: '"IBM Plex Mono", monospace', fontWeight: 400 }}>Research ↗</a>
