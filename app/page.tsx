@@ -20,7 +20,7 @@ At <span className="font-bold">Subcurrent</span>, this is our central focus: ide
 We're a computational anthropology studio operating at the intersection of context, decision theory, and design.
 <br /><br />
 03<br />
-We develop and apply ML models native to emergence, driven by our insatiable pursuit of truth in possibility.
+We develop and apply models native to emergence, driven by our insatiable pursuit of truth in possibility.
 <br /><br />
 04<br />
 Our aim is to help venture pioneers systematically mitigate uncertainty and enhance their capacity for judgment in fostering sovereign technologies.
