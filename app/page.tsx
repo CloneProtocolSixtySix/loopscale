@@ -14,7 +14,7 @@ export default function Home() {
         01<br />
         A subcurrent (noun) is an underlying, often subtle force that unfolds beneath the surface of events, shaping outcomes without being apparent.
 <br /><br />
-At Subcurrent, this is our central focus: identifying the hidden yet powerful externalities of human ingenuity.
+At <span className="font-bold">Subcurrent</span>, this is our central focus: identifying the hidden yet powerful externalities of human ingenuity.
 <br /><br />
 02<br />
 We're a computational anthropology studio operating at the intersection of context, decision theory, and design.
