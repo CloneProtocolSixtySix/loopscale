@@ -2,7 +2,7 @@ import React from 'react';
 import type { Metadata } from 'next';
 import './globals.css';
 export const metadata: Metadata = {
-  title: "General Intellection",
+  title: "Subcurrent",
 };
 
 export default function RootLayout({
