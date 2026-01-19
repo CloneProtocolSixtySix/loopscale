@@ -4,7 +4,7 @@ import React from "react";
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex items-center justify-center py-12 md:py-24" style={{ backgroundColor: '#FFFFFF' }}>
+    <main className="min-h-screen flex items-center justify-center py-12 md:py-24" style={{ backgroundColor: '#D9D9D9' }}>
       {/* Text content center */}
       <div className="w-[90%] max-w-[500px] px-4 md:px-6">
         <div className="flex items-center gap-1.5 mb-6">
