@@ -1,6 +1,8 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import './globals.css';
+import { altform } from './fonts';
+
 export const metadata: Metadata = {
   title: "Subcurrent",
 };
@@ -11,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="antialiased">
+    <html lang="en" className={`antialiased ${altform.variable}`}>
       <head>
         {/* Favicon link removed: handled automatically by app/icon.ico */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
