@@ -7,6 +7,7 @@ export default function Home() {
     <main className="min-h-screen flex items-center justify-center py-12 md:py-24" style={{ backgroundColor: '#D9D9D9' }}>
       <div className="flex flex-col items-start max-w-[550px] px-4 gap-4">
         <p className="text-sm md:text-base text-left" style={{ fontFamily: '"IBM Plex Mono", monospace', fontWeight: 400 }}>
+        <br /><br />
           01<br />
           Inspired by subcurrents (noun) — hidden directions of thought, intention, or action beneath what is visible.
           <span className="block h-4" />
