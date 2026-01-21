@@ -7,7 +7,6 @@ export default function Home() {
     <main className="min-h-screen flex items-center justify-center py-12 md:py-24" style={{ backgroundColor: '#D9D9D9' }}>
       <div className="flex flex-col items-start max-w-[550px] px-4 gap-4">
         <p className="text-sm md:text-base text-left" style={{ fontFamily: '"IBM Plex Mono", monospace', fontWeight: 400 }}>
-        <br />
           Inspired by <a href="https://www.collinsdictionary.com/dictionary/english/subcurrent" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-500 transition-colors duration-200">subcurrents</a> (noun) — hidden directions of thought, intention, or action beneath what is visible.
           <span className="block h-4" />
           At <span style={{ fontFamily: '"Old Standard TT", serif', fontWeight:500, fontSize: '1.16em', }}>Subcurrent</span>, this is our focal point: identifying the hidden yet powerful externalities of change.
