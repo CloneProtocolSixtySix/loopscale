@@ -1,14 +1,29 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 export default function Home() {
+  const [animated, setAnimated] = useState(false);
+
+  useEffect(() => {
+    // Trigger animation after component mounts
+    const timer = setTimeout(() => {
+      setAnimated(true);
+    }, 100);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <main className="min-h-screen flex items-center justify-center py-12 md:py-24" style={{ backgroundColor: '#D9D9D9' }}>
-      <div className="flex flex-col items-start max-w-[550px] px-4 gap-4">
+    <main className="min-h-screen flex items-start justify-center py-12 md:py-24 overflow-hidden" style={{ backgroundColor: '#D9D9D9' }}>
+      <div 
+        className="flex flex-col items-start max-w-[550px] px-4 gap-4 transition-all duration-1000 ease-out"
+        style={{
+          transform: animated ? 'translateY(30vh)' : 'translateY(0)',
+        }}
+      >
         <img src="/subcurrent.svg" alt="Subcurrent" className="w-[20px] md:w-[26px] mb-2" />
         <p className="text-lg md:text-base text-left" style={{ fontFamily: 'var(--font-altform), sans-serif', fontWeight: 400 }}>
- <a href="https://www.collinsdictionary.com/dictionary/english/subcurrent" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#D9D9D9] transition-colors duration-200">Subcurrent</a> (noun) refers to the hidden directions of intentionality underlying what is manifested. It defines both our focus and our name.
+ <a href="https://www.collinsdictionary.com/dictionary/english/subcurrent" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#D9D9D9] transition-colors duration-200">Apline Intelligence</a> (noun) refers to the hidden directions of intentionality underlying what is manifested. It defines both our focus and our name.
 
         </p>
         <p className="text-lg md:text-base text-left" style={{ fontFamily: 'var(--font-altform), sans-serif', fontWeight: 400 }}>
