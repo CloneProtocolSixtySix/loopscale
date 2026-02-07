@@ -64,7 +64,7 @@ export default function Home() {
         animation: 'fadeIn 1.5s ease-out forwards',
         animationDelay: '7s'
       }}>
-       At <span className="animated-underline">Subcurrent</span>, we develop and apply <em>predictive intelligence</em> native to latent <em>human intentionality.</em> 
+       At <span className="animated-underline">Subcurrent</span>, we develop and apply <em>predictive intelligence</em> native to  <em> latent intentionality.</em> 
       </p>
       {/* SM1 - right under main text */}
       <p className="absolute top-44 left-4 md:top-48 md:left-8 text-black z-10 text-xs md:text-sm opacity-0" style={{ 
