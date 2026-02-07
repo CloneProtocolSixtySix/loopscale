@@ -67,16 +67,16 @@ export default function Home() {
        At <span className="animated-underline">Subcurrent</span>, we develop and apply <em>predictive intelligence</em> native to  <em> latent intentionality.</em> 
       </p>
       {/* SM1 - right under main text */}
-      <p className="absolute top-44 left-4 md:top-48 md:left-8 text-black z-10 text-xs md:text-sm opacity-0" style={{ 
+      <p className="absolute top-44 left-4 md:top-48 md:left-8 text-black z-10 text-sm md:text-sm opacity-0" style={{ 
         fontFamily: '"IBM Plex Mono", monospace',
         animation: 'fadeIn 1.5s ease-out forwards',
         animationDelay: '7s'
       }}>
-        	EM1 — Our Flagship Model <span className="text-gray-500">(coming soon)</span>
+        	SM1 — Our Flagship Model <span className="text-gray-500">(coming soon)</span>
       </p>
       
       {/* Bottom left - copyright */}
-      <p className="fixed bottom-4 left-4 md:bottom-8 md:left-8 text-black z-10 text-xs md:text-sm opacity-0" style={{ 
+      <p className="fixed bottom-4 left-4 md:bottom-8 md:left-8 text-black z-10 text-sm md:text-sm opacity-0" style={{ 
         fontFamily: '"IBM Plex Mono", monospace',
         animation: 'fadeIn 1.5s ease-out forwards',
         animationDelay: '7s'
@@ -85,7 +85,7 @@ export default function Home() {
       </p>
       
       {/* Bottom right - links */}
-      <div className="fixed bottom-4 right-4 md:bottom-8 md:right-8 text-black z-10 text-xs md:text-sm flex gap-3 md:gap-6 opacity-0" style={{ 
+      <div className="fixed bottom-4 right-4 md:bottom-8 md:right-8 text-black z-10 text-sm md:text-sm flex gap-3 md:gap-6 opacity-0" style={{ 
         fontFamily: '"IBM Plex Mono", monospace',
         animation: 'fadeIn 1.5s ease-out forwards',
         animationDelay: '7s'
@@ -180,7 +180,7 @@ export default function Home() {
           transform: isVisible ? 'translateY(0)' : 'translateY(-10px)',
           transition: 'opacity 1.5s ease-out, transform 1.5s ease-out'
         }}>
-          <p className="text-black text-xs md:text-sm mb-4" style={{ 
+          <p className="text-black text-sm md:text-sm mb-4" style={{ 
             fontFamily: '"IBM Plex Mono", monospace'
           }}>
             Our Approach + Aim
@@ -191,7 +191,7 @@ export default function Home() {
           }}>
             Merging <em>computational anthropology</em> with <em>investment research</em> to help venture pioneers systematically mitigate uncertainty while fostering sovereign technologies.
           </p>
-          <a href="https://medium.com" target="_blank" rel="noopener noreferrer" className="text-black text-xs md:text-sm mt-4 block hover:underline" style={{ 
+          <a href="https://medium.com" target="_blank" rel="noopener noreferrer" className="text-black text-sm md:text-sm mt-4 block hover:underline" style={{ 
             fontFamily: '"IBM Plex Mono", monospace'
           }}>
           Case Studies
