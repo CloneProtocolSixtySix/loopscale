@@ -1,26 +1,82 @@
+"use client";
+
+import { useState } from "react";
+
 export default function Home() {
+  const [showAboutText, setShowAboutText] = useState(false);
+  const aboutText = `Launching Subcurrent AI
+(April 2026)
+
+A subcurrent (noun) refers to a partially revealed direction of thought, intention, or action underlying what is manifested-it defines both our focus and our name.
+
+In our view, every system-whether in industry, research, or culture-contains latent directions that influence how outcomes unfold. These subcurrents are often invisible, yet they shape adoption, behavior, and trajectory.
+
+At Subcurrent, we aim to identify and understand them.
+
+We are building an intelligence layer native to human granularity, capable of identifying and assessing hidden forces before they emerge-helping venture pioneers make safer bets in continually evolving environments.`;
+
   return (
     <main
-      className="min-h-screen flex items-center justify-start px-6 md:px-8 relative"
-      style={{ backgroundColor: "#D9D9D9" }}
+      className="eb-garamond-regular min-h-screen relative text-[#d9dde5]"
+      style={{ backgroundColor: "#0b1324" }}
     >
-      <p
-        className="absolute bottom-4 left-4 md:bottom-6 md:left-8 text-xs md:text-sm tracking-wide"
-        style={{ fontFamily: '"Inter", sans-serif', fontWeight: 400, fontOpticalSizing: "auto" }}
+      <div className="absolute left-4 top-10 hidden md:flex flex-col gap-6 text-[#3a4252] text-lg leading-none z-10">
+      </div>
+
+      <header className="absolute left-6 md:left-16 top-4 md:top-6 text-xl font-bold leading-relaxed z-10">
+        <p>
+          <span
+            style={{
+              textDecorationLine: "underline",
+              textDecorationThickness: "1.5px",
+              textUnderlineOffset: "3px",
+              paddingLeft: "0.5em",
+              marginLeft: "-0.2em",
+            }}
+          >
+            ‎ ‎ S
+          </span>
+          ubcurrent
+        </p>
+      </header>
+
+      <div
+        className={
+          showAboutText
+            ? "z-10 relative pt-24 md:pt-28 pb-10 md:pb-14 pl-6 md:pl-16 pr-6"
+            : "min-h-screen flex items-center pl-6 md:pl-16 pr-6 z-10 relative"
+        }
       >
-        © 2026 Subcurrent AI
-      </p>
-      <a
-        href="#"
-        className="absolute bottom-4 right-4 md:bottom-6 md:right-8 text-xs md:text-sm tracking-wide"
-        style={{ fontFamily: '"Inter", sans-serif', fontWeight: 400, fontOpticalSizing: "auto" }}
-      >
-      </a>
-      <div className="flex flex-col items-start justify-center gap-6 w-full max-w-2xl">
-        <p className="libertinus-math-regular text-black text-left text-2xl md:text-3xl max-w-2xl">
-          <span style={{ textDecorationLine: "underline", textDecorationThickness: "2px", textUnderlineOffset: "4px" }}>‎ ‎ S</span>ubcurrent is a computational anthropology studio predicting agency across evolving environments.
+        <p
+          className={
+            showAboutText
+              ? "body-text-after-header max-w-md text-xl leading-relaxed whitespace-pre-line"
+              : "body-text-after-header max-w-md text-xl leading-relaxed whitespace-pre-line"
+          }
+        >
+          {showAboutText
+            ? aboutText
+            : "Subcurrent is an intelligence studio helping venture pioneers leverage underlying agency across their environments."}
         </p>
       </div>
+
+      <footer
+        className={
+          showAboutText
+            ? "body-text-after-header relative z-20 pl-6 md:pl-16 pb-6 md:pb-10 flex items-center gap-3 md:gap-4 text-xl"
+            : "body-text-after-header fixed md:absolute left-4 md:left-16 bottom-4 md:bottom-10 flex items-center gap-3 md:gap-4 text-xl z-20"
+        }
+      >
+        <button
+          type="button"
+          onClick={() => setShowAboutText((prev) => !prev)}
+          className="hover:opacity-80 transition-opacity"
+        >
+          {showAboutText ? "home" : "about"}
+        </button>
+        <span className="opacity-70">|</span>
+        <a href="mailto:info@subcurrent.ai" className="hover:opacity-80 transition-opacity">inquiries</a>
+      </footer>
     </main>
   );
 }
