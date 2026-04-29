@@ -141,6 +141,12 @@ body {
   font-style: italic;
 }
 
+.libertinus-math-regular {
+  font-family: "Libertinus Math", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .instrument-sans-regular {
   font-family: "Instrument Sans", sans-serif;
   font-optical-sizing: auto;
