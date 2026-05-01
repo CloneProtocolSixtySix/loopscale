@@ -4,7 +4,7 @@ import { useState } from "react";
 
 export default function Home() {
   const [showAboutText, setShowAboutText] = useState(false);
-  const aboutText = `Launching Subcurrent AI
+  const aboutText = `
 (April 2026)
 
 A subcurrent (noun) refers to a partially revealed direction of thought, intention, or action underlying what is manifested-it defines both our focus and our name.
@@ -23,20 +23,9 @@ We are building an intelligence layer native to human granularity, capable of id
       <div className="absolute left-4 top-10 hidden md:flex flex-col gap-6 text-[#3a4252] text-lg leading-none z-10">
       </div>
 
-      <header className="absolute left-6 md:left-16 top-4 md:top-6 text-xl font-bold leading-relaxed z-10">
+      <header className="absolute left-6 md:left-16 top-4 md:top-6 text-xl font-normal leading-relaxed z-10">
         <p>
-          <span
-            style={{
-              textDecorationLine: "underline",
-              textDecorationThickness: "1.5px",
-              textUnderlineOffset: "3px",
-              paddingLeft: "0.5em",
-              marginLeft: "-0.2em",
-            }}
-          >
-            ‎ ‎ S
-          </span>
-          ubcurrent
+          Subcurrent
         </p>
       </header>
 
@@ -56,7 +45,15 @@ We are building an intelligence layer native to human granularity, capable of id
         >
           {showAboutText
             ? aboutText
-            : "Subcurrent is an intelligence studio helping venture pioneers leverage underlying agency across their environments."}
+            : (
+              <>
+                <span className="relative -top-0.5 inline-block mr-2 align-middle animate-pulse">■</span>
+                An intelligence project
+            
+                {"\n\n"}
+                We study human agency underlying economies.
+              </>
+            )}
         </p>
       </div>
 
