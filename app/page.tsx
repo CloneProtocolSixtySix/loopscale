@@ -62,9 +62,9 @@ We are building a foundation model that anticipates subcurrents—enabling pione
       <div className="absolute left-4 top-10 hidden md:flex flex-col gap-6 text-[#3a4252] text-lg leading-none z-10">
       </div>
 
-      <header className="absolute left-6 md:left-16 top-4 md:top-6 text-xl font-semibold leading-relaxed z-10">
+      <header className="absolute left-6 md:left-16 top-4 md:top-6 text-xl font-medium leading-relaxed z-10">
         <p>
-      _Subcurrent
+          <span className="underline underline-offset-4">‎ ‎ S</span>ubcurrent
         </p>
       </header>
 
@@ -86,8 +86,8 @@ We are building a foundation model that anticipates subcurrents—enabling pione
             ? aboutText
             : (
               <>
-                <span className=" inline-block mr-2 animate-pulse">■</span>
-                An intelligence studio
+                <span className="relative top-0.5 inline-block mr-2 animate-pulse">■</span>
+                an intelligence studio
             
                 {"\n\n"}
                 Anticipating <em>human agency</em> underlying ({typedTerm}) shifts.
@@ -108,10 +108,10 @@ We are building a foundation model that anticipates subcurrents—enabling pione
           onClick={() => setShowAboutText((prev) => !prev)}
           className="hover:opacity-80 transition-opacity"
         >
-          {showAboutText ? "Home" : "About"}
+          {showAboutText ? "home" : "about"}
         </button>
         <span className="opacity-70">|</span>
-        <a href="mailto:info@subcurrent.ai" className="hover:opacity-80 transition-opacity">Inquiries</a>
+        <a href="mailto:info@subcurrent.ai" className="hover:opacity-80 transition-opacity">inquiries</a>
       </footer>
     </main>
   );
