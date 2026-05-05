@@ -292,6 +292,12 @@ body {
   font-variation-settings: "wdth" 100;
 }
 
+.instrument-serif-regular {
+  font-family: "Instrument Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .ibm-plex-serif-thin {
   font-family: "IBM Plex Serif", serif;
   font-weight: 100;
