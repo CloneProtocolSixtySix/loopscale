@@ -2,9 +2,15 @@
 
 import { useEffect, useState } from "react";
 
+const rotatingTerms = [
+  "political",
+  "economic",
+  "cultural",
+  "technological",
+];
+
 export default function Home() {
   const [showAboutText, setShowAboutText] = useState(false);
-  const rotatingTerms = ["political", "economic", "cultural", "technological"];
   const [termIndex, setTermIndex] = useState(0);
   const [typedTerm, setTypedTerm] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -41,10 +47,9 @@ export default function Home() {
     }, delay);
 
     return () => clearTimeout(timer);
-  }, [isDeleting, rotatingTerms, showAboutText, termIndex, typedTerm]);
+  }, [isDeleting, showAboutText, termIndex, typedTerm]);
 
   const aboutText = `
-
 
 (April 2026)
 
@@ -52,71 +57,72 @@ A subcurrent (noun) refers to an obscured direction of thought, intention, or ac
 
 We believe that beneath every complex system lies a subcurrent whose direction determines how outcomes unfold.
 
-Our aim is to accurately identify, understand, and predict subcurrents in their natural, present states before they emerge.
+Our aim is to accurately identify, understand, and predict subcurrents in their natural, present states before they emerge—generating strategic insights for future proofing application.
 
-We are building a foundation model that anticipates underlying human agency—enabling pioneers to make safer product, policy, and investment decisions across complex systems.`;
+We are building a foundation model that predicts underlying human agency—enabling pioneers to make safer product, policy, and investment decisions across complex systems.`;
 
   return (
     <main
-      className="eb-garamond-regular min-h-screen relative text-[#d9dde5]"
+      className="eb-garamond-regular min-h-screen relative text-[#d9dde5] text-[19px]"
       style={{ backgroundColor: "#0b1324" }}
     >
-      <div className="absolute left-4 top-10 hidden md:flex flex-col gap-6 text-[#3a4252] text-lg leading-none z-10">
-      </div>
-
-      <header className="absolute left-6 md:left-16 top-4 md:top-6 text-xl font-bold leading-relaxed z-10">
+      <header className="absolute left-6 md:left-16 top-4 md:top-6 font-normal leading-relaxed z-10">
         <p>
-          <span className="mr-1 underline decoration-[1px]"></span>subcurrent
-          
+          <span className="mr-1 underline decoration-[1px]"></span>
+          _subcurrent
         </p>
       </header>
 
       <div
         className={
           showAboutText
-            ? "z-10 relative pt-24 md:pt-28 pb-10 md:pb-14 pl-6 md:pl-16 pr-6"
+            ? "z-10 relative pt-14 md:pt-16 pb-24 md:pb-28 pl-6 md:pl-16 pr-6"
             : "min-h-screen flex items-center pl-6 md:pl-16 pr-6 z-10 relative"
         }
       >
-        <p
-          className={
-            showAboutText
-              ? "body-text-after-header max-w-lg text-xl leading-relaxed whitespace-pre-line"
-              : "body-text-after-header max-w-lg text-xl leading-relaxed whitespace-pre-line"
-          }
-        >
-          {showAboutText
-            ? aboutText
-            : (
-              <>
-                <span className="relative top-0.5 inline-block mr-2 animate-pulse">■</span>
-                an intelligence studio
-            
-                {"\n\n"}
-                Predicting <em>human agency</em> underlying ({typedTerm}) shifts.
-              </>
-            )}
+        <p className="body-text-after-header max-w-lg leading-relaxed whitespace-pre-line">
+          {showAboutText ? (
+            aboutText
+          ) : (
+            <>
+              subcurrent is a computational social science and market
+              intelligence studio predicting <em>human 𖠋 agency</em> underlying (
+              {typedTerm}) shifts.
+            </>
+          )}
         </p>
       </div>
 
-      <footer
-        className={
-          showAboutText
-            ? "body-text-after-header relative z-20 pl-6 md:pl-16 pb-6 md:pb-10 flex items-center gap-3 md:gap-4 text-xl"
-            : "body-text-after-header fixed md:absolute left-4 md:left-16 bottom-4 md:bottom-10 flex items-center gap-3 md:gap-4 text-xl z-20"
-        }
-      >
+      <footer className="body-text-after-header fixed left-4 md:left-16 bottom-4 md:bottom-10 z-20 whitespace-nowrap">
         <button
           type="button"
+          aria-label={showAboutText ? "Return home" : "Show about text"}
           onClick={() => setShowAboutText((prev) => !prev)}
+          className="inline hover:opacity-80 transition-opacity cursor-pointer"
+        >
+          {showAboutText ? "< home" : "about"}
+        </button>
+
+        {" | "}
+
+        <a
+          href="mailto:info@subcurrent.ai"
           className="hover:opacity-80 transition-opacity"
         >
-          {showAboutText ? "home" : "about"}
-        </button>
-        <span className="opacity-70">|</span>
-        <a href="mailto:info@subcurrent.ai" className="hover:opacity-80 transition-opacity">inquiries</a>
+          inquiries
+        </a>
+
+        {" | "}
+
+        <a
+          href="https://medium.com/@yannickbruderlein"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:opacity-80 transition-opacity"
+        >
+          research
+        </a>
       </footer>
     </main>
   );
 }
-

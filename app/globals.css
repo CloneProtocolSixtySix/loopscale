@@ -284,13 +284,13 @@ body {
   font-variation-settings: "wdth" 100;
 }
 
-.instrument-sans-regular-italic {
-  font-family: "Instrument Sans", sans-serif;
+.lora {
+  font-family: "Lora", serif;
   font-optical-sizing: auto;
   font-weight: 400;
-  font-style: italic;
-  font-variation-settings: "wdth" 100;
+  font-style: normal;
 }
+
 
 .instrument-serif-regular {
   font-family: "Instrument Serif", serif;
