@@ -48,8 +48,6 @@ export default function Home() {
 
 (April 2026)
 
-Founder's Note
-
 A subcurrent (noun) refers to an obscured direction of thought, intention, or action—human agency—underlying what is manifested—it defines both our focus and our name.
 
 We believe that beneath every complex system lies a subcurrent whose direction determines how outcomes unfold.
@@ -66,9 +64,9 @@ We are building a foundation model that anticipates underlying human agency—en
       <div className="absolute left-4 top-10 hidden md:flex flex-col gap-6 text-[#3a4252] text-lg leading-none z-10">
       </div>
 
-      <header className="absolute left-6 md:left-16 top-4 md:top-6 text-xl font-medium leading-relaxed z-10">
+      <header className="absolute left-6 md:left-16 top-4 md:top-6 text-xl font-bold leading-relaxed z-10">
         <p>
-          <span className="underline underline-offset-2 decoration-[1px]">‎ ‎ S</span>ubcurrent
+          <span className="mr-1 underline decoration-[1px]"></span>subcurrent
           
         </p>
       </header>
