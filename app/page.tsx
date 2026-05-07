@@ -44,15 +44,19 @@ export default function Home() {
   }, [isDeleting, rotatingTerms, showAboutText, termIndex, typedTerm]);
 
   const aboutText = `
+
+
 (April 2026)
+
+Founder's Note
 
 A subcurrent (noun) refers to an obscured direction of thought, intention, or action—human agency—underlying what is manifested—it defines both our focus and our name.
 
 We believe that beneath every complex system lies a subcurrent whose direction determines how outcomes unfold.
 
-Our aim is to accurately identify and understand subcurrents in their natural, present states before they emerge.
+Our aim is to accurately identify, understand, and predict subcurrents in their natural, present states before they emerge.
 
-We are building a foundation model that anticipates subcurrents—enabling pioneers to make safer product, policy, and investment bets across complex systems.`;
+We are building a foundation model that anticipates underlying human agency—enabling pioneers to make safer product, policy, and investment decisions across complex systems.`;
 
   return (
     <main
@@ -64,7 +68,8 @@ We are building a foundation model that anticipates subcurrents—enabling pione
 
       <header className="absolute left-6 md:left-16 top-4 md:top-6 text-xl font-medium leading-relaxed z-10">
         <p>
-          <span className="underline underline-offset-4">‎ ‎ S</span>ubcurrent
+          <span className="underline underline-offset-2 decoration-[1px]">‎ ‎ S</span>ubcurrent
+          
         </p>
       </header>
 
@@ -90,7 +95,7 @@ We are building a foundation model that anticipates subcurrents—enabling pione
                 an intelligence studio
             
                 {"\n\n"}
-                Anticipating <em>human agency</em> underlying ({typedTerm}) shifts.
+                Predicting <em>human agency</em> underlying ({typedTerm}) shifts.
               </>
             )}
         </p>
