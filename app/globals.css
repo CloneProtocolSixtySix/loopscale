@@ -255,9 +255,10 @@ body {
   font-style: italic;
 }
 
-.libertinus-math-regular {
-  font-family: "Libertinus Math", system-ui;
+.nanum-myeongjo-regular {
+  font-family: "Nanum Myeongjo", serif;
   font-weight: 400;
+  font-weight: 800;
   font-style: normal;
 }
 

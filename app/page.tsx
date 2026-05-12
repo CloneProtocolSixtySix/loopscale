@@ -1,6 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { Nanum_Myeongjo } from "next/font/google";
+
+const nanum = Nanum_Myeongjo({
+  subsets: ["latin"],
+  weight: ["400", "700", "800"],
+});
 
 const rotatingTerms = [
   "political",
@@ -53,23 +59,24 @@ export default function Home() {
 
 (April 2026)
 
-A subcurrent (noun) refers to an obscured direction of thought, intention, or action—human agency—underlying what is manifested—it defines both our focus and our name.
+A subcurrent (noun) refers to an obscured direction of thought, intention, or action—human agency—underlying what is manifested within a system—it defines both our focus and our name.
 
-We believe that beneath every complex system lies a subcurrent whose direction determines how outcomes unfold.
+We believe beneath every complex social system lies a subcurrent whose direction determines how transactional, adoption, alignment, and migration outcomes unfold.
+Subcurrents are naturally granular, making them extremely difficult to grasp, before they become apparent. 
 
-Our aim is to accurately identify, understand, and predict subcurrents in their natural, present states before they emerge—generating strategic insights for future proofing application.
+Our aim is to accurately identify, understand, and predict subcurrents in their natural, present states, generating strategic insights in research, development and application.
 
 We are building a foundation model that predicts underlying human agency—enabling pioneers to make safer product, policy, and investment decisions across complex systems.`;
 
   return (
     <main
-      className="eb-garamond-regular min-h-screen relative text-[#d9dde5] text-[19px]"
+      className={`${nanum.className} min-h-screen relative text-[#d9dde5] text-[19px]`}
       style={{ backgroundColor: "#0b1324" }}
     >
-      <header className="absolute left-6 md:left-16 top-4 md:top-6 font-normal leading-relaxed z-10">
+      <header className="absolute left-6 md:left-16 top-4 md:top-6 font-[700] leading-relaxed z-10">
         <p>
           <span className="mr-1 underline decoration-[1px]"></span>
-          _subcurrent
+          _Subcurrent
         </p>
       </header>
 
@@ -85,10 +92,12 @@ We are building a foundation model that predicts underlying human agency—enabl
             aboutText
           ) : (
             <>
-              subcurrent is a computational social science and market
-              intelligence studio predicting <em>human 𖠋 agency</em> underlying (
-              {typedTerm}) shifts.
-            </>
+            Subcurrent is a computational social science and market
+            intelligence venture, aimed at predicting{" "}
+            <span className="underline decoration-[1px] underline-offset-2"> human agency
+            </span>{" "}
+            underlying ({typedTerm}) shifts.
+          </>
           )}
         </p>
       </div>
