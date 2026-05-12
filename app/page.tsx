@@ -61,8 +61,7 @@ export default function Home() {
 
 A subcurrent (noun) refers to an obscured direction of thought, intention, or action—human agency—underlying what is manifested within a system—it defines both our focus and our name.
 
-We believe beneath every complex social system lies a subcurrent whose direction determines how transactional, adoption, alignment, and migration outcomes unfold.
-Subcurrents are naturally granular, making them extremely difficult to grasp, before they become apparent. 
+We believe beneath every complex system lies a subcurrent whose direction determines how human transaction, adoption, alignment, and migration outcomes unfold. Human granularity and dynamism make subcurrents extremely difficult to grasp, before they become apparent. Yet the most consequential decisions in society are made with surface level signals.
 
 Our aim is to accurately identify, understand, and predict subcurrents in their natural, present states, generating strategic insights in research, development and application.
 
