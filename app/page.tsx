@@ -16,9 +16,7 @@ export default function Home() {
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
-    if (showAboutText) {
-      return;
-    }
+    if (showAboutText) return;
 
     const currentTerm = rotatingTerms[termIndex];
     const atFullTerm = typedTerm === currentTerm;
@@ -49,50 +47,98 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, [isDeleting, showAboutText, termIndex, typedTerm]);
 
-  const aboutText = `
-
-(April 2026)
-
-A subcurrent (noun) refers to an obscured direction of thought, intention, or action—human agency—underlying what is manifested within a system—it defines both our focus and our name.
-
-We believe beneath every complex system lies a subcurrent whose direction determines how human transaction, adoption, alignment, and migration outcomes unfold. Human granularity and dynamism make subcurrents extremely difficult to grasp, before they become apparent. Yet the most consequential decisions are made using surface level indicators.
-
-Our aim is to accurately identify and understand subcurrents in their natural, present states, generating strategic insights in research, development and application.
-
-We are building a foundation model that predicts underlying human agency—enabling teams to make safer product, policy, and investment decisions across complex systems.`;
-
   return (
     <main
       className="nanum-myeongjo-regular min-h-screen relative text-[#d9dde5] text-[19px]"
       style={{ backgroundColor: "#0b1324" }}
     >
-      <header className="absolute left-6 md:left-16 top-4 md:top-6 font-[700] leading-relaxed z-10">
+      <header className="fixed left-6 md:left-16 top-4 md:top-6 font-[700] leading-relaxed z-30">
         <p>
           <span className="mr-1 underline decoration-[1px]"></span>
-          _S
+          _Subcurrent
         </p>
       </header>
 
       <div
         className={
           showAboutText
-            ? "z-10 relative pt-14 md:pt-16 pb-24 md:pb-28 pl-6 md:pl-16 pr-6"
+            ? "z-10 relative pt-24 md:pt-28 pb-24 md:pb-28 pl-6 md:pl-16 pr-6"
             : "min-h-screen flex items-center pl-6 md:pl-16 pr-6 z-10 relative"
         }
       >
-        <p className="body-text-after-header max-w-[600px] leading-relaxed whitespace-pre-line">
+        <div className="body-text-after-header max-w-[600px] leading-relaxed">
           {showAboutText ? (
-            aboutText
+            <>
+              <p className="mb-8">
+                (April 2026) | Our Thesis — An Ode to Human Agency
+              </p>
+
+              <div className="border-l-[3px] border-[#d9dde5] pl-6 mb-8 ml-1">
+                <p className="leading-relaxed">
+                  <span className="italic">subcurrent</span>
+                  <br />
+                  (ˈsʌbˌkɜːrənt, -ˌkʌr-)
+                  <br />
+                  noun
+                  <br />
+                  an obscured or not yet clearly formulated direction of
+                  thought, intention, or action—human agency—underlying what is manifested within social system and/or interaction.
+                </p>
+              </div>
+
+              <p className="mb-6">
+               <em>Subcurrents define both our focus and name.</em>
+              </p>
+
+              <p className="mb-6">
+                We believe beneath every complex system lies a subcurrent whose
+                direction determines how human transaction, adoption,
+                alignment, and migration outcomes unfold. Human granularity and
+                dynamism make subcurrents extremely difficult to grasp before
+                they become apparent. As a result, the most consequential decisions are
+                made using surface level indicators.
+              </p>
+
+              <p className="mb-6">
+                Our aim is to accurately identify and understand subcurrents in
+                their natural, present states, generating strategic insights in
+                research, development and application.
+              </p>
+
+              <p>
+                We are building a foundation model that predicts underlying
+                human agency—enabling teams to make safer product, policy, and
+                investment decisions across complex systems.
+              </p>
+            </>
           ) : (
             <>
-            Subcurrent is a <em>computational social science venture</em>, predicting{" "}
-            <span className="underline decoration-[1px] underline-offset-2"> human agency
-            </span>{" "}
-            underlying ({typedTerm}) shifts across complex social systems.
-          </>
+              Subcurrent is a{" "}
+              <em>computational social science venture</em>, predicting{" "}
+              <span className="underline decoration-[1px] underline-offset-2">
+                human agency
+              </span>{" "}
+              underlying ({typedTerm}) shifts across complex social systems.
+            </>
           )}
-        </p>
+        </div>
       </div>
+
+      <div
+        className="pointer-events-none fixed left-0 right-0 top-0 z-10 h-28"
+        style={{
+          background:
+            "linear-gradient(to bottom, #0b1324 0%, #0b1324 35%, transparent 100%)",
+        }}
+      />
+
+      <div
+        className="pointer-events-none fixed left-0 right-0 bottom-0 z-10 h-32"
+        style={{
+          background:
+            "linear-gradient(to top, #0b1324 0%, #0b1324 35%, transparent 100%)",
+        }}
+      />
 
       <footer className="body-text-after-header fixed left-4 md:left-16 bottom-4 md:bottom-10 z-20 whitespace-nowrap">
         <button
