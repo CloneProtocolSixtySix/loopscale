@@ -4,7 +4,7 @@ import './globals.css';
 import { altform } from './fonts';
 
 export const metadata: Metadata = {
-  title: "Subcurrent | Predicting Human Agency.",
+  title: "Subcurrent | Predicting human agency.",
 };
 
 export default function RootLayout({
