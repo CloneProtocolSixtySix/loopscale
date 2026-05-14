@@ -1,12 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Nanum_Myeongjo } from "next/font/google";
-
-const nanum = Nanum_Myeongjo({
-  subsets: ["latin"],
-  weight: ["400", "700", "800"],
-});
 
 const rotatingTerms = [
   "political",
@@ -69,13 +63,13 @@ We are building a foundation model that predicts underlying human agency—enabl
 
   return (
     <main
-      className={`${nanum.className} min-h-screen relative text-[#d9dde5] text-[19px]`}
+      className="nanum-myeongjo-regular min-h-screen relative text-[#d9dde5] text-[19px]"
       style={{ backgroundColor: "#0b1324" }}
     >
       <header className="absolute left-6 md:left-16 top-4 md:top-6 font-[700] leading-relaxed z-10">
         <p>
           <span className="mr-1 underline decoration-[1px]"></span>
-          _Subcurrent
+          _S
         </p>
       </header>
 
@@ -86,16 +80,15 @@ We are building a foundation model that predicts underlying human agency—enabl
             : "min-h-screen flex items-center pl-6 md:pl-16 pr-6 z-10 relative"
         }
       >
-        <p className="body-text-after-header max-w-lg leading-relaxed whitespace-pre-line">
+        <p className="body-text-after-header max-w-[600px] leading-relaxed whitespace-pre-line">
           {showAboutText ? (
             aboutText
           ) : (
             <>
-            Subcurrent is a computational social science and market
-            intelligence venture, aimed at predicting{" "}
+            Subcurrent is a <em>computational social science venture</em>, predicting{" "}
             <span className="underline decoration-[1px] underline-offset-2"> human agency
             </span>{" "}
-            underlying ({typedTerm}) shifts.
+            underlying ({typedTerm}) shifts across complex social systems.
           </>
           )}
         </p>
