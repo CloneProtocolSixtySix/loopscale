@@ -55,7 +55,7 @@ export default function Home() {
       <header className="fixed left-6 md:left-16 top-4 md:top-6 font-[700] leading-relaxed z-30">
         <p>
           <span className="mr-1 underline decoration-[1px]"></span>
-          _Subcurrent
+          Augur
         </p>
       </header>
 
@@ -70,10 +70,10 @@ export default function Home() {
           {showAboutText ? (
             <>
               <p className="mb-8">
-                (April 2026) | Our Thesis — An Ode to Human Agency
+                (April 2026) | Our Thesis
               </p>
 
-              <div className="border-l-[3px] border-[#d9dde5] pl-6 mb-8 ml-1">
+              <div className="border-l-[1px] border-[#d9dde5] pl-6 mb-8 ml-1">
                 <p className="leading-relaxed">
                   <span className="italic">subcurrent</span>
                   <br />
@@ -82,34 +82,30 @@ export default function Home() {
                   noun
                   <br />
                   an obscured or not yet clearly formulated direction of
-                  thought, intention, or action—human agency—underlying what is manifested within social system and/or interaction.
+                  thought, intention, or action—human agency—underlying what is manifested
                 </p>
               </div>
 
               <p className="mb-6">
-               <em>Subcurrents define both our focus and name.</em>
+                Markets, institutions, and societies are shaped by underlying human agency. Beneath every transaction, adoption cycle, alignment, and migration pattern lie hidden directional forces that determine how systems evolve over time.
               </p>
 
               <p className="mb-6">
-                We believe beneath every complex system lies a subcurrent whose
-                direction determines how human transaction, adoption,
-                alignment, and migration outcomes unfold. Human granularity and
-                dynamism make subcurrents extremely difficult to grasp before
-                they become apparent. As a result, the most consequential decisions are
-                made using surface level indicators.
+              Yet human granularity, dynamism  and noise make these forces extremely difficult to identify before they become apparent. As a result, many of the most consequential decisions in product development, policy, and investment are still made using surface-level indicators.
               </p>
 
               <p className="mb-6">
-                Our aim is to accurately identify and understand subcurrents in
-                their natural, present states, generating strategic insights in
-                research, development and application.
+              We are building a foundation model that predicts underlying human agency across complex social systems.
               </p>
 
-              <p>
-                We are building a foundation model that predicts underlying
-                human agency—enabling teams to make safer product, policy, and
-                investment decisions across complex systems.
+              <p className="mb-6">
+              Our research focuses on identifying and understanding underlying forces of agency—subcurrents—in their natural, present states—generating strategic insight for research, development, and real-world application.
               </p>
+
+              <p className="mb-6">
+              We envision a future where organizations can anticipate human direction, before decisions are deployed at scale.
+              </p>
+
             </>
           ) : (
             <>
@@ -118,7 +114,7 @@ export default function Home() {
               <span className="underline decoration-[1px] underline-offset-2">
                 human agency
               </span>{" "}
-              underlying ({typedTerm}) shifts across complex social systems.
+              underlying ({typedTerm}) shifts.
             </>
           )}
         </div>
