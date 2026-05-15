@@ -49,13 +49,13 @@ export default function Home() {
 
   return (
     <main
-      className="nanum-myeongjo-regular min-h-screen relative text-[#d9dde5] text-[19px]"
+      className="eb-garamond-regular min-h-screen relative text-[#d9dde5] text-[19px]"
       style={{ backgroundColor: "#0b1324" }}
     >
-      <header className="fixed left-6 md:left-16 top-4 md:top-6 font-[400] leading-relaxed z-30">
+      <header className="fixed left-6 md:left-16 top-4 md:top-6 font-[700] leading-relaxed z-30">
         <p>
           <span className="mr-1 underline decoration-[1px]"></span>
-          _Subcurrent
+          _subcurrent
         </p>
       </header>
 
@@ -66,7 +66,7 @@ export default function Home() {
             : "min-h-screen flex items-center pl-6 md:pl-16 pr-6 z-10 relative"
         }
       >
-        <div className="body-text-after-header max-w-[600px] leading-relaxed">
+        <div className="body-text-after-header max-w-[500px] leading-relaxed">
           {showAboutText ? (
             <>
               <p className="mb-8">
@@ -109,12 +109,12 @@ export default function Home() {
             </>
           ) : (
             <>
-              Subcurrent is a{" "}
-              <em>computational social science venture</em>, predicting{" "}
+              {" "}
+              A computational social science venture | We predict <em>human agency</em> {" "} 
               <span className="underline decoration-[1px] underline-offset-2">
-                human agency
+              underlying
               </span>{" "}
-              underlying ({typedTerm}) shifts.
+              ({typedTerm}) shifts.
             </>
           )}
         </div>
