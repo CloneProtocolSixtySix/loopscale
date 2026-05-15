@@ -52,10 +52,10 @@ export default function Home() {
       className="nanum-myeongjo-regular min-h-screen relative text-[#d9dde5] text-[19px]"
       style={{ backgroundColor: "#0b1324" }}
     >
-      <header className="fixed left-6 md:left-16 top-4 md:top-6 font-[700] leading-relaxed z-30">
+      <header className="fixed left-6 md:left-16 top-4 md:top-6 font-[400] leading-relaxed z-30">
         <p>
           <span className="mr-1 underline decoration-[1px]"></span>
-          Augur
+          _Subcurrent
         </p>
       </header>
 
