@@ -321,15 +321,17 @@ body {
   font-style: normal;
 }
 
-.ibm-plex-serif-normal {
-  font-family: "IBM Plex Serif", serif;
+.nanum-myeongjo-regular {
+  font-family: "Nanum Myeongjo", serif;
   font-weight: 400;
   font-style: normal;
 }
 
-.ibm-plex-serif-medium {
-  font-family: "IBM Plex Serif", serif;
-  font-weight: 500;
+.eb-garamond {
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
 }
 
