@@ -49,10 +49,10 @@ export default function Home() {
 
   return (
     <main
-      className="eb-garamond-regular min-h-screen relative text-[#d9dde5] text-[19px]"
+      className="nanum-myeongjo-regular min-h-screen relative text-[#d9dde5] text-[19px]"
       style={{ backgroundColor: "#0b1324" }}
     >
-      <header className="fixed left-6 md:left-16 top-4 md:top-6 font-[700] leading-relaxed z-30">
+      <header className="fixed left-6 md:left-16 top-4 md:top-6 font-[900] leading-relaxed z-30">
         <p>
           <span className="mr-1 underline decoration-[1px]"></span>
           _subcurrent
@@ -110,7 +110,7 @@ export default function Home() {
           ) : (
             <>
               {" "}
-              A computational social science venture | We predict <em>human agency</em> {" "} 
+              a computational social science venture | we predict <em>human agency</em> {" "} 
               <span className="underline decoration-[1px] underline-offset-2">
               underlying
               </span>{" "}
