@@ -61,7 +61,7 @@ export default function Home() {
       <div className="px-10 md:px-20 py-24">
         <div className="max-w-[700px]">
           <img
-            src="/augurlogo.svg"
+            src="/augur.svg"
             alt="Augur"
             className="w-[70px] h-auto mb-10"
           />
