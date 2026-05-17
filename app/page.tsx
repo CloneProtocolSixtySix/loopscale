@@ -10,7 +10,6 @@ const ebGaramond = EB_Garamond({
 });
 
 const rotatingTerms = [
-  "social",
   "cultural",
   "technological",
   "economic",
@@ -66,26 +65,40 @@ export default function Home() {
             className="w-[70px] h-auto mb-10"
           />
 
-          <h1 className="leading-[1.45] tracking-[-0.01em] mb-10">
-            Introducing <span className="font-semibold">Augur</span> | Venture Intelligence
-          </h1>
 
+          <div className="mb-10">
+            <p className="tracking-[-0.01em] mb-2">
+              (May 2026)
+            </p>
+
+            <h1 className="leading-[1.45] tracking-[-0.01em]">
+              Introducing <span className="font-semibold">Augur</span> | A Computational Social Science Venture
+            </h1>
+          </div>
           <p className="leading-[1.45] tracking-[-0.01em] mb-12 max-w-[600px]">
-            We’re building <em>multi-agent research workflows</em> that
-            generate strategic insights, helping{" "}
-            <span className="underline decoration-[1px] underline-offset-2">
-              founders and investors
-            </span>{" "}
-            anticipate{" "}
-            <span className="normal">
-              ({typedTerm})
-            </span>{" "}
-            directionality before monumental decisions are made at scale.
-          </p>
-
+          We’re building <em>multi-agent research workflows</em> that
+          generate strategic insights, helping{" "}
+          <span className="underline decoration-[1px] underline-offset-2">
+            founders and investors
+          </span>{" "}
+          anticipate{" "}
+          <span>
+            ({typedTerm})
+          </span>{" "}
+          directionality across complex social systems before monumental
+          decisions are made at scale.
+        </p>
           <footer className="fixed bottom-8 left-10 md:left-20 tracking-[-0.01em] opacity-70 z-20">
-          <p> + info (coming soon)</p>
-          </footer>
+          <p>
+            inquiries |{" "}
+            <a
+              href="mailto:info@augur.ventures"
+              className="hover:opacity-60 transition-opacity"
+            >
+              info@augur.ventures
+            </a>
+          </p>
+        </footer>
         </div>
       </div>
     </main>
