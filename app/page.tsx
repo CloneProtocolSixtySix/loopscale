@@ -70,14 +70,12 @@ export default function Home() {
             <p className="tracking-[-0.01em] mb-2">
               (May 2026)
             </p>
-
             <h1 className="leading-[1.45] tracking-[-0.01em]">
-              Introducing <span className="font-semibold">Augur</span> | A Computational Social Science Venture
+              Introducing <span className="font-semibold">Augur</span>, a venture intelligence project.
             </h1>
           </div>
           <p className="leading-[1.45] tracking-[-0.01em] mb-12 max-w-[600px]">
-          We’re building <em>multi-agent research workflows</em> that
-          generate strategic insights, helping{" "}
+          We’re building <em>multi-agent research workflows</em> that help{" "}
           <span className="underline decoration-[1px] underline-offset-2">
             founders and investors
           </span>{" "}
@@ -85,8 +83,7 @@ export default function Home() {
           <span>
             ({typedTerm})
           </span>{" "}
-          directionality across complex social systems before monumental
-          decisions are made at scale.
+          directionality.
         </p>
           <footer className="fixed bottom-8 left-10 md:left-20 tracking-[-0.01em] opacity-70 z-20">
           <p>
